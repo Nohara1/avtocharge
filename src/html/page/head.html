@@ -22,6 +22,7 @@
   }
 
   <link media="screen" rel="stylesheet" href="styles/styles.min.css">
+  @@include("./src/html/page/legacy-my-project-head.html", { legacyMyProject: @@if(context.legacyMyProject){@@legacyMyProject}@@if(!context.legacyMyProject){false} })
   <!-- need to be hidden -->
   <link media="screen" rel="stylesheet" href="files/jquery-ui.min.css" fetchpriority="low">
   <link media="screen" rel="stylesheet" href="files/msearch2/default.css" fetchpriority="low">

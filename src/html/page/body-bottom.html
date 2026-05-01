@@ -34,3 +34,4 @@
 @@include("./src/html/components/scroll-top.html")
 @@if(true){<svg xmlns="http://www.w3.org/2000/svg" class="_sr-only" aria-hidden="true"><defs><linearGradient id="instagram-fill" x1="2.23374" y1="27.7663" x2="27.272" y2="2.72802" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#E09B3D"/><stop offset="0.3" stop-color="#C74C4D"/><stop offset="0.6" stop-color="#C21975"/><stop offset="1" stop-color="#7024C4"/></linearGradient><filter id="baBlur" width="200%" height="200%" x="-50%" y="-50%" color-interpolation-filters="sRGB"><feGaussianBlur in="SourceGraphic" stdDeviation="30" /></filter></defs></svg>}
 @@if(true){@@include('./src/html/components/service-widget.html')}
+@@include("./src/html/page/legacy-my-project-body.html", { legacyMyProject: @@if(context.legacyMyProject){@@legacyMyProject}@@if(!context.legacyMyProject){false} })

@@ -4,6 +4,8 @@ import rename from "gulp-rename";
 import cleanCss from "gulp-clean-css";
 import autoPrefixer from "gulp-autoprefixer";
 import groupCss from "gulp-group-css-media-queries";
+import postcss from "gulp-postcss";
+import tailwindcss from "@tailwindcss/postcss";
 
 const sass = gulpSass(dartSass);
 
@@ -18,6 +20,7 @@ export function scss() {
         })
         .on("error", sass.logError)
     )
+    .pipe(postcss([tailwindcss()]))
     // .pipe(app.plugins.if(app.isBuild, groupCss()))
     .pipe(
       app.plugins.if(
