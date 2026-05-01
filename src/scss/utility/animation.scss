@@ -1,0 +1,182 @@
+// @keyframes pill {
+//   0% {
+//     transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 10deg);
+//   }
+//   20% {
+//     transform: translate3d(0, -2px, -1px) rotate3d(1, 1, -1, -10deg);
+//   }
+//   55% {
+//     transform: translate3d(2px, 0, -8px) rotate3d(-1, -1, 1, 10deg);
+//   }
+//   85% {
+//     transform: translate3d(0, -2px, 2px) rotate3d(0, 1, 1, -10deg);
+//   }
+//   100% {
+//     transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 10deg);
+//   }
+// }
+// @keyframes lines {
+//   0% {
+//     opacity: 1;
+//     transform: scale(1);
+//   }
+//   10% {
+//     opacity: 0;
+//     transform: scale(0.9);
+//   }
+//   30% {
+//     opacity: 1;
+//     transform: scale(1);
+//   }
+//   60% {
+//     opacity: 0.3;
+//     transform: scale(1.05);
+//   }
+//   80% {
+//     opacity: 1;
+//     transform: scale(1.02);
+//   }
+//   100% {
+//     opacity: 1;
+//     transform: scale(1);
+//   }
+// }
+// @keyframes our-clients {
+//   0% {
+//     transform: translate(0) rotate(0);
+//   }
+//   10% {
+//     transform: translate(5px, 2px) rotate(5deg);
+//   }
+//   30% {
+//     transform: translate(1px, 6px) rotate(1deg);
+//   }
+//   40% {
+//     transform: translate(2px, 3px) rotate(-5deg);
+//   }
+//   70% {
+//     transform: translate(-2px, 1px) rotate(3deg);
+//   }
+//   90% {
+//     transform: translate(1px, -3px) rotate(1deg);
+//   }
+//   100% {
+//     transform: translate(0) rotate(0);
+//   }
+// }
+// @keyframes border-01 {
+//   0%,
+//   100% {
+//     border-radius: 30% 70% 70% 30% / 30% 52% 48% 70%;
+//   }
+//   10% {
+//     border-radius: 50% 50% 20% 80% / 25% 80% 20% 75%;
+//   }
+//   20% {
+//     border-radius: 67% 33% 47% 53% / 37% 20% 80% 63%;
+//   }
+//   30% {
+//     border-radius: 39% 61% 47% 53% / 37% 40% 60% 63%;
+//   }
+//   40% {
+//     border-radius: 39% 61% 82% 18% / 74% 40% 60% 26%;
+//   }
+//   50% {
+//     border-radius: 100%;
+//   }
+//   60% {
+//     border-radius: 50% 50% 53% 47% / 72% 69% 31% 28%;
+//   }
+//   70% {
+//     border-radius: 50% 50% 53% 47% / 26% 22% 78% 74%;
+//   }
+//   80% {
+//     border-radius: 50% 50% 53% 47% / 26% 69% 31% 74%;
+//   }
+//   90% {
+//     border-radius: 20% 80% 20% 80% / 20% 80% 20% 80%;
+//   }
+// }
+// @keyframes border-02 {
+//   0%,
+//   100% {
+//     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+//   }
+//   25% {
+//     border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
+//   }
+//   50% {
+//     border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
+//   }
+//   75% {
+//     border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
+//   }
+// }
+// @keyframes border-03 {
+//   0%,
+//   100% {
+//     border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
+//   }
+//   14% {
+//     border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%;
+//   }
+//   28% {
+//     border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%;
+//   }
+//   42% {
+//     border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%;
+//   }
+//   56% {
+//     border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%;
+//   }
+//   70% {
+//     border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%;
+//   }
+//   84% {
+//     border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%;
+//   }
+// }
+// @keyframes callback {
+//   0% {
+//     opacity: 1;
+//     transform: scale(0.8);
+//   }
+//   30% {
+//     opacity: 0.7;
+//     transform: scale(1.2);
+//   }
+//   55% {
+//     opacity: 0;
+//     transform: scale(1.35);
+//   }
+//   100% {
+//     opacity: 0;
+//     transform: scale(1.35);
+//   }
+// }
+// @keyframes pulse {
+//   0% {
+//     opacity: 1;
+//     transform: scale(1);
+//   }
+//   10% {
+//     opacity: 0.8;
+//     transform: scale(0.9);
+//   }
+//   30% {
+//     opacity: 1;
+//     transform: scale(1.1);
+//   }
+//   60% {
+//     opacity: 0.9;
+//     transform: scale(0.85);
+//   }
+//   80% {
+//     opacity: 1;
+//     transform: scale(0.95);
+//   }
+//   100% {
+//     opacity: 1;
+//     transform: scale(1);
+//   }
+// }

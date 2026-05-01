@@ -1,0 +1,42 @@
+<nav class="pagination@@if(context.variant){ pagination-0@@variant}@@if(!context.variant){ pagination-01}">
+    <ul class="pagination__list">
+        @@if(context.variant && context.variant == 2){
+        <li class="page-item">
+            <span class="page-link">«</span>
+        </li>
+        }
+        <li class="page-item active">
+            <span class="page-link">1</span>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="@@pageUrl?page=2">2</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="@@pageUrl?page=3">3</a>
+        </li>
+        @@if(!context.variant || context.variant == 1){
+        <li class="page-item">
+            <a class="page-link" href="@@pageUrl?page=4">4</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="@@pageUrl?page=5">5</a>
+        </li>
+        }
+        <li class="page-item">
+            <span class="page-link page-separator">...</span>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="@@pageUrl?page=10">10</a>
+        </li>
+        @@if(context.variant && context.variant == 2){
+        <li class="page-item">
+            <a class="page-link" href="@@pageUrl?page=10">»</a>
+        </li>
+        }
+    </ul>
+    @@if (context.description) {
+    <div class="pagination__description-wrapper">
+        <p class="pagination__description">Показано с 1 по 15 из 42 (всего 3 страниц)</p>
+    </div>
+    }
+</nav>

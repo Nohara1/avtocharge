@@ -1,0 +1,205 @@
+.product-creation {
+  color: var(--white);
+  padding: 3.7rem 0;
+  margin: 8.9rem 0;
+  background-image: var(--linear-gradient);
+
+  @media ($desktop-max-xl) and ($desktop-min) {
+    margin: 4.9rem 0;
+  }
+  @media ($tablet-max) {
+    margin: 1rem 0 18rem;
+    padding: 4.1rem 0;
+  }
+  @media ($tablet-mad) {
+    padding: 3.5rem 0;
+    margin-bottom: 27.5%;
+  }
+
+  &__items {
+    align-items: flex-end;
+    @include row($gapB: 5rem);
+  }
+  &__item {
+    flex: 1 1 50%;
+    max-width: 50%;
+
+    @media ($tablet-max) {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+  }
+  &__inner {
+    &_images {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  &__heading {
+    color: inherit;
+    max-width: 700px;
+    font-weight: 700;
+    margin-bottom: 3.1rem;
+
+    @media ($tablet-mad) {
+      margin-bottom: 2.7rem;
+    }
+  }
+  // &__list {
+  // }
+  &__li {
+    display: flex;
+    font-size: 20px;
+    font-weight: 600;
+    align-items: center;
+    margin-bottom: 0.5rem;
+
+    @media ($desktop-max-xl) and ($desktop-min) {
+      font-size: 17px;
+      line-height: 1.25;
+      margin-bottom: 1rem;
+    }
+    @media ($tablet-mad) {
+      font-size: 16px;
+      margin-bottom: 1.8rem;
+      flex-direction: column;
+    }
+
+    strong {
+      width: 171px;
+      color: var(--primary-c);
+      height: 82px;
+      display: flex;
+      padding: 0 1em;
+      flex-wrap: wrap;
+      font-size: 36px;
+      text-align: center;
+      align-self: flex-start;
+      background: none center / contain no-repeat;
+      flex-shrink: 0;
+      font-weight: 900;
+      line-height: 0.5em;
+      align-items: center;
+      margin-right: 0.8em;
+      justify-content: center;
+
+      @media ($desktop-max-xl) and ($desktop-min) {
+        width: 151px;
+        font-size: 34px;
+      }
+      @media ($tablet-mad) {
+        margin-right: 0;
+        margin-bottom: 0.2em;
+      }
+
+      span {
+        display: contents;
+        font-size: 20px;
+
+        @media ($desktop-max-xl) and ($desktop-min), ($tablet-mad) {
+          font-size: 18px;
+        }
+      }
+    }
+    &:nth-child(2n + 1) {
+      strong {
+        background-image: url("../images/icons.svg#pc-shape-01");
+      }
+    }
+    &:nth-child(2n) {
+      strong {
+        background-image: url("../images/icons.svg#pc-shape-02");
+      }
+    }
+  }
+  &__images {
+    margin: 0 7rem 0 8.4rem;
+    display: inline-flex;
+    align-items: center;
+
+    @media ($desktop-max-xl) {
+      margin: 0 25% 0 15%;
+    }
+    @media ($tablet-max) {
+      transform: translateY(55%);
+    }
+    @media ($tablet-mad) {
+    }
+
+    input:checked {
+      &[id$="01"] {
+        @extend %pc-input-01-checked !optional;
+      }
+      &[id$="02"] {
+        @extend %pc-input-02-checked !optional;
+      }
+      &[id$="03"] {
+        @extend %pc-input-03-checked !optional;
+      }
+    }
+  }
+  &__iw {
+    flex: 0 1 33.3333%;
+    max-width: 33.3333%;
+
+    img {
+      width: 140px;
+      height: auto;
+      margin: 0 auto;
+      cursor: pointer;
+      position: relative;
+      max-width: 100%;
+      transition: z-index 0.5s, transform 0.5s;
+    }
+    &[for$="01"] {
+      order: 1;
+
+      img {
+        %pc-input-01-checked ~ & {
+          z-index: 10;
+          transform: rotate(-14.93deg) translate(-20.6%, -18.2%) scale(1.75);
+        }
+        %pc-input-02-checked ~ & {
+          transform: rotate(-14.93deg) translate(-62.5%, 2%) scale(0.98);
+        }
+        %pc-input-03-checked ~ & {
+          transform: rotate(-14.93deg) translate(-40%, 2%) scale(0.98);
+        }
+      }
+    }
+    &[for$="02"] {
+      order: 2;
+
+      img {
+        z-index: 1;
+
+        %pc-input-01-checked ~ & {
+          transform: translate(27%, -12.8%) scale(1.2);
+        }
+        %pc-input-02-checked ~ & {
+          z-index: 10;
+          transform: translate(0, -12.8%) scale(2.16);
+        }
+        %pc-input-03-checked ~ & {
+          transform: translate(-27.4%, -12.8%) scale(1.2);
+        }
+      }
+    }
+    &[for$="03"] {
+      order: 3;
+
+      img {
+        %pc-input-01-checked ~ & {
+          transform: rotate(14.71deg) translate(51.4%, -2.1%) scale(1.38);
+        }
+        %pc-input-02-checked ~ & {
+          transform: rotate(14.71deg) translate(78.5%, 0) scale(1.48);
+        }
+        %pc-input-03-checked ~ & {
+          z-index: 10;
+          transform: rotate(14.71deg) translate(34.3%, -10.4%) scale(2.1);
+        }
+      }
+    }
+  }
+}

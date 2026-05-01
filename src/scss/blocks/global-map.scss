@@ -1,0 +1,121 @@
+.global-map {
+  overflow: hidden;
+  // &__heading {
+  // }
+  // &__inner {
+  //   margin: 0 calc(15vw - 288px) 0 calc(35vw - 672px);
+  // }
+  &__map {
+    width: 100%;
+    position: relative;
+  }
+  &__image {
+    width: 100%;
+  }
+  &__pin {
+    cursor: pointer;
+    z-index: 1;
+    display: flex;
+    position: absolute;
+    transform: translate(-50%, -13px);
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+
+    &:hover {
+      z-index: 2;
+
+      @extend %global-map-pin-hover !optional;
+    }
+    // &_russia {
+    //   @extend %global-map-russia !optional;
+    // }
+    // &_quazaqstan {
+    //   @extend %global-map-quazaqstan !optional;
+    // }
+    // &_china {
+    //   @extend %global-map-china !optional;
+    // }
+  }
+  &__pin-icon {
+    width: 1.4375rem;
+    color: var(--primary-c);
+    height: 1.625rem;
+  }
+  &__pin-label {
+    top: 1.8rem;
+    color: var(--title-c);
+    cursor: pointer;
+    opacity: 0;
+    display: block;
+    padding: 3px 7px;
+    position: absolute;
+    font-size: 0.8rem;
+    max-width: 150px;
+    transform: translateY(0%);
+    text-align: center;
+    visibility: hidden;
+    transition:
+      opacity 0.3s,
+      visibility 0.3s,
+      transform 0.3s;
+    font-weight: 700;
+    line-height: 1.15;
+    white-space: nowrap;
+    border-radius: 3px;
+    pointer-events: none;
+    background-color: rgba(255, 255, 255, 0.5);
+
+    %global-map-pin-hover & {
+      opacity: 1;
+      transform: none;
+      transform: translateY(13%);
+      visibility: visible;
+    }
+
+    @media ($mobile-max) {
+      display: none;
+    }
+  }
+  // &__region {
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   opacity: 0;
+  //   display: block;
+  //   position: absolute;
+  //   transition: opacity 0.3s;
+  //   background: none center/contain no-repeat transparent;
+
+  //   &_russia {
+  //     %global-map-russia:hover ~ & {
+  //       opacity: 1;
+  //     }
+  //   }
+  //   &_qazaqstan {
+  //     %global-map-quazaqstan:hover ~ & {
+  //       opacity: 1;
+  //     }
+  //   }
+  //   &_china {
+  //     %global-map-china:hover ~ & {
+  //       opacity: 1;
+  //     }
+  //   }
+  // }
+  .global-map-svg {
+    color: var(--map-color);
+    width: 100%;
+    height: auto;
+
+    @media ($transition-min) {
+      transition: color 0.3s;
+
+      path:hover {
+        color: #eef2fe;
+        color: change-color($color: $primary-color, $lightness: 94%);
+      }
+    }
+  }
+}

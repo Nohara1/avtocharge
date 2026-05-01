@@ -1,0 +1,82 @@
+<form class="form" name="target" novalidate="" data-toggle-container="">
+  <h2 class="form__heading _heading _h3">Получите предложение конкретно для Вашего бизнеса</h2>
+  <div class="form__items active" data-target="first-step" data-step-container="">
+    <div class="form__item">
+      <label>
+        <span class="form__label _sr-only">Имя*</span>
+        <input class="form__input" type="text" name="name" value="" data-required="" placeholder="Имя*">
+        <span class="form__error-message"></span>
+      </label>
+    </div>
+    <div class="form__item">
+      <label>
+        <span class="form__label _sr-only">Телефон*</span>
+        <input class="form__input" type="tel" name="phone" value="" data-required="" placeholder="Телефон*">
+        <span class="form__error-message"></span>
+      </label>
+    </div>
+    <div class="form__item">
+      <label>
+        <span class="form__label _sr-only">Email*</span>
+        <input class="form__input" type="email" name="email" value="" data-required="" placeholder="Email*">
+        <span class="form__error-message"></span>
+      </label>
+    </div>
+    <div class="form__item form__item_big-gap">
+      <label class="form__personal">
+        <input class="form__checkbox" type="checkbox" name="agree" data-required="">
+        <span class="form__label">Согласен(а) с условиями <a href="files/test.pdf" target="_blank">политики обработки
+            персональных данных</a></span>
+      </label>
+    </div>
+    <div class="form__item">
+      <div class="form__buttons-wrapper">
+        <button class="form__button _btn _btn--white" type="button" name="second-step" data-toggle="second-step">Далее</button>
+      </div>
+    </div>
+  </div>
+  <div class="form__items" data-target="second-step">
+    <div class="form__item">
+      <p class="form__description">Обязательно заполните форму</p>
+    </div>
+    <div class="form__item">
+      <label>
+        <span class="form__label _sr-only">Укажите Ваш сайт или социальную сеть*</span>
+        <input class="form__input" type="text" name="website" value="" data-required="" placeholder="Укажите Ваш сайт или социальную сеть*">
+        <span class="form__error-message"></span>
+      </label>
+    </div>
+    <div class="form__item">
+      <label>
+        <span class="form__label _sr-only">Укажите Ваш основной продукт</span>
+        <textarea class="form__input" name="product" placeholder="Укажите Ваш основной продукт"></textarea>
+      </label>
+    </div>
+    <div class="form__item">
+      <label>
+        <span class="form__label _sr-only">Какие рекламные каналы используете</span>
+        <select class="form__select" name="advchannels">
+          <option value="" selected="">Какие рекламные каналы используете</option>
+          <option value="Контекстная реклама">Контекстная реклама</option>
+          <option value="Таргетированная реклама">Таргетированная реклама</option>
+          <option value="Email маркетинг">Email маркетинг</option>
+          <option value="Не продвигаемся">Не продвигаемся</option>
+        </select>
+        <span class="form__error-message"></span>
+      </label>
+    </div>
+    <div class="form__item">
+      <label>
+        <span class="form__label _sr-only">Таргет: Цель рекламы</span>
+        <input class="form__input" type="text" name="goal" value="" data-required="" placeholder="Таргет: Цель рекламы">
+        <span class="form__error-message"></span>
+      </label>
+    </div>
+    <div class="form__item">
+      <div class="form__buttons-wrapper">
+        <button class="form__button _btn _btn--white" type="button" name="first-step" data-toggle="first-step">Назад</button>
+        <button class="form__button _btn" type="submit" name="submit">Получить консультацию</button>
+      </div>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,80 @@
+.payment-and-delivery {
+  padding: 4rem 0;
+
+  %breadcrumbs + & {
+    padding-top: 0;
+  }
+  @media ($tablet-mad) {
+    padding: 2rem 0;
+
+    %breadcrumbs + & {
+      padding-top: 0.5rem;
+    }
+  }
+
+  &__heading {
+    @media ($tablet-mid) {
+      margin-bottom: 3.1rem;
+    }
+    @media ($tablet-mad) {
+      margin-bottom: 2.7rem;
+    }
+  }
+  &__items {
+    @include row($gapB: 1.875rem, $gapL: 1.875rem);
+  }
+  &__item {
+    flex: 1 1 50%;
+    max-width: 50%;
+
+    @media ($tablet-mad) {
+      max-width: 100%;
+      flex-basis: 100%;
+    }
+  }
+  &__inner {
+    color: var(--white);
+    height: 100%;
+    padding: 2rem 4rem 3rem;
+    font-size: 18px;
+    line-height: 1.38;
+    border-radius: 5px;
+    background-color: var(--primary-c);
+
+    @media ($tablet-max) {
+      font-size: 16px;
+      padding: 2.7rem 2.5rem 3rem;
+    }
+
+    > * + * {
+      margin-top: 1.9rem;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+
+      li {
+        & + li {
+          margin-top: 0.9rem;
+        }
+        svg {
+          margin-right: 0.37em;
+        }
+      }
+    }
+  }
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.25;
+
+    @media ($tablet-max) {
+      font-size: 22px;
+    }
+
+    svg {
+      margin-right: 0.2em;
+      vertical-align: -0.2em;
+    }
+  }
+}

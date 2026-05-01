@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Проекты</title>
+  <meta name="description" content="Описание заглушка, заменить!">
+
+  <link rel="icon" type="image/png" href="/images/favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg" />
+<link rel="shortcut icon" href="/images/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="MyWebSite" />
+<link rel="manifest" href="/images/favicon/site.webmanifest" />
+
+  <!-- base preloads -->
+  <link rel="preload" href="images/placeholder.png" as="image">
+  <link rel="preload" href="fonts/ppneuemontreal_500.woff2" as="font" type="font/woff2" crossorigin="">
+
+  
+
+  <link media="screen" rel="stylesheet" href="styles/styles.min.css">
+  <!-- need to be hidden -->
+  <link media="screen" rel="stylesheet" href="files/jquery-ui.min.css" fetchpriority="low">
+  <link media="screen" rel="stylesheet" href="files/msearch2/default.css" fetchpriority="low">
+
+  <script src="scripts/main.js" async fetchpriority="high"></script>
+  <script src="scripts/slider.js" async></script>
+  <script src="scripts/inputmask.js" async fetchpriority="low"></script>
+  <script src="scripts/tippy.js" async></script>
+
+  <noscript>
+  <style>
+    
+    .collapse__tabpanel {
+      opacity: 1;
+      max-height: none;
+      visibility: visible;
+    }
+    [data-animate] {
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+    [data-animate="appearing"] {
+      transform: none !important;
+    }
+  </style>
+</noscript>
+</head>
+
+<body>
+  <div class="wrapper">
+    
+
+
+
+
+<header class="header h">
+  <div class="container">
+    <div class="h__mobile">
+      
+      <button class="h__callback text-icon" type="button" data-open-popup="request-a-call" aria-label="Заказать звонок">
+        <svg class="text-icon__icon" width="18" height="18"><use href="images/icons.svg#phone"></use></svg>
+      </button>
+      <a class="logo" href="/" aria-label="Логотип blackstage.by">
+  <img src="images/logo.png" alt='Логотип blackstage.by' width="130" height="48" decoding="async">
+</a>
+      <button class="burger" type="button">
+  <span></span><span></span><span></span><span></span><span class="_sr-only">Меню</span>
+</button>
+    </div>
+    <div class="h__navigation">
+      <a class="logo" href="/" aria-label="Логотип blackstage.by">
+  <img src="images/logo.png" alt='Логотип blackstage.by' width="130" height="48" decoding="async">
+</a>
+      
+      <nav class="h__links">
+        <ul class="h__links-list">
+          <li class="h__li">
+            <a href="about" class="h__link">
+              О компании
+            </a>
+          </li>
+          <li class="h__li _hto">
+            <div class="h__buttons">
+              <a href="/catalog" class="h__link" >Услуги</a>
+              <button class="h__collapse" type="button" name="button-collapse" aria-label="Развернуть/свернуть меню">
+                <svg class="h__collapse-image" width="16" height="16">
+                  <use href="images/icons.svg#chevron_down"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="h__menu _hto__target">
+              <nav class="catalog">
+  <div class="catalog__list">
+    <ul class="catalog__list-inner">
+      <li class="catalog__li">
+        <a href="usluga-it" class="catalog__link">Прокат оборудования</a>
+      </li>
+      <li class="catalog__li">
+        <a href="usluga-1c" class="catalog__link">Техническое сопровождение</a>
+      </li>
+      <li class="catalog__li">
+        <a href="clients" class="catalog__link">Дизайн и продакшн</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+            </div>
+          </li>
+          <li class="h__li _hto">
+            <div class="h__buttons">
+              <a href="/project" class="h__link">Проекты</a>
+              <button class="h__collapse" type="button" name="button-collapse" aria-label="Развернуть/свернуть меню">
+                <svg class="h__collapse-image" width="16" height="16">
+                  <use href="images/icons.svg#chevron_down"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="h__menu _hto__target">
+              <nav class="catalog">
+  <div class="catalog__list">
+    <ul class="catalog__list-inner">
+      <li class="catalog__li">
+        <a href="usluga-it" class="catalog__link">Прокат оборудования</a>
+      </li>
+      <li class="catalog__li">
+        <a href="usluga-1c" class="catalog__link">Техническое сопровождение</a>
+      </li>
+      <li class="catalog__li">
+        <a href="clients" class="catalog__link">Дизайн и продакшн</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+            </div>
+          </li>
+          <li class="h__li">
+            <a href="contacts" class="h__link">
+              Контакты
+            </a>
+          </li>
+          <li class="h__li">
+            <a href="blog" class="h__link">
+              Новости
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- <div class="h__info">
+       
+      </div> -->
+      <button class="h__callback _btn _btn--transparent _btn--expandable" type="button" data-open-popup="request-a-call">
+        <svg width="17" height="17" aria-hidden="true">
+          <use href="images/icons.svg#phone"></use>
+        </svg>
+        <span>Заказать звонок</span>
+      </button>
+      <div class="h__info _hto">
+        
+        <div class="messengers">
+  
+  
+  
+  <div class="messengers__phones ">
+    <div class="messengers__phone-wrapper">
+      
+      <a href="tel:<span>7 (846) 205-13-12</span>"
+        class="messengers__phone" target="_blank">
+        <svg width="35" height="35" aria-hidden="true">
+          <use href="images/icons.svg#phone"></use>
+        </svg>
+        <span>7 (846) 205-13-12</span></a>
+      
+    </div>
+  </div>
+</div>
+        <div class="email " >
+  <a class="email-icon text-icon" href="mailto:info@gmail.com" target="_blank">
+    <svg class="text-icon__icon" width="18" height="18">
+      <use href="images/icons.svg#email"></use>
+    </svg><span>info@gmail.com</span>
+  </a>
+</div>
+        <div class="socials ">
+  
+  
+  
+  
+  
+  <a href="https://www.viber.com/ru/" class="socials__link _btn _btn--square" target="_blank" aria-label="Viber" data-tippy-content="Viber">
+    <svg width="14" height="14" aria-hidden="true">
+      <use href="images/icons.svg#viber"></use>
+    </svg>
+  </a>
+  <a href="https://www.whatsapp.com/" class="socials__link _btn _btn--square" target="_blank" aria-label="WhatsApp" data-tippy-content="WhatsApp">
+    <svg width="14" height="14" aria-hidden="true">
+      <use href="images/icons.svg#whatsapp"></use>
+    </svg>
+  </a>
+  
+</div>  
+        <a class="phone text-icon" href="tel:78462051312">
+  <span>+ 7 (846) 205-13-12</span>
+  <button class="h__collapse" type="button" name="button-collapse" aria-label="Развернуть/свернуть меню">
+    <svg class="h__collapse-image" width="16" height="16">
+      <use href="images/icons.svg#chevron_down"></use>
+    </svg>
+  </button>
+</a>
+        <div class="_hto__target">
+          <div class="email email__target" >
+  <a class="email-icon text-icon" href="mailto:info@gmail.com" target="_blank">
+    <svg class="text-icon__icon" width="18" height="18">
+      <use href="images/icons.svg#email"></use>
+    </svg><span>info@gmail.com</span>
+  </a>
+</div>
+          <div class="socials socials__target">
+  
+  
+  
+  
+  
+  <a href="https://www.viber.com/ru/" class="socials__link _btn _btn--square" target="_blank" aria-label="Viber" data-tippy-content="Viber">
+    <svg width="14" height="14" aria-hidden="true">
+      <use href="images/icons.svg#viber"></use>
+    </svg>
+  </a>
+  <a href="https://www.whatsapp.com/" class="socials__link _btn _btn--square" target="_blank" aria-label="WhatsApp" data-tippy-content="WhatsApp">
+    <svg width="14" height="14" aria-hidden="true">
+      <use href="images/icons.svg#whatsapp"></use>
+    </svg>
+  </a>
+  
+</div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</header>
+
+
+    <div class="background">
+    <img src="images/background/background-2.png" width="860" height="860" alt="">
+    <img src="images/background/background-1.png" width="860" height="860" alt="">
+</div>
+
+    <nav class="breadcrumbs crumbs">
+  <div class="container">
+    <div class="crumbs__list-wrapper">
+      <ol class="crumbs__list" itemscope itemtype="https://schema.org/BreadcrumbList">
+        
+        
+          
+            <li class="crumbs__li" itemscope itemprop="itemListElement" itemtype="https://schema.org/ListItem">
+              <a class="crumbs__link" href="/" itemprop="item">
+                <span itemprop="name">Главная</span>
+                <meta itemprop="position" content="1">
+              </a>
+            </li>
+          
+            <li class="crumbs__li" itemscope itemprop="itemListElement" itemtype="https://schema.org/ListItem">
+              <a class="crumbs__link" href="/blog" itemprop="item">
+                <span itemprop="name">Проекты</span>
+                <meta itemprop="position" content="2">
+              </a>
+            </li>
+          
+          
+            <li class="crumbs__li" itemscope itemprop="itemListElement" itemtype="https://schema.org/ListItem">
+              <span class="crumbs__link" itemprop="item">
+                <span itemprop="name">Название проекта</span>
+                <meta itemprop="position" content="3">
+              </span>
+            </li>
+          
+        
+      </ol>
+    </div>
+  </div>
+</nav>
+
+    <section class="two-components tc tc_full tc_banner" >
+  <div class="container">
+    
+<h2 class="tc__heading _heading _h2">
+  Прокат оборудования
+</h2>
+
+    
+    <div class="tc__wrapper">
+      <div class="tc__items">
+        
+        <div class="tc__item">
+          
+          <video class="video-content" poster="images/uslugi/uslugi3.png" playsinline loop muted autoplay width="1620" height="726">
+    <source src="videos/content-1.mp4" type="video/mp4" />
+    <a href="videos/content-1.mp4" targte="_blank" download>Download the MP4 video.</a>
+</video>
+          
+        </div>
+        
+        
+        <div class="tc__item">
+          
+          
+<div class="_cc">
+  <p>Lorem ipsum dolor sit amet consectetur. Pellentesque dictumst diam lorem fusce penatibus. Egestas venenatis ac eget scelerisque a enim tellus eu mollis. Nulla eget nibh id integer facilisi vulputate. Etiam auctor eu porta faucibus cursus morbi. Euismod arcu proin varius eget nibh diam lacus duis nulla. Dictum aenean convallis in ultrices ut. Lacinia hac aliquet dolor semper.</p><p>Lorem ipsum dolor sit amet consectetur. Pellentesque dictumst diam lorem fusce penatibus. Egestas venenatis ac eget scelerisque a enim tellus eu mollis. Nulla eget nibh id integer facilisi vulputate. Etiam auctor eu porta faucibus cursus morbi. Euismod arcu proin varius eget nibh diam lacus duis nulla. Dictum aenean convallis in ultrices ut. Lacinia hac aliquet dolor semper.</p>
+</div>
+
+          
+        </div>
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+    <div class="inner-items ii _section_no-gap _section">
+  <div class="container">
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="ii__items ii__items_3-cols">
+      <div class="image image_gallery">
+  <p class="image__wrapper _iw
+    
+     _iw--horizontal"
+     role="button" data-gallery="cert" tabindex="0" >
+    <img src="images/content/content-3.jpg" alt="благодарность от Колорит трейд" srcset="images/placeholder.png"
+      data-srcset="images/content/content-3.jpg" width="520" 
+      height="340"  decoding="async">
+      
+  </p>
+  
+  
+</div><div class="image image_gallery">
+  <p class="image__wrapper _iw
+    
+     _iw--horizontal"
+     role="button" data-gallery="cert" tabindex="0" >
+    <img src="images/content/content-3.jpg" alt="благодарность от Колорит трейд" srcset="images/placeholder.png"
+      data-srcset="images/content/content-3.jpg" width="520" 
+      height="340"  decoding="async">
+      
+  </p>
+  
+  
+</div><div class="image image_gallery">
+  <p class="image__wrapper _iw
+    
+     _iw--horizontal"
+     role="button" data-gallery="cert" tabindex="0" >
+    <img src="images/content/content-3.jpg" alt="благодарность от Колорит трейд" srcset="images/placeholder.png"
+      data-srcset="images/content/content-3.jpg" width="520" 
+      height="340"  decoding="async">
+      
+  </p>
+  
+  
+</div><div class="image image_gallery">
+  <p class="image__wrapper _iw
+    
+     _iw--horizontal"
+     role="button" data-gallery="cert" tabindex="0" >
+    <img src="images/content/content-3.jpg" alt="благодарность от Колорит трейд" srcset="images/placeholder.png"
+      data-srcset="images/content/content-3.jpg" width="520" 
+      height="340"  decoding="async">
+      
+  </p>
+  
+  
+</div><div class="image image_gallery">
+  <p class="image__wrapper _iw
+    
+     _iw--horizontal"
+     role="button" data-gallery="cert" tabindex="0" >
+    <img src="images/content/content-3.jpg" alt="благодарность от Колорит трейд" srcset="images/placeholder.png"
+      data-srcset="images/content/content-3.jpg" width="520" 
+      height="340"  decoding="async">
+      
+  </p>
+  
+  
+</div><div class="image image_gallery">
+  <p class="image__wrapper _iw
+    
+     _iw--horizontal"
+     role="button" data-gallery="cert" tabindex="0" >
+    <img src="images/content/content-3.jpg" alt="благодарность от Колорит трейд" srcset="images/placeholder.png"
+      data-srcset="images/content/content-3.jpg" width="520" 
+      height="340"  decoding="async">
+      
+  </p>
+  
+  
+</div>
+    </div>
+    
+    
+    
+    
+  </div>
+  
+</div>
+
+    
+<footer class="footer f _section">
+  <div class="container">
+    <div class="f__items">
+      <div class="f__item">
+        <div class="f__inner">
+          
+            <div class="f__logo">
+              <img src="images/logo.png" alt='black stage' width="150" height="50" loading="lazy" decoding="async">
+            </div>
+            
+          <div class="f__info">
+            <p>ООО "Название" <br>
+              УНП 6319707412</p>
+          </div>
+          <div class="socials ">
+  <a href="https://www.facebook.com/" class="socials__link _btn _btn--square" target="_blank" aria-label="Facebook" data-tippy-content="Facebook">
+    <svg width="14" height="14" aria-hidden="true">
+      <use href="images/icons.svg#facebook"></use>
+    </svg>
+  </a>
+  
+  <a href="https://www.instagram.com/" class="socials__link _btn _btn--square" target="_blank" aria-label="Instagram" data-tippy-content="Instagram">
+    <svg class="svg-instagram" width="14" height="14" aria-hidden="true">
+      <use href="images/icons.svg#instagram"></use>
+    </svg>
+  </a>
+  
+  <a href="https://t.me/" class="socials__link _btn _btn--square" target="_blank" aria-label="Telegram" data-tippy-content="Telegram">
+    <svg width="14" height="14" aria-hidden="true">
+      <use href="images/icons.svg#telegram"></use>
+    </svg>
+  </a>
+  
+  
+  
+</div>
+          
+        </div>
+      </div>
+      <div class="f__item">
+        <nav class="f__inner">
+          <span class="f__heading">Услуги</span> 
+            <ul class="f__links-list">
+              <li class="f__li">
+                <a href="country" class="f__link">Прокат оборудования</a>
+              </li>
+              <li class="f__li">
+                <a href="service" class="f__link">Техническое сопровождение</a>
+              </li>
+              <li class="f__li">
+                <a href="service" class="f__link">Дизайн и продакшн</a>
+              </li>
+            </ul>
+        </nav>
+      </div>
+      <div class="f__item">
+        <nav class="f__inner">
+          <span class="f__heading">Проекты</span> 
+            <ul class="f__links-list">
+              <li class="f__li">
+                <a href="service" class="f__link">Телевидение</a>
+              </li>
+              <li class="f__li">
+                <a href="service" class="f__link">Телевидение</a>
+              </li>
+              <li class="f__li">
+                <a href="service" class="f__link">Концерты</a>
+              </li>
+              <li class="f__li">
+                <a href="service" class="f__link">Туры</a>
+              </li>
+              <li class="f__li">
+                <a href="service" class="f__link">Корпоративы</a>
+              </li>
+            </ul>
+        </nav>
+      </div>
+      
+      
+      <div class="f__item">
+        <div class="f__inner">
+          <span class="f__heading">Контакты</span> 
+          
+          
+          <div class="messengers">
+  
+  
+  
+  <div class="messengers__phones ">
+    <div class="messengers__phone-wrapper">
+      
+      <a href="tel:<span>8 (996) 955-13-12</span>"
+        class="messengers__phone" target="_blank">
+        <svg width="35" height="35" aria-hidden="true">
+          <use href="images/icons.svg#phone"></use>
+        </svg>
+        <span>8 (996) 955-13-12</span></a>
+      
+    </div>
+  </div>
+</div>
+          <div class="schedule text-icon">
+  <svg class="text-icon__icon" width="18" height="18">
+    <use href="images/icons.svg#clock"></use>
+  </svg><span>пн-пт: 9.00 - 18.00, сб - вс: выходной</span>
+</div>
+          <div class="address text-icon">
+  <svg class="text-icon__icon" width="16" height="16">
+    <use href="images/icons.svg#location"></use>
+  </svg><span>г. Минск, ул. Уличная, оф. 11</span>
+</div>
+          <div class="email " >
+  <a class="email-icon text-icon" href="mailto:info@gmail.com" target="_blank">
+    <svg class="text-icon__icon" width="18" height="18">
+      <use href="images/icons.svg#email"></use>
+    </svg><span>info@gmail.com</span>
+  </a>
+</div>
+          
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <aside class="developers devs">
+  <div class="container">
+    
+    <div class="devs__items">
+      <div class="devs__item">
+        <p>Разработка сайта
+          <a class="devs__logo" href="https://cweb.by/" rel="nofollow" target="_blank">
+            <span class="_sr-only">cweb.by</span>
+            <svg width="55" height="17" aria-hidden="true">
+              <use href="images/icons.svg#cweb_logo"></use>
+            </svg>
+          </a>
+        </p>
+      </div>
+      
+    </div>
+  </div>
+</aside>
+</footer>
+  </div>
+  <aside class="popups-wrapper" aria-label="Всплывающие окна">
+  
+<article id="request-a-call" class="popup"
+  
+  
+  >
+  <div class="popup__inner">
+    <button class="popup__close" type="button" name="popup-close">
+      <span class="_sr-only">Закрыть всплывающее окно</span>
+    </button>
+    <form class="form" name="request-a-call" novalidate="">
+  <div class="form__items">
+    <div class="form__item">
+      <h2 class="form__heading _heading _h2">
+        Заказать обратный звонок
+      </h2>
+      
+    </div>
+    <div class="form__item">
+      <label>
+        <span class="form__label _sr-only">Имя*</span>
+        <input class="form__input" type="text" name="name" value="" data-required="" placeholder="Имя*">
+        <span class="form__error-message"></span>
+      </label>
+    </div>
+    
+    <div class="form__item">
+      <label>
+        <span class="form__label _sr-only">Телефон*</span>
+        
+        <input class="form__input" type="tel" name="phone" value="" data-required="" placeholder="Телефон*">
+        <span class="form__error-message"></span>
+      </label>
+    </div>
+    
+    
+    <div class="form__item form__item_big-gap">
+      
+      <label class="form__personal">
+        <input class="form__checkbox" type="checkbox" name="agree" data-required="">
+        <span class="form__label">Нажимая на кнопку, я даю согласие на <a href="files/test.pdf" target="_blank">обработку персональных данных</a>
+          и соглашаюсь c <a href="files/test.pdf" target="_blank">политикой конфиденциальности.</a></span>
+      </label>
+    </div>
+    <div class="form__item form__item_big-gap">
+      <div class="form__buttons-wrapper">
+        
+        <button class="form__button _btn _btn--primary" type="submit" name="submit">Получить консультацию</button>
+        
+      </div>
+    </div>
+    
+  </div>
+</form>
+    
+  </div>
+</article>
+
+<article id="thank-you" class="popup"
+  
+  
+  >
+  <div class="popup__inner">
+    <button class="popup__close" type="button" name="popup-close">
+      <span class="_sr-only">Закрыть всплывающее окно</span>
+    </button>
+    <form class="form" name="thank-you" novalidate="">
+  <div class="form__items">
+    <div class="form__item">
+      <p class="form__heading _heading _h2">Спасибо!</p>
+    </div>
+    <div class="form__item _centered">
+      <span class="form__label">Наш менеджер свяжется с Вами в течении 10 минут.</span>
+    </div>
+    <div class="form__item">
+      <div class="form__buttons-wrapper">
+        <button class="form__button _btn _btn--primary" type="submit" name="submit">Отлично</button>
+      </div>
+    </div>
+  </div>
+</form>
+    
+  </div>
+</article>
+
+  
+</aside>
+
+<button class="scroll-top st" type="button" aria-label="Вверх">
+  <span class="st__inner">
+    <svg class="st__progress" width="74" height="74" viewBox="0 0 54 54" fill="none"
+      xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect class="st__path" x="5" y="5" width="45" height="45" rx="45" stroke="currentColor" stroke-width="2"
+        stroke-miterlimit="16" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="190"
+        stroke-dashoffset="190" />
+    </svg>
+    <svg class="st__arrow" width="24" height="24" aria-hidden="true">
+      <use href="images/icons.svg#arrow"></use>
+    </svg>
+  </span>
+  
+</button>
+<svg xmlns="http://www.w3.org/2000/svg" class="_sr-only" aria-hidden="true"><defs><linearGradient id="instagram-fill" x1="2.23374" y1="27.7663" x2="27.272" y2="2.72802" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#E09B3D"/><stop offset="0.3" stop-color="#C74C4D"/><stop offset="0.6" stop-color="#C21975"/><stop offset="1" stop-color="#7024C4"/></linearGradient><filter id="baBlur" width="200%" height="200%" x="-50%" y="-50%" color-interpolation-filters="sRGB"><feGaussianBlur in="SourceGraphic" stdDeviation="30" /></filter></defs></svg>
+<!-- remove on production -->
+<script>const serviceWidget=document.createElement("div");serviceWidget.style="left:10px;color:#fff;bottom:10px;opacity:0.5;padding:5px 10px;position:fixed;text-align:center;border-radius:5px;text-transform:uppercase;background-color:#000;z-index:9999;cursor:default";applyDimensions(serviceWidget);document.body.appendChild(serviceWidget);window.addEventListener("resize", function(){applyDimensions(serviceWidget);},{passive: true});function applyDimensions(elem){elem.textContent=window.innerWidth + " x " + window.innerHeight;}</script>
+<!-- remove on production -->
+</body>
+
+</html>

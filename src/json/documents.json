@@ -1,0 +1,22 @@
+[
+  {
+    "icon": "pdf",
+    "title": "Название документа",
+    "link": "files/test.pdf"
+  },
+  {
+    "icon": "pdf",
+    "title": "Очень длинное название документа не вмещающееся в одну строку",
+    "link": "files/test.pdf"
+  },
+  {
+    "icon": "pdf",
+    "title": "Название документа",
+    "link": "files/test.pdf"
+  },
+  {
+    "icon": "pdf",
+    "title": "Название инструкции",
+    "link": "files/test.pdf"
+  }
+]

@@ -1,0 +1,12 @@
+<div class="cs__slide cs__slide_video">
+  @@if(context.videoId){
+    @@include('./src/html/components/video.html', {
+      'id': '@@videoId',
+      'styled': '@@if(context.styled){@@styled}',
+      'width': '@@if(context.width){@@width}@@if(!context.width){400}',
+      'height': '@@if(context.height){@@height}@@if(!context.height){224}',
+      'title': '@@if(context.title){@@title}',
+      'text': '@@if(context.text){@@text}'
+    })
+  }
+</div>

@@ -1,0 +1,38 @@
+.banner-project {
+  color: inherit;
+  display: inline-block;
+  padding: 20px 2.8125rem;
+  max-width: 100%;
+  font-weight: 700;
+  background-color: change-color($color: $white, $alpha: 0.3);
+
+  @media ($tablet-mad) {
+    padding-bottom: 34px;
+  }
+
+  &__title {
+    font-size: 24px;
+
+    @media ($tablet-mad) {
+      font-size: 20px;
+    }
+  }
+  &__description {
+    margin-top: 1rem;
+  }
+  &__properties {
+    font-size: 20px;
+    margin-top: 0;
+    @include row($margin: true);
+
+    @media ($tablet-mad) {
+      font-size: 18px;
+    }
+  }
+  // &__property {}
+  &__button {
+    margin-top: 1rem;
+  }
+
+  @extend %banner-project !optional;
+}

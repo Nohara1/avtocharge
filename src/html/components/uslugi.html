@@ -1,0 +1,12 @@
+<div class="uslugi us">
+    <div class="us__inner">
+        <div class="us__content">
+            @@if(context.title){<p class="us__heading _heading _h2">@@title</p>}
+            @@if(context.text){<div class="us__text">@@text</div>}
+            @@if(context.link){<a class="us__btn _btn _btn--circle" href="@@link">
+            <svg class="us__arrow" width="32" height="24" aria-hidden="true">
+                <use href="images/icons.svg#arrow"></use>
+              </svg></a>}
+        </div>
+    </div>
+</div>

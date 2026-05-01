@@ -1,0 +1,15 @@
+<div class="card-country ccy">
+  <div class="ccy__inner" style="background-image: url('images/placeholder-transparent.png');" data-background="@@background">
+    @@if(context.image){
+    <p class="_iw">
+      <img src="@@image" alt="@@title" srcset="images/placeholder.png" data-srcset="@@image"
+        width="527" height="383" decoding="async">
+    </p>
+    }
+    <p class="ccy__title _title">@@title</p>
+    <div class="ccy__extra">
+      <p class="ccy__price">@@price</p>
+      <a href="@@url" class="ccy__button _btn _btn--pseudo" data-title="Подробнее">@@title</a>
+    </div>
+  </div>
+</div>

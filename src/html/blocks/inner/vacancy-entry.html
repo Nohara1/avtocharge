@@ -1,0 +1,25 @@
+<div class="vacancy-entry">
+  <div class="container">
+    <main class="vacancy-entry__inner">
+      <header class="vacancy-entry__heading-wrapper">
+        <h1 class="vacancy-entry__heading _heading _h2">@@heading</h1>
+      </header>
+      @@if(context.date){<p class="vacancy-entry__date">@@date</p>}
+      @@if(context.description){
+      <div class="vacancy-entry__description _cc">
+        @@description
+      </div>
+      }
+      @@if(context.hasMainImage){
+      <p class="vacancy-entry__iw _iw">
+        <img class="vacancy-entry__image" src="@@imageSrc" srcset="images/placeholder.png" data-srcset="@@imageSrc"
+          alt="@@title" width="1150" height="616">
+          @@if(context.tag){@@include('./src/html/components/tag-badge.html', { 'tag': '@@tag' })}
+      </p>
+      }
+      <div class="vacancy-entry__content _cc">
+        @@contents
+      </div>
+    </main>
+  </div>
+</div>

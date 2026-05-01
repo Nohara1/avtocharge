@@ -1,0 +1,52 @@
+.files-catalog {
+  // &__heading {}
+  &__items {
+    @include row(3.125rem, 4.375rem);
+  }
+  &__item {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  &__title {
+    color: var(--text-c);
+    margin-bottom: 20px;
+
+    @extend %files-catalog-title !optional;
+  }
+  &__lis {
+    @include row(10px, 4.375rem);
+  }
+  &__li {
+    flex: 1 1 33.3333%;
+    max-width: 33.3333%;
+
+    @media ($desktop-max) and ($tablet-mid) {
+      max-width: 50%;
+      flex-basis: 50%;
+    }
+    @media ($tablet-mad) {
+      max-width: 100%;
+      flex-basis: 100%;
+    }
+
+    @extend %files-catalog-list-item !optional;
+  }
+  &__link {
+    color: var(--text-c);
+    border: 1px solid var(--text-l);
+    display: flex;
+    padding: 8px 20px;
+    line-height: 1.35;
+    align-items: center;
+    border-radius: 3px;
+    text-decoration: none;
+
+    svg {
+      color: var(--primary-c);
+      // align-self: flex-start;
+      margin-right: 20px;
+    }
+  }
+
+  @extend %files-catalog !optional;
+}

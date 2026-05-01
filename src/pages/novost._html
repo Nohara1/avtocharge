@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./src/html/page/head.html', {
+  "title": "Название статьи",
+})
+
+<body>
+  <div class="wrapper">
+    @@include('./src/html/page/header.html', { 'variant': 4 })
+
+    @@include('./src/html/components/breadcrumbs.html', {
+      'jsonPath': '../json/breadcrumbs/novost.json'
+    })
+
+    @@include('./src/html/blocks/inner/blog-entry.html', {
+      'heading': 'Название статьи',
+      'hasMainImage': false,
+      'imageSrc': 'images/blog/blog-content-01.jpg',
+      'link': '/magniya-citrat-bezvodnyy',
+      'date': '',
+      'tag': '',
+      'description': '',
+      'relatedProduct': '',
+      'contents': '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci. Integer cursus, dui at blandit facilisis, sem orci sagittis nunc, vel posuere neque nulla a massa. Sed eget ante ultricies, scelerisque dolor nec, tincidunt arcu. Phasellus sit amet leo eros. Nulla ac tortor at sapien accumsan tempor non sed mi. Ut at nisi porta, feugiat neque ut, ultricies quam. Maecenas venenatis dolor sed leo hendrerit, id imperdiet nisi laoreet. Pellentesque et nulla commodo, feugiat nisl finibus, posuere ante. Vivamus non lacus nulla. Curabitur lobortis, dolor sit amet efficitur fringilla, velit mi bibendum arcu, eget euismod magna purus eget turpis. Phasellus felis augue, suscipit molestie tempor in, dictum non est. Nam a ante convallis, posuere enim at, pretium est. Nulla iaculis eros nulla, quis gravida lorem venenatis ac.</p><h2>Заголовок 1</h2><p>Nam vulputate arcu at sapien posuere, in dictum metus ultrices.Suspendisse massa nibh, tristique vel mattis eu, auctor ut purus.Praesent suscipit massa ac tristique pulvinar.In hac habitasse platea dictumst.Nunc a tellus eros.Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.Aenean lobortis a orci vel commodo.Vivamus vitae turpis in est dictum suscipit id in libero.Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.Nam diam leo, hendrerit sit amet venenatis et, blandit vitae nibh.Integer in orci.</p><p><img src="images/blog/blog-content-01.jpg" alt="описание изображения" width="1219" height="506" loading="lazy" decoding="async"></p><h3>Заголовок 2</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci. Integer cursus, dui at blandit facilisis, sem orci sagittis nunc, vel posuere neque nulla a massa. Sed eget ante ultricies, scelerisque dolor nec, tincidunt arcu. Phasellus sit amet leo eros. Nulla ac tortor at sapien accumsan tempor non sed mi. Ut at nisi porta, feugiat neque ut, ultricies quam. Maecenas venenatis dolor sed leo hendrerit, id imperdiet nisi laoreet. Pellentesque et nulla commodo, feugiat nisl finibus, posuere ante. Vivamus non lacus nulla. Curabitur lobortis, dolor sit amet efficitur fringilla, velit mi bibendum arcu, eget euismod magna purus eget turpis. Phasellus felis augue, suscipit molestie tempor in, dictum non est. Nam a ante convallis, posuere enim at, pretium est. Nulla iaculis eros nulla, quis gravida lorem venenatis ac.</p><p>Nam vulputate arcu at sapien posuere, in dictum metus ultrices.Suspendisse massa nibh, tristique vel mattis eu, auctor ut purus.Praesent suscipit massa ac tristique pulvinar.In hac habitasse platea dictumst.Nunc a tellus eros.Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.Aenean lobortis a orci vel commodo.Vivamus vitae turpis in est dictum suscipit id in libero.Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.Nam diam leo, hendrerit sit amet venenatis et, blandit vitae nibh.Integer in orci.</p>',
+      'hasRelatedBlogs': true,
+      'hasRelatedProducts': false
+    })
+
+    @@include('./src/html/page/footer.html')
+  </div>
+  @@include("./src/html/page/body-bottom.html")
+</body>
+
+</html>

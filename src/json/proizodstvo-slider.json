@@ -1,0 +1,57 @@
+[
+  {
+    "link": "portfolio-entry",
+    "imageSrc": "images/additional/proizodstvo-01.jpg",
+    "type": "image",
+    "title": "",
+    "tag": "",
+    "text": "",
+    "product": false,
+    "button": false,
+    "prTitle": "",
+    "prLink": "",
+    "prImageSrc": "",
+    "c01": true,
+    "c02": false,
+    "c03": false,
+    "c04": false
+  },
+  {
+    "link": "portfolio-entry",
+    "imageSrc": "images/additional/proizodstvo-02.jpg",
+    "type": "image",
+    "title": "",
+    "tag": "",
+    "text": "",
+    "product": false,
+    "button": false,
+    "prTitle": "",
+    "prLink": "",
+    "prImageSrc": "",
+    "c01": true,
+    "c02": false,
+    "c03": false,
+    "c04": false
+  },
+  {
+    "link": "portfolio-entry",
+    "type": "video",
+    "title": "",
+    "tag": "",
+    "text": "",
+    "product": false,
+    "button": false,
+    "prTitle": "",
+    "prLink": "",
+    "prImageSrc": "",
+    "c01": true,
+    "c02": false,
+    "c03": false,
+    "c04": false,
+    "videoId": "BcM_Eg80QRY",
+    "width": "550",
+    "height": "310",
+    "styled": true
+  }
+  
+]

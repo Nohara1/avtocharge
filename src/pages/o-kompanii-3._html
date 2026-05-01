@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./src/html/page/head.html', {
+  title: "О компании"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('./src/html/page/header.html')
+
+    @@include('./src/html/blocks/two-components.html', {
+      h1: true,
+      hStyle: 2,
+      heading: "Условия оплаты",
+      subheading: "",
+      title01: "",
+      component01url: "./src/html/components/custom-content.html",
+      component01params: '{ contents: "<h3>Этапы развития компании</h3><p>Lorem ipsum dolor sit amet consectetur. Egestas diam feugiat fringilla fringilla laoreet. Dui ultrices purus amet tincidunt diam. Quis a tempus tellus feugiat. Nisl duis quisque odio nec suspendisse ac blandit.<br>Purus nibh viverra in tempus augue quam tempor tortor ridiculus. Sit non in arcu duis. Urna sollicitudin blandit vulputate volutpat congue proin est magna libero. Orci arcu curabitur neque aenean mauris bibendum fusce. Malesuada amet nullam morbi maecenas pretium et. Tellus tristique condimentum sapien risus mattis massa vitae lectus sociis. Feugiat massa neque neque cursus vestibulum id viverra. Suspendisse sapien dignissim ullamcorper lobortis duis dui donec dignissim. Tellus diam in tincidunt vulputate purus tristique proin diam suspendisse. Viverra accumsan nunc lorem pulvinar.<br>Duis dignissim in fermentum tortor. Rhoncus sapien mauris pulvinar etiam. Justo dui dictumst aliquam egestas. Orci aenean massa egestas tristique volutpat mollis. Tempus.</p>", styled: true }',
+      title02: "",
+      component02url: "./src/html/components/custom-slider.html",
+      component02params: "{ gap: 0, slides: 1, mobSlides: 1, navigation: true, navigationStyle: 4, overflow: true, itemPath: './src/html/include/custom-slider-image-item.html', jsonPath: '../json/o-kompanii-custom-slider-images.json' }",
+    })
+
+    @@include('./src/html/blocks/custom-content-01.html', {
+      h1: false,
+      full: false,
+      reverse: false,
+      h1style: false,
+      heading: "",
+      content01: "<p>Lorem ipsum dolor sit amet consectetur. Egestas diam feugiat fringilla fringilla laoreet. Dui ultrices purus amet tincidunt diam. Quis a tempus tellus feugiat. Nisl duis quisque odio nec suspendisse ac blandit.<br>Purus nibh viverra in tempus augue quam tempor tortor ridiculus. Sit non in arcu duis. Urna sollicitudin blandit vulputate volutpat congue proin est magna libero. Orci arcu curabitur neque aenean mauris bibendum fusce. Malesuada amet nullam morbi maecenas pretium et. Tellus tristique condimentum sapien risus mattis massa vitae lectus sociis. Feugiat massa neque neque cursus vestibulum id viverra. Suspendisse sapien dignissim ullamcorper lobortis duis dui donec dignissim. Tellus diam in tincidunt vulputate purus tristique proin diam suspendisse. Viverra accumsan nunc lorem pulvinar.<br>Duis dignissim in fermentum tortor. Rhoncus sapien mauris pulvinar etiam. Justo dui dictumst aliquam egestas. Orci aenean massa egestas tristique volutpat mollis. Tempus.</p>",
+      content02: "<p>Lorem ipsum dolor sit amet consectetur. Egestas diam feugiat fringilla fringilla laoreet. Dui ultrices purus amet tincidunt diam. Quis a tempus tellus feugiat. Nisl duis quisque odio nec suspendisse ac blandit.<br>Purus nibh viverra in tempus augue quam tempor tortor ridiculus. Sit non in arcu duis. Urna sollicitudin blandit vulputate volutpat congue proin est magna libero. Orci arcu curabitur neque aenean mauris bibendum fusce. Malesuada amet nullam morbi maecenas pretium et. Tellus tristique condimentum sapien risus mattis massa vitae lectus sociis. Feugiat massa neque neque cursus vestibulum id viverra. Suspendisse sapien dignissim ullamcorper lobortis duis dui donec dignissim. Tellus diam in tincidunt vulputate purus tristique proin diam suspendisse. Viverra accumsan nunc lorem pulvinar.<br>Duis dignissim in fermentum tortor. Rhoncus sapien mauris pulvinar etiam. Justo dui dictumst aliquam egestas. Orci aenean massa egestas tristique volutpat mollis. Tempus.</p>",
+    })
+
+    @@include('./src/html/blocks/custom-slider.html', {
+      h1style: false,
+      gap: 70,
+      slides: 4,
+      mobSlides: 1.8,
+      filter: false,
+      heading: 'Информация о лицензиях и сертификатах',
+      text: '',
+      navigation: false,
+      navigationStyle: 1,
+      pagination: false,
+      itemPath: './src/html/include/custom-slider-image-item.html',
+      jsonPath: '../json/certificates.json',
+      linkUrl: '',
+      linkName: ''
+    })
+
+    @@include('./src/html/blocks/custom-slider.html', {
+      h1style: false,
+      gap: 70,
+      slides: 4,
+      mobSlides: 1.8,
+      filter: false,
+      heading: 'Наши клиенты',
+      text: '',
+      navigation: false,
+      navigationStyle: 1,
+      pagination: false,
+      itemPath: './src/html/include/custom-slider-image-item.html',
+      jsonPath: '../json/custom-slider-partners.json',
+      linkUrl: '',
+      linkName: ''
+    })
+
+    @@include('./src/html/blocks/form-with-map.html')
+
+    @@include('./src/html/page/footer.html')
+  </div>
+  @@include('./src/html/page/body-bottom.html')
+</body>
+
+</html>

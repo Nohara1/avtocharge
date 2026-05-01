@@ -1,0 +1,113 @@
+$white: #FEFEFE;
+$black: #010101;
+$grey-30: #B3B3B3;
+$grey-60: #676767;
+$grey-80: #343434;
+$grey-100: #00152D;
+
+
+$text-color: $white;
+$text-lighter: #7d7d7d;
+$primary-color: $black;
+$primary-color-60: #667381;
+$primary-color-30: #B3B9C0;
+$primary-color-10: #E6E8EA;
+$secondary-color: #005FB1;
+$primary-hover: $secondary-color;
+$header-background: #010101CC;
+$accent-color-01: #ff4900;
+$accent-color-02: #a8843e;
+
+$title-color: $white;
+$heading-color: $white;
+
+$form-background: #FEFEFE99;
+$form-hover: #FFFFFFE5;
+$form-placeholder: #B3B9C0;
+$form-search-placeholder: $primary-color-60;
+
+$required-and-error: #ff4242;
+$bestseller-color: $primary-color;
+$discount-color: #c00d0d;
+$novelty-color: #288c1f;
+
+$header-border: #e0e0e0;
+$header-hover: #0562eb;
+$body-background: $white;
+$items-border: #acacac;
+$hover-card: #E3F6FF;
+
+$background-image-color: #0e2ed1;
+
+$breadcrumbs-color: $text-lighter;
+$breadcrumbs-current: $primary-color;
+
+
+$star-color: #f9c201;
+$map-color: #ececec;
+$image-wrapper-color: rgba(189, 189, 189, 0.75);
+
+:root {
+  --white: #{$white};
+  --black: #{$black};
+  --grey-30: #{$grey-30};
+  --grey-60: #{$grey-60};
+  --grey-80: #{$grey-80};
+  --grey-100: #{$grey-100};
+
+  --text-c: #{$white};
+  --text-l: #{$text-lighter};
+  --primary-c: #{$primary-color};
+  --primary-c-60: #{$primary-color-60};
+  --primary-c-30: #{$primary-color-30};
+  --primary-c-10: #{$primary-color-10};
+  --primary-h: #{$white};
+  --header-back: #{$header-background};
+  --secondary-c: #{$secondary-color};
+  --accent-01: #{$accent-color-01};
+  --accent-02: #{$accent-color-02};
+
+  --title-c: #{$title-color};
+  --heading-c: #{$heading-color};
+
+  --selection-c: var(--white);
+  --selection-b: var(--primary-c);
+
+  --form-b: #{$form-background};
+  --form-h: #{$form-hover};
+  --form-p: #{$text-lighter};
+  --form-search-p: #{$text-lighter};
+
+  --error: #{$required-and-error};
+  --bestseller-color: #{$primary-color};
+  --discount-color: #{$discount-color};
+  --valid: #{$novelty-color};
+
+  --header-border: #{$header-border};
+  --header-hover: #{$header-hover};
+  --body-background: #{$black};
+  --items-border: #{$items-border};
+  --hover-card: #{$hover-card};
+  // --background-image-color: #{$background-image-color};
+
+  --crumbs-c: #{$text-lighter};
+  --crumbs-curr: #{$primary-color};
+
+  --star-color: #{$star-color};
+  --map-color: #{$map-color};
+
+  --image-wrapper-color: #{$image-wrapper-color};
+
+  --box-shadow-default: 0px 0px 25px 0px rgba(5, 141, 243, 0.25);
+  --box-shadow-default2: 0 0 50px rgba(0, 0, 0, 0.05);
+  --box-shadow-big: 0px 0px 0px 0px rgba(0, 0, 0, 0.1), 0px 4px 10px 0px rgba(0, 0, 0, 0.1),
+    0px 17px 17px 0px rgba(0, 0, 0, 0.09), 0px 39px 23px 0px rgba(0, 0, 0, 0.05),
+    0px 70px 28px 0px rgba(0, 0, 0, 0.01), 0px 109px 30px 0px rgba(0, 0, 0, 0);
+
+  --linear-gradient: linear-gradient(90deg, var(--primary-c) 33%, var(--primary-h) 100%);
+  --linear-gradient1: linear-gradient(
+    90deg,
+    change-color($primary-hover, $alpha: 0.9) 0%,
+    change-color($primary-hover, $alpha: 0) 100%
+  );
+}

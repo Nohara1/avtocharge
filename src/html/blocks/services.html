@@ -1,0 +1,34 @@
+<section class="services">
+  <div class="container">
+    <h2 class="services__heading _heading">Услуги</h2>
+    <div class="services__items">
+      @@loop('./src/html/components/services-item.html', [
+      {
+        small: true,
+        image: "images/obslujivanie/obslugivanie1.png",
+        title: "Услуги программиста 1С",
+        link: "kontekstnaya-reklama/",
+        text: "<p>Услуги программиста 1С Информационно-техническое сопровождение программы 1С</p>"
+      },{
+        small: true,
+        image: "images/obslujivanie/obslugivanie2.png",
+        title: "Постановка управленческого учета",
+        link: "razrabotka-sajtov/",
+        text: "<p>Прозрачность и достоверность данных управленческого учета — залог эффективной работы предприятия.</p>"
+      },{
+        small: true,
+        image: "images/obslujivanie/obslugivanie3.png",
+        title: "Внедрение 1С",
+        link: "razrabotka-sajtov/",
+        text: "<p>Предлагаем услугу внедрения 1С на предприятии. Установим и настроим программный комплекс или его составные части.</p>"
+      },{
+        small: true,
+        image: "images/obslujivanie/obslugivanie4.png",
+        title: "Обслуживание 1С",
+        link: "razrabotka-sajtov/",
+        text: "<p>Актуальность сервисного обслуживания 1С</p>"
+      }
+      ])
+    </div>
+  </div>
+</section>

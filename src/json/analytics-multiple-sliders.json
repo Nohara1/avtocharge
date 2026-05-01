@@ -1,0 +1,9 @@
+[
+  {
+    "gap": 0,
+    "slides": "auto",
+    "mobSlides": "auto",
+    "itemPath": "./src/html/include/custom-slider-item.html",
+    "jsonPath": "[{'text': '<h3>Наши веб-аналитики активно применяют</h3>'},{'imageObj': \"{src:'images/technology/google_analytics.png',alt:'Google Analytics',contain:true,width:'400',height:'120',class:'image_ms-technology'}\"},{'imageObj': \"{src:'images/technology/tag_manager.png',alt:'Google Tag Manager',contain:true,width:'400',height:'120',class:'image_ms-technology'}\"},{'imageObj': \"{src:'images/technology/yandex_metrika.svg',alt:'Яндекс Метрика',contain:true,width:'400',height:'120',class:'image_ms-technology'}\"}]"
+  }
+]

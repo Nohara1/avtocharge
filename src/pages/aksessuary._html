@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./src/html/page/head.html', {
+"title": "Аксессуары"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('./src/html/page/header.html')
+    @@include('./src/html/components/breadcrumbs.html', {
+    'jsonPath': '../json/breadcrumbs/katalog.json'
+    })
+    @@include('./src/html/blocks/category-cards.html', {
+      'heading': 'Аксессуары',
+      'variant': '2',
+      'jsonPath': '../json/categories-aksessuary.json'
+    })
+    @@include('./src/html/blocks/callback.html', {
+      'h1style': true,
+      'formPath': './src/html/forms/request-a-messenger.html'
+    })
+    @@include('./src/html/page/footer.html')
+  </div>
+  @@include("./src/html/page/body-bottom.html", {
+    'checkout': true
+  })
+</body>
+
+</html>

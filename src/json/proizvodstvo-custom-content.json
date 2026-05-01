@@ -1,0 +1,20 @@
+[
+  {
+    "h1": false,
+    "full": false,
+    "reverse": false,
+    "h1style": false,
+    "heading": "О компании",
+    "content01": "<p><strong>Lorem ipsum dolor sit amet</strong>, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orciLorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci.</p><p><strong>Lorem ipsum dolor sit amet</strong>, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orciLorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci.</p><p><strong>Lorem ipsum dolor sit amet</strong>, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orciLorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci.</p></p>",
+    "image01": {
+      "src": "images/additional/proizodstvo-01.jpg"
+    },
+    "gap": 19,
+    "slides": 3,
+    "mobSlides": "auto",
+    "navigation": false,
+    "pagination": false,
+    "itemPath": "./src/html/include/custom-slider-item.html",
+    "jsonPath": "../json/proizodstvo-slider.json"
+  }
+]

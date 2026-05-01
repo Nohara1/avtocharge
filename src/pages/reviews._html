@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./src/html/page/head.html', {
+  title: "Виза для белорусов 2025 Запись в визовый центр более 50 стран",
+  sliderPreload: false
+})
+
+<body>
+  <div class="wrapper">
+    @@include('./src/html/page/header.html', {
+      transparent: false
+    })
+
+    @@include('./src/html/components/breadcrumbs.html', {
+      elements: [
+        { name: 'Главная', link: '/' },
+        { name: 'О нас', link: '/about' },
+        { name: 'Отзывы', link: '' }
+      ]
+    })
+
+    @@include('./src/html/blocks/reviews-02.html', {
+      extraClass: '_heading-wave',
+      heading: 'Отзывы о работе компании Виза Всем',
+      hLevel: 1,
+      hStyle: 2,
+      reviews: [
+        { title: 'Дмитрий', src: 'images/placeholder.png', srcset: 'images/placeholder.png', width: 140, height: 140, date: '11.04.2025', dateFormat: '2025-04-11', text: '<p>Lorem ipsum dolor sit amet consectetur. Amet tincidunt dolor diam facilisi arcu habitant enim ornare massa. Quis ultrices sed facilisis dictumst neque arcu nunc tincidunt. Tempor tempus erat viverra vestibulum amet neque nisi. Lacus auctor euismod at morbi pharetra. Sociis a aliquet neque ut. Dolor risus volutpat magna nulla.</p>' },
+        { title: 'Владимир', src: 'images/placeholder.png', srcset: 'images/placeholder.png', width: 140, height: 140, date: '11.04.2025', dateFormat: '2025-04-11', text: '<p>Lorem ipsum dolor sit amet consectetur. Amet tincidunt dolor diam facilisi arcu habitant enim ornare massa. Quis ultrices sed facilisis dictumst neque arcu nunc tincidunt.</p>' },
+        { title: 'Марина', src: 'images/placeholder.png', srcset: 'images/placeholder.png', width: 140, height: 140, date: '11.04.2025', dateFormat: '2025-04-11', text: '<p>Lorem ipsum dolor sit amet consectetur.</p>' },
+        { title: 'Светлана', src: 'images/placeholder.png', srcset: 'images/placeholder.png', width: 140, height: 140, date: '11.04.2025', dateFormat: '2025-04-11', text: '<p>Lorem ipsum dolor sit amet consectetur. Amet tincidunt dolor diam facilisi arcu habitant enim ornare massa. Quis ultrices sed facilisis dictumst neque arcu nunc tincidunt. Tempor tempus erat viverra vestibulum amet neque nisi. Lacus auctor euismod at morbi pharetra. Sociis a aliquet neque ut. Dolor risus volutpat magna nulla.</p>' },
+        { title: 'Александр', src: 'images/placeholder.png', srcset: 'images/placeholder.png', width: 140, height: 140, date: '11.04.2025', dateFormat: '2025-04-11', text: '<p>Lorem ipsum dolor sit amet consectetur. Amet tincidunt dolor diam facilisi arcu habitant enim ornare massa. Quis ultrices sed facilisis dictumst neque arcu nunc tincidunt. Tempor tempus erat viverra vestibulum amet neque nisi. Lacus auctor euismod at morbi pharetra. Sociis a aliquet neque ut. Dolor risus volutpat magna nulla.</p>' },
+      ],
+      pagination: '',
+      linkUrl: 'https://g.page/r/CcdAa45FzbBvEAI/review',
+      linkName: 'Добавить'
+    })
+
+    @@include('./src/html/page/footer.html')
+  </div>
+  @@include("./src/html/page/body-bottom.html")
+</body>
+
+</html>

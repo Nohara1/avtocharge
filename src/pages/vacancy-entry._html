@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('./src/html/page/head.html', {
+  title: "Вакансия Project-менеджер/ Аккаунт-менеджер"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('./src/html/page/header.html')
+
+    @@include('./src/html/components/breadcrumbs.html', {
+      elements: [
+        { name: 'Главная', link: '/' },
+        { name: 'О компании', link: '/o-kompanii' },
+        { name: 'Вакансии', link: '/vacancies' },
+        { name: 'Project-менеджер/Аккаунт-менеджер', link: '' }
+      ]
+    })
+
+    @@include('./src/html/blocks/custom-content-01.html', {
+      extraClass: '',
+      heading: "Вакансия Project-менеджер/ Аккаунт-менеджер",
+      hLevel: 1,
+      hStyle: 2,
+      content01: '<p>Менеджер проектов - это сердце команды. Налаживая взаимодействие сотрудников и заказчиков он обеспечивает соблюдение регламентов компании. На эту должность мы ищем ответственного человека. Ниже приведены подробности вакансии.</p><div class="_cc__row"><p style="max-width:250px">Откликнуться можно как на сайте, так и на</p><div><div class="_cc__buttons"><a href="https://rabota.by/employer/5314407" class="_btn _btn--white _btn--circle-icon" target="_blank">Rabota.by<svg width="21" height="21" aria-hidden="true"><use href="images/icons.svg#arrow"></use></svg></a><a href="https://www.linkedin.com/company/crystal-web-bel/" class="_btn _btn--white _btn--circle-icon"  target="_blank">LinkedIn<svg width="21" height="21" aria-hidden="true"><use href="images/icons.svg#arrow"></use></svg></a></div></div></div><p><b>Не обязательно обладать всеми перечисленными навыками, мы рассматриваем как кандидатов с опытом, так и людей, которые ищут новое направление для самореализации.</b></p>',
+      image01: "{ src: 'images/blog/blog-01.jpg', alt: 'описание изображения' }",
+    })
+
+    @@include('./src/html/blocks/inner-items.html', {
+      extraClass: 'ii_vacancy-entry',
+      heading: '',
+      text: '',
+      columns: '',
+      columnsMobile: 1,
+      subcategoriesTitle: '',
+      subcategoriesJson: '',
+      itemPath: './src/html/components/inner-items/inner-items-item.html',
+      jsonPath: '[{ title: "Требования", text: "<ul><li>Основы и принципы SEO</li><li>Основы и принципы РРС</li><li>Принципы и нюансы разработки сайтов</li><li>Основы и принципы web-дизайна</li><li>Основы и принципы СММ и Таргета</li><li>Основы интернет-маркетинга</li><li>Основы продаж</li><li>Должен обладать навыками делового общения, этикета и знать правила деловой переписки.</li><li>Знать основы scrum и agile, знание различных фреймворков для ведения проектов.</li></ul>" },{ title: "Обязанности", text: "<ul><li>Основы и принципы SEO</li><li>Основы и принципы РРС</li><li>Принципы и нюансы разработки сайтов</li><li>Основы и принципы web-дизайна</li><li>Основы и принципы СММ и Таргета</li><li>Основы интернет-маркетинга</li><li>Основы продаж</li><li>Должен обладать навыками делового общения, этикета и знать правила деловой переписки.</li><li>Знать основы scrum и agile, знание различных фреймворков для ведения проектов.</li></ul>" },{ title: "От нас", text: "<ul><li>Основы и принципы SEO</li><li>Основы и принципы РРС</li><li>Принципы и нюансы разработки сайтов</li><li>Основы и принципы web-дизайна</li><li>Основы и принципы СММ и Таргета</li><li>Основы интернет-маркетинга</li><li>Основы продаж</li><li>Должен обладать навыками делового общения, этикета и знать правила деловой переписки.</li><li>Знать основы scrum и agile, знание различных фреймворков для ведения проектов.</li></ul>" }]'
+    })
+
+    @@include('./src/html/blocks/form-with-links.html', {
+      heading: 'Откликнуться на вакансию',
+      tagline: '',
+      formPath: './src/html/forms/vacancy-entry.html'
+    })
+
+    @@include('./src/html/page/footer.html')
+  </div>
+  @@include("./src/html/page/body-bottom.html")
+</body>
+
+</html>

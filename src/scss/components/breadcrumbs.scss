@@ -1,0 +1,96 @@
+.crumbs {
+  $arrow-style: false;
+  --brcr-gap: 0.3125em;
+  --brcr-fz: 14px;
+
+  position: relative;
+  font-size: var(--brcr-fz);
+  margin-top: 1.25rem;
+  // text-align: right;
+  font-weight: 400;
+  line-height: 1.5;
+
+  %banner + & {
+    margin-top: 0;
+  }
+
+  // &__list-wrapper {
+  //   margin: 0 calc(-1 * var(--brcr-gap));
+  //   display: inline-block;
+  // }
+  &__list {
+    font-size: 0;
+  }
+  &__li {
+    color: var(--primary-c-60);
+    display: inline-flex;
+
+    @if ($arrow-style) {
+      & + &::before {
+        width: 8px;
+        height: 8px;
+        margin: 0 var(--brcr-gap);
+        content: "";
+        opacity: 1;
+        display: inline-block;
+        font-size: var(--brcr-fz);
+        // background: url("../images/icons.svg#arrow-breadcrumbs")
+        // background: url("../images/icons.svg#chevron-right") center/contain no-repeat;
+        transform: scale(0.7071, 0.8839) rotate(45deg);
+        vertical-align: 0.05em;
+        background-color: var(--primary-c);
+      }
+    } @else {
+      &:nth-last-child(n + 2)::after {
+        margin: 0 var(--brcr-gap);
+        content: "/";
+        font-size: calc(var(--brcr-fz) - 2px);
+      }
+    }
+  }
+  &__link {
+    color: inherit;
+    padding: 0 var(--brcr-gap);
+    display: inline-flex;
+    position: relative;
+    font-size: var(--brcr-fz);
+    // text-transform: uppercase;
+    text-decoration: none;
+
+    &[href] {
+      font-weight: 400;
+
+      @media ($transition-min) {
+        transition: color var(--transition);
+
+        // &:hover {
+        //   color: var(--primary-c);
+        // }
+      }
+    }
+    &:not([href]) {
+      color: var(--white);
+      cursor: default;
+    }
+  }
+
+  + * {
+    // --mt: 25px;
+    --pt: 60px;
+
+    @media ($header-max) {
+      --pt: 64px;
+    }
+  }
+  // + %main-banner {
+  //   --mt: 25px;
+  // }
+  // + %section:not(%_primary-background) {
+  //   --pt: 0;
+  // }
+  // + %heading {
+  //   --pt: 0;
+  // }
+
+  @extend %breadcrumbs !optional;
+}

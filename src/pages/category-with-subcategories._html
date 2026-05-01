@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./src/html/page/head.html', {
+"title": "Мини-сауны"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('./src/html/page/header.html', { 'variant': 3 })
+    @@include('./src/html/components/breadcrumbs.html', {
+    'jsonPath': '../json/breadcrumbs/katalog.json'
+    })
+    @@include('./src/html/blocks/products/category.html', {
+    'categoriesJson': '../json/categories.json',
+    'url': 'mini-sauny',
+    'heading': 'Мини-сауны',
+    'subcategoriesJson': '../json/category-subcategories.json'
+    })
+    @@include('./src/html/page/footer.html')
+  </div>
+  @@include("./src/html/page/body-bottom.html", {
+    'checkout': true
+  })
+</body>
+
+</html>

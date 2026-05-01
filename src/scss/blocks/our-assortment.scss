@@ -1,0 +1,42 @@
+.our-assortment {
+  padding: 5.3rem 0;
+
+  @media ($tablet-mad) {
+    padding: 3.5rem 0;
+  }
+
+  &__heading {
+    font-weight: 700;
+  }
+  &__items {
+    @include row($gapB: 2rem, $gapL: 2rem);
+
+    @media ($mobile-max) {
+      @include row-breakpoint($gapB: 1.4rem, $gapL: 1.4rem);
+    }
+
+    & > * {
+      flex: 1 1 20%;
+      max-width: 20%;
+
+      @media ($desktop-max-xl) and ($desktop-min) {
+        flex: 1 1 25%;
+        max-width: 25%;
+      }
+      @media ($tablet-max) and ($tablet-mid) {
+        flex: 1 1 33.3333%;
+        max-width: 33.3333%;
+      }
+      @media ($tablet-mad) {
+        flex: 1 1 50%;
+        max-width: 50%;
+      }
+
+      @for $i from 1 to 11 {
+        &:nth-child(#{$i}) {
+          @extend %oa-item-#{$i} !optional;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./src/html/page/head.html', {
+  "title": "Доставка и оплата"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('./src/html/page/header.html', { 'variant': 2 })
+
+    @@include('./src/html/components/breadcrumbs.html', {
+      'jsonPath': '../json/breadcrumbs/dostavka-i-oplata.json'
+    })
+
+    @@include('./src/html/blocks/heading.html', {
+      "h1": true,
+      "heading": "Доставка и оплата"
+    })
+
+    @@include('./src/html/blocks/custom-content-01.html', {
+      "full": true,
+      'heading': 'Условия доставки',
+      "content01": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh neque, venenatis sed quam vitae, facilisis placerat lectus. Aliquam sapien ex, sodales ac nunc a, viverra lacinia lectus. Sed dapibus eleifend fermentum. Aenean laoreet leo vitae molestie commodo. Aenean in libero porta, viverra lorem at, cursus turpis. Duis ut congue est. Nullam non euismod tellus. Phasellus a lobortis augue, laoreet finibus ipsum.</p>"
+    })
+
+    @@include('./src/html/blocks/custom-content-02.html', {
+      'heading01': '',
+      'h1': false,
+      'noGap': true,
+      'imageUrl': 'images/additional/content-03.jpg',
+      'imageAlt': 'условия доставки',
+      'imageCover': true,
+      'collapseJson': '../json/collapse-3-pieces.json',
+      'collapseStyle': 2,
+      'collapseSelf': true
+    })
+
+    @@include('./src/html/blocks/custom-content-01.html', {
+      "heading": "Самовывоз со склада",
+      "reverse": false,
+      "content01": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh neque, venenatis sed quam vitae, facilisis placerat lectus. Aliquam sapien ex, sodales ac nunc a, viverra lacinia lectus. Sed dapibus eleifend fermentum. Aenean laoreet leo vitae molestie commodo. Aenean in libero porta, viverra lorem at, cursus turpis. Duis ut congue est. Nullam non euismod tellus. Phasellus a lobortis augue, laoreet finibus ipsum.</p><p>Suspendisse tincidunt facilisis libero at consequat. Nulla ut ante id urna sagittis pellentesque. In ut urna mauris. Cras diam ipsum, semper sit amet eros vitae, sollicitudin tincidunt massa. Phasellus vehicula neque at nunc venenatis posuere. Etiam sed elit a est accumsan fringilla. Quisque ante augue, ornare sed iaculis a, luctus et mauris.</p><p>Vestibulum sollicitudin nisi ante, ut fermentum urna commodo eu. Donec posuere ante vitae turpis laoreet luctus. Quisque mollis vehicula pharetra. Quisque hendrerit ex nec metus convallis, in finibus enim posuere. Etiam sollicitudin eleifend sapien, sit amet dictum sapien faucibus eu. Phasellus tempor erat ut dolor imperdiet, vel tempor felis lacinia. Ut tempus scelerisque convallis. Suspendisse potenti. Phasellus et elit sollicitudin, porttitor nisl et, porttitor nisl. Vestibulum venenatis mi nisi, eget ultricies mauris congue a. Cras tempus lorem quis quam faucibus, ut fermentum urna cursus.</p>",
+      image01: '{ src: "images/certificates/certificate-05.jpg", alt: "Доверенность", contain: true, }'
+    })
+
+    @@include('./src/html/blocks/two-components.html', {
+      "h1": false,
+      "h1style": false,
+      "heading": "Условия оплаты",
+      "subheading": "",
+      "title01": "",
+      "component01url": "./src/html/components/custom-slider.html",
+      "component01params": "{ 'gap': 25, 'slides': 1, 'mobSlides': 1, 'navigation': true, 'navigationStyle': 2, 'itemPath': './src/html/include/custom-slider-image-item.html', 'jsonPath': '../json/dostavka-i-oplata-custom-content-images.json' }",
+      "title02": "",
+      "component02url": "./src/html/components/custom-content.html",
+      "component02params": '{ "contents": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh neque, venenatis sed quam vitae, facilisis placerat lectus. Aliquam sapien ex, sodales ac nunc a, viverra lacinia lectus. Sed dapibus eleifend fermentum. Aenean laoreet leo vitae molestie commodo. Aenean in libero porta, viverra lorem at, cursus turpis. Duis ut congue est. Nullam non euismod tellus. Phasellus a lobortis augue, laoreet finibus ipsum.</p><p>Suspendisse tincidunt facilisis libero at consequat. Nulla ut ante id urna sagittis pellentesque. In ut urna mauris. Cras diam ipsum, semper sit amet eros vitae, sollicitudin tincidunt massa. Phasellus vehicula neque at nunc venenatis posuere. Etiam sed elit a est accumsan fringilla. Quisque ante augue, ornare sed iaculis a, luctus et mauris.</p><p>Vestibulum sollicitudin nisi ante, ut fermentum urna commodo eu. Donec posuere ante vitae turpis laoreet luctus. Quisque mollis vehicula pharetra. Quisque hendrerit ex nec metus convallis, in finibus enim posuere. Etiam sollicitudin eleifend sapien, sit amet dictum sapien faucibus eu. Phasellus tempor erat ut dolor imperdiet, vel tempor felis lacinia. Ut tempus scelerisque convallis. Suspendisse potenti. Phasellus et elit sollicitudin, porttitor nisl et, porttitor nisl. Vestibulum venenatis mi nisi, eget ultricies mauris congue a. Cras tempus lorem quis quam faucibus, ut fermentum urna cursus.</p>" }'
+    })
+
+    @@include('./src/html/blocks/custom-content-01.html', {
+      "heading": "Упаковка",
+      "reverse": false,
+      "content01": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh neque, venenatis sed quam vitae, facilisis placerat lectus. Aliquam sapien ex, sodales ac nunc a, viverra lacinia lectus. Sed dapibus eleifend fermentum. Aenean laoreet leo vitae molestie commodo. Aenean in libero porta, viverra lorem at, cursus turpis. Duis ut congue est. Nullam non euismod tellus. Phasellus a lobortis augue, laoreet finibus ipsum.</p><p>Suspendisse tincidunt facilisis libero at consequat. Nulla ut ante id urna sagittis pellentesque. In ut urna mauris. Cras diam ipsum, semper sit amet eros vitae, sollicitudin tincidunt massa. Phasellus vehicula neque at nunc venenatis posuere. Etiam sed elit a est accumsan fringilla. Quisque ante augue, ornare sed iaculis a, luctus et mauris.</p>",
+      image01: '{ src: "images/additional/content-05.jpg", alt: "Упаковка" }',
+    })
+
+    @@include('./src/html/blocks/custom-content-01.html', {
+      "full": true,
+      'heading': 'Условия оплаты',
+      "content01": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh neque, venenatis sed quam vitae, facilisis placerat lectus. Aliquam sapien ex, sodales ac nunc a, viverra lacinia lectus. Sed dapibus eleifend fermentum. Aenean laoreet leo vitae molestie commodo. Aenean in libero porta, viverra lorem at, cursus turpis. Duis ut congue est. Nullam non euismod tellus. Phasellus a lobortis augue, laoreet finibus ipsum.</p>"
+    })
+
+    @@include('./src/html/blocks/custom-content-02.html', {
+      'heading01': '',
+      'h1': false,
+      'imageUrl': 'images/additional/content-06.jpg',
+      'imageAlt': 'условия оплаты',
+      'imageCover': true,
+      'collapseJson': '../json/collapse-3-pieces.json',
+      'collapseStyle': 2,
+      'collapseSelf': true
+    })
+
+    @@include('./src/html/blocks/custom-content-01.html', {
+      "full": true,
+      'heading': '',
+      "content01": '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh neque, venenatis sed quam vitae <b><a href="tel:88000000000">8 (800) 000 00 00</a></b></p>'
+    })
+
+    @@include('./src/html/page/footer.html')
+  </div>
+  @@include("./src/html/page/body-bottom.html")
+</body>
+
+</html>

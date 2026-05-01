@@ -1,0 +1,18 @@
+<div class="cs__slide" @@if(context.c01 || context.c02 || context.c03 ||
+  context.c04){data-slide-category="@@if(context.c01){c01,}@@if(context.c02){c02,}@@if(context.c03){c03,}@@if(context.c04){c04,}"
+  }>
+  @@if(context.title){
+    @@include('./src/html/components/inner-items/inner-items-item.html', {
+      image: '@@if(context.image){@@image}',
+      title: '@@if(context.title){@@title}',
+      text: '@@if(context.text){@@text}',
+      price: '@@if(context.price){@@price}',
+      oldPrice: '@@if(context.oldPrice){@@oldPrice}',
+      note: '@@if(context.note){@@note}',
+      tags: @@if(context.tags){true}@@if(!context.tags){false},
+      linkName: '@@if(context.linkName){@@linkName}',
+      linkUrl: '@@if(context.linkUrl){@@linkUrl}',
+      linkClass: '@@if(context.linkClass){@@linkClass}',
+    })
+  }
+</div>

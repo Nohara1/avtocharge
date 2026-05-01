@@ -1,0 +1,23 @@
+<section class="inner-navigation">
+  <div class="container">
+    @@if (context.heading) {
+    <h1 class="inner-navigation__heading _heading">@@heading</h1>
+    }
+    <div class="inner-navigation__items">
+      <div class="inner-navigation__item">
+        <div class="inner-navigation__links">
+          <a class="inner-navigation__link _title" href="#">О компании</a>
+          <a class="inner-navigation__link _title" href="#">Команда</a>
+          <a class="inner-navigation__link _title" href="#">Достижения</a>
+          <a class="inner-navigation__link _title" href="#">Вакансии</a>
+          <a class="inner-navigation__link _title active" href="#">Вопрос-ответ</a>
+        </div>
+      </div>
+      <div class="inner-navigation__item">
+        <div class="inner-navigation__inner">
+          @@blocks
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

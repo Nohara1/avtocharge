@@ -1,0 +1,118 @@
+.contacts-details-line {
+  %container {
+    max-width: 1338px;
+  }
+  &__items {
+    justify-content: space-between;
+    @include row();
+
+    @media ($mobile-max) {
+      align-items: flex-start;
+      flex-direction: column;
+      @include row-breakpoint(2rem, 0);
+    }
+  }
+  &__item {
+    font-size: 24px;
+    // font-weight: 600;
+
+    @media ($tablet-min) {
+      flex: 0 1 auto;
+      max-width: calc(25% - 2rem);
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+    @media ($desktop-max-xl) and ($desktop-min-xl) {
+      max-width: calc(33.3333% - 2rem);
+      font-size: 22px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media ($desktop-max) and ($tablet-min) {
+      max-width: calc(50% - 2rem);
+      font-size: 22px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media ($mobile-max) {
+      flex: 1 1 100%;
+      max-width: 100%;
+      font-size: 20px;
+    }
+  }
+  &__row {
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+
+    @media ($tablet-max) and ($tablet-min) {
+      font-size: 18px;
+    }
+    @media ($mobile-max) {
+      font-size: 16px;
+    }
+  }
+  &__line {
+    flex: 0 1 auto;
+    max-width: none;
+
+    @media ($tablet-min) {
+      margin-right: -2px;
+      border-right: 2px solid var(--items-border);
+    }
+    @media ($desktop-max-xl) and ($desktop-min-xl) {
+      &:nth-child(6n) {
+        flex: 1 0 100%;
+        padding: 0;
+      }
+    }
+    @media ($desktop-max) and ($tablet-min) {
+      &:nth-child(4n) {
+        flex: 1 0 100%;
+        padding: 0;
+      }
+    }
+    @media ($mobile-max) {
+      flex: 1 0 100%;
+      align-self: stretch;
+      border-bottom: 2px solid var(--items-border);
+    }
+  }
+  &__title {
+    display: block;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  // %schedule,
+  // %email {
+  //   font-size: 16px;
+  // }
+  %address {
+    font-size: 20px;
+  }
+  %messengers,
+  %phone,
+  %schedule,
+  %email,
+  %address {
+    color: var(--primary-c);
+
+    svg {
+      display: none;
+    }
+  }
+  %schedule-label,
+  %address-label {
+    color: var(--text-c);
+  }
+  %socials {
+    font-size: 24px;
+  }
+  %messengers {
+    & + %messengers {
+      margin-top: 1.25rem;
+    }
+  }
+}

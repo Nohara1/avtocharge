@@ -1,0 +1,90 @@
+<main class="category">
+  <div class="container">
+    @@if(context.heading || context.categoriesJson){<header class="category__header">
+      @@if(context.heading){<h1 class="category__heading _heading _h2">@@heading</h1>}
+      @@if(context.categories && context.categoriesJson){
+      <div class="category__categories-wrapper@@if(context.categoriesVersion){ category__categories-wrapper_0@@categoriesVersion}">
+        <nav class="category__categories">
+          @@loop('./src/html/components/category-item.html', '@@categoriesJson')
+        </nav>
+      </div>}
+      @@if(context.subcategories && context.subcategoriesJson) {
+        <div class="category__subcategories">
+          @@include('./src/html/blocks/products/subcategories.html', {
+            jsonPath: '@@subcategoriesJson',
+            subcategoriesVersion: '@@if(context.subcategoriesVersion){@@subcategoriesVersion}',
+            title: 'Популярное:'
+          })
+        </div>
+      }
+    </header>}
+    <div class="category__items">
+      @@if(context.sort){<div class="category__sort">
+        @@include('./src/html/blocks/products/sort.html', {
+          pageUrl: '@@url',
+          viewNumber: false,
+          viewGrid: false,
+          sortButtons: true
+        })
+      </div>}
+      @@if(context.filter){<div class="category__filter">
+        @@include('./src/html/blocks/products/filter.html', {
+          pageUrl: '@@url',
+          buttons: true
+        })
+      </div>}
+      @@if(context.subcategoriesFilter){<div class="category__filter">
+        @@include('./src/html/blocks/products/subcategories-filter.html')
+      </div>}
+      <div class="category__products">
+        @@include('./src/html/blocks/products/products.html', {
+          categoryUrl: '@@url',
+          categoryTitle: '@@title',
+          subcategories: false,
+          subcategoriesJson: '@@if(context.subcategoriesJson){@@subcategoriesJson}',
+          sort: true
+        })
+      </div>
+    </div>
+  </div>
+  <div class="category__content">
+    @@include('./src/html/blocks/custom-content-01.html', {
+      h1: false,
+      full: true,
+      reverse: false,
+      h1style: false,
+      heading: "SEO-текст (при необходимости)",
+      content01: "<p>Lorem ipsum dolor sit amet consectetur. Tortor justo euismod in urna pharetra tristique nullam facilisis. Hendrerit sapien vitae hac sit eget. Massa dictumst lacus volutpat urna. Tempor sit ullamcorper amet sit. Sed in egestas sed tellus amet adipiscing. Sed libero justo eget nisl. Pretium adipiscing turpis sit et. Faucibus sagittis morbi pharetra nam quis fringilla tincidunt. Aliquam pulvinar amet enim malesuada semper. Et lobortis cursus tincidunt ornare.</p>",
+    })
+
+    @@if(false){@@include('./src/html/blocks/cards.html', {
+      heading: '',
+      variant: 3,
+      reverseColors: false,
+      itemPath: './src/html/components/cards-item.html',
+      jsonPath: '../json/cards-02.json'
+    })
+
+    @@include('./src/html/blocks/callback.html', {
+      h1style: false,
+      heading: 'Не нашли подходящий проект?',
+      subheading: 'Оставляйте свои контакты и сы свяжемся с Вами в ближайшее время',
+      formPath: './src/html/forms/request-a-messenger.html',
+      image01: 'images/additional/callback-01.png',
+      image01webp: 'images/additional/callback-01.webp',
+      component: ''
+    })
+
+    @@include('./src/html/blocks/custom-slider.html', {
+      h1style: true,
+      gap: 50,
+      mobSlides: 1,
+      filter: false,
+      heading: 'Отзывы',
+      navigation: true,
+      pagination: true,
+      itemPath: './src/html/include/custom-slider-review-item.html',
+      jsonPath: '../json/category-custom-slider-reviews.json'
+    })}
+  </div>
+</main>

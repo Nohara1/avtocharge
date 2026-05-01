@@ -1,0 +1,5 @@
+.documents {
+  &__inner {
+    @include row(3.125rem, 3.125rem, true);
+  }
+}

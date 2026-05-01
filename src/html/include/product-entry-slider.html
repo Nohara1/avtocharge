@@ -1,0 +1,51 @@
+<article class="product-entry-slider@@if(visible){ active}" @@if(!visible){ aria-hidden="true" }@@if(visible){
+  aria-hidden="false" }>
+  @@if (context.title) {
+  <h2 class="product-entry-slider__heading _sr-only">@@title</h2>
+  }
+  <div class="product-entry-slider__wrapper">
+    <div class="product-entry-slider__container product-entry-slider__container--thumbs">
+      @@if(false){<button class="product-entry-slider__nav-btn product-entry-slider__nav-btn_prev _btn _btn--nav">
+        <span class="_sr-only">Предыдущий слайд</span>
+        <svg width="20" height="10" aria-hidden="true">
+          <use href="images/icons.svg#chevron-right"></use>
+        </svg>
+      </button>}
+      <nav class="product-entry-slider__swiper product-entry-slider__swiper--thumbs @@additionalClass">
+        <div class="product-entry-slider__swiper-wrapper">
+          @@loop('@@sliderThumbUrl', '@@galleryUrl')
+        </div>
+      </nav>
+      @@if(false){<button class="product-entry-slider__nav-btn product-entry-slider__nav-btn_next _btn _btn--nav">
+        <span class="_sr-only">Следующий слайд</span>
+        <svg width="20" height="10" aria-hidden="true">
+          <use href="images/icons.svg#chevron-right"></use>
+        </svg>
+      </button>}
+    </div>
+    <div class="product-entry-slider__container product-entry-slider__container--main">
+      <div class="product-entry-slider__swiper product-entry-slider__swiper--main @@additionalClass">
+        <div class="product-entry-slider__swiper-wrapper">
+          @@loop('@@sliderUrl', '@@galleryUrl')
+        </div>
+        <button class="product-entry-slider__nav-btn product-entry-slider__nav-btn_prev">
+          <span class="_sr-only">Предыдущий слайд</span>
+          <svg width="20" height="10" aria-hidden="true">
+            <use href="images/icons.svg#chevron-right-thick"></use>
+          </svg>
+        </button>
+        <button class="product-entry-slider__nav-btn product-entry-slider__nav-btn_next">
+          <span class="_sr-only">Следующий слайд</span>
+          <svg width="20" height="10" aria-hidden="true">
+            <use href="images/icons.svg#chevron-right-thick"></use>
+          </svg>
+        </button>
+        @@if(context.badges){@@include('./src/html/components/product-badges.html', {
+        'bestseller': @@bestseller,
+        'discount': @@discount,
+        'novelty': @@novelty
+        })}
+      </div>
+    </div>
+  </div>
+</article>

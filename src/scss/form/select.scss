@@ -1,0 +1,32 @@
+.form__select {
+  @extend %f-item-element;
+  width: 100%;
+  cursor: pointer;
+  appearance: none;
+  padding-right: 2.66em;
+  background-size: 0.66em auto;
+  background-image: url("../images/icons.svg#select");
+  background-repeat: no-repeat;
+  background-position: right 1em center;
+
+  @extend %form-select;
+
+  // &:active,
+  // &:focus {
+  //   background-image: url("../images/icons.svg#select-up");
+  // }
+  &::-ms-expand {
+    display: none;
+  }
+  * {
+    width: 100%;
+    border: none;
+    padding: 3px 17px;
+    font-size: 14px;
+    font-weight: 600;
+
+    // &:hover {
+    //   background-color: var(--primary-c);
+    // }
+  }
+}

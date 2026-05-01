@@ -1,0 +1,65 @@
+[
+  {
+    "url": "poleznye-aksessuary",
+    "name": "Полезные аксессуары",
+    "imageWidth": 850,
+    "imageHeight": 450,
+    "imageSrc": "images/categories/accessories-01.jpg"
+  },
+  {
+    "url": "liftery-dlya-termokryshki",
+    "name": "Лифтеры для термокрышки",
+    "imageWidth": 850,
+    "imageHeight": 450,
+    "imageSrc": "images/categories/accessories-02.jpg"
+  },
+  {
+    "url": "stupeni",
+    "name": "Ступени",
+    "imageWidth": 399,
+    "imageHeight": 211,
+    "imageSrc": "images/categories/accessories-03.jpg"
+  },
+  {
+    "url": "poruchni",
+    "name": "Поручни",
+    "imageWidth": 399,
+    "imageHeight": 211,
+    "imageSrc": "images/categories/accessories-04.jpg"
+  },
+  {
+    "url": "termokryshki",
+    "name": "Термокрышки",
+    "imageWidth": 399,
+    "imageHeight": 211,
+    "imageSrc": "images/categories/accessories-05.jpg"
+  },
+  {
+    "url": "uhod-za-vodoy",
+    "name": "Уход за водой",
+    "imageWidth": 399,
+    "imageHeight": 211,
+    "imageSrc": "images/categories/accessories-06.jpg"
+  },
+  {
+    "url": "kartridji-dlya-filtra",
+    "name": "Картриджи для фильтра",
+    "imageWidth": 550,
+    "imageHeight": 290,
+    "imageSrc": "images/categories/accessories-07.jpg"
+  },
+  {
+    "url": "aromaterapiya",
+    "name": "Ароматерапия",
+    "imageWidth": 550,
+    "imageHeight": 290,
+    "imageSrc": "images/categories/accessories-08.jpg"
+  },
+  {
+    "url": "aksessuary-dlya-plavatelnogo-basseyna",
+    "name": "Аксессуары для плава&shy;тельного бассейна",
+    "imageWidth": 550,
+    "imageHeight": 290,
+    "imageSrc": "images/categories/accessories-09.jpg"
+  }
+]

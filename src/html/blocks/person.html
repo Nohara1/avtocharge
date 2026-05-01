@@ -1,0 +1,55 @@
+<section class="person">
+  <div class="container">
+    @@if(context.heading){
+    <@@if(context.h1){h1}@@if(!context.h1){h2} class="custom-content__heading _heading@@if(context.h1style){ _h1}">@@heading</@@if(context.h1){h1}@@if(!context.h1){h2}>
+    }
+    <div class="person__wrapper">
+      <div class="person__items-wrapper">
+        <div class="person__items@@if(context.reverse){ person__items_reverse}">
+          <div class="person__item person__item_card@@if(context.imageTitle && !context.imageSubtitle){ person__item_title}
+            @@if(context.imageSubtitle){person__item_subtitle}">
+            <div class="person__inner">
+              @@if(!context.slider){
+                @@include('./src/html/components/image.html', {
+                  'src': '@@imageSrc',
+                  'thumb': '@@if(context.imageThumb){@@imageThumb}',
+                  'alt': '@@if(context.imageAlt){@@imageAlt}',
+                  'width': '@@imageWidth',
+                  'height': '@@imageHeight',
+                  'responsive': true,
+                  'gallery': '@@if(context.imageGallery){@@imageGallery}',
+                  'title': '@@if(context.imageTitle){@@imageTitle}',
+                  'subtitle': '@@if(context.imageSubtitle){@@imageSubtitle}'
+                })
+              }
+              @@if(context.slider){
+                @@include('./src/html/components/custom-slider.html', {
+                  'gap': '@@gap',
+                  'slides': '@@slides',
+                  'mobSlides': '@@mobSlides',
+                  'navigation': '@@if(context.navigation){@@navigation}',
+                  'navigationStyle': @@if(context.navigationStyle){'@@navigationStyle'}@@if(!context.navigationStyle){2},
+                  'pagination': '@@if(context.pagination){@@pagination}',
+                  'itemPath': '@@itemPath',
+                  'jsonPath': '@@jsonPath'
+                })
+              }
+            </div>
+          </div>
+          <div class="person__item">
+            <div class="person__inner _cc">
+              @@text
+            </div>
+          </div>
+          @@if(context.formPath){
+          <div class="person__item">
+            <div class="person__inner">
+              @@include('@@formPath')
+            </div>
+          </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

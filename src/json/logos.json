@@ -1,0 +1,56 @@
+[
+  {
+    "src": "images/additional/logo-01.jpg",
+    "alt": "название компании",
+    "orientation": "horizontal",
+    "contain": "true",
+    "width": "93",
+    "height": "82",
+    "class": "image_logo"
+  },
+  {
+    "src": "images/additional/logo-01.jpg",
+    "alt": "название компании",
+    "orientation": "horizontal",
+    "contain": "true",
+    "width": "93",
+    "height": "82",
+    "class": "image_logo"
+  },
+  {
+    "src": "images/additional/logo-01.jpg",
+    "alt": "название компании",
+    "orientation": "horizontal",
+    "contain": "true",
+    "width": "93",
+    "height": "82",
+    "class": "image_logo"
+  },
+  {
+    "src": "images/additional/logo-01.jpg",
+    "alt": "название компании",
+    "orientation": "horizontal",
+    "contain": "true",
+    "width": "93",
+    "height": "82",
+    "class": "image_logo"
+  },
+  {
+    "src": "images/additional/logo-01.jpg",
+    "alt": "название компании",
+    "orientation": "horizontal",
+    "contain": "true",
+    "width": "93",
+    "height": "82",
+    "class": "image_logo"
+  },
+  {
+    "src": "images/additional/logo-01.jpg",
+    "alt": "название компании",
+    "orientation": "horizontal",
+    "contain": "true",
+    "width": "93",
+    "height": "82",
+    "class": "image_logo"
+  }
+]

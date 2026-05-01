@@ -1,0 +1,64 @@
+<section class="content-grid cg">
+  <div class="container">
+    @@include('./src/html/components/heading.html', {
+    heading: '@@if(context.heading){@@heading}',
+    hLevel: '@@if(context.hLevel){@@hLevel}',
+    hStyle: '@@if(context.hStyle){@@hStyle}'
+    })
+    <div class="cg__items">
+      <div class="cg__item">
+        <div class="_cc">
+          <p>Crystal Web начал работу в ноябре 2017 года. Первые полгода мы работали в коворкинге. У нас был 1 проект, 2
+            ноутбука, шумные соседи, дешевый кофе 3в1 и булочки с маком. Их вкус мы не забудем никогда.</p>
+          <p>Речи о деньгах вообще никакой не было, было интересно продвинуть сайты в ТОП. Заработало сарафанное радио,
+            и клиенты рекомендовали нас своим знакомым. Потом первый офис, первый сотрудник, и понеслась!</p>
+          <p>Теперь мы обзавелись уютным просторным офисом, командой единомышленников и десятками проектов. Да, теперь
+            мы пьем зерновой кофе, но все также голодны до новых проектов, знаний и позиций в ТОПе. Мы вышли за пределы
+            РБ и реализовали проекты в Европе, США и РФ. За 2020 год мы углубили знания по веб-аналитике и стали Яндекс
+            партнером по контекстной рекламе.</p>
+        </div>
+      </div>
+      <div class="cg__item cg__item_image">
+        @@include('./src/html/components/image.html', {
+        src: 'images/additional/placeholder-square.jpg',
+        thumb: 'images/additional/placeholder-square.jpg',
+        alt: 'описание изображения',
+        orientation: 'square',
+        contain: false,
+        width: '550',
+        height: '550',
+        class: ''
+        })
+      </div>
+      <div class="cg__item cg__item_label">
+        <span class="cg__label">CWEB</span>
+      </div>
+      <div class="cg__item cg__item_image">
+        @@include('./src/html/components/image.html', {
+        src: 'images/additional/placeholder-square.jpg',
+        thumb: 'images/additional/placeholder-square.jpg',
+        alt: 'описание изображения',
+        orientation: 'square',
+        contain: false,
+        width: '550',
+        height: '550',
+        class: ''
+        })
+      </div>
+      <div class="cg__item cg__item_label"></div>
+      <div class="cg__item">
+        <div class="_cc">
+          <p>Наше ключевое преимущество в том, что мы на одинаково высоком уровне можем разработать сайт, продвинуть его
+            в поиске, привести целевой платный трафик, переплести это в единую сеть и отследить результат в реальных
+            цифрах. В своей работе мы используем CRM и EPM системы, что позволяет нам прогнозировать результаты и сроки
+            проектов.</p>
+          <p>Crystal Web - не безликий бренд. Команда — наш главный капитал, в который мы постоянно вкладываем ресурсы.
+            Наша цель - стать номер 1 в создании и продвижении сайтов. Crystal Web - это не сайты клиентов, это наши
+            сайты.</p>
+          <p>Мы - не аутсорсинговая компания, а отдел интернет-маркетинга на удаленке, потому что вникаем в ваш бизнес и
+            становимся его неотъемлемой частью. CWEB – онлайн присутствие - оффлайн успех!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

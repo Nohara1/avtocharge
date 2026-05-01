@@ -1,0 +1,49 @@
+<section class="pro proffessional">
+  <div class="container">
+    @@include('./src/html/components/heading.html', {
+      heading: '@@if(context.heading){@@heading}',
+      hLevel: '@@if(context.hLevel){@@hLevel}',
+      hStyle: '@@if(context.hStyle){@@hStyle}'
+    })
+    <div class="pro__items">
+      <div class="pro__item">
+        @@if(context.features){
+        <div class="pro__features-wrapper">
+          <ul class="pro__features">
+            @@for(var i = 0; i < features.length; i++){
+              <li class="pro__feature">
+                <span class="_title">`+features[i].value+`</span>
+                <span class="_cc">`+features[i].name+`</span>
+              </li>
+            }
+          </ul>
+        </div>
+        }
+      </div>
+      <div class="pro__item">
+        @@if(context.imageObj){
+          @@include('./src/html/components/image.html', @@imageObj)
+        }
+      </div>
+      <div class="pro__item">
+        <div class="pro__content _cc">
+          @@if(context.text){ @@text }
+          <p class="pro__author">© @@name - @@position</p>
+        </div>
+      </div>
+      <div class="pro__item">
+        <div class="pro__info">
+          @@if(context.name){
+          <h2 class="pro__name _title">@@name</h2>
+          }
+          @@if(context.position){
+          <p class="pro__position _cc">@@position</p>
+          }
+        </div>
+      </div>
+      <div class="pro__item">
+        <span class="pro__logo">cweb</span>
+      </div>
+    </div>
+  </div>
+</section>

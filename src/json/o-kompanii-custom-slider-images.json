@@ -1,0 +1,42 @@
+[
+  {
+    "src": "images/additional/content-03.jpg",
+    "thumb": "images/additional/content-03.jpg",
+    "alt": "Этапы развития компании",
+    "orientation": "horizontal",
+    "contain": false,
+    "gallery": true,
+    "width": 830,
+    "height": 440
+  },
+  {
+    "src": "images/additional/content-03.jpg",
+    "thumb": "images/additional/content-03.jpg",
+    "alt": "Этапы развития компании",
+    "orientation": "horizontal",
+    "contain": false,
+    "gallery": true,
+    "width": 830,
+    "height": 440
+  },
+  {
+    "src": "images/additional/content-03.jpg",
+    "thumb": "images/additional/content-03.jpg",
+    "alt": "Этапы развития компании",
+    "orientation": "horizontal",
+    "contain": false,
+    "gallery": true,
+    "width": 830,
+    "height": 440
+  },
+  {
+    "src": "images/additional/content-03.jpg",
+    "thumb": "images/additional/content-03.jpg",
+    "alt": "Этапы развития компании",
+    "orientation": "horizontal",
+    "contain": false,
+    "gallery": true,
+    "width": 830,
+    "height": 440
+  }
+]

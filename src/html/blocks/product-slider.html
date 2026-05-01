@@ -1,0 +1,21 @@
+<@@if(context.heading){section}@@if(!context.heading){div} class="product-slider">
+  <div class="container">
+    @@if(context.heading){
+      <@@if(context.h1){h1}@@if(!context.h1){h2} class="product-slider__heading _heading@@if(context.h1style){ _h1}">@@heading</@@if(context.h1){h1}@@if(!context.h1){h2}>
+    }
+    @@if(context.text){<div class="product-slider__text _cc">@@text</div>}
+    <div class="product-slider__slider">
+      @@include('./src/html/include/product-entry-slider.html', {
+        'sliderUrl': './src/html/include/product-entry-slider-item.html',
+        'sliderThumbUrl': './src/html/include/product-entry-slider-item-thumb.html',
+        'galleryUrl': '../json/product-page-gallery.json',
+        'additionalClass': 'pcs-slider-01',
+        'visible': true,
+        'badges': false,
+        'bestseller': false,
+        'novelty': false,
+        'discount': false
+      })
+    </div>
+  </div>
+</@@if(context.heading){section}@@if(!context.heading){div}>

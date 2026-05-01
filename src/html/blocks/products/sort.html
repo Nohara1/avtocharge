@@ -1,0 +1,87 @@
+<div class="sort">
+  @@if(false){<button class="sort__filter-toggle-button _btn" type="button" name="filter-toggle">
+    <svg width="18" height="18">
+      <use href="images/icons.svg#settings"></use>
+    </svg>Фильтр
+  </button>}
+  <div class="sort__items">
+    @@if(!context.sortButtons){
+    <div class="sort__item sort__item_sort">
+      <div class="form__item-wrapper form__item-wrapper_row">
+        <span class="form__item-heading">Сортировка:</span>
+        <div class="form__item">
+          <label>
+            <span class="form__label" hidden="">Сортировка продуктов</span>
+            <select class="form__select sorting_cat" id="mse2_sort">
+              <option class="sort" data-sort="resource|publishedon" value="desc">Дата публикации</option>
+              <option class="sort" data-sort="resource|pagetitle" value="asc">Название (А - Я)</option>
+              <option class="sort" data-sort="resource|pagetitle" value="desc">Название (Я - А)</option>
+              <option class="sort" data-sort="ms|price" value="asc">Цена (по возрастанию)</option>
+              <option class="sort" data-sort="ms|price" value="desc">Цена (по убыванию)</option>
+            </select>
+          </label>
+        </div>
+      </div>
+    </div>
+    }
+    @@if(context.sortButtons){
+    <div class="sort__item sort__item_sort">
+      <div class="sort__criteria" id="mse2_sort">
+        <a href="#" data-sort="resource|publishedon" data-dir="desc" data-default="desc"
+          class="sort__criterion sort active">
+          <span></span>Сортировать по новизне
+        </a>
+        <a href="#" data-sort="ms|price" data-dir="" data-default="desc" class="sort__criterion sort">
+          <span></span>Сортировать по цене
+        </a>
+      </div>
+    </div>
+    }
+    <div class="sort__item sort__item_count">
+      <p class="sort__products-count">25 товаров</p>
+    </div>
+    @@if(context.viewNumber){
+    <div class="sort__item sort__item_limit">
+      <div class="form__item-wrapper form__item-wrapper_row">
+        <span class="form__item-heading">Показать:</span>
+        <div class="form__item">
+          <label>
+            <span class="form__label" hidden="">Количество отображаемых товаров</span>
+            <select class="form__select" name="limit" onchange="window.location.href=this.value">
+              <option value="@@pageUrl?limit=15" selected>15</option>
+              <option value="@@pageUrl?limit=25">25</option>
+              <option value="@@pageUrl?limit=50">50</option>
+              <option value="@@pageUrl?limit=75">75</option>
+              <option value="@@pageUrl?limit=100">100</option>
+            </select>
+          </label>
+        </div>
+      </div>
+    </div>
+    }
+    @@if(context.viewGrid){
+    <div class="sort__item sort__item_views">
+      <div class="sort__views">
+        <button class="sort__views-button active" name="sort-view" value="grid2" type="button">
+          <span class="_sr-only">Отобразить в виде крупной сетки</span>
+          <svg width="18" height="18">
+            <use href="images/icons.svg#view-grid2" />
+          </svg>
+        </button>
+        <button class="sort__views-button" name="sort-view" value="grid" type="button">
+          <span class="_sr-only">Отобразить в виде сетки</span>
+          <svg width="18" height="18">
+            <use href="images/icons.svg#view-grid" />
+          </svg>
+        </button>
+        <button class="sort__views-button" name="sort-view" value="list" type="button">
+          <span class="_sr-only">Отобразить в виде списка</span>
+          <svg width="22" height="18">
+            <use href="images/icons.svg#view-list" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,41 @@
+.list-icons {
+  // &__list {}
+  &__li {
+    color: var(--text-l);
+    display: flex;
+    font-size: 18px;
+    line-height: 1.2;
+    align-items: center;
+
+    @extend %list-icons-list-item !optional;
+
+    @media ($tablet-max) {
+      font-size: 16px;
+    }
+
+    svg {
+      width: 2em;
+      color: var(--white);
+      height: 2em;
+      padding: 0.5em;
+      overflow: visible;
+      font-size: 15px;
+      align-self: flex-start;
+      margin-right: 0.6667em;
+      border-radius: 50%;
+      background-color: var(--primary-c);
+      @extend %flex-center;
+
+      // & + * {
+      //   margin-left: 0.6667em;
+      // }
+    }
+    b,
+    strong {
+      color: var(--text-c);
+    }
+    & + & {
+      margin-top: 1.25rem;
+    }
+  }
+}

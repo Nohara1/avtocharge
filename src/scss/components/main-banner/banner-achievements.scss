@@ -1,0 +1,74 @@
+.ba {
+  color: inherit;
+  font-size: 16px;
+  text-align: left;
+  font-weight: 400;
+  line-height: 1.25;
+  border-collapse: collapse;
+
+  @media ($mobile-max) {
+    font-size: 14px;
+  }
+
+  @extend %banner-achievements !optional;
+
+  @media ($mobile-max) {
+    line-height: 1.25;
+  }
+
+  tbody {
+    @include row(20px, 20px);
+
+    > * {
+      flex: 0 1 25%;
+      max-width: 25%;
+
+      @media ($custom-breakpoint-01) and ($desktop-min-xl), ($tablet-max) {
+        max-width: 50%;
+        flex-basis: 50%;
+      }
+    }
+  }
+  tr {
+    display: flex;
+    flex-direction: column;
+
+    > * {
+      position: relative;
+      padding-left: 60px;
+
+      @media ($mobile-max) {
+        padding-left: 40px;
+      }
+    }
+
+    > * {
+      vertical-align: top;
+    }
+  }
+  th,
+  td:first-child {
+    font-size: 1.625em;
+    font-weight: 500;
+    line-height: 1.15;
+  }
+  svg {
+    top: 0;
+    left: 0;
+    color: var(--primary-c);
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    overflow: visible;
+    position: absolute;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: var(--secondary-c);
+
+    @media ($mobile-max) {
+      width: 25px;
+      height: 25px;
+      padding: 5px;
+    }
+  }
+}

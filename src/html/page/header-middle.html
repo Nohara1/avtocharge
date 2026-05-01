@@ -1,0 +1,41 @@
+<div class="header-middle hm">
+  <div class="hm__items">
+    @@if(false){<div class="hm__item _mobile">
+      @@include("./src/html/components/burger.html")
+    </div>
+    <div class="hm__item _desktop">
+      @@include('./src/html/components/logo.html')
+    </div>}
+    <div class="hm__item">
+      @@include("./src/html/components/address.html")
+      @@include("./src/html/components/schedule.html")
+      @@if(false){<div class="hm__phone-wrapper">
+        @@include("./src/html/components/messengers.html", {
+          label: 'СПБ',
+          hideTelegram: true,
+          hideViber: true,
+          hideWhatsapp: true
+        })
+      </div>}
+    </div>
+    @@if(false){<div class="hm__item">
+      @@include("./src/html/components/socials.html")
+    </div>}
+    <div class="hm__item">
+      @@include("./src/html/components/info.html", {
+        icon: "instagram",
+        href: "https://www.instagram.com/komplektdom",
+        label: "@komplektdom"
+      })
+      @@include("./src/html/components/email.html")
+    </div>
+    <div class="hm__item">
+      <div class="hm__phone-wrapper">
+        @@include("./src/html/components/phone.html") (мобильные здания)
+      </div>
+      <div class="hm__phone-wrapper">
+        @@include("./src/html/components/phone.html") (заборы панели)
+      </div>
+    </div>
+  </div>
+</div>

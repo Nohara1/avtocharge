@@ -1,0 +1,56 @@
+.certificates {
+  color: var(--white);
+  margin: 10rem 0 9rem;
+  padding: 4rem 0;
+  background-image: var(--linear-gradient);
+
+  @media ($tablet-max) {
+    margin: 2.9rem 0 9rem;
+  }
+
+  &__items {
+    align-items: center;
+    @include row($gapB: 2.8rem);
+
+    > * {
+      flex: 1 1 50%;
+      max-width: 50%;
+
+      @media ($tablet-max) {
+        max-width: 100%;
+        flex-basis: 100%;
+      }
+    }
+  }
+  // &__item {}
+  &__heading {
+    color: inherit;
+    font-weight: 700;
+    margin-bottom: 3rem;
+  }
+  &__content {
+    color: inherit;
+    font-weight: 600;
+
+    @media ($desktop-min) {
+      padding-right: 5.6rem;
+    }
+  }
+  &__images {
+    margin: -7.7rem -1rem;
+    display: flex;
+    justify-content: center;
+
+    @media ($tablet-max) {
+      margin: 0 -0.5rem -8.7rem;
+    }
+  }
+  &__iw {
+    flex: 0 1 auto;
+    margin: 0 1rem;
+
+    @media ($tablet-max) {
+      margin: 0 0.5rem;
+    }
+  }
+}

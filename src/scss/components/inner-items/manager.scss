@@ -1,0 +1,70 @@
+.mgr {
+  display: flex;
+
+  &__inner {
+    width: 100%;
+    color: var(--white);
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    border-radius: 30px;
+
+    @media ($desktop-max-xl) and ($desktop-min-xl), ($tablet-max) and ($tablet-mid), ($mobile-max) {
+      flex-direction: column;
+    }
+  }
+  %image {
+    flex: 1 1 0%;
+
+    @media ($desktop-max-xl) and ($desktop-min-xl), ($tablet-max) and ($tablet-mid), ($mobile-max) {
+      flex: 0 1 auto;
+    }
+  }
+  %image-wrapper {
+    height: 100%;
+    border-radius: 0;
+    padding-bottom: 80%;
+  }
+  %_title {
+    --c: inherit;
+    --fz: 30px;
+    max-width: 50%;
+    margin-bottom: 30px;
+  }
+  &__content {
+    flex: 1 1 0%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-c);
+
+    @media ($desktop-min) {
+      padding-right: 30px;
+    }
+  }
+  %email {
+    font-size: 16px;
+    margin-top: 5px;
+  }
+  %messengers {
+    margin-top: auto;
+  }
+  %messengers-phone {
+    font-size: 20px;
+  }
+  %messengers-link,
+  %email {
+    svg {
+      font-size: 24px;
+      background-color: change-color($grey-100, $alpha: 0.5);
+    }
+  }
+  %email,
+  %messengers-phone {
+    @media ($transition-min) {
+      &:hover {
+        color: var(--white);
+      }
+    }
+  }
+}

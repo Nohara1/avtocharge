@@ -1,0 +1,94 @@
+%form {
+  .fgbw,
+  &__gallery-button-wrapper {
+    $gbw-gap: 3.4375rem;
+    $gbw-bottom-gap: 1.25rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: $gbw-bottom-gap;
+    margin-left: -$gbw-gap;
+    margin-bottom: $gbw-bottom-gap;
+
+    @media ($mobile-max) {
+      margin-left: -$gbw-bottom-gap;
+    }
+
+    & > * {
+      flex: 1 1 calc(33.3333% - $gbw-gap);
+      max-width: calc(33.3333% - $gbw-gap);
+      margin-left: $gbw-gap;
+      margin-bottom: $gbw-bottom-gap;
+
+      @media ($mobile-max) {
+        flex: 1 1 calc(50% - $gbw-gap);
+        max-width: calc(50% - $gbw-gap);
+        margin-left: $gbw-bottom-gap;
+      }
+    }
+    &__button {
+      border: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      text-align: left;
+      background-color: transparent;
+
+      @media ($desktop-min) {
+        align-items: center;
+      }
+      @media ($tablet-max) {
+        flex-direction: column;
+      }
+
+      img {
+        color: var(--white);
+        font-size: 12px;
+        margin-right: 1rem;
+        border-radius: 5px;
+        background-color: var(--white);
+      }
+      %form-label {
+        flex: 1 1 0%;
+        color: var(--text-c);
+        font-size: 12px;
+        font-weight: 400;
+        margin-bottom: 0;
+        text-transform: none;
+
+        @media ($tablet-max) {
+          margin-top: 0.5rem;
+        }
+      }
+
+      @media ($transition-min) {
+        img,
+        %form-label {
+          transform: translate(0) scale(1);
+          transition: transform 0.3s, color 0.3s;
+        }
+        &:hover {
+          img {
+            transform: scale(1.15);
+          }
+          %form-label {
+            color: var(--primary-c);
+            transform: translateX(2px);
+          }
+        }
+      }
+    }
+    %form-item-heading {
+      flex: 1 1 100%;
+      max-width: 100%;
+      font-size: 16px;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+      text-transform: none;
+
+      @media ($mobile-max) {
+        font-size: 14px;
+      }
+    }
+  }
+}

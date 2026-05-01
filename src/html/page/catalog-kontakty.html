@@ -1,0 +1,30 @@
+<nav class="catalog catalog_grid">
+  <div class="catalog__list">
+    <ul class="catalog__list-inner">
+      <li class="catalog__li">
+        <p class="catalog__title">Контактный телефон</p>
+        @@include("./src/html/components/phone.html")
+      </li>
+      <li class="catalog__li">
+        <p class="catalog__title">Telegram</p>
+        @@include('./src/html/components/messengers.html', { hideWhatsapp: true, hideViber: true })
+      </li>
+      <li class="catalog__li">
+        <p class="catalog__title">Наша почта</p>
+        @@include('./src/html/components/email.html')
+      </li>
+      <li class="catalog__li">
+        <p class="catalog__title">Адрес</p>
+        @@include('./src/html/components/address.html', { icon: 'hide' })
+      </li>
+      <li class="catalog__li">
+        <p class="catalog__title">График работы</p>
+        @@include('./src/html/components/schedule.html', { icon: 'hide' })
+      </li>
+      <li class="catalog__li">
+        <button class="header__callback _btn" type="button" data-open-popup="request-a-call"
+          data-tippy-content="Заказать звонок">Заказать звонок</button>
+      </li>
+    </ul>
+  </div>
+</nav>

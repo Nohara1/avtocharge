@@ -1,0 +1,10 @@
+<section class="related-products">
+  <div class="container">
+    @@if(context.heading){
+      <h2 class="related-products__heading _heading@@if(context.h1style){ _h1}">@@heading</h2>
+    }
+    <div class="related-products__items">
+      @@loop('./src/html/components/product-like.html', '../json/related-products-product-like.json')
+    </div>
+  </div>
+</section>

@@ -1,0 +1,50 @@
+<section id="get-to-work" class="form-with-links fwl _primary-background _section-p _section-p_bdrs _section-p_bdrs-t">
+  <div class="fwl__background-wrapper">
+    <svg class="_animated-background" width="1920" height="1140" aria-hidden="true" preserveAspectRatio="xMidYMid meet"
+      style="background-image:url('images/background.webp');" filter="url(#baBlur)">
+      <use href="#background-animated"></use>
+    </svg>
+  </div>
+  <div class="container">
+    <div class="fwl__items@@if(context.director){ fwl__items_director}">
+      <div class="fwl__item">
+        @@if(context.heading){<h2 class="fwl__heading _heading">@@heading</h2>}
+        @@if(context.tagline){<p class="fwl__tagline _title">@@tagline</p>}
+      </div>
+      <div class="fwl__item">
+        <div class="fwl__inner">
+          @@if(context.formPath){@@include('@@formPath')}
+          @@if(!context.formPath){@@include('./src/html/forms/get-to-work.html')}
+        </div>
+      </div>
+      <div class="fwl__item">
+        @@if(context.director){@@include('./src/html/components/director.html')}
+        @@if(!context.director){
+        <div class="fwl__links">
+          <a href="https://www.instagram.com/cweb.by/" class="_btn _btn--transparent _btn--circle-icon" target="_blank">
+            Instagram<svg width="21" height="21" aria-hidden="true">
+              <use href="images/icons.svg#arrow"></use>
+            </svg>
+          </a>
+          <a href="https://www.behance.net/cweb/" class="_btn _btn--transparent _btn--circle-icon" target="_blank">
+            Behance<svg width="21" height="21" aria-hidden="true">
+              <use href="images/icons.svg#arrow"></use>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/company/crystal-web-bel/" class="_btn _btn--transparent _btn--circle-icon"
+            target="_blank">
+            LinkedIn<svg width="21" height="21" aria-hidden="true">
+              <use href="images/icons.svg#arrow"></use>
+            </svg>
+          </a>
+          <a href="https://www.tiktok.com/@cweb.by" class="_btn _btn--transparent _btn--circle-icon" target="_blank">
+            TikTok<svg width="21" height="21" aria-hidden="true">
+              <use href="images/icons.svg#arrow"></use>
+            </svg>
+          </a>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

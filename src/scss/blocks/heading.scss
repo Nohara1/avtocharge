@@ -1,0 +1,19 @@
+.heading {
+  &--no-gap {
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+    @extend %_heading-no-gap !optional;
+  }
+  &%_heading-no-gap {
+    & + %section {
+      --mt: 0;
+    }
+    & + %section%_primary-background {
+      --mt: 50px;
+    }
+  }
+  %_heading {
+    margin-bottom: 0;
+  }
+}

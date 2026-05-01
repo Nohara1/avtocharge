@@ -1,0 +1,218 @@
+<div class="tariffs tariffs-seo _section">
+  <div class="container">
+    @@include('./src/html/components/heading.html', {
+      heading: '@@if(context.heading){@@heading}',
+      hLevel: '@@if(context.hLevel){@@hLevel}',
+      hStyle: '@@if(context.hStyle){@@hStyle}',
+      hExtraClass: 'collapse__heading'
+    })
+    <table data-column="1" data-columns-count="3">
+      <thead>
+        <tr>
+          <td></td>
+          <th scope="col"><button type="button" data-toggle-tariff="1">Базовый</button></th>
+          <th scope="col"><button type="button" data-toggle-tariff="2">Оптимальный</button></th>
+          <th scope="col"><button type="button" data-toggle-tariff="3">Премиальный</button></th>
+        </tr>
+      </thead>
+      <tbody data-toggle-container="toggle">
+        <tr>
+          <th scope="row">Количество ключевых запросов</th>
+          <td>до 130</td>
+          <td>до 300</td>
+          <td>без ограничений</td>
+        </tr>
+        <tr>
+          <th scope="colgroup" colspan="4">
+            <button type="button" data-toggle="same" aria-expanded="true">Все тарифы включают:<svg width="16" height="16" aria-hidden="true">
+                <use href="images/icons.svg#chevron-up"></use>
+              </svg></button>
+          </th>
+        </tr>
+        <tr class="active" data-target="same">
+          <th scope="row">Анализ конкурентов по тематике</th>
+          <td><svg width="12" height="12" aria-hidden="true">
+              <use href="images/icons.svg#valid"></use>
+            </svg><span class="_sr-only">входит</span></td>
+          <td><svg width="12" height="12" aria-hidden="true">
+              <use href="images/icons.svg#valid"></use>
+            </svg><span class="_sr-only">входит</span></td>
+          <td><svg width="12" height="12" aria-hidden="true">
+              <use href="images/icons.svg#valid"></use>
+            </svg><span class="_sr-only">входит</span></td>
+        </tr>
+        <tr class="active" data-target="same">
+          <th scope="row">Usability-аудит</th>
+          <td><svg width="12" height="12" aria-hidden="true">
+              <use href="images/icons.svg#valid"></use>
+            </svg><span class="_sr-only">входит</span></td>
+          <td><svg width="12" height="12" aria-hidden="true">
+              <use href="images/icons.svg#valid"></use>
+            </svg><span class="_sr-only">входит</span></td>
+          <td><svg width="12" height="12" aria-hidden="true">
+              <use href="images/icons.svg#valid"></use>
+            </svg><span class="_sr-only">входит</span></td>
+        </tr>
+        <tr class="active" data-target="same">
+          <th scope="row">Внутренняя оптимизация страниц сайта</th>
+          <td><svg width="12" height="12" aria-hidden="true">
+              <use href="images/icons.svg#valid"></use>
+            </svg><span class="_sr-only">входит</span></td>
+          <td><svg width="12" height="12" aria-hidden="true">
+              <use href="images/icons.svg#valid"></use>
+            </svg><span class="_sr-only">входит</span></td>
+          <td><svg width="12" height="12" aria-hidden="true">
+              <use href="images/icons.svg#valid"></use>
+            </svg><span class="_sr-only">входит</span></td>
+        </tr>
+        <tr class="active" data-target="same">
+          <th scope="row">Настройка целей</th>
+          <td><svg width="12" height="12" aria-hidden="true">
+              <use href="images/icons.svg#valid"></use>
+            </svg><span class="_sr-only">входит</span></td>
+          <td><svg width="12" height="12" aria-hidden="true">
+              <use href="images/icons.svg#valid"></use>
+            </svg><span class="_sr-only">входит</span></td>
+          <td><svg width="12" height="12" aria-hidden="true">
+              <use href="images/icons.svg#valid"></use>
+            </svg><span class="_sr-only">входит</span></td>
+        </tr>
+        <tr class="active" data-target="same">
+          <th scope="row">Отчет о выполненных работах</th>
+          <td><svg width="12" height="12" aria-hidden="true">
+              <use href="images/icons.svg#valid"></use>
+            </svg><span class="_sr-only">входит</span></td>
+          <td><svg width="12" height="12" aria-hidden="true">
+              <use href="images/icons.svg#valid"></use>
+            </svg><span class="_sr-only">входит</span></td>
+          <td><svg width="12" height="12" aria-hidden="true">
+              <use href="images/icons.svg#valid"></use>
+            </svg><span class="_sr-only">входит</span></td>
+        </tr>
+        <tr>
+          <th scope="colgroup" colspan="4">
+            <button type="button" data-toggle="monthly">Ежемесячно включено в тариф:<svg width="16" height="16" aria-hidden="true">
+              <use href="images/icons.svg#chevron-up"></use>
+            </svg></button>
+          </th>
+        </tr>
+        <tr data-target="monthly">
+          <th scope="row">Внешняя оптимизация (сумма от бюджета)</th>
+          <td><span>17%</span></td>
+          <td><span>17%</span></td>
+          <td>17%</td>
+        </tr>
+        <tr data-target="monthly">
+          <th scope="row">Копирайтинг, символов</th>
+          <td>до 5 000</td>
+          <td>до 10 000</td>
+          <td>до 20 000</td>
+        </tr>
+        <tr data-target="monthly">
+          <th scope="row">Наполнение товаров, страниц</th>
+          <td>до 20</td>
+          <td>до 40</td>
+          <td>до 150</td>
+        </tr>
+        <tr data-target="monthly">
+          <th scope="row">Создание страниц услуг</th>
+          <td>до 3</td>
+          <td>до 3</td>
+          <td>до 10</td>
+        </tr>
+        <tr data-target="monthly">
+          <th scope="row">Доработки программиста, часов</th>
+          <td>2</td>
+          <td>4</td>
+          <td>5</td>
+        </tr>
+        <tr data-target="monthly">
+          <th scope="row">Работа дизайнера, часов</th>
+          <td><svg class="invalid" width="12" height="12" aria-hidden="true">
+              <use href="images/icons.svg#invalid"></use>
+            </svg><span class="_sr-only">не входит</span></td>
+          <td><span>2</span></td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <th scope="colgroup" colspan="4">
+            <button type="button" data-toggle="extra">Дополнительно:<svg width="16" height="16" aria-hidden="true">
+              <use href="images/icons.svg#chevron-up"></use>
+            </svg></button>
+          </th>
+        </tr>
+        <tr data-target="extra">
+          <th scope="row">Скидка на настройку контекстной рекламы</th>
+          <td><svg class="invalid" width="12" height="12" aria-hidden="true">
+              <use href="images/icons.svg#invalid"></use>
+            </svg><span class="_sr-only">не входит</span></td>
+          <td><svg width="12" height="12" aria-hidden="true">
+              <use href="images/icons.svg#valid"></use>
+            </svg><span class="_sr-only">входит</span></td>
+          <td><svg width="12" height="12" aria-hidden="true">
+              <use href="images/icons.svg#valid"></use>
+            </svg><span class="_sr-only">входит</span></td>
+        </tr>
+        <tr data-target="extra">
+          <th scope="row">Установка и настройка call-tracking<span>*</span></th>
+          <td><svg class="invalid" width="12" height="12" aria-hidden="true">
+              <use href="images/icons.svg#invalid"></use>
+            </svg><span class="_sr-only">не входит</span></td>
+          <td><svg class="invalid" width="12" height="12" aria-hidden="true">
+              <use href="images/icons.svg#invalid"></use>
+            </svg><span class="_sr-only">не входит</span></td>
+          <td><svg width="12" height="12" aria-hidden="true">
+              <use href="images/icons.svg#valid"></use>
+            </svg><span class="_sr-only">входит</span></td>
+        </tr>
+        <tr data-target="extra">
+          <th scope="row">Настройка сквозной аналитики</th>
+          <td><svg class="invalid" width="12" height="12" aria-hidden="true">
+              <use href="images/icons.svg#invalid"></use>
+            </svg><span class="_sr-only">не входит</span></td>
+          <td><svg class="invalid" width="12" height="12" aria-hidden="true">
+              <use href="images/icons.svg#invalid"></use>
+            </svg><span class="_sr-only">не входит</span></td>
+          <td><svg width="12" height="12" aria-hidden="true">
+              <use href="images/icons.svg#valid"></use>
+            </svg><span class="_sr-only">входит</span></td>
+        </tr>
+        <tr data-target="extra">
+          <th scope="row">Продвижение на картах Яндекс и Google</th>
+          <td><svg class="invalid" width="12" height="12" aria-hidden="true">
+              <use href="images/icons.svg#invalid"></use>
+            </svg><span class="_sr-only">не входит</span></td>
+          <td><svg class="invalid" width="12" height="12" aria-hidden="true">
+              <use href="images/icons.svg#invalid"></use>
+            </svg><span class="_sr-only">не входит</span></td>
+          <td><svg width="12" height="12" aria-hidden="true">
+              <use href="images/icons.svg#valid"></use>
+            </svg><span class="_sr-only">входит</span></td>
+        </tr>
+        <tr>
+          <th scope="colgroup" colspan="4"><button type="button" data-toggle="who">Кому подойдет:<svg width="16" height="16" aria-hidden="true">
+            <use href="images/icons.svg#chevron-up"></use>
+          </svg></button></th>
+        </tr>
+        <tr data-target="who">
+          <th scope="row">Наполнение товаров, страниц</th>
+          <td>до 30 категорий</td>
+          <td>до 100 категорий</td>
+          <td>до 200 категорий</td>
+        </tr>
+        <tr data-target="who">
+          <th scope="row">Создание страниц услуг</th>
+          <td>до 10 услуг</td>
+          <td>до 50 услуг</td>
+          <td>до 100 услуг</td>
+        </tr>
+        <tr class="_sticky">
+          <th scope="row">Цена на продвижение</th>
+          <td>800 BYN/месяц</td>
+          <td>1 000 BYN/месяц</td>
+          <td>1 500 BYN/месяц</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

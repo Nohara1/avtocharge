@@ -1,0 +1,77 @@
+<div class="tariffs tariffs-dev _section">
+  <div class="container">
+    @@include('./src/html/components/heading.html', {
+      heading: '@@if(context.heading){@@heading}',
+      hLevel: '@@if(context.hLevel){@@hLevel}',
+      hStyle: '@@if(context.hStyle){@@hStyle}',
+      hExtraClass: ''
+    })
+    <table data-column="1" data-columns-count="4">
+      <thead>
+        <tr>
+          <td></td>
+          <th scope="col"><button type="button" data-toggle-tariff="1">Минимальный</button></th>
+          <th scope="col"><button type="button" data-toggle-tariff="2">Стандартный</button></th>
+          <th scope="col"><button type="button" data-toggle-tariff="3">Расширеный</button></th>
+          <th scope="col"><button type="button" data-toggle-tariff="4">Особый</button></th>
+        </tr>
+      </thead>
+      <tbody data-toggle-container="toggle">
+        <tr class="active" data-target="same">
+          <th scope="row">Количество рабочих мест</th>
+          <td>до 5</td>
+          <td>от 5 до 10</td>
+          <td>от 10 до 20</td>
+          <td>от 20</td>
+        </tr>
+        <tr class="active" data-target="same">
+          <th scope="row">Выезды</th>
+          <td>без ограничений</td>
+          <td>без ограничений</td>
+          <td>без ограничений</td>
+          <td>без ограничений</td>
+        </tr>
+        <tr class="active" data-target="same">
+          <th scope="row">Поддержка</th>
+          <td>круглосуточно</td>
+          <td>круглосуточно</td>
+          <td>круглосуточно</td>
+          <td>круглосуточно</td>
+        </tr>
+        <tr class="active" data-target="same">
+          <th scope="row">Консультации</th>
+          <td>+</td>
+          <td>+</td>
+          <td>+</td>
+          <td>+</td>
+        </tr>
+        <tr class="active" data-target="same">
+          <th scope="row">Доработка «1С: Предприятие v7.7/8.x»</th>
+          <td>+</td>
+          <td>+</td>
+          <td>+</td>
+          <td>+</td>
+        </tr>
+        <tr class="active" data-target="same">
+          <th scope="row">Стоимость</th>
+          <td>10 000 ₽</td>
+          <td>15 000 ₽</td>
+          <td>20 000 ₽</td>
+          <td>индивидуально</td>
+        </tr>
+        <tr>
+          <td colspan="5">попробуйте бесплатно в течение месяца</td>
+        </tr>
+        <tr class="_buttons">
+          <th scope="row"><span class="_sr-only">Заказать</span></th>
+          <td>
+            <button class="_btn" type="button" data-open-popup="request-a-call">Заказать</button>
+          </td>
+          <td><button class="_btn" type="button" data-open-popup="request-a-call">Заказать</button></td>
+          <td><button class="_btn" type="button" data-open-popup="request-a-call">Заказать</button></td>
+          <td><button class="_btn" type="button" data-open-popup="request-a-call">Заказать</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

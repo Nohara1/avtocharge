@@ -1,0 +1,30 @@
+[
+  {
+    "url": "#",
+    "name": "Одноэтажные дома",
+    "imageWidth": 210,
+    "imageHeight": 76,
+    "imageSrc": "images/categories/category-01.png"
+  },
+  {
+    "url": "#",
+    "name": "Двухэтажные дома",
+    "imageWidth": 210,
+    "imageHeight": 127,
+    "imageSrc": "images/categories/category-02.png"
+  },
+  {
+    "url": "#",
+    "name": "Дома с гаражом",
+    "imageWidth": 269,
+    "imageHeight": 111,
+    "imageSrc": "images/categories/category-03.png"
+  },
+  {
+    "url": "#",
+    "name": "Дома с мансардой",
+    "imageWidth": 222,
+    "imageHeight": 117,
+    "imageSrc": "images/categories/category-04.png"
+  }
+]

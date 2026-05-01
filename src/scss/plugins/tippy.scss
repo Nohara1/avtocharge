@@ -1,0 +1,16 @@
+.tippy-box {
+  color: var(--black);
+  padding: 0.5em 0.75em;
+  min-width: 0;
+  font-size: 14px;
+  // box-shadow: 0 0 27px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.15);
+  font-weight: 500;
+  border-radius: 8px;
+  background-color: var(--white);
+  transition-property: transform, visibility, opacity;
+}
+.tippy-box[data-state="hidden"] {
+  opacity: 0;
+  transform: scale(0.5);
+}

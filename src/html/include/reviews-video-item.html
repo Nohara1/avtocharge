@@ -1,0 +1,10 @@
+<div class="reviews__video-item">
+  @@include('./src/html/components/video.html', {
+    'id': '@@id',
+    'width': '@@width',
+    'height': '@@height',
+    'styled': '@@if(context.styled){@@styled}',
+    'title': '@@if(context.title){@@title}',
+    'text': '@@if(context.text){@@text}'
+  })
+</div>

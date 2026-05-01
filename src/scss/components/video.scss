@@ -1,0 +1,138 @@
+.video {
+  width: 100%;
+  max-width: 100%;
+
+  &_fullwidth {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    // border-radius: 5px;
+
+    @media ($tablet-mid) {
+      min-height: 350px;
+      max-height: calc(100vh - 240px);
+    }
+
+    iframe {
+      pointer-events: none;
+    }
+
+    @extend %video-fullwidth !optional;
+  }
+
+  &__inner {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    position: relative;
+    // border-radius: 5px;
+    padding-bottom: 56.25%;
+    background-color: var(--secondary-c);
+  }
+  &_styled {
+    @extend %video-styled !optional;
+  }
+  &__cover {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    display: block;
+    opacity: 1;
+    position: absolute;
+    visibility: inherit;
+    transition: opacity 0.3s, visibility 0.3s, margin 0.15s;
+
+    &[tabindex] {
+      &:focus-visible {
+        margin: 2px;
+      }
+    }
+    &::before {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      content: "";
+      opacity: 0.76;
+      display: block;
+      z-index: 1;
+      position: absolute;
+      background-color: hsla(0, 0%, 100%, 0.1);
+
+      @media ($transition-min) {
+        transition: opacity 0.3s;
+      }
+      %video-styled & {
+        background-color: var(--text-c);
+      }
+    }
+    &:hover {
+      @media ($transition-min) {
+        transition: opacity 0.3s;
+
+        &::before {
+          opacity: 0.5;
+        }
+      }
+
+      @extend %video-cover-hover !optional;
+    }
+    &_hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  &__play {
+    top: 50%;
+    left: 50%;
+    color: var(--primary-c);
+    z-index: 2;
+    position: absolute;
+    transform: translate(-50%, -50%);
+
+    @media ($transition-min) {
+      transition: transform 0.3s;
+
+      %video-cover-hover & {
+        transform: translate(-50%, -50%) scale(1.2);
+      }
+    }
+    %video-fullwidth & {
+      opacity: 0;
+    }
+  }
+  &__title {
+    // margin: 20px auto 0;
+    // max-width: 80%;
+    margin-top: 20px;
+    // text-align: center;
+
+    // @media ($tablet-mad) {
+    //   max-width: 90%;
+    // }
+  }
+  &__text {
+    display: -webkit-box;
+    overflow: hidden;
+    margin-top: 1.6875rem;
+    text-overflow: ellipsis;
+    margin-bottom: auto;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+  iframe {
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    bottom: 0;
+    height: 100%;
+    border: none;
+    position: absolute;
+    max-width: 100%;
+  }
+
+  @extend %video !optional;
+}

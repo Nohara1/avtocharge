@@ -1,0 +1,74 @@
+<article class="product">
+  <div class="product__inner">
+    <div class="is-container">
+      <p class="product__iw _iw">
+        <img class="product__image" src="@@imageSrc" srcset="images/placeholder.png" data-srcset="@@imageSrc"
+          alt="@@title" width="550" height="302" decoding="async">
+      </p>
+      @@include('./src/html/components/image-switcher.html', {
+        image: '@@imageSrc'
+      })
+    </div>
+    <form method="post" class="product__form">
+      <input type="hidden" name="id" value="@@id">
+      <input type="hidden" name="count" value="1">
+      <input type="hidden" name="options" value="[]">
+
+      <div class="product__content">
+        @@include("./src/html/components/feature-buttons-add.html", { "wishlist": true, "comparison": true })
+        <a href="@@link" class="product__title _title">@@title</a>
+        @@if(context.feature01){
+        <div class="product__features">
+          @@if(context.feature01){
+          <p><svg width="20" height="20" aria-hidden="true">
+              <use href="images/icons.svg#floor"></use>
+            </svg>@@if(context.feature01.key){<span>@@feature01.key</span>}
+            <b>@@if(context.feature01.value){@@feature01.value}</b>
+          </p>
+          }
+          @@if(context.feature02){
+          <p><svg width="20" height="20" aria-hidden="true">
+              <use href="images/icons.svg#resize"></use>
+            </svg>@@if(context.feature02.key){<span>@@feature02.key</span>}
+            <b>@@if(context.feature02.value){@@feature02.value}</b>
+          </p>
+          }
+          @@if(context.feature03){
+          <p><svg width="20" height="20" aria-hidden="true">
+              <use href="images/icons.svg#bed"></use>
+            </svg>@@if(context.feature03.key){<span>@@feature03.key</span>}
+            <b>@@if(context.feature03.value){@@feature03.value}</b>
+          </p>
+          }
+          @@if(context.feature04){
+          <p>@@if(context.feature04.key){<span>@@feature04.key</span>}
+            <b>@@if(context.feature04.value){@@feature04.value}</b>
+          </p>
+          }
+          @@if(context.feature05){
+          <p>@@if(context.feature05.key){<span>@@feature05.key</span>}
+            <b>@@if(context.feature05.value){@@feature05.value}</b>
+          </p>
+          }
+        </div>
+        }
+      </div>
+      @@if(context.price || context.construction){<div class="product__bottom">
+        @@if(context.price){<p class="product__price-wrapper">
+          <span>Цена проекта: <span class="product__price">от @@price руб.</span></span>
+          @@if (context.old_price) {
+          <span class="product__price product__price_old">@@old_price руб.</span>
+          }
+        </p>}
+        @@if(context.construction){<p class="product__price-wrapper">
+          <span>Стоимость строительства <span class="product__price">~ @@construction руб.</span></span>
+        </p>}
+      </div>}
+    </form>
+    @@include('./src/html/components/product-badges.html', {
+    'bestseller': @@bestseller,
+    'discount': @@discount,
+    'novelty': @@novelty
+    })
+  </div>
+</article>

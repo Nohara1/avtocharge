@@ -1,0 +1,68 @@
+.flip-card {
+  margin: 0 0 0 -1px;
+  flex-grow: 1;
+  perspective: 1500px;
+
+  &:hover {
+    @extend %flip-card-hover !optional;
+  }
+
+  &__inner {
+    height: 100%;
+    display: flex;
+
+    @media ($transition-min) {
+      transform: rotateY(0deg);
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+
+      %flip-card-hover & {
+        transform: rotateY(180deg);
+      }
+    }
+  }
+  &__side {
+    flex: 1 0 100%;
+    width: 100%;
+    outline: 1px solid var(--primary-c);
+    padding: 3.875rem 2.1875rem 3.75rem;
+    position: relative;
+    text-align: center;
+    background: none 50% / cover no-repeat var(--white);
+
+    // %custom-slider-slide:last-child & {
+    //   border-right-width: 1px;
+    // }
+
+    &_rear {
+      color: var(--white);
+      transform: rotateY(180deg);
+      margin-left: -100%;
+      backface-visibility: hidden;
+
+      &::before {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: change-color($color: $text-color, $alpha: 0.78);
+      }
+    }
+    & > * {
+      position: relative;
+    }
+  }
+  &__title {
+    margin-bottom: 3.125rem;
+  }
+  &__icon {
+    color: var(--primary-c);
+  }
+  &__text {
+    text-align: left;
+    margin-top: 3.125rem;
+  }
+}

@@ -1,0 +1,42 @@
+.pick-a-project {
+  border: 1px solid var(--text-c);
+  color: var(--primary-c);
+  border-radius: 10px;
+
+  %form-items {
+    @include row-breakpoint(2.3125rem, 3.125rem);
+  }
+  %form-items-row {
+    @media ($tablet-min) {
+      flex-wrap: wrap;
+    }
+  }
+  %form-input {
+    max-width: 135px;
+    min-height: 45px;
+    border-radius: 0;
+    background-color: var(--form-b);
+  }
+  %form-input-placeholder {
+    top: calc(45px / 2);
+  }
+  %form-input-placeholder + %form-input {
+    text-align: center;
+    font-weight: 700;
+  }
+  %form-buttons-wrapper {
+    flex-grow: 1;
+  }
+  %form-button {
+    flex-grow: 1;
+    min-height: 50px;
+  }
+  %search-form {
+    width: 100%;
+  }
+  %search-form-label {
+    max-width: 100%;
+  }
+
+  @extend %pick-a-project !optional;
+}

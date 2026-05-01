@@ -1,0 +1,40 @@
+.product-badges {
+  display: flex;
+  position: absolute;
+  pointer-events: none;
+  flex-direction: column;
+
+  @extend %product-badges !optional;
+
+  &__badge {
+    width: 2.5rem;
+    color: var(--white);
+    height: 2.5rem;
+    display: flex;
+    min-width: 30px;
+    font-size: 0.875rem;
+    min-height: 30px;
+    font-weight: 700;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+
+    @media ($tablet-mad) {
+      font-size: 11px;
+    }
+
+    & + & {
+      margin-top: 0.5rem;
+    }
+    &_discount {
+      font-size: 1.275rem;
+      background-color: var(--discount-color);
+    }
+    &_novelty {
+      background-color: var(--valid);
+    }
+    &_bestseller {
+      background-color: var(--bestseller-color);
+    }
+  }
+}

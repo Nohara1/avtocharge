@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./src/html/page/head.html', {
+  title: "Название статьи",
+})
+
+<body>
+  <div class="wrapper">
+    @@include('./src/html/page/header.html')
+
+    @@include('./src/html/components/breadcrumbs.html', {
+      elements: [
+        { name: 'Главная', link: '/' },
+        { name: 'Блог', link: '/blog' },
+        { name: 'Название статьи', link: '' }
+      ]
+    })
+
+    @@include('./src/html/blocks/inner/blog-entry.html', {
+      heading: 'Название статьи',
+      hasMainImage: true,
+      imageSrc: 'images/blog/blog-content-01.jpg',
+      link: '/magniya-citrat-bezvodnyy',
+      date: '01.01.2023',
+      tag: '',
+      description: '',
+      relatedProduct: '',
+      contents: '<p>Lorem ipsum dolor sit amet consectetur. Cursus sed a condimentum id amet ac metus elementum donec. In etiam varius risus pulvinar erat eget ut ipsum luctus. Massa sed diam feugiat pellentesque elementum nec praesent. Egestas duis fringilla gravida nibh. Sollicitudin potenti metus nulla tellus id pulvinar scelerisque mauris. At erat ac amet eget sed habitant vitae gravida maecenas. Non ut bibendum nibh purus diam tempor pellentesque morbi quis.<br>Eu lacus donec maecenas pretium. Cursus faucibus quisque at non suspendisse fames leo a. Pulvinar a iaculis ut vel pellentesque odio. Aliquet eget nunc sed proin libero. Ornare interdum aenean cursus enim consequat id donec. Ut placerat nec habitasse gravida imperdiet tortor mauris tortor. Amet vivamus pretium aenean purus massa tellus scelerisque montes arcu. Urna enim id ut aliquam. Commodo ultrices eu leo vulputate. Tellus lacus proin odio nibh mauris pharetra sit.<br>Adipiscing sit non risus magna arcu montes massa aliquam vel. Id mauris aliquam mauris adipiscing dictum risus. Ultrices adipiscing amet molestie turpis vel aliquam lectus nulla mi. Mi quis porttitor nunc accumsan. Pellentesque quis nibh integer in quis scelerisque tempor sed hendrerit. Eu est id diam faucibus accumsan egestas.<br>Fermentum turpis mattis et nibh vivamus in. Ac pellentesque posuere ultrices morbi proin. Nulla sed dui eget cursus. Elementum eget rutrum integer felis enim urna sit egestas phasellus. Mus quis tempus turpis vivamus tincidunt massa. Vestibulum integer non sed est velit felis enim. Proin sed sed in et vitae porta ac duis nullam. Tellus consequat quam enim gravida proin pharetra eget. Eu ipsum risus ut varius sit elit nec habitasse rhoncus. Tortor lorem proin vitae sagittis. Eget metus facilisi sed tortor eu turpis turpis. Ultrices eleifend orci enim congue at venenatis. Sit elementum justo tristique ut amet. Mauris et maecenas sapien elit faucibus. Vitae odio dolor lorem vitae.<br>Venenatis dignissim neque semper urna senectus commodo quam purus. Ullamcorper tincidunt hendrerit urna integer. Nulla phasellus egestas ultricies sed et pellentesque morbi mi. Convallis at vitae senectus quam eget sed ornare. Duis tortor aliquam nunc faucibus elementum. Eu donec purus aliquam blandit. Risus eu laoreet non dui massa interdum id elementum commodo. Eget erat facilisi lorem lacinia. Gravida vulputate metus pellentesque hendrerit ornare rhoncus etiam sed erat. At vitae integer pharetra pellentesque aliquet cursus et tempus malesuada. Posuere aliquam non nulla in. Vivamus diam bibendum augue enim nisi viverra. Molestie consequat diam commodo ligula risus sollicitudin sem aliquet a. Ut ac nam nullam aenean nullam adipiscing at.<br>Habitant adipiscing duis a porta commodo. Pellentesque bibendum aliquet convallis elit vestibulum turpis consectetur. Sit ullamcorper consequat tellus a. Sodales consequat justo ut hendrerit cursus. Libero amet felis eu imperdiet. Enim neque eget suspendisse sed malesuada adipiscing et in leo. Natoque est quis sed natoque sed eleifend gravida. Tristique arcu adipiscing elementum massa nisl elementum. Augue eu eget donec amet dolor. Fermentum iaculis enim purus commodo mauris elementum. Enim faucibus eu a scelerisque commodo sed venenatis. Tincidunt a sed vulputate lorem viverra. Id sit velit luctus morbi egestas pellentesque. Turpis et sapien cursus felis sed.<br>Adipiscing turpis risus quam egestas massa. Enim pulvinar et neque et commodo ut leo ac. Mi aliquet volutpat pretium enim id ac. Tortor lacinia sit ipsum aliquam. Ut in proin amet faucibus tincidunt integer ultricies. Mattis tempor ante in malesuada vitae turpis lorem lectus ut. At ac enim consectetur nisl pellentesque cursus. Mattis eget dui sed aliquam. Habitant massa bibendum viverra mi pretium. Egestas maecenas quam rhoncus malesuada justo tortor facilisis maecenas tincidunt. Lacinia quis pellentesque platea ut. Aliquam dignissim pulvinar urna et et justo eget orci.<br>Nulla nam diam sed in neque odio. Feugiat magna lorem cras ultrices cras massa odio sagittis sed. Ultrices congue felis metus leo cursus mauris aenean morbi. Neque sed sit diam tincidunt sed. Faucibus sapien tempor eget pellentesque gravida faucibus quis quisque vitae. Auctor pellentesque lacus nisl facilisi morbi consequat ornare ultrices. Varius accumsan tincidunt mauris elementum nibh turpis tellus ornare. Consectetur non ultrices sem bibendum. Lacinia massa vel nulla vel eget purus dignissim placerat. Pretium auctor sem eget urna nisl lobortis amet et. In nec pellentesque facilisis eu et. Turpis vel justo at senectus posuere nulla.<br>Ultrices pharetra porttitor nulla mattis quis. Magna sem proin metus nunc sit enim fringilla. Faucibus diam viverra amet tincidunt id tortor varius mauris nulla. Lacinia in nec amet quisque ut. Proin turpis morbi amet tellus odio leo magna.<br>Natoque suspendisse ullamcorper adipiscing vel. Netus dolor auctor vulputate orci malesuada mauris. Mattis consectetur lacus eu et. Fringilla id habitant magna proin id ut. Eu nulla felis feugiat mi. Lectus et feugiat aliquam erat etiam maecenas ut. Sagittis augue nunc nisl egestas egestas eget in. Sed purus elementum non risus euismod placerat eget facilisi viverra. Aliquet blandit donec cursus feugiat id at egestas. Volutpat pellentesque cursus sagittis quam malesuada. Condimentum amet est lacus nulla eu et. Dignissim mi neque odio placerat enim nunc euismod.</p>',
+      hasRelatedBlogs: false,
+      hasRelatedProducts: false
+    })
+
+    @@include('./src/html/blocks/inner-items.html', {
+      extraClass: '_primary-background _section-p _section-p_bdrs _section-p_bdrs-t',
+      heading: 'Последние статьи',
+      text: '',
+      columns: 4,
+      columnsMobile: 1,
+      itemPath: './src/html/components/blog-item.html',
+      jsonPath: '[{imageSrc: "images/blog/blog-01.jpg", width: 550, height: 300, class: "image_blog", orientation: "horizontal", title: "Как дизайн может убить продажи?", link: "/blog-entry", date: "01.01.2023",text: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh neque, venenatis sed quam vitae, facilisis placerat lectus. Aliquam sapien ex, sodales ac nunc a, viverra lacinia</p>"},{imageSrc: "images/blog/blog-01.jpg", width: 550, height: 300, class: "image_blog", orientation: "horizontal", title: "Как дизайн может убить продажи?", link: "/blog-entry", date: "01.01.2023",text: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh neque, venenatis sed quam vitae, facilisis placerat lectus. Aliquam sapien ex, sodales ac nunc a, viverra lacinia</p>"},{imageSrc: "images/blog/blog-01.jpg", width: 550, height: 300, class: "image_blog", orientation: "horizontal", title: "Как дизайн может убить продажи?", link: "/blog-entry", date: "01.01.2023",text: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh neque, venenatis sed quam vitae, facilisis placerat lectus. Aliquam sapien ex, sodales ac nunc a, viverra lacinia</p>"},{imageSrc: "images/blog/blog-01.jpg", width: 550, height: 300, class: "image_blog", orientation: "horizontal", title: "Как дизайн может убить продажи?", link: "/blog-entry", date: "01.01.2023",text: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh neque, venenatis sed quam vitae, facilisis placerat lectus. Aliquam sapien ex, sodales ac nunc a, viverra lacinia</p>"},]'
+    })
+
+    @@include('./src/html/blocks/custom-content-01.html', {
+      extraClass: '_primary-background _section-p',
+      full: true,
+      heading: "Подпишись на наши социальные сети",
+      content01: '<div class="_cc__buttons"><a href="https://www.instagram.com/cweb.by/" class="_btn _btn--transparent _btn--circle-icon" target="_blank">Instagram<svg width="21" height="21" aria-hidden="true"><use href="images/icons.svg#arrow"></use></svg></a><a href="https://www.behance.net/cweb/" class="_btn _btn--transparent _btn--circle-icon" target="_blank">Behance<svg width="21" height="21" aria-hidden="true"><use href="images/icons.svg#arrow"></use></svg></a><a href="https://www.linkedin.com/company/crystal-web-bel/" class="_btn _btn--transparent _btn--circle-icon"  target="_blank">LinkedIn<svg width="21" height="21" aria-hidden="true"><use href="images/icons.svg#arrow"></use></svg></a><a href="https://www.tiktok.com/@cweb.by" class="_btn _btn--transparent _btn--circle-icon" target="_blank">TikTok<svg width="21" height="21" aria-hidden="true"><use href="images/icons.svg#arrow"></use></svg></a></div>'
+    })
+
+    @@include('./src/html/page/footer.html')
+  </div>
+  @@include("./src/html/page/body-bottom.html")
+</body>
+
+</html>

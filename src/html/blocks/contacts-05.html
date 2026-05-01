@@ -1,0 +1,64 @@
+<section class="cont-05 cont-05@@if(context.image){ cont-05_image}">
+  <div class="container">
+    @@include('./src/html/components/heading.html', {
+      heading: '@@if(context.heading){@@heading}',
+      hLevel: '@@if(context.hLevel){@@hLevel}',
+      hStyle: '@@if(context.hStyle){@@hStyle}'
+    })
+    <div class="cont-05__items">
+      <div class="cont-05__item cont-05__item_info">
+        <div class="cont-05__info">
+          <h3 class="cont-05__title _heading _h3">Digital-агентство CWEB</h3>
+          <p class="_heading _h3">Наш адрес</p>
+          <p class="_cc">220073, г.&nbsp;Минск, ул.&nbsp;Притыцкого, д.&nbsp;2, корп.&nbsp;3, оф.&nbsp;23</p>
+          <p class="_heading _h3">График работы</p>
+          <p class="_cc">пн-пт с&nbsp;10:00 до&nbsp;17:00</p>
+          <div class="cont-05__extra">ООО «КристаллВеб»<br>УНП 193312909</div>
+        </div>
+      </div>
+      <div class="cont-05__item cont-05__item_map">
+        <div data-map-overlay="Нажмите, чтобы взаимодействовать">
+          <iframe class="cont-05__map" data-src="https://yandex.by/map-widget/v1/?ll=27.505138%2C53.910575&mode=search&oid=160308665139&ol=biz&z=17.04"></iframe>
+        </div>
+        <a href="https://maps.app.goo.gl/JetbSFDAGLiyQhda8" class="cont-05__button _btn _btn--white _btn--circle-icon" target="_blank">
+          Как проехать (Google)
+          <svg width="21" height="21" aria-hidden="true">
+            <use href="images/icons.svg#arrow"></use>
+          </svg>
+        </a>
+        <a href="https://yandex.by/maps/-/CDVGATN4" class="cont-05__button _btn _btn--white _btn--circle-icon" target="_blank">
+          Как проехать (Яндекс)
+          <svg width="21" height="21" aria-hidden="true">
+            <use href="images/icons.svg#arrow"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="cont-05__item cont-05__item_phones">
+        <div class="cont-05__phones">
+          <p class="_heading _h3">Контактный телефон</p>
+          <p class="_cc"><a class="" href="tel:+375291077777">+375 (29) 107-77-77</a></p>
+          <p class="_heading _h3">Telegram</p>
+          @@include('./src/html/components/messengers.html', { hideWhatsapp: true, hideViber: true })
+          <p class="_heading _h3">Наша почта</p>
+          @@include('./src/html/components/email.html')
+          <button class="_btn" type="button" data-open-popup="request-a-call">Заказать звонок</button>
+        </div>
+      </div>
+      @@if(context.image){
+        <div class="cont-05__item cont-05__item_image">
+          @@include('./src/html/components/image.html', {
+            src: 'images/certificates/certificate-03.jpg',
+            thumb: 'images/certificates/thumbs/certificate-03.jpg',
+            alt: 'Сертификат о государственной регистрации',
+            orientation: 'vertical',
+            contain: false,
+            width: '400',
+            height: '570',
+            class: 'image--grayscale',
+            gallery: 'cont-05'
+          })
+        </div>
+      }
+    </div>
+  </div>
+</section>

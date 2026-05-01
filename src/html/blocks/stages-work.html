@@ -1,0 +1,28 @@
+<@@if(context.heading){section}@@if(!context.heading){div} class="collapse@@if(context.extraClass){ @@extraClass}@@if(!context.heading){ _section}" @@if(context.id){id="@@id"}>
+  <div class="container">
+    @@include('./src/html/components/heading.html', {
+      heading: '@@if(context.heading){@@heading}',
+      hLevel: '@@if(context.hLevel){@@hLevel}',
+      hStyle: '@@if(context.hStyle){@@hStyle}',
+      hExtraClass: 'collapse__heading'
+    })
+    <div class="sw__items" data-toggle-container="@@if(context.self){,self}" role="tablist">
+      @@if(context.subtitle){
+        <p class="sw__subtitle ">
+          @@subtitle
+        </p>
+      }
+        <div class="sw__tabs">
+            @@loop('./src/html/include/stages-work-buttons.html', '@@jsonPath')
+        </div>
+        <div class="sw__contents">
+          @@if(context.it){
+            @@loop('./src/html/include/stages-work-contents.html', '@@jsonPath')
+          }
+          @@if(context.oneC){
+            @@loop('./src/html/include/stages-work-contents-02.html', '@@jsonPath')
+          } 
+        </div>
+    </div>
+  </div>
+</@@if(context.heading){section}@@if(!context.heading){div}>

@@ -1,0 +1,39 @@
+@@if(context.comparison || context.wishlist || context.cart || context.search){<div class="feature-buttons">
+  @@if(context.wishlist){<div class="feature-buttons__item">
+    <a class="feature-buttons__link feature-buttons__wishlist" href="/wishlist" data-tippy-content="Список желаемого">
+      <span class="_sr-only">Список желаемого</span>
+      <svg class="feature-buttons__icon" width="25.73" height="24" aria-hidden="true">
+        <use href="images/icons.svg#heart" />
+      </svg>
+      <span class="feature-buttons__number wishlist-count">0</span>
+    </a>
+  </div>}
+  @@if(context.comparison){<div class="feature-buttons__item">
+    <a class="feature-buttons__link feature-buttons__comparison" href="/comparison" data-tippy-content="Сравнение">
+      <span class="_sr-only">Сравнение</span>
+      <svg class="feature-buttons__icon" width="32.24" height="24" aria-hidden="true">
+        <use href="images/icons.svg#comparison" />
+      </svg>
+      <span class="feature-buttons__number comparison-count">0</span>
+    </a>
+  </div>}
+  @@if(context.cart){<div class="feature-buttons__item">
+    <button class="feature-buttons__link feature-buttons__cart" type="button" name="cart-button"
+      data-tippy-content="Корзина">
+      <span class="_sr-only">Корзина</span>
+      <svg class="feature-buttons__icon" width="24" height="24" aria-hidden="true">
+        <use href="images/icons.svg#cart" />
+      </svg>
+      <span class="feature-buttons__number cart-count">0</span>
+    </button>
+  </div>}
+  @@if(context.search){<div class="feature-buttons__item">
+    <button class="feature-buttons__link feature-buttons__search" type="button" name="search-button"
+      data-tippy-content="Поиск">
+      <span class="_sr-only">Поиск</span>
+      <svg class="feature-buttons__icon" width="24" height="24" aria-hidden="true">
+        <use href="images/icons.svg#search" />
+      </svg>
+    </button>
+  </div>}
+</div>}

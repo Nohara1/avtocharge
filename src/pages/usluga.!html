@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./src/html/page/head.html', {
+  title: "Название услуги",
+  sliderPreload: true
+})
+
+<body>
+  <div class="wrapper">
+    @@include('./src/html/page/header.html', {
+      transparent: false
+    })
+
+    @@include('./src/html/blocks/background.html')
+
+    @@include('./src/html/components/breadcrumbs.html', {
+      elements: [
+        { name: 'Главная', link: '/' },
+        { name: 'Услуги', link: 'catalog' },
+        { name: 'Название услуги', link: '' }
+      ]
+    })
+
+
+    @@include('./src/html/blocks/two-components.html', {
+        hStyle: 2,
+        heading: 'Прокат оборудования',
+        subheading: '',
+        extraClass: 'tc_full tc_banner',
+        title01: '',
+        component01url: './src/html/components/video-content.html',
+        component01params: '{ videoLink: "videos/content-1.mp4",videoPoster: "images/uslugi/uslugi3.png"}',
+        title02: '',
+        component02url: './src/html/components/custom-content.html',
+        component02params: '{ contents: "<p>Lorem ipsum dolor sit amet consectetur. Pellentesque dictumst diam lorem fusce penatibus. Egestas venenatis ac eget scelerisque a enim tellus eu mollis. Nulla eget nibh id integer facilisi vulputate. Etiam auctor eu porta faucibus cursus morbi. Euismod arcu proin varius eget nibh diam lacus duis nulla. Dictum aenean convallis in ultrices ut. Lacinia hac aliquet dolor semper.</p><p>Lorem ipsum dolor sit amet consectetur. Pellentesque dictumst diam lorem fusce penatibus. Egestas venenatis ac eget scelerisque a enim tellus eu mollis. Nulla eget nibh id integer facilisi vulputate. Etiam auctor eu porta faucibus cursus morbi. Euismod arcu proin varius eget nibh diam lacus duis nulla. Dictum aenean convallis in ultrices ut. Lacinia hac aliquet dolor semper.</p>" }',
+    })
+
+    @@include('./src/html/blocks/custom-content-01.html', {
+        "h1": true,
+        "full": true,
+        "heading": "Что включает в себя услуга",
+        "extraClass": 'cc_uslugi-list',
+        "content01": "<ul><li>выезды к заказчику</li><li>регулярная диагностика (осмотр, проверка работоспособности, настройка, регулировка, чистка и прочие схожие работы)</li><li>ремонтные работы</li><li>подбор и подключение новых устройств или перемещение уже имеющихся</li><li>заправка картриджей</li><li>обучение сотрудников работе с устройствами</li><li>поставка запчастей и расходных материалов (по выгодным ценам)</li></ul>"
+    })
+
+    @@include('./src/html/blocks/stages-work.html', {
+        extraClass: '',
+        heading: 'Этапы работы',
+        self: false,
+        it: true,
+        jsonPath: '../json/collapse-3-pieces.json'
+    })
+    
+
+    @@include('./src/html/blocks/inner-items.html', {
+        extraClass: 'ii_advantages',
+        heading: 'Преимущества',
+        subheading: '',
+        text: '',
+        columns: 3,
+        columnsMobile: '',
+        subcategoriesTitle: '',
+        subcategoriesJson: '',
+        itemPath: './src/html/components/inner-items/inner-items-item.html',
+        jsonPath: '"../json/inner-items-advantages.json"'
+      })
+
+      @@include('./src/html/blocks/inner-items.html', {
+        extraClass: 'ii_tarif',
+        heading: 'Стоимость',
+        subheading: '',
+        text: '',
+        columns: 3,
+        columnsMobile: '',
+        subcategoriesTitle: '',
+        subcategoriesJson: '',
+        itemPath: './src/html/components/inner-items/inner-items-item.html',
+        jsonPath: '"../json/inner-items-tarif.json"'
+      })
+
+      @@include('./src/html/blocks/two-components.html', {
+        hStyle: 2,
+        heading: '',
+        subheading: '',
+        title01: '',
+        extraClass: 'tc_proportions tc_background tc_form',
+        component01url: './src/html/components/custom-content.html',
+        component01params: '{ contents: "<h2 class=\'_heading _h2\'>Как получить услугу?</h2><p>Чтобы получить услугу IT-аутсорсинга, свяжитесь с Грани IT любым удобным способом, либо заполните форму:</p>@@include(\'./src/html/components/messengers.html\',{hideTelegram: true,hideViber: true,solid: true})@@include(\'./src/html/components/email.html\')<p>Если необходимо, дадим подробную бесплатную консультацию, в ходе которой рассчитаем предварительную цену работы.</p>", extraClass: "_cc_contacts-form" }',
+        title02: '',
+        component02url: './src/html/forms/form-consultation.html',
+        component02params: 'null',
+      })
+
+    @@include('./src/html/page/footer.html')
+  </div>
+  @@include("./src/html/page/body-bottom.html", {
+    contactManager: false,
+    checkout: false,
+    promo: false
+  })
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+<section class="attention">
+    <div class="container">
+      @@include('./src/html/components/heading.html', {
+        heading: '@@if(context.heading){@@heading}',
+        hLevel: '@@if(context.hLevel){@@hLevel}',
+        hStyle: '@@if(context.hStyle){@@hStyle}',
+      })
+      <div class="attention__inner">
+        <svg class="attention__icon" width="20" height="80" aria-hidden="true">
+          <use href="images/icons.svg#attention"></use>
+        </svg>
+        <div class="attention__text">
+            <p>Тарифы определяются в индивидуальном порядке. Перед заключением договора, специалисты по обслуживанию производят расчет. Итоговая месячная оплата будет зависеть от разновидностей установленного оборудования, а также его количества. Составляется график плановых визитов специалиста для проведения осмотров и регулярных работ. Также возможны внеплановые выезды в случае экстренных поломок, эти выезды включены в месячную плату.</p>
+        </div>
+      </div>
+    </div>
+</section>

@@ -1,0 +1,57 @@
+.vacancy-entry {
+  &__inner {
+    margin: 0 auto;
+    display: flex;
+    max-width: 76.25rem;
+    flex-direction: column;
+  }
+  // &__heading-wrapper {}
+  &__heading {
+    max-width: 80%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media ($tablet-mad) {
+      max-width: 90%;
+    }
+  }
+  &__iw {
+    order: -1;
+    width: 100%;
+    height: 0;
+    margin-bottom: 3.125rem;
+    // border-radius: 5px;
+    padding-bottom: 53.57%;
+    background-color: var(--secondary-c);
+
+    @media ($tablet-mad) {
+      margin-bottom: 2.5rem;
+    }
+  }
+  // &__image {}
+  &__date {
+    color: var(--secondary-c);
+    margin-top: 0.7rem;
+    font-weight: 600;
+
+    @media ($tablet-mad) {
+      font-size: 14px;
+      margin-top: 1rem;
+    }
+  }
+  &__description {
+    margin-top: 0.6rem;
+
+    @media ($tablet-mad) {
+      margin-top: 0.9rem;
+    }
+  }
+  // &__content {
+  //   margin-top: 5rem;
+
+  //   @media ($tablet-mad) {
+  //     margin-top: 20px;
+  //   }
+  // }
+}

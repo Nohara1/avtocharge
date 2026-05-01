@@ -1,0 +1,24 @@
+.info {
+  color: inherit;
+  display: flex;
+  font-size: inherit;
+  // font-weight: 300;
+  align-items: center;
+  text-decoration: none;
+
+  @extend %info !optional;
+
+  &__icon {
+    color: inherit;
+    width: 1.4286em;
+    height: 1.4286em;
+    margin-top: 0.07em;
+    align-self: flex-start;
+    margin-right: 0.5em;
+  }
+  span {
+    color: inherit;
+
+    @extend %info-label !optional;
+  }
+}

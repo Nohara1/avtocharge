@@ -1,0 +1,9 @@
+<div class="docs">
+  <@@if(context.popup){button}@@if(!context.popup){div} class="docs__inner"@@if(context.popup){ type="button" data-open-popup="docs"}>
+    <div class="docs__folder">
+      <svg class="docs__sheet" width="61" height="51" aria-hidden="true"><use href="images/icons.svg#sheet"></use></svg>
+      <svg width="83" height="71" aria-hidden="true"><use href="images/icons.svg#folder"></use></svg>
+    </div>
+    <p class="docs__title _title">@@if(context.title){@@title}@@if(!context.title){Вписать заголовок}</p>
+  </@@if(context.popup){button}@@if(!context.popup){div}>
+</div>

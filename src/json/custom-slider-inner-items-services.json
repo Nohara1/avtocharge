@@ -1,0 +1,44 @@
+[
+  {
+    "image": "images/services/photo.jpg",
+    "title": "Фото",
+    "linkUrl": "service",
+    "linkName": "Подробнее",
+    "linkClass": "_btn--pseudo _btn--small"
+  },
+  {
+    "image": "images/services/insurance.jpg",
+    "title": "Страховка",
+    "linkUrl": "service",
+    "linkName": "Подробнее",
+    "linkClass": "_btn--pseudo _btn--small"
+  },
+  {
+    "image": "images/services/tickets.jpg",
+    "title": "Бронирование билетов",
+    "linkUrl": "service",
+    "linkName": "Подробнее",
+    "linkClass": "_btn--pseudo _btn--small"
+  },
+  {
+    "image": "images/services/hotels.jpg",
+    "title": "Бронирование гостиниц",
+    "linkUrl": "service",
+    "linkName": "Подробнее",
+    "linkClass": "_btn--pseudo _btn--small"
+  },
+  {
+    "image": "images/services/translation.jpg",
+    "title": "Переводы документов",
+    "linkUrl": "service",
+    "linkName": "Подробнее",
+    "linkClass": "_btn--pseudo _btn--small"
+  },
+  {
+    "image": "images/services/delivery.jpg",
+    "title": "Доставка",
+    "linkUrl": "service",
+    "linkName": "Подробнее",
+    "linkClass": "_btn--pseudo _btn--small"
+  }
+]

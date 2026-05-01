@@ -1,0 +1,37 @@
+.blog {
+  &__heading {
+    margin-bottom: 3.1rem;
+  }
+  &__items {
+    @include row(3.125rem, 4.375rem);
+
+    @media ($desktop-max) {
+      @include row-breakpoint(2.85rem, 4.1rem);
+    }
+
+    > * {
+      flex: 1 1 33.3333%;
+      max-width: 33.3333%;
+
+      // @media ($tablet-mid) {
+      //   &:nth-child(5n + 1),
+      //   &:nth-child(5n + 2) {
+      //     flex: 1 1 50%;
+      //     max-width: 50%;
+      //   }
+      // }
+      // @media ($desktop-max) and ($desktop-min) {
+      //   max-width: 33.3333%;
+      //   flex-basis: 33.3333%;
+      // }
+      @media ($tablet-max) and ($tablet-min) {
+        max-width: 50%;
+        flex-basis: 50%;
+      }
+      @media ($mobile-max) {
+        max-width: 100%;
+        flex-basis: 100%;
+      }
+    }
+  }
+}

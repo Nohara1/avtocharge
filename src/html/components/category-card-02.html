@@ -1,0 +1,31 @@
+<div class="category-card-02">
+  <div class="category-card-02__inner">
+    <p class="category-card-02__iw _iw">
+      <img src="@@imageSrc" alt="@@name" srcset="images/placeholder.png" data-srcset="@@imageSrc" width="@@imageWidth"
+        height="@@imageHeight" decoding="async">
+    </p>
+    <div class="category-card-02__header">
+      <a href="@@url" class="category-card-02__link _title">@@name</a>
+      @@if(context.tags){<div class="category-card-02__tags">
+        <ul class="category-card-02__tags-list">
+          @@if(context.tags.t01){<li class="category-card-02__tags-item">
+            <a class="category-card-02__tags-link" href="category">@@tags.t01</a>
+          </li>}
+          @@if(context.tags.t02){<li class="category-card-02__tags-item">
+            <a class="category-card-02__tags-link" href="category">@@tags.t02</a>
+          </li>}
+        </ul>
+      </div>}
+    </div>
+    <div class="category-card-02__extra">
+      <span class="category-card-02__extra-item">
+        <svg width="18" height="19">
+          <use href="images/icons.svg#money"></use>
+        </svg>от <span>@@price RUB</span></span>
+      <span class="category-card-02__extra-item">
+        <svg width="18" height="19">
+          <use href="images/icons.svg#clock"></use>
+        </svg>до <span>@@date</span></span>
+    </div>
+  </div>
+</div>

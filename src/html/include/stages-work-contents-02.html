@@ -1,0 +1,24 @@
+<div id="@@id" class="sw__tabpanel sw__content @@if(context.active){@@active}" data-target="@@id" role="tabpanel">
+    <!-- <div class="sw__interlayer"> -->
+    <div class="sw__content _cc">
+      
+            @@include('./src/html/blocks/two-components.html', {
+                hStyle: 2,
+                heading: '',
+                subheading: '',
+                title01: '',
+                extraClass: 'sw_tc',
+                component01url: './src/html/components/custom-content.html',
+                component01params: '{ contents: "<h3>Анализ деятельности предприятия</h3>", extraClass: "" }',
+                title02: '',
+                component02url: './src/html/components/custom-content.html',
+                component02params: '{ contents: "<p><strong>Анализ деятельности предприятия</strong><br>Изучается специфика работы компании, проходящие в ней бизнес-процессы, особенности переноса данных в электронный вид, пожелания клиента.</p>", extraClass: "" }',
+            })
+    </div>
+    @@if(context.link){
+    <div class="sw__link-wrapper">
+        <a href="@@link" class="sw__link _btn _btn--text">Подробнее</a>
+    </div>
+    }
+    <!-- </div> -->
+</div> 

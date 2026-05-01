@@ -1,0 +1,23 @@
+<article class="portfolio">
+  <div class="portfolio__inner">
+    <p class="portfolio__iw _iw">
+      <img class="portfolio__image" src="@@imageSrc" srcset="images/placeholder.png" data-srcset="@@imageSrc"
+        alt="@@title" width="243" height="185" decoding="async">
+      @@if(context.tag){@@include('./src/html/components/tag-badge.html', { 'tag': '@@tag' })}
+    </p>
+    @@if(context.title){
+    <a href="@@link" class="portfolio__title _title">@@title</a>
+    }
+    @@if(context.text){
+    <p class="portfolio__text">@@text</p>
+    }
+    @@if(context.product){@@include('./src/html/components/product-card-mini.html', {
+    'imageSrc': '@@prImageSrc',
+    'link': '@@prLink',
+    'title': '@@prTitle'
+    })}
+    @@if(context.button){
+    <a href="@@link" class="portfolio__button _btn">Подробнее</a>
+    }
+  </div>
+</article>

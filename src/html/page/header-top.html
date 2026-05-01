@@ -1,0 +1,91 @@
+<div class="header-top ht">
+  <div class="container">
+    <div class="ht__inner">
+      @@if(context.headerVariant == '4'){@@include('./src/html/components/logo.html')}
+      <div class="ht__items ht__items_auto">
+        @@if(context.headerVariant == '3'){<div class="ht__item ht__item_grows">
+          <ul class="ht__nav">
+            <li class="ht__nav-item _hto">
+              <div class="ht__buttons-wrapper">
+                <a href="o-kompanii" class="ht__link">О компании</a>
+                <button class="header__collapse-button" type="button" name="button-collapse">
+                  <svg class="header__collapse-button-image" width="16" height="16">
+                    <use href="images/icons.svg#chevron-up"></use>
+                  </svg>
+                  <span class="_sr-only">Развернуть меню</span>
+                </button>
+              </div>
+              <div class="ht__menu _hto__target">
+                <ul class="ht__menu-list">
+                  <li class="ht__menu-item">
+                    <a href="akcii" class="ht__link">Акции</a>
+                  </li>
+                  <li class="ht__menu-item">
+                    <a href="achievements" class="ht__link">Достижения</a>
+                  </li>
+                  <li class="ht__menu-item">
+                    <a href="postavshchiki" class="ht__link">Поставщики</a>
+                  </li>
+                  <li class="ht__menu-item">
+                    <a href="o-nas" class="ht__link">О нас</a>
+                  </li>
+                  <li class="ht__menu-item">
+                    <a href="blog" class="ht__link">Блог</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="ht__nav-item">
+              <a href="spetsialnye-predlozheniya" class="ht__link">Специальные предложения</a>
+            </li>
+            <li class="ht__nav-item">
+              <a href="oplata" class="ht__link">Оплата</a>
+            </li>
+            <li class="ht__nav-item">
+              <a href="portfolio" class="ht__link">Портфолио</a>
+            </li>
+          </ul>
+        </div>
+        <div class="ht__item ht__item_mobile-grows">
+          @@include('./src/html/components/messengers.html')
+        </div>}
+        <div class="ht__item ht__item_mobile-grows">
+          @@include('./src/html/components/address.html', { icon: 'hide' })
+        </div>
+        <div class="ht__item ht__item_mobile-grows">
+          @@include('./src/html/components/schedule.html', { icon: 'hide' })
+        </div>
+        <div class="ht__item ht__item_mobile-grows">
+          @@include('./src/html/components/email.html', { icon: 'hide' })
+        </div>
+        <div class="ht__item ht__item_mobile-grows ht__item_lang">
+          <button class="ht__lang _btn _btn--white _btn--square-small" type="button">RU</button>
+        </div>
+        @@if(context.headerVariant == '4'){<div class="ht__separator _desktop"></div>}
+        @@if(context.headerVariant == '3'){<div class="ht__item">
+          @@include('./src/html/components/socials.html', { instagram: true })
+        </div>
+        <div class="ht__item ht__item_mobile-grows">
+          <button class="header__callback _btn _btn--circle _btn--pulse" type="button" data-open-popup="request-a-call"
+            data-tippy-content="Заказать звонок">
+            <svg width="13" height="13" aria-hidden="true">
+              <use href="images/icons.svg#call"></use>
+            </svg>
+            <span class="_sr-only">Заказать звонок</span>
+          </button>
+        </div>
+        <div class="ht__item _mobile">
+          @@include('./src/html/components/feature-buttons.html', { comparison: true, wishlist: true })
+        </div>}
+        @@if(context.headerVariant == '4'){<div class="ht__item ht__item_grows _desktop">
+          <div class="ht__search">
+            @@include('./src/html/components/search-form.html')
+          </div>
+        </div>
+        <div class="ht__item ht__item_mobile-grows ht__item_buttons">
+          <button class="header__callback _btn" type="button" data-open-popup="request-a-call">Заказать звонок</button>
+        </div>}
+      </div>
+    </div>
+  </div>
+</div>

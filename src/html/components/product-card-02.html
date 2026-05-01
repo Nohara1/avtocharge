@@ -1,0 +1,61 @@
+<article class="product">
+  <div class="product__inner">
+    <div class="is-container">
+      <p class="product__iw _iw _iw--contain">
+        <img class="product__image" src="@@imageSrc" srcset="images/placeholder.png" data-srcset="@@imageSrc"
+          alt="@@title" width="243" height="185" decoding="async">
+      </p>
+      @@include('./src/html/components/image-switcher.html', {
+        image: '@@imageSrc'
+      })
+    </div>
+    <form method="post" class="product__form">
+      <input type="hidden" name="id" value="@@id">
+      <input type="hidden" name="count" value="1">
+      <input type="hidden" name="options" value="[]">
+
+      <div class="product__content">
+        <div class="product__title-wrapper">
+          <a href="@@link" class="product__title _title">@@title</a>
+          <button class="product__feature-button msfavorites" type="button" name="product-wish">
+            <svg width="16.08" height="15">
+              <use href="images/icons.svg#heart"></use>
+            </svg>
+            <span class="_sr-only">Добавить в список желаемого</span>
+          </button>
+        </div>
+        @@if(context.availability){@@include('./src/html/components/availability.html', {
+        'in_stock': @@in_stock,
+        'not_available': @@not_available,
+        'on_order': @@on_order
+        })}
+        <div class="product__features">
+          @@if(context.feature){
+          <p>Характеристика <strong>@@feature</strong></p>
+          }
+          @@if(context.size){
+          <p>Размеры <strong>@@size</strong></p>
+          }
+          @@if(context.equipment){
+          <p>Комплектация <strong>@@equipment</strong></p>
+          }
+        </div>
+      </div>
+      <div class="product__bottom">
+        <div class="product__price-wrapper">
+          @@if (context.old_price) {
+          <span class="product__price product__price_old">@@old_price BYN</span>
+          }
+          <span class="product__price">@@price BYN</span>
+        </div>
+        <button class="product__btn _btn" type="button" data-open-popup="checkout" @@if(context.not_available){
+          disabled="" }>Заказать</button>
+      </div>
+    </form>
+    @@if(context.badges){@@include('./src/html/components/product-badges.html', {
+    'bestseller': @@bestseller,
+    'discount': @@discount,
+    'novelty': @@novelty
+    })}
+  </div>
+</article>

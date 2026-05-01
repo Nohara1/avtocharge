@@ -1,0 +1,76 @@
+@import "utility/colors";
+@import "utility/breakpoints";
+
+// convert px to vw
+@function tovw($pixels) {
+  @return calc(0.05208334vw * $pixels); // 100vw / 1920
+}
+
+// container properties
+$container-width: 100%;
+$container-desktop: 7.82vw;
+$container-mobile: 4.44vw;
+$container-tablet: calc(($container-desktop + $container-mobile) / 2);
+
+// header properties
+$header-top-height: 0px; // top
+$header-middle-height: 0px; // middle
+$header-bottom-height: 100px; // bottom
+$header-height: calc(
+  $header-top-height + $header-middle-height + $header-bottom-height
+); // summ of heights
+
+$header-height-mobile: 70px; // mobile
+
+$header-scroll-height: $header-top-height; // to be scrolled
+$header-scrolled-height: calc(
+  $header-middle-height + $header-bottom-height
+); // height of scrolled header
+
+$header-items-gap: 1.7rem; // bottom menu items gap
+$header-items-gap-mobile: 1.2rem;
+
+:root {
+  --ff: "PP Neue Montreal", sans-serif;
+
+  --cubic-out: cubic-bezier(0.3, 0.8, 0.4, 1);
+
+  --transition: 0.2s ease-out;
+  --transitionSpring: 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+  --transitionQuad: 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+
+  --scrollbar-w: 8px;
+
+  --container-w: #{$container-width};
+
+  --sticky-el-header: var(--header-h);
+
+  --block-bdrs-t: 3.125rem;
+  --block-bdrs-b: 3.125rem;
+
+  @media ($header-min) {
+    --header-top-h: #{$header-top-height};
+    --header-h: calc(#{$header-top-height} + #{tovw(100)}); // #{$header-height};
+    --container-p: #{$container-desktop};
+    --sticky-el-indent: 50px;
+  }
+  @media ($header-max) {
+    --header-h: #{$header-height-mobile};
+    --sticky-el-indent: 30px;
+  }
+  @media ($header-max) and ($tablet-min) {
+    --container-p: #{$container-tablet};
+  }
+  @media ($mobile-max) {
+    --container-p: #{$container-mobile};
+  }
+}
+
+@import "utility/nullstyle";
+@import "utility/fonts";
+@import "utility/basics";
+@import "utility/nav-slider";
+@import "utility/buttons";
+// @import "utility/cookie";
+@import "utility/custom-content";
+@import "utility/animation";

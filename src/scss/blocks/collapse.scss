@@ -1,0 +1,126 @@
+.collapse {
+  --dp: 30px;
+
+  @media ($mobile-max) {
+    --dp: 20px;
+  }
+
+  &%_plane {
+    &::after {
+      @media ($tablet-mid) {
+        transform: translateY(50%);
+      }
+      @media ($tablet-mad) {
+        background-position: 3rem 50%;
+      }
+    }
+  }
+
+  &_component {
+    @extend %collapse-component !optional;
+  }
+  &__items {
+    column-gap: 40px;
+    column-count: 2;
+
+    @media ($tablet-max) {
+      column-count: 1;
+    }
+
+    > * {
+      display: inline-block;
+      break-inside: avoid;
+      margin-bottom: 20px;
+    }
+  }
+  &__item {
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(19, 101, 116, 0.15);
+    border-radius: 20px;
+  }
+  &__tab {
+    --fz-lg: 20px;
+    --fz-sm: 16px;
+    width: 100%;
+    border: 0;
+    display: flex;
+    padding: calc(var(--dp) * 0.666) var(--dp);
+    position: relative;
+    max-width: 100%;
+    text-align: left;
+    transition:
+      color 0.3s,
+      background-color 0.3s,
+      border-radius 0s;
+    align-items: center;
+    margin-bottom: 0;
+    justify-content: space-between;
+    transition-delay: 0s, 0s, 0.3s;
+    background-color: var(--white);
+
+    @media ($transition-min) {
+      &:hover {
+        color: var(--primary-c);
+      }
+    }
+    // &[aria-expanded="true"] {
+    //   color: var(--white);
+    //   border-color: var(--primary-c);
+    //   transition-delay: 0s, 0s, 0s;
+    //   background-color: var(--primary-c);
+    // }
+    svg {
+      width: 0.8em;
+      height: 0.8em;
+      // margin-top: 0.1em;
+      margin-left: 0.5em;
+    }
+    svg {
+      transform: rotate(0deg);
+      transition: transform 0.3s;
+    }
+    &[aria-expanded="true"] {
+      color: var(--primary-c);
+
+      svg {
+        transform: rotate(45deg);
+      }
+    }
+  }
+  &__tabpanel {
+    display: grid;
+    visibility: hidden;
+    transition:
+      opacity 0.3s,
+      visibility 0.3s,
+      grid-template-rows 0.3s;
+    background-color: var(--white);
+    grid-template-rows: 0fr;
+
+    &.active {
+      visibility: visible;
+      grid-template-rows: 1fr;
+    }
+  }
+  &__interlayer {
+    overflow: hidden;
+  }
+  &__content {
+    padding: 0 var(--dp) calc(var(--dp) * 0.666);
+    max-width: 100%;
+
+    @media ($tablet-mad) {
+      --fz: 14px;
+    }
+  }
+  &__link-wrapper {
+    padding: 0 var(--dp) calc(var(--dp) * 0.666);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  &__link {
+    --fz: 16px;
+  }
+}

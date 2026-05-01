@@ -1,0 +1,33 @@
+%form {
+  &__color-wrapper {
+    margin-right: -26px;
+
+    @extend %form-color-wrapper !optional;
+  }
+  &__color {
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+
+    @extend %form-color !optional;
+
+    %form-label {
+      color: transparent;
+      width: 50px;
+      height: 50px;
+      display: block;
+      overflow: hidden;
+      min-height: 0;
+      transition: box-shadow 0.2s;
+      box-shadow: inset 0 0 0 0 var(--secondary-c);
+      user-select: none;
+      border-radius: 50%;
+      background-color: var(--white);
+    }
+    input:checked ~ %form-label {
+      box-shadow: inset 0 0 0 3px var(--primary-c);
+    }
+  }
+}

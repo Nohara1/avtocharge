@@ -1,0 +1,137 @@
+.reviews-widget {
+  color: var(--heading-c);
+  padding: 2rem 4rem;
+  min-width: 60%;
+  font-size: 18px;
+  align-self: center;
+  box-shadow: var(--box-shadow-default2);
+  // border-radius: 10px;
+  background-color: var(--white);
+  @extend %sticky-element;
+
+  @media ($desktop-max) and ($tablet-min) {
+    font-size: 16px;
+  }
+  @media ($mobile-max) {
+    padding: 1.8rem 2rem;
+    font-size: 14px;
+  }
+
+  // &__heading {}
+  &__overall-wrapper {
+    display: flex;
+    margin-top: 1.6rem;
+    align-items: center;
+    margin-right: 4.55rem;
+
+    @media ($desktop-max) and ($tablet-min) {
+      margin-right: 2rem;
+    }
+    @media ($mobile-max) {
+      margin-right: 0;
+    }
+  }
+  &__overall-rating {
+    color: var(--white);
+    width: 6.1875rem;
+    height: 5.875rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-right: 1.4rem;
+    border-radius: 0.625rem;
+    @extend %flex-center;
+    background-color: var(--accent-02);
+  }
+  &__overall-stars {
+    display: flex;
+    align-items: center;
+  }
+  // &__overall-star {}
+  &__overall-title {
+    margin-top: 1rem;
+  }
+  // &__overall-amount {}
+  &__ratings {
+    margin-top: 2.3rem;
+  }
+  &__rating {
+    display: flex;
+    align-items: center;
+
+    & + & {
+      margin-top: 0.5rem;
+    }
+  }
+  &__score {
+    width: 0.9rem;
+    text-align: center;
+    flex-shrink: 0;
+    margin-right: 3px;
+  }
+  &__star {
+    color: var(--star-color);
+    flex-shrink: 0;
+  }
+  &__progress {
+    height: 1.1rem;
+    flex-grow: 0;
+    min-height: 12px;
+    transition: flex-grow 1s;
+    margin-left: 1.4rem;
+    border-radius: 5px;
+    background-color: var(--accent-02);
+  }
+  &__amount {
+    flex-shrink: 0;
+    margin-left: 0.6rem;
+  }
+  &__button {
+    width: 100%;
+    margin-top: 1.875rem;
+  }
+}
+[data-star] {
+  color: var(--star-color);
+  width: 2.375rem;
+  height: 2.14875rem;
+  position: relative;
+  min-width: 26px;
+  min-height: 23.5238px;
+  transform: translateZ(0);
+
+  & + & {
+    margin-left: 0.6rem;
+  }
+  svg {
+    width: 0%;
+    height: 100%;
+    position: relative;
+    transition: width 0.25s;
+  }
+  &:nth-child(2) svg {
+    transition-delay: 0.25s;
+  }
+  &:nth-child(3) svg {
+    transition-delay: 0.5s;
+  }
+  &:nth-child(4) svg {
+    transition-delay: 0.75s;
+  }
+  &:nth-child(5) svg {
+    transition-delay: 1s;
+  }
+  &::before {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    opacity: 0.5;
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    transform: translateZ(0);
+    background: url("../images/icons.svg#star-grey") left center/100% auto
+      no-repeat transparent;
+  }
+}

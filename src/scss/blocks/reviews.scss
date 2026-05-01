@@ -1,0 +1,94 @@
+.reviews {
+  &._full-review {
+    @extend %full-review !optional;
+  }
+
+  // &__heading {}
+  &__items {
+    @include row(3.125rem, 3.125rem);
+
+    & > * {
+      flex: 1 1 0%;
+      max-width: 100%;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    &_side {
+      flex: 0 1 auto;
+      max-width: 100%;
+
+      @media ($tablet-max) {
+        flex: 1 1 100%;
+      }
+    }
+  }
+  &__reviews-wrapper {
+    @include row(3.125rem, 3.125rem);
+
+    > * {
+      flex: 1 1 33.3333%;
+      max-width: 33.3333%;
+
+      @media ($tablet-max) and ($tablet-min) {
+        max-width: 50%;
+        flex-basis: 50%;
+      }
+      @media ($mobile-max) {
+        max-width: 100%;
+        flex-basis: 100%;
+      }
+
+      %full-review & {
+        max-width: 50%;
+        flex-basis: 50%;
+
+        @media ($desktop-max) {
+          max-width: 100%;
+          flex-basis: 100%;
+        }
+      }
+    }
+  }
+  &__description {
+    margin-top: 3.125rem;
+  }
+  %pagination {
+    order: 1;
+  }
+  %form {
+    padding: 35px;
+    font-size: 14px;
+    background-color: var(--white);
+    @extend %sticky-element;
+
+    @media ($desktop-min) {
+      max-width: 34.375rem;
+    }
+    @media ($tablet-mad) {
+      padding: 30px 25px;
+    }
+  }
+  %form-items {
+    @include row();
+  }
+  %form-input {
+    min-height: 45px;
+  }
+  %form-textarea {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+  %form-heading {
+    color: var(--title-c);
+    margin-bottom: 1rem;
+  }
+  %form-label {
+    font-size: inherit;
+  }
+  %form-button {
+    flex-grow: 1;
+  }
+}

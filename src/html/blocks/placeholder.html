@@ -1,0 +1,11 @@
+<section class="placeholder">
+  <div class="container">
+    @@if(context.heading){
+    <@@if(context.h1){h1}@@if(!context.h1){h2} class="placeholder__heading _heading@@if(context.h1style){ _h1}">
+      @@heading</@@if(context.h1){h1}@@if(!context.h1){h2}>
+    }
+    <div class="placeholder__inner">
+      @@if(context.text){@@text}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,30 @@
+<section class="reviews-links rl@@if(context.extraClass){ @@extraClass}">
+  <div class="container">
+    <div class="rl__header">
+      @@include('./src/html/components/heading.html', {
+        heading: '@@if(context.heading){@@heading}',
+        hLevel: '@@if(context.hLevel){@@hLevel}',
+        hStyle: '@@if(context.hStyle){@@hStyle}',
+        hExtraClass: 'rl__heading',
+      })
+      <a href="reviews" class="rl__button _btn _btn--white">Все отзывы</a>
+    </div>
+    <a href="#" class="rl__inner">
+      <p class="rl__subheading _title">>1 000 довольных клиентов и их отзывы</p>
+      <div class="rl__items" aria-hidden="true">
+        <p class="rl__iw">
+          <img src="images/services/otzyvy.by.png" alt="" srcset="images/placeholder.png"
+            data-srcset="images/services/otzyvy.by.png" width="300" height="123" decoding="async">
+        </p>
+        <p class="rl__iw">
+          <img src="images/services/yandex_reviews.png" alt="" srcset="images/placeholder.png"
+            data-srcset="images/services/yandex_reviews.png" width="300" height="79" decoding="async">
+        </p>
+        <p class="rl__iw">
+          <img src="images/services/google_reviews.png" alt="" srcset="images/placeholder.png"
+            data-srcset="images/services/google_reviews.png" width="300" height="133" decoding="async">
+        </p>
+      </div>
+    </a>
+  </div>
+</section>

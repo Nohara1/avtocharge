@@ -1,0 +1,100 @@
+.person {
+  $gap: 3.125rem;
+  $padding-y: 2.9375rem;
+
+  &__wrapper {
+    display: flex;
+  }
+  &__items-wrapper {
+    margin: $gap 0;
+    display: flex;
+    padding: $padding-y 5.5%;
+    border-radius: 0 50px 50px 50px;
+    background-color: var(--grey-10);
+
+    @media ($desktop-max) {
+      margin-bottom: 0;
+    }
+    @media ($mobile-max) {
+      padding: $padding-y 8% 4rem;
+    }
+  }
+  &__items {
+    align-items: center;
+    @include row($gap, $gap);
+
+    @media ($desktop-min-xl) {
+      flex-wrap: nowrap;
+    }
+    @media ($tablet-mad) {
+      @include row-breakpoint($gapB: 2rem);
+    }
+
+    &_reverse {
+      @media ($desktop-min-xl) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+  &__item {
+    flex: 1 1 auto;
+    max-width: 100%;
+
+    @media ($desktop-max) and ($tablet-mid) {
+      flex-basis: 0%;
+    }
+    @media ($tablet-mad) {
+      flex-basis: 100%;
+    }
+
+    &#{&}_card {
+      margin: calc($gap * -1) 0 calc($padding-y * -1 - $gap);
+      flex-shrink: 0;
+
+      @media ($desktop-max) {
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin-bottom: 0;
+      }
+    }
+    &_title {
+      margin-bottom: -12.6rem;
+    }
+    &_subtitle {
+      margin-bottom: -15rem;
+    }
+  }
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+  %image {
+    width: auto;
+    text-align: center;
+
+    img {
+      max-height: 100%;
+
+      @media ($desktop-max) {
+        width: auto;
+      }
+    }
+  }
+  %image-wrapper {
+    @media ($desktop-max) {
+      height: 270px;
+    }
+  }
+  %custom-slider {
+    width: 300px;
+    margin: 0 auto;
+    overflow: visible;
+
+    @media ($mobile-max) {
+      width: 250px;
+    }
+  }
+  %custom-slider-nav-btn {
+    background-image: none;
+  }
+}

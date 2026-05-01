@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./src/html/page/head.html', {
+  "title": "Каталог товаров"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('./src/html/page/header.html', { 'variant': 4 })
+
+    @@include('./src/html/blocks/inner-items.html', {
+      'h1': true,
+      'hStyle': '2',
+      'heading': 'Каталоги',
+      'text': '',
+      'subcategoriesJson': '',
+      'itemPath': './src/html/components/product-like.html',
+      'jsonPath': '../json/product-like.json'
+    })
+
+    @@include('./src/html/blocks/form-block.html', {
+      'pathToForm': './src/html/forms/feedback.html'
+    })
+    
+    @@include('./src/html/page/footer.html')
+  </div>
+  @@include("./src/html/page/body-bottom.html", {
+    'catalog': true
+  })
+</body>
+
+</html>

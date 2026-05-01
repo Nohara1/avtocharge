@@ -1,0 +1,56 @@
+[
+  {
+    "image": "images/services/visa_survey.jpg",
+    "title": "Анкета для визы",
+    "text": "Стоимость: 10 BYN",
+    "url": "service"
+  },
+  {
+    "image": "images/services/visa_photo.jpg",
+    "title": "Фото для визы",
+    "text": "Стоимость: 10 BYN",
+    "url": "service"
+  },
+  {
+    "image": "images/services/visa_tickets.jpg",
+    "title": "Бронирование билетов для визы",
+    "text": "Стоимость: 10 BYN",
+    "url": "service"
+  },
+  {
+    "image": "images/services/visa_insurance.jpg",
+    "title": "Страхование для поездки за границу",
+    "text": "Стоимость: 10 BYN",
+    "url": "service"
+  },
+  {
+    "image": "images/services/visa_car_insurance.jpg",
+    "title": "Страхование авто для поездки за границу",
+    "text": "Стоимость: 10 BYN",
+    "url": "service"
+  },
+  {
+    "image": "images/services/visa_delivery.jpg",
+    "title": "Доставка документов",
+    "text": "Стоимость: 10 BYN",
+    "url": "service"
+  },
+  {
+    "image": "images/services/green_card_lottery.jpg",
+    "title": "Регистрация в лотерее Green Card",
+    "text": "Стоимость: 10 BYN",
+    "url": "service"
+  },
+  {
+    "image": "images/services/visa_translation.jpg",
+    "title": "Перевод документов для визы",
+    "text": "Стоимость: 10 BYN",
+    "url": "service"
+  },
+  {
+    "image": "images/services/legal_cooperation.jpg",
+    "title": "Сотрудничество с Юр. лицами",
+    "text": "Стоимость: 10 BYN",
+    "url": "service"
+  }
+]

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./src/html/page/head.html', {
+  title: "Виза для белорусов 2025 Запись в визовый центр более 50 стран",
+  sliderPreload: false
+})
+
+<body>
+  <div class="wrapper">
+    @@include('./src/html/page/header.html', {
+      transparent: false
+    })
+
+    @@include('./src/html/components/breadcrumbs.html', {
+      elements: [
+        { name: 'Главная', link: '/' },
+        { name: 'О нас', link: '/about' },
+        { name: 'Клиентам', link: '/clients' },
+        { name: 'FAQ', link: '/faq' },
+        { name: 'Lorem ipsum dolor sit amet consectetur', link: '' }
+      ]
+    })
+
+    @@include('./src/html/blocks/two-components.html', {
+      hStyle: 2,
+      hLevel: 1,
+      heading: 'Lorem ipsum dolor sit amet consectetur',
+      subheading: '',
+      title01: '',
+      extraClass: 'tc_proportions _heading-wave _plane',
+      component01url: './src/html/components/custom-content.html',
+      component01params: '{ contents: "<p>Lorem ipsum dolor sit amet consectetur. Amet tincidunt dolor diam facilisi arcu habitant enim ornare massa. Quis ultrices sed facilisis dictumst neque arcu nunc tincidunt. Tempor tempus erat viverra vestibulum amet neque nisi. Lacus auctor euismod at morbi pharetra. Sociis a aliquet neque ut. Dolor risus volutpat magna nulla.</p><p class=\'_heading _h3\'>Lorem ipsum dolor sit amet consectetur.</p><ul><li><b>Lorem:</b> Lorem ipsum dolor sit amet consectetur. Amet tincidunt dolor diam facilisi arcu habitant enim ornare massa. Quis ultrices sed facilisis dictumst neque arcu nunc tincidunt.</li><li><b>Lorem:</b> Lorem ipsum dolor sit amet consectetur. Amet tincidunt dolor diam facilisi arcu habitant enim ornare massa. Quis ultrices sed facilisis dictumst neque arcu nunc tincidunt.</li><li><b>Lorem:</b> Lorem ipsum dolor sit amet consectetur. Amet tincidunt dolor diam facilisi arcu habitant enim ornare massa. Quis ultrices sed facilisis dictumst neque arcu nunc tincidunt.</li><li><b>Lorem:</b> Lorem ipsum dolor sit amet consectetur. Amet tincidunt dolor diam facilisi arcu habitant enim ornare massa. Quis ultrices sed facilisis dictumst neque arcu nunc tincidunt.</li></ul><p class=\'_heading _h3\'>Lorem ipsum dolor sit amet consectetur.</p><p>Lorem ipsum dolor sit amet consectetur. Amet tincidunt dolor diam facilisi arcu habitant enim ornare massa. Quis ultrices sed facilisis dictumst neque arcu nunc tincidunt. Tempor tempus erat viverra vestibulum amet neque nisi. Lacus auctor euismod at morbi pharetra. Sociis a aliquet neque ut. Dolor risus volutpat magna nulla.</p><p>Lorem ipsum dolor sit amet consectetur. Amet tincidunt dolor diam facilisi arcu habitant enim ornare massa. Quis ultrices sed facilisis dictumst neque arcu nunc tincidunt. Tempor tempus erat viverra vestibulum amet neque nisi. Lacus auctor euismod at morbi pharetra. Sociis a aliquet neque ut. Dolor risus volutpat magna nulla.Lorem ipsum dolor sit amet consectetur. Amet tincidunt dolor diam facilisi arcu habitant enim ornare massa. Quis ultrices sed facilisis dictumst neque arcu nunc tincidunt. Tempor tempus erat viverra vestibulum amet neque nisi. Lacus auctor euismod at morbi pharetra. Sociis a aliquet neque ut. Dolor risus volutpat magna nulla.</p><p>Lorem ipsum dolor sit amet consectetur. Amet tincidunt dolor diam facilisi arcu habitant enim ornare massa. Quis ultrices sed facilisis dictumst neque arcu nunc tincidunt. Tempor tempus erat viverra vestibulum amet neque nisi. Lacus auctor euismod at morbi pharetra. Sociis a aliquet neque ut. Dolor risus volutpat magna nulla.Lorem ipsum dolor sit amet consectetur. Amet tincidunt dolor diam facilisi arcu habitant enim ornare massa. Quis ultrices sed facilisis dictumst neque arcu nunc tincidunt. Tempor tempus erat viverra vestibulum amet neque nisi. Lacus auctor euismod at morbi pharetra. Sociis a aliquet neque ut. Dolor risus volutpat magna nulla.</p><p class=\'_heading _h3\'>Lorem ipsum dolor sit amet consectetur.</p><ul><li><b>Lorem:</b> Lorem ipsum dolor sit amet consectetur. Amet tincidunt dolor diam facilisi arcu habitant enim ornare massa. Quis ultrices sed facilisis dictumst neque arcu nunc tincidunt.</li></ul>", extraClass: "" }',
+      title02: '',
+      component02url: './src/html/forms/request-a-call.html',
+      component02params: 'null',
+    })
+
+    @@include('./src/html/page/footer.html')
+  </div>
+  @@include("./src/html/page/body-bottom.html")
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+[
+  {
+    "url": "modulnye-mini-doma",
+    "name": "Модульные мини-дома",
+    "imageWidth": 400,
+    "imageHeight": 250,
+    "imageSrc": "images/categories/category-01.jpg",
+    "price": "500 000",
+    "date": "5 дней"
+  },
+  {
+    "url": "gril-domiki",
+    "name": "Гриль-домики",
+    "imageWidth": 400,
+    "imageHeight": 250,
+    "imageSrc": "images/categories/category-02.jpg",
+    "tags": {
+      "t01": "Гриль Patio",
+      "t02": "Гриль беседки"
+    },
+    "price": "500 000",
+    "date": "5 дней"
+  },
+  {
+    "url": "modulnye-bani",
+    "name": "Модульные бани",
+    "imageWidth": 400,
+    "imageHeight": 250,
+    "imageSrc": "images/categories/category-03.jpg",
+    "tags": {
+      "t01": "Бани Hygge",
+      "t02": "Бани Викинг"
+    },
+    "price": "500 000",
+    "date": "5 дней"
+  },
+  {
+    "url": "kompozitnye-kupeli",
+    "name": "Композитные купели",
+    "imageWidth": 400,
+    "imageHeight": 250,
+    "imageSrc": "images/categories/category-04.jpg",
+    "price": "500 000",
+    "date": "5 дней"
+  },
+  {
+    "url": "kompozitnye-kupeli",
+    "name": "Композитные купели",
+    "imageWidth": 400,
+    "imageHeight": 250,
+    "imageSrc": "images/categories/category-04.jpg",
+    "price": "500 000",
+    "date": "5 дней"
+  }
+]

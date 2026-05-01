@@ -1,0 +1,14 @@
+.tag-badge {
+  left: 0;
+  color: var(--white);
+  bottom: 0;
+  display: block;
+  padding: 1rem 1.75rem;
+  position: absolute;
+  font-weight: 600;
+  background-color: change-color($color: $primary-color, $alpha: 0.9);
+
+  // &__name {}
+
+  @extend %tag-badge !optional;
+}

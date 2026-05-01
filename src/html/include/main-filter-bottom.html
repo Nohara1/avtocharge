@@ -1,0 +1,116 @@
+<div class="mfb">
+  <div class="mfb__item">
+    <fieldset class="form__item-wrapper form__item-wrapper_row">
+      <legend class="form__item-heading">Цвета</legend>
+      <div class="form__item form__color-wrapper">
+        <label class="form__color" tabindex="0">
+          <input class="form__input" type="checkbox" name="door-color" value="color001" checked hidden>
+          <span class="form__label" style="background-color:rgb(210, 105, 30);">Светлый коричневый</span>
+        </label>
+        <label class="form__color" tabindex="0">
+          <input class="form__input" type="checkbox" name="door-color" value="color002" hidden>
+          <span class="form__label" style="background-color:rgb(82, 59, 42);">Тёмный коричневый</span>
+        </label>
+        <label class="form__color" tabindex="0">
+          <input class="form__input" type="checkbox" name="door-color" value="color003" hidden>
+          <span class="form__label" style="background-color:rgb(218, 184, 161);">Ольха</span>
+        </label>
+      </div>
+    </fieldset>
+  </div>
+  <div class="mfb__item mfb__item_half">
+    <span class="form__item-heading">Размер полотна</span>
+    <div class="form__item">
+      <label>
+        <span class="form__label" hidden>Размер полотна</span>
+        <select class="form__select" name="door-size">
+          <option value="" disabled>Выберите размер</option>
+          <option value="opt001">высотой 200 см</option>
+          <option value="opt002">высотой 210 см</option>
+          <option value="opt003">высотой 220 см</option>
+          <option value="opt004">высотой 230 см</option>
+          <option value="opt005">шириной 90 см</option>
+          <option value="opt006">шириной 80 см</option>
+        </select>
+      </label>
+    </div>
+  </div>
+  <div class="mfb__item mfb__item_half">
+    <span class="form__item-heading">Материал</span>
+    <div class="form__item">
+      <label>
+        <span class="form__label" hidden>Материал</span>
+        <select class="form__select" name="door-material">
+          <option value="" disabled>Выберите материал</option>
+          <option value="opt001">Деревянные</option>
+          <option value="opt002">Металлические</option>
+        </select>
+      </label>
+    </div>
+  </div>
+  <div class="mfb__item">
+    <fieldset class="form__item-wrapper form__item-wrapper_row">
+      <legend class="form__item-heading">Система открывания</legend>
+      <div class="form__item">
+        <label class="form__checkbox" tabindex="0">
+          <input class="form__input" type="checkbox" name="door-opening-system" hidden>
+          <span class="form__label">Классическая</span>
+        </label>
+        <label class="form__checkbox" tabindex="0">
+          <input class="form__input" type="checkbox" name="door-opening-system" hidden>
+          <span class="form__label">Раздвижная</span>
+        </label>
+        <label class="form__checkbox" tabindex="0">
+          <input class="form__input" type="checkbox" name="door-opening-system" hidden>
+          <span class="form__label">Складная</span>
+        </label>
+      </div>
+    </fieldset>
+  </div>
+  <div class="mfb__item">
+    <fieldset class="form__item-wrapper">
+      <legend class="form__item-heading">Стиль двери</legend>
+      <div class="form__item form__checkbox-wrapper--img">
+        <label class="form__checkbox form__checkbox--img" tabindex="0">
+          <input class="form__input" type="checkbox" name="door-style" hidden>
+          <span class="form__label">
+            <svg width="80" height="80">
+              <use href="images/icons.svg#doors-interior" />
+            </svg>
+            <span>Хай-тек</span>
+          </span>
+        </label>
+        <label class="form__checkbox form__checkbox--img" tabindex="0">
+          <input class="form__input" type="checkbox" name="door-style" hidden>
+          <span class="form__label">
+            <svg width="80" height="80">
+              <use href="images/icons.svg#doors-interior" />
+            </svg>
+            <span>Хай-тек</span>
+          </span>
+        </label>
+        <label class="form__checkbox form__checkbox--img" tabindex="0">
+          <input class="form__input" type="checkbox" name="door-style" hidden>
+          <span class="form__label">
+            <svg width="80" height="80">
+              <use href="images/icons.svg#doors-interior" />
+            </svg>
+            <span>Хай-тек</span>
+          </span>
+        </label>
+        <label class="form__checkbox form__checkbox--img" tabindex="0">
+          <input class="form__input" type="checkbox" name="door-style" hidden>
+          <span class="form__label">
+            <svg width="80" height="80">
+              <use href="images/icons.svg#doors-interior" />
+            </svg>
+            <span>Хай-тек</span>
+          </span>
+        </label>
+      </div>
+    </fieldset>
+  </div>
+  <div class="mfb__item">
+    <button id="door-submit" class="mfb__button _btn" type="submit" name="door-submit">Подобрать дверь</button>
+  </div>
+</div>

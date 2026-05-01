@@ -1,0 +1,16 @@
+<div class="it-uslugi iu@@if(context.plane){ _plane}">
+    <div class="iu__inner">
+      @@if(context.image){
+      <p class="_iw">
+        <img src="@@image" alt="@@title" srcset="images/placeholder.png" data-srcset="@@image"
+          width="527" height="383" decoding="async">
+      </p>
+      }
+      <div class="iu__content">
+        <p class="iu__title _title">@@title</p>
+        @@if(context.text){<div class="iu__text _cc">@@text</div>}
+        <a href="@@url" class="iu__link _btn _btn--pseudo@@if(context.btnClass){ @@btnClass}" data-title="Узнать больше">@@title</a>
+        @@if(context.popup){<button class="iu__button _btn _btn--pseudo" type="button" data-open-popup="request-a-call" data-title="Заказать">@@title</button>}
+      </div>
+    </div>
+  </div>

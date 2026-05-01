@@ -1,0 +1,46 @@
+.cg {
+  &__items {
+    @include row(3.125rem, 3.125rem);
+  }
+  &__item {
+    --fxb: 33.3333%;
+    flex: 0 1 var(--fxb);
+
+    @media ($desktop-max-xl) and ($desktop-min) {
+      --fxb: 50%;
+    }
+    @media ($tablet-max) {
+      --fxb: 100%;
+    }
+
+    &_image {
+      @media ($tablet-max) and ($tablet-min) {
+        --fxb: 50%;
+      }
+    }
+    &_label {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      @media ($desktop-max-xl) {
+        display: none;
+      }
+    }
+  }
+  &__label {
+    color: var(--grey-10);
+    // font-size: 9.35vw; // 180px
+    font-size: calc((100vw - var(--container-p) * 2 - 3.125rem * 2) / 3 / 3.06);
+    font-weight: 700;
+    line-height: 0.833;
+    letter-spacing: 0.01em;
+  }
+  %image {
+    height: 100%;
+  }
+  %image-wrapper {
+    height: 100%;
+    border-radius: var(--block-bdrs-t);
+  }
+}

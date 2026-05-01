@@ -1,0 +1,35 @@
+<main class="filler _section@@if(context.extraClass){ @@extraClass}">
+  @@if(context.images){
+  <div class="filler__shape filler__shape-01" style="background-image: url('images/additional/filler-02.png')"></div>
+  <div class="filler__shape filler__shape-02" style="background-image: url('images/additional/filler-01.png')"></div>
+  }
+  <div class="container">
+    <div class="filler__wrapper">
+      <div class="filler__inner">
+        <h1 class="filler__heading _heading _h3">@@heading</h1>
+        @@if(context.citeSwitcher){
+        <span class="filler__cite-switcher" data-cite-switcher="@@citeSwitcher" data-cite-switcher-delay="2"></span>
+        }
+        <div class="filler__text _cc">@@text</div>
+        <a href="/" class="filler__btn _btn _btn--transparent">На главную</a>
+      </div>
+      @@if(context.image){
+        @@include('./src/html/components/image.html', {
+          src: '@@image',
+          thumb: '',
+          alt: '404',
+          link: '',
+          gallery: false,
+          orientation: '',
+          responsive: true,
+          contain: true,
+          width: 666,
+          height: 423,
+          class: 'image_404',
+          title: '',
+          subtitle: ''
+        })
+      }
+    </div>
+  </div>
+</main>

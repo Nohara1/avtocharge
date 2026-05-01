@@ -1,0 +1,18 @@
+@@if(context.src){
+<div class="logos__item">
+  @@include('./src/html/components/image.html', {
+    'src': '@@if(context.src){@@src}',
+    'thumb': '@@if(context.thumb){@@thumb}',
+    'alt': '@@if(context.alt){@@alt}',
+    'gallery': '@@if(context.gallery){@@gallery}',
+    'orientation': '@@if(context.orientation){@@orientation}',
+    'responsive': '@@if(context.responsive){@@responsive}',
+    'contain': @@if(context.contain){true}@@if(!context.contain){false},
+    'width': '@@if(context.width){@@width}',
+    'height': '@@if(context.height){@@height}',
+    'class': '@@if(context.class){@@class}',
+    'title': '@@if(context.title){@@title}',
+    'subtitle': '@@if(context.subtitle){@@subtitle}'
+  })
+</div>
+}

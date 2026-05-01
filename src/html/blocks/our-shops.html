@@ -1,0 +1,37 @@
+<section class="our-shops @@if(context.detailed){_detailed}@@if(context.oneRow){ our-shops_in-a-row}">
+  <div class="container">
+    @@if (context.heading) {
+    <h2 class="our-shops__heading _heading">@@heading</h2>
+    }
+    <div class="our-shops__items">
+      <div class="our-shops__item">
+        @@if (context.text) {
+        <div class="our-shops__text _cc">@@text</div>
+        }
+        @@if (!context.detailed) {
+        <div class="our-shops__cards">
+          @@loop('./src/html/include/our-shops-item-short.html', '@@jsonPath')
+        </div>
+        }
+      </div>
+      <div class="our-shops__item">
+        <div class="our-shops__map">
+          <div class="map">
+            <div class="map__overlay">
+              <p class="map__message">Нажмите, чтобы взаимодействовать</p>
+            </div>
+            <iframe id="our-shops-map" width="1780" height="445" loading="lazy" title="Наши магазины (карта)"
+              src="https://yandex.by/map-widget/v1/?ll=27.554318%2C53.900910&z=12"></iframe>
+          </div>
+        </div>
+      </div>
+      @@if (context.detailed) {
+      <div class="our-shops__item">
+        <div class="our-shops__cards">
+          @@loop('./src/html/include/our-shops-item-detailed.html', '@@jsonPath')
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</section>

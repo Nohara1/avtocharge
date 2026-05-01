@@ -1,0 +1,42 @@
+[
+  {
+    "src": "images/additional/content-04.jpg",
+    "thumb": "images/additional/thumbs/content-04.jpg",
+    "alt": "условия оплаты",
+    "orientation": "horizontal",
+    "contain": false,
+    "gallery": "payment",
+    "width": 760,
+    "height": 430
+  },
+  {
+    "src": "images/additional/content-05.jpg",
+    "thumb": "images/additional/content-05.jpg",
+    "alt": "условия оплаты",
+    "orientation": "horizontal",
+    "contain": false,
+    "gallery": "payment",
+    "width": 760,
+    "height": 430
+  },
+  {
+    "src": "images/additional/content-04.jpg",
+    "thumb": "images/additional/thumbs/content-04.jpg",
+    "alt": "условия оплаты",
+    "orientation": "horizontal",
+    "contain": false,
+    "gallery": "payment",
+    "width": 760,
+    "height": 430
+  },
+  {
+    "src": "images/additional/content-05.jpg",
+    "thumb": "images/additional/content-05.jpg",
+    "alt": "условия оплаты",
+    "orientation": "horizontal",
+    "contain": false,
+    "gallery": "payment",
+    "width": 760,
+    "height": 430
+  }
+]

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./src/html/page/head.html', {
+  "title": "О компании"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('./src/html/page/header.html', { 'variant': 3 })
+
+    @@include('./src/html/components/breadcrumbs.html', {
+      'jsonPath': '../json/breadcrumbs/o-kompanii.json'
+    })
+
+    @@include('./src/html/blocks/inner/navigation.html', {
+      'heading': 'О компании',
+      'blocks': "@@include('./src/html/blocks/custom-content-01.html', { 'full': true, 'content01': '<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including.</p>' }) @@include('./src/html/blocks/cards.html', { 'heading': 'Почему выбирают нас', 'variant': 3, 'itemPath': './src/html/components/cards-item.html', 'jsonPath': '../json/cards-02.json' }) @@include('./src/html/blocks/custom-content-02.html', { 'heading01': 'Наша миссия', 'text': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including.', 'mirrored': true, 'videoId': 'M9TykgH0rIU', 'videoHeight': '559', 'videoWidth': '1000' }) @@include('./src/html/blocks/custom-content-01.html', { 'full': true, 'heading': 'Команда', 'content01': '<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\\'s standard dummy text ever.</p><img width=\"1300\" height=\"517\" src=\"images/additional/content-07.jpg\" srcset=\"images/placeholder.png\" data-srcset=\"images/additional/content-07.jpg\" alt=\"описание изображения\" decoding=\"async\">' })"
+    })
+
+    @@include('./src/html/page/footer.html')
+  </div>
+  @@include("./src/html/page/body-bottom.html", {
+    'checkout': false
+  })
+</body>
+
+</html>

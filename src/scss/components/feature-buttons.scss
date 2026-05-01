@@ -1,0 +1,113 @@
+.feature-buttons {
+  align-items: center;
+  @include row(15px, 20px, true);
+
+  &_addings {
+    @extend %feature-buttons-addings !optional;
+  }
+  // &__item {}
+  &__link-wrapper {
+    display: flex;
+    position: relative;
+    align-items: center;
+    text-decoration: none;
+
+    @extend %feature-buttons-link-wrapper !optional;
+  }
+  &__link {
+    color: var(--white);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-decoration: none;
+    background-color: var(--primary-c);
+    @extend %flex-center;
+
+    @extend %feature-buttons-link !optional;
+
+    @media ($transition-min) {
+      transform: scale(1);
+      transition: transform 0.2s;
+
+      &:hover {
+        transform: scale(1.25);
+
+        svg {
+          transform: none;
+        }
+      }
+    }
+
+    %feature-buttons-addings & {
+      background-color: var(--text-l);
+
+      @media ($transition-min) {
+        transition:
+          background-color 0.3s,
+          color 0.3s;
+      }
+    }
+    @media ($transition-min) {
+      %feature-buttons-addings %feature-buttons-link-wrapper:hover & {
+        color: var(--white);
+        transform: none;
+        background-color: var(--primary-c);
+      }
+    }
+    %plugin-comparison-added & {
+      color: var(--white);
+      background-color: var(--primary-c);
+    }
+  }
+  &__icon {
+    width: 40%;
+    height: 40%;
+  }
+  &__number {
+    top: -1px;
+    right: -4px;
+    color: inherit;
+    color: var(--primary-c);
+    position: absolute;
+    font-size: 16px;
+    transform: translateX(50%);
+    line-height: 1;
+    font-weight: 700;
+
+    @extend %header-bottom-number !optional;
+  }
+  &__label {
+    color: var(--text-l);
+    margin-left: 10px;
+
+    @media ($transition-min) {
+      transition: color 0.3s;
+
+      %feature-buttons-link-wrapper:hover & {
+        color: var(--primary-c);
+      }
+    }
+  }
+  // &__comparison {
+  //   & %header-bottom-number {
+  //     right: 1px;
+  //   }
+  // }
+  // &__wishlist {
+  //   & %header-bottom-number {
+  //     right: 2px;
+  //   }
+  // }
+  &__cart {
+    border: none;
+    padding: 0;
+    background-color: transparent;
+  }
+  &__search {
+    border: none;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  @extend %feature-buttons !optional;
+}

@@ -1,0 +1,30 @@
+.logos {
+  // &__heading {}
+  &__text {
+    margin-bottom: 3.125em;
+  }
+  &__items {
+    @include row(3.125rem, 3.125rem);
+
+    @media ($tablet-max) {
+      @include row-breakpoint(1.85rem, 1.85rem);
+    }
+  }
+  &__item {
+    flex: 1 1 16.6667%;
+    max-width: 16.6667%;
+
+    @media ($desktop-max) and ($tablet-mid) {
+      max-width: 33.3333%;
+      flex-basis: 33.3333%;
+    }
+    @media ($tablet-mad) {
+      max-width: 50%;
+      flex-basis: 50%;
+    }
+    // @media ($mobile-max) {
+    //   max-width: 100%;
+    //   flex-basis: 100%;
+    // }
+  }
+}

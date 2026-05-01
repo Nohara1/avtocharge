@@ -1,0 +1,22 @@
+[
+  {
+    "icon": "world",
+    "title": "Заголовок вашего преимущества",
+    "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci</p>"
+  },
+  {
+    "icon": "world",
+    "title": "Преимущество",
+    "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci</p>"
+  },
+  {
+    "icon": "world",
+    "title": "Заголовок вашего преимущества",
+    "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+  },
+  {
+    "icon": "world",
+    "title": "Заголовок вашего преимущества",
+    "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci</p>"
+  }
+]

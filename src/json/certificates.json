@@ -1,0 +1,82 @@
+[
+  {
+    "src": "images/content/content-3.jpg",
+    "thumb": "images/content/content-3.jpg",
+    "alt": "благодарность от Колорит трейд",
+    "gallery": "cert",
+    "orientation": "horizontal",
+    "contain": false,
+    "width": 520,
+    "height": 340,
+    "responsive": false,
+    "class": "image_gallery",
+    "subtitle": ""
+  },
+  {
+    "src": "images/content/content-3.jpg",
+    "thumb": "images/content/content-3.jpg",
+    "alt": "благодарность от Колорит трейд",
+    "gallery": "cert",
+    "orientation": "horizontal",
+    "contain": false,
+    "width": 520,
+    "height": 340,
+    "responsive": false,
+    "class": "image_gallery",
+    "subtitle": ""
+  },
+  {
+    "src": "images/content/content-3.jpg",
+    "thumb": "images/content/content-3.jpg",
+    "alt": "благодарность от Колорит трейд",
+    "gallery": "cert",
+    "orientation": "horizontal",
+    "contain": false,
+    "width": 520,
+    "height": 340,
+    "responsive": false,
+    "class": "image_gallery",
+    "subtitle": ""
+  }
+  ,
+  {
+    "src": "images/content/content-3.jpg",
+    "thumb": "images/content/content-3.jpg",
+    "alt": "благодарность от Колорит трейд",
+    "gallery": "cert",
+    "orientation": "horizontal",
+    "contain": false,
+    "width": 520,
+    "height": 340,
+    "responsive": false,
+    "class": "image_gallery",
+    "subtitle": ""
+  }
+  ,
+  {
+    "src": "images/content/content-3.jpg",
+    "thumb": "images/content/content-3.jpg",
+    "alt": "благодарность от Колорит трейд",
+    "gallery": "cert",
+    "orientation": "horizontal",
+    "contain": false,
+    "width": 520,
+    "height": 340,
+    "responsive": false,
+    "class": "image_gallery",
+    "subtitle": ""
+  },
+  {
+    "src": "images/content/content-3.jpg",
+    "thumb": "images/content/content-3.jpg",
+    "alt": "благодарность от Колорит трейд",
+    "gallery": "cert",
+    "orientation": "horizontal",
+    "contain": false,
+    "width": 520,
+    "height": 340,
+    "responsive": false,
+    "class": "image_gallery",
+    "subtitle": ""
+  }
+]

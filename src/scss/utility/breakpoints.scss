@@ -1,0 +1,20 @@
+$desktop-min-xxl: "min-width: 1366px";
+$desktop-max-xl: "max-width: 1365.98px";
+$desktop-min-xl: "min-width: 1200px";
+$desktop-max: "max-width: 1199.98px";
+$desktop-min: "min-width: 992px";
+$tablet-max: "max-width: 991.98px";
+$tablet-mid: "min-width: 768px";
+$tablet-mad: "max-width: 767.98px";
+$tablet-min: "min-width: 576px";
+$mobile-max: "max-width: 575.98px";
+
+$custom-breakpoint-01: "max-width: 1699.98px";
+$custom-breakpoint-01-min: "min-width: 1700px";
+$custom-breakpoint-02: "max-width: 1520px";
+
+$header-min: $desktop-min-xxl; // min breakpoint to toggle header
+$header-max: $desktop-max-xl; // max breakpoint to toggle header
+
+$transition-min: $desktop-min-xl;
+$transition-max: $desktop-max;

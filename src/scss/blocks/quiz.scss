@@ -1,0 +1,219 @@
+.quiz {
+  &_big {
+    @extend %quiz-big !optional;
+  }
+  // &__heading {
+  // }
+  &__wrapper {
+    padding: 3.125rem;
+    counter-reset: quiz-slides;
+    background-color: var(--secondary-c);
+
+    @media ($tablet-mad) {
+      padding: 1.86rem;
+    }
+  }
+  &__slide {
+    opacity: 0;
+    display: grid;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s, grid-template-rows 0.3s;
+    grid-template-rows: 0fr;
+
+    &_shown {
+      opacity: 1;
+      visibility: visible;
+      grid-template-rows: 1fr;
+    }
+  }
+  &__title {
+    &:not(legend) {
+      margin-bottom: 3.125rem;
+    }
+
+    @media ($tablet-mad) {
+      &:not(legend) {
+        margin-bottom: 1.86rem;
+      }
+    }
+
+    &_counter {
+      &::before {
+        counter-increment: quiz-slides;
+        content: counter(quiz-slides) ". ";
+      }
+    }
+    &_final {
+      font-weight: 700;
+    }
+  }
+  &__text {
+    margin-top: -2.7rem;
+    font-weight: 500;
+    margin-bottom: 3.125rem;
+
+    @media ($tablet-mad) {
+      margin-top: -1.5rem;
+      margin-bottom: 1.86rem;
+    }
+
+    b,
+    strong {
+      font-weight: 700;
+    }
+  }
+  &__inner {
+    overflow: hidden;
+  }
+  &__options {
+    margin: 0;
+    border: none;
+    padding: 0;
+    @include row(3.125rem, 1.875rem);
+  }
+  &__option {
+    flex: 1 1 12.5%;
+    cursor: pointer;
+    max-width: 12.5%;
+
+    @media ($desktop-max) and ($desktop-min) {
+      max-width: 16.6666%;
+      flex-basis: 16.6666%;
+    }
+    @media ($tablet-max) and ($tablet-mid) {
+      max-width: 20%;
+      flex-basis: 20%;
+    }
+    @media ($tablet-mad) and ($tablet-min) {
+      max-width: 25%;
+      flex-basis: 25%;
+    }
+    @media ($mobile-max) {
+      max-width: 50%;
+      flex-basis: 50%;
+    }
+
+    %quiz-big & {
+      max-width: 20%;
+      flex-basis: 20%;
+
+      @media ($desktop-max-xl) and ($desktop-min) {
+        max-width: 25%;
+        flex-basis: 25%;
+      }
+      @media ($tablet-max) and ($tablet-mid) {
+        max-width: 33.3333%;
+        flex-basis: 33.3333%;
+      }
+      @media ($tablet-mad) {
+        max-width: 50%;
+        flex-basis: 50%;
+      }
+    }
+
+    @media ($transition-min) {
+      transform: translateY(0);
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: translateY(-3px);
+      }
+    }
+
+    %image {
+      position: relative;
+
+      &::before {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        z-index: 1;
+        content: "";
+        display: block;
+        position: absolute;
+        transition: opacity 0.3s;
+        background-color: var(--text-c);
+
+        @at-root {
+          %quiz-option-checked ~ %image::before {
+            opacity: 0.78;
+          }
+        }
+      }
+    }
+    %image-wrapper {
+      padding-bottom: 66.666%;
+
+      %quiz-big & {
+        padding-bottom: 100%;
+      }
+
+      &::before,
+      &::after {
+        top: 50%;
+        left: 50%;
+        width: 16px;
+        height: 3px;
+        opacity: 0;
+        z-index: 2;
+        content: "";
+        display: block;
+        position: absolute;
+        transform: rotate(-45deg) translateX(-0.5px);
+        transform-origin: left bottom;
+        transition: opacity 0.3s;
+        background-color: var(--white);
+
+        @at-root {
+          %quiz-option-checked ~ * %image-wrapper::before,
+          %quiz-option-checked ~ * %image-wrapper::after {
+            opacity: 1;
+          }
+        }
+      }
+      &::after {
+        width: 10px;
+        transform-origin: left bottom;
+        transform: rotate(-135deg);
+      }
+    }
+  }
+  &__input {
+    display: none;
+
+    &:checked {
+      @extend %quiz-option-checked !optional;
+    }
+  }
+  &__option-title {
+    margin: 10px auto 0;
+    display: block;
+    max-width: 90%;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.3571;
+  }
+  &__buttons {
+    margin-top: 1.25rem;
+    @include row(1.875rem, 1.875rem, true);
+  }
+  &__button {
+    &[name="quiz-previous"] {
+      opacity: 0.5;
+    }
+    @media ($mobile-max) {
+      width: 100%;
+    }
+  }
+  %form-select,
+  %form-input {
+    background-color: var(--white);
+  }
+  %form-item,
+  %form-items {
+    max-width: 800px;
+  }
+}

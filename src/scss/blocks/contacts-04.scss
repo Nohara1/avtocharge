@@ -1,0 +1,75 @@
+.contacts {
+  @media ($header-min) {
+    font-size: 18px;
+  }
+  @media ($header-max) and ($tablet-min) {
+    font-size: 17px;
+  }
+  @media ($mobile-max) {
+    font-size: 16px;
+  }
+
+  // &__heading {}
+  &__items {
+    @include row(3.125rem, 4.375rem);
+
+    @media ($desktop-max) {
+      @include row-breakpoint($gapL: 3.125rem);
+    }
+  }
+  &__item {
+    flex: 1 1 25%;
+    max-width: 25%;
+
+    @media ($desktop-max) and ($tablet-min) {
+      max-width: 50%;
+      flex-basis: 50%;
+    }
+    @media ($mobile-max) {
+      max-width: 100%;
+      flex-basis: 100%;
+    }
+
+    &_big {
+      max-width: 50%;
+      flex-basis: 50%;
+
+      @media ($desktop-max) {
+        max-width: 100%;
+        flex-basis: 100%;
+      }
+    }
+  }
+  // &__content {}
+  &__title {
+    margin-bottom: 1.25rem;
+  }
+  &__inner {
+    > * + * {
+      margin-top: 10px;
+
+      &[href] {
+        margin-top: 5px;
+      }
+    }
+    %_custom-content {
+      --c: var(--grey-100);
+    }
+  }
+  &__phone-wrapper {
+    color: var(--text-l);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  %phone {
+    color: var(--grey-100);
+    margin-right: 0;
+  }
+  %address-label,
+  %schedule-label,
+  %info-label,
+  %email-label {
+    color: var(--grey-100);
+  }
+}

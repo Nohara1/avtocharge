@@ -1,0 +1,24 @@
+<nav class="tabs@@if(context.tabsSlider){ _nav-slider}@@if(!context.tabsSlider){ tabs_rows}" role="tablist">
+  @@if(context.tabsSlider){<div class="_nav-slider__wrapper">}
+    @@if(!context.tabsLinks){
+      @@if(context.tabsActive){
+        @@for(var i = 0; i < 1; i++){
+          <button class="_nav-slider__slide _btn active @@if(context.style){@@style}" type="button" role="tab">`+tabs[i]+`</button>
+        }
+      }
+      @@for(var i = 1; i < tabs.length; i++){
+        <button class="_nav-slider__slide _btn @@if(context.style){@@style}" type="button" role="tab">`+tabs[i]+`</button>
+      }
+    }
+    @@if(context.tabsLinks){
+      @@if(context.tabsActive){
+        @@for(var i = 0; i < 1; i++){
+          <a href="`+tabs[i].href+`" class="_nav-slider__slide _btn active @@if(context.style){@@style}" role="tab">`+tabs[i].name+`</a>
+        }
+      }
+      @@for(var i = 1; i < tabs.length; i++){
+        <a href="`+tabs[i].href+`" class="_nav-slider__slide _btn @@if(context.style){@@style}" role="tab">`+tabs[i].name+`</a>
+      }
+    }
+  @@if(context.tabsSlider){</div>}
+</nav>

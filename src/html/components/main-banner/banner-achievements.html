@@ -1,0 +1,10 @@
+<table class="banner-achievements ba"@@if(context.attr){ @@attr}>
+  <tbody>
+    @@for(var i = 0; i < achievements.length; i++) {
+    <tr>
+      <th scope="row"><svg width="24" height="30" aria-hidden="true"><use href="images/icons.svg#`+achievements[i].icon+`"></use></svg>`+achievements[i].title+`</th>
+      <td>`+achievements[i].text+`</td>
+    </tr>
+    }
+  </tbody>
+</table>

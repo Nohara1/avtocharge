@@ -1,0 +1,35 @@
+<div class="contacts">
+  <div class="contacts__item">
+    <span class="contacts__label">Call-центр</span>
+    <div class="contacts__content contacts__phone">
+      <div class="contacts__phone-wrapper">
+        <a class="contacts__link" href="tel:+375445332522">
+          <svg class="contacts__icon" width="20" height="20">
+            <use href="images/icons.svg#phone" />
+          </svg><span>+375 44 533-25-22</span>
+        </a>
+        @@loop('./src/html/socials.html', '../json/socials.json')
+      </div>
+    </div>
+  </div>
+  <div class="contacts__item">
+    <span class="contacts__label">Наша почта</span>
+    <div class="contacts__content contacts__email">
+      <a class="contacts__link" href="mailto:sales@dvernoirai.by">
+        <svg class="contacts__icon" width="20" height="20">
+          <use href="images/icons.svg#email" />
+        </svg><span>sales@dvernoirai.by</span>
+      </a>
+    </div>
+  </div>
+  <div class="contacts__item">
+    <span class="contacts__label">Без выходных</span>
+    <div class="contacts__content contacts__timetable">
+      <span class="contacts__link">
+        <svg class="contacts__icon" width="20" height="20">
+          <use href="images/icons.svg#clock" />
+        </svg><span>c 9:00 до 21:00</span>
+      </span>
+    </div>
+  </div>
+</div>

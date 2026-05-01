@@ -1,0 +1,38 @@
+[
+  {
+    "imageSrc": "images/additional/article.jpg",
+    "width": "530",
+    "height": "358",
+    "class": "image_blog",
+    "orientation": "horizontal",
+    "title": "Заголовок для вашей статьи в блоге 1234",
+    "link": "/novost",
+    "tag": "",
+    "date": "",
+    "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh neque, venenatis sed quam vitae, facilisis placerat lectus. Aliquam sapien ex, sodales ac nunc a, viverra lacinia</p>"
+  },
+  {
+    "imageSrc": "images/additional/article.jpg",
+    "width": "530",
+    "height": "358",
+    "class": "image_blog",
+    "orientation": "horizontal",
+    "title": "Довольно длинный заголовок для вашей статьи в блоге 1234",
+    "link": "/novost",
+    "tag": "",
+    "date": "",
+    "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh neque, venenatis sed quam vitae, facilisis placerat lectus. Aliquam sapien ex, sodales ac nunc a, viverra lacinia</p>"
+  },
+  {
+    "imageSrc": "images/additional/article.jpg",
+    "width": "530",
+    "height": "358",
+    "class": "image_blog",
+    "orientation": "horizontal",
+    "title": "Заголовок для вашей статьи в блоге 1234",
+    "link": "/novost",
+    "tag": "",
+    "date": "",
+    "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh neque, venenatis sed quam vitae, facilisis placerat lectus. Aliquam sapien ex, sodales ac nunc a, viverra lacinia</p>"
+  }
+]

@@ -1,0 +1,17 @@
+<section class="global-map">
+  <div class="container">
+    @@if(context.heading){
+      <@@if(context.h1){h1}@@if(!context.h1){h2} class="global-map__heading _heading@@if(context.h1style){ _h1}">@@heading</@@if(context.h1){h1}@@if(!context.h1){h2}>
+    }
+    <div class="global-map__inner">
+      <div class="global-map__map">
+        @@if(false){<img class="global-map__image" src="images/map/map.png" alt="@@if(context.heading){@@heading}" width="1747" height="749" decoding="async">}
+        @@include('./src/images/map/russia-belarus-map.svg')
+        @@loop('./src/html/include/global-map-item.html', '@@jsonPath')
+        @@if(false){<span class="global-map__region global-map__region_russia" style="background-image: url('images/map/map-russia.png')"></span>
+        <span class="global-map__region global-map__region_qazaqstan" style="background-image: url('images/map/map-qazaqstan.png')"></span>
+        <span class="global-map__region global-map__region_china" style="background-image: url('images/map/map-china.png')"></span>}
+      </div>
+    </div>
+  </div>
+</section>

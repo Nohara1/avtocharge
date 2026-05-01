@@ -1,0 +1,12 @@
+<div class="our-goods__slide swiper-slide"
+  data-slide-category="@@if(context.bestseller){bestseller,}@@if(context.novelty){novelty,}@@if(context.discount){discount,}">
+  @@include('./src/html/components/product-card-01.html', {
+  'id': '@@id',
+  'link': '@@link',
+  'imageSrc': '@@imageSrc',
+  'title': '@@title',
+  'bestseller': @@bestseller,
+  'novelty': @@novelty,
+  'discount': @@discount,
+  })
+</div>

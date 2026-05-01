@@ -1,0 +1,52 @@
+<div class="ii-item@@if(context.image){ ii-item_image}"@@if(context.collapse){ data-target="@@collapse"}>
+    <div class="ii-item__inner">
+      @@if(context.image){
+        @@include('./src/html/components/image.html', {
+          src: '@@image',
+          alt: '@@title',
+          width: 400,
+          height: 400
+        })
+      }
+      @@if(context.icon){
+      <svg class="ii-item__icon" width="60" height="60" aria-hidden="true">
+        <use href="images/icons.svg#@@icon"></use>
+      </svg>
+      }
+      @@if(context.title){
+      <p class="ii-item__title _title">
+        @@if(context.linkUrl && !context.linkName){<a href="@@linkUrl">}@@title@@if(context.linkUrl && !context.linkName){</a>}
+      </p>
+      }
+      @@if(context.subtitle){
+        <p class="ii-item__subtitle ">
+          @@subtitle
+        </p>
+        }
+      @@if(context.text){<div class="ii-item__text _cc">@@text</div>}
+      @@if(context.collapse){
+        <div class="ii-item__collapse">
+          <button class="ii-item__collapse-button" type="button" data-toggle="@@collapse" aria-expanded="false">
+            <span class="_sr-only">Развернуть/свернуть</span>
+            <svg width="20" height="20" aria-hidden="true"><use href="images/icons.svg#arrow"></use></svg>
+          </button>
+      }
+      @@if(context.price){<div class="ii-item__prices">
+        <span class="ii-item__price _title">@@price</span>
+        @@if(context.oldPrice){<span class="ii-item__price ii-item__price_old _title">@@oldPrice</span>}
+      </div>}
+      @@if(context.note){<div class="ii-item__note _cc">@@note</div>}
+      @@if(context.tags){@@include('./src/html/components/tags.html', { tags: ["#dev", "#design", "#бассейны_и_оборудование"] })}
+      @@if(context.linkName){
+        <a href="@@linkUrl@@if(!context.linkUrl){#}" class="_btn@@if(context.linkClass){ @@linkClass}" data-title="@@linkName">@@linkName
+          @@if(context.linkClass && linkClass.includes('_btn--arrow')){<svg width="51" height="15" aria-hidden="true"><use href="images/icons.svg#arrow-btn"></use></svg>}
+        </a>
+      }
+      @@if(context.button){
+        <button class="_btn" type="button" data-open-popup="request-a-call" aria-label="Заказать звонок">
+          @@button
+        </button>
+      }
+      @@if(context.collapse){</div>}
+    </div>
+  </div>

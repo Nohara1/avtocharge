@@ -1,0 +1,112 @@
+.r-02 {
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    // @media ($mobile-max) {
+    //   flex-direction: column;
+    // }
+  }
+  &__heading {
+    flex: 1 1 0%;
+    max-width: max-content;
+    align-self: flex-start;
+    margin-right: 20px;
+  }
+  &__link {
+    align-self: flex-start;
+    margin-left: auto;
+
+    // @media ($mobile-max) {
+    //   order: 1;
+    //   margin-top: 30px;
+    //   margin-left: auto;
+    //   margin-right: auto;
+    // }
+  }
+  &__items {
+    // column-gap: 3.125rem;
+    // column-count: 3;
+    margin-bottom: -1.875rem;
+
+    // @media ($desktop-max-xl) and ($tablet-mid) {
+    //   column-count: 2;
+    // }
+    // @media ($tablet-mad) {
+    //   column-gap: 1.875rem;
+    //   column-count: 1;
+    //   margin-bottom: -1.875rem;
+    // }
+  }
+  &__item {
+    display: block;
+    page-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+    break-inside: avoid;
+  }
+  &__inner {
+    border: 2px solid var(--primary-c);
+    display: flex;
+    padding: 1.875rem;
+    flex-wrap: wrap;
+    border-radius: 30px;
+    margin-bottom: 1.875rem;
+
+    // @media ($tablet-mad) {
+    //   margin-bottom: 1.875rem;
+    // }
+  }
+  &__title {
+    width: 100%;
+    color: var(--primary-c);
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.25;
+    margin-bottom: 1.25rem;
+  }
+  %image {
+    flex: 0 0 7.5rem;
+
+    @media ($tablet-mad) {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+  %image-wrapper {
+    border: 1px solid var(--primary-c);
+    overflow: hidden;
+    border-radius: 10px;
+    // background-color: var(--grey-80);
+  }
+  &__content {
+    flex: 1 1 0%;
+
+    @media ($tablet-mid) {
+      margin-left: 1.875rem;
+    }
+  }
+  &__date {
+    color: var(--primary-c-60);
+    display: block;
+    // font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 0.625rem;
+  }
+  %_custom-content {
+    --fz: 16px;
+  }
+  &__buttons {
+    width: 100%;
+    display: flex;
+    margin-top: 1.875rem;
+    justify-content: flex-end;
+  }
+  // %_btn {}
+  %pagination {
+    margin-top: 50px;
+  }
+}

@@ -1,0 +1,19 @@
+body {
+  .comparison {
+    .comparison-add,
+    &.added .comparison-remove,
+    &.added.can_compare .comparison-go,
+    &.added.can_compare .comparison-total {
+      display: flex;
+    }
+    .comparison-remove,
+    .comparison-go,
+    .comparison-total,
+    &.added .comparison-add {
+      display: none;
+    }
+    &.added {
+      @extend %plugin-comparison-added !optional;
+    }
+  }
+}

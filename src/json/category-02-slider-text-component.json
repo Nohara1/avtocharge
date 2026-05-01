@@ -1,0 +1,17 @@
+[
+  {
+    "text": "<h3>Модульный дом в современном стиле</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orciLorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci</p>",
+    "itemPath": "./src/html/components/video.html",
+    "itemJson": "../json/custom-slider-slides/slide-01.json"
+  },
+  {
+    "text": "<h3>Модульный дом в современном стиле</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orciLorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci</p>",
+    "itemPath": "./src/html/components/image.html",
+    "itemJson": "../json/custom-slider-slides/slide-02.json"
+  },
+  {
+    "text": "<h3>Модульный дом в современном стиле</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orciLorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci</p>",
+    "itemPath": "./src/html/components/video.html",
+    "itemJson": "../json/custom-slider-slides/slide-01.json"
+  }
+]

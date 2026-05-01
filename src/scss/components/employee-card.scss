@@ -1,0 +1,80 @@
+// employee-card
+.ec {
+  height: 100%;
+
+  &__inner {
+    --gap: 20px;
+    color: var(--primary-c);
+    height: 100%;
+    border: 2px solid var(--primary-c);
+    padding: var(--gap);
+    display: flex;
+    position: relative;
+    min-height: 16.25rem;
+    align-items: center;
+    border-radius: 20px;
+
+    @media ($tablet-mad) {
+      --gap: 10px;
+    }
+
+    %inner-items-team & {
+      min-height: 14rem;
+    }
+  }
+  &__image {
+    border-radius: 20px 0 0 20px;
+    // --bdrs: 20px;
+    --objp: 50% 100%;
+    width: 50%;
+    height: auto;
+    min-width: 164px;
+    align-self: stretch;
+    flex-shrink: 0;
+    margin: calc(var(--gap) * -1) var(--gap) calc(var(--gap) * -1) calc(var(--gap) * -1);
+   
+  }
+  // &__content {}
+  &__name {
+    --c: inherit;
+    --fw-sm: 600;
+    --fw-lg: 600;
+    --fz: 20px;
+    text-transform: uppercase;
+
+    @media($tablet-mad){
+      --fz: 14px;
+    }
+    
+
+    &[href] {
+      &::before {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        content: "";
+        position: absolute;
+      }
+      @media ($transition-min) {
+        transition: color var(--transition);
+
+        &:hover {
+          color: var(--primary-c-60);
+        }
+      }
+    }
+
+    %inner-items-team & {
+      @media ($desktop-min-xl) {
+        --fz-lg: 22px;
+      }
+    }
+  }
+  &__position {
+    --lh: 1.4;
+    margin-top: 10px;
+    --fz: 14px;
+    --c: var(--primary-c-60);
+  }
+}

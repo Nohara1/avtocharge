@@ -1,0 +1,14 @@
+<div class="cs__slide" data-slide-category="@@if(c01){c01,}@@if(c02){c02,}@@if(c03){c03,}@@if(c04){c04,}">
+  @@include('./src/html/components/portfolio-card.html', {
+    link: "@@link",
+    imageSrc: "@@imageSrc",
+    title: "@@title",
+    tag: @@if(context.tag){'@@tag'}@@if(!context.tag){null},
+    text: @@if(context.text){'@@text'}@@if(!context.text){null},
+    product: @@if(context.product){'@@product'}@@if(!context.product){false},
+    button: @@if(context.button){'@@button'}@@if(!context.button){false},
+    prImageSrc: '@@prImageSrc',
+    prLink: '@@prLink',
+    prTitle: '@@prTitle'
+  })
+</div>

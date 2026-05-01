@@ -1,0 +1,44 @@
+[
+  {
+    "src": "images/additional/project-01.jpg",
+    "thumb": "images/additional/thumbs/project-01.jpg",
+    "alt": "описание проекта",
+    "orientation": "",
+    "contain": true,
+    "gallery": "certificate",
+    "width": 250,
+    "height": 354,
+    "responsive": false,
+    "class": "image_project",
+    "title": "Заголовок 12345678910",
+    "subtitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since"
+  },
+  {
+    "src": "images/additional/project-01.jpg",
+    "thumb": "images/additional/thumbs/project-01.jpg",
+    "alt": "описание проекта",
+    "orientation": "",
+    "contain": true,
+    "gallery": "certificate",
+    "width": 250,
+    "height": 354,
+    "responsive": false,
+    "class": "image_project",
+    "title": "Заголовок 12345678910",
+    "subtitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since"
+  },
+  {
+    "src": "images/additional/project-01.jpg",
+    "thumb": "images/additional/thumbs/project-01.jpg",
+    "alt": "описание проекта",
+    "orientation": "",
+    "contain": true,
+    "gallery": "certificate",
+    "width": 250,
+    "height": 354,
+    "responsive": false,
+    "class": "image_project",
+    "title": "Заголовок 12345678910",
+    "subtitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since"
+  }
+]

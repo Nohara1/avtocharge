@@ -1,0 +1,15 @@
+<section class="multiple-sliders ms@@if(context.extraClass){ @@extraClass}">
+  <div class="container">
+    @@include('./src/html/components/heading.html', {
+      heading: '@@if(context.heading){@@heading}',
+      hLevel: '@@if(context.hLevel){@@hLevel}',
+      hStyle: '@@if(context.hStyle){@@hStyle}',
+      hExtraClass: 'ms__heading',
+    })
+    @@if(context.jsonPath){
+    <div class="ms__items">
+      @@loop('./src/html/components/custom-slider.html', '@@jsonPath')
+    </div>
+    }
+  </div>
+</section>

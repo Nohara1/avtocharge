@@ -1,0 +1,87 @@
+<section class="contacts">
+  <div class="container">
+    <h1 class="contacts__heading _heading _h2">Контакты</h1>
+    <div class="contacts__items">
+      <div class="contacts__item contacts__item_big">
+        <div class="contacts__content _cc">
+          <h3>Где мы находимся и как к нам проехать?</h3>
+          <p>Lorem ipsum dolor sit amet consectetur. Ac nulla tristique nec non bibendum feugiat mi purus. Bibendum elit
+            sit suspendisse adipiscing donec sed ac sit enim. Volutpat sed id tristique nisl nec enim nascetur interdum.
+            Pellentesque nullam elementum lacus semper non et enim vitae. Elementum id et ac viverra amet eu accumsan
+            convallis. Lacinia convallis proin nisl sed. Ornare id purus magnis condimentum.</p>
+        </div>
+      </div>
+      <div class="contacts__item">
+        @@include('./src/html/components/image.html', {
+        src: 'images/additional/contacts.jpg',
+        thumb: '',
+        alt: 'Где мы находимся?',
+        link: '',
+        gallery: true,
+        orientation: '',
+        responsive: false,
+        contain: false,
+        width: 380,
+        height: 300,
+        class: 'image_contacts',
+        title: '',
+        subtitle: ''
+        })
+      </div>
+      <div class="contacts__item">
+        @@include('./src/html/components/image.html', {
+        src: 'images/additional/contacts.jpg',
+        thumb: '',
+        alt: 'Где мы находимся?',
+        link: '',
+        gallery: true,
+        orientation: '',
+        responsive: false,
+        contain: false,
+        width: 380,
+        height: 300,
+        class: 'image_contacts',
+        title: '',
+        subtitle: ''
+        })
+      </div>
+      <div class="contacts__item">
+        <p class="contacts__title _heading _h3">Телефоны</p>
+        <div class="contacts__inner">
+          <div class="contacts__phone-wrapper">
+            @@include("./src/html/components/phone.html") (мобильные здания)
+          </div>
+          <div class="contacts__phone-wrapper">
+            @@include("./src/html/components/phone.html") (заборы панели)
+          </div>
+        </div>
+      </div>
+      <div class="contacts__item">
+        <p class="contacts__title _heading _h3">Адрес и время работы</p>
+        <div class="contacts__inner">
+          @@include("./src/html/components/address.html")
+          @@include("./src/html/components/schedule.html")
+        </div>
+      </div>
+      <div class="contacts__item">
+        <p class="contacts__title _heading _h3">Социальные сети и почта</p>
+        <div class="contacts__inner">
+          @@include("./src/html/components/info.html", {
+            icon: "instagram",
+            href: "https://www.instagram.com/komplektdom",
+            label: "@komplektdom"
+          })
+          @@include("./src/html/components/email.html")
+        </div>
+      </div>
+      <div class="contacts__item">
+        <p class="contacts__title _heading _h3">Реквизиты</p>
+        <div class="contacts__inner">
+          <div class="contacts__content _cc">
+            <p>ООО «КДОМ»<br>УНП 193577892</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

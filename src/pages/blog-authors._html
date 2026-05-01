@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./src/html/page/head.html', {
+  title: "Виза для белорусов 2025 Запись в визовый центр более 50 стран",
+  sliderPreload: false
+})
+
+<body>
+  <div class="wrapper">
+    @@include('./src/html/page/header.html', {
+      transparent: false
+    })
+
+    @@include('./src/html/components/breadcrumbs.html', {
+      elements: [
+        { name: 'Главная', link: '/' },
+        { name: 'Блог', link: '' }
+      ]
+    })
+
+    @@include('./src/html/blocks/inner-items.html', {
+      extraClass: 'ii_blog _heading-wave _plane',
+      heading: 'Блог',
+      tabs: '[{ name: "Авторы", href: "#" }, { name: "Статьи", href: "blog" }, { name: "Новости", href: "blog" }]',
+      tabsActive: true,
+      tabsLinks: true,
+      tabsSlider: false,
+      text: '',
+      columns: '3',
+      columnsMobile: '',
+      itemPath: './src/html/components/employee-card.html',
+      jsonPath: '"../json/blog-authors.json"',
+      pagination: 'blog'
+    })
+
+    @@include('./src/html/page/footer.html')
+  </div>
+  @@include("./src/html/page/body-bottom.html")
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+.maps {
+  &-01 {
+    @extend %maps-01 !optional;
+  }
+  &_full {
+    @extend %maps-full !optional;
+  }
+  // &__heading {}
+  // &__subheading {}
+  &__text {
+    margin-bottom: 3.125rem;
+  }
+  &__items {
+    @include row(1.86rem, 3.31rem);
+  }
+  &_no-gap{
+    --mt: 0;
+    --pt: 0;
+  }
+  &__item {
+    flex: 1 1 100%;
+    max-width: 100%;
+    text-align: center;
+
+    @media ($desktop-min) {
+      flex: 0 1 50%;
+
+      &:nth-child(1) {
+        order: 1;
+      }
+      &:nth-child(2) {
+        order: 3;
+      }
+      &:nth-child(3) {
+        order: 2;
+      }
+      &:nth-child(4) {
+        order: 4;
+      }
+    }
+    &_map {
+      @media ($desktop-min) {
+        %maps-full & {
+          flex-basis: 100%;
+        }
+      }
+    }
+  }
+  &__address {
+    display: flex;
+    padding: 0.75rem 5rem;
+    position: relative;
+    text-align: center;
+    min-height: 4.375rem;
+    box-shadow: var(--box-shadow-default2);
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+
+    @media ($tablet-mad) {
+      font-size: 14px;
+    }
+
+    %maps-full & {
+      text-align: left;
+      justify-content: flex-start;
+    }
+    svg {
+      top: 50%;
+      left: 1.5rem;
+      color: var(--primary-c);
+      width: 2.5rem;
+      height: 2.875rem;
+      position: absolute;
+      min-width: 26.09px;
+      transform: translateY(-50%);
+      min-height: 30px;
+    }
+  }
+  &__button {
+    margin-top: 1.875rem;
+  }
+}

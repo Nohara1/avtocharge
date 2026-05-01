@@ -1,0 +1,10 @@
+<section class="features"@@if(context.animate){ data-animate="appearing"}>
+  <div class="container">
+    @@if(context.heading){
+      <@@if(context.h1){h1}@@if(!context.h1){h2} class="features__heading _heading@@if(context.h1style){ _h1}">@@heading</@@if(context.h1){h1}@@if(!context.h1){h2}>
+    }
+    <div class="features__items">
+      @@loop('./src/html/include/features-item.html', '@@jsonPath')
+    </div>
+  </div>
+</section>

@@ -1,0 +1,38 @@
+.map {
+  // border: 2px solid var(--text-c);
+  overflow: hidden;
+  position: relative;
+  user-select: none;
+  border-radius: 10px;
+
+  &::before {
+    content: "";
+    display: block;
+    min-height: 590px;
+    padding-bottom: 51.8%;
+  }
+
+  iframe {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+    position: absolute;
+    // min-height: 40rem;
+    border-radius: 10px;
+
+    // @media ($desktop-min) {
+    //   min-height: 455px;
+    // }
+    // @media ($tablet-max) and ($tablet-min) {
+    //   min-height: 350px;
+    // }
+    @media ($mobile-max) {
+      min-height: 200px;
+    }
+  }
+
+  @extend %map !optional;
+}

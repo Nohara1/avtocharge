@@ -1,0 +1,33 @@
+%form {
+  &__rating {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -0.45rem;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+
+    & > * {
+      margin-left: 0.45rem;
+    }
+    svg {
+      width: auto;
+      color: var(--secondary-c);
+      height: 2.5rem;
+      min-height: 30px;
+    }
+    label {
+      cursor: pointer;
+
+      &.active {
+        svg {
+          color: var(--primary-c);
+        }
+        & ~ label {
+          svg {
+            color: var(--primary-c);
+          }
+        }
+      }
+    }
+  }
+}

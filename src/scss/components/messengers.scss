@@ -1,0 +1,129 @@
+.messengers {
+  align-items: center;
+  @include row(0px, 5px, true, false, true);
+
+  
+  &__link {
+    --fz: 20px;
+
+    @extend %messengers-link !optional;
+    
+    svg {
+      %custom-content-contacts &{
+        width: 2.1875rem;
+        height: 2.1875rem;
+        color: var(--white);
+        background-color: var(--black);
+        border-radius: 50%;
+        padding: 6px ;
+        @media($transition-max){
+          padding: 0px;
+        }
+      }
+  
+    }
+  }
+  &__phones {
+    &::after {
+      height: 7px;
+    }
+  }
+  &__phone-wrapper {
+    display: flex;
+    line-height: 1;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  &__phone {
+    color: inherit;
+    display: flex;
+    padding: 5px 0;
+    font-size: 20px;
+    line-height: 1;
+    // font-weight: 700;
+    white-space: nowrap;
+    gap: 5px;
+    align-items: center;
+    text-decoration: none;
+
+    @extend %messengers-phone !optional;
+
+    @media ($transition-min) {
+      transition: color var(--transition);
+
+      // &:hover {
+      //   color: var(--primary-c);
+      // }
+    }
+
+
+
+    svg {
+      width: 2.1875rem;
+      height: 2.1875rem;
+      color: var(--light-blue);
+      background-color: var(--black);
+      border-radius: 50%;
+      padding: 6px;
+      @media($transition-max){
+        padding: 0px;
+      }
+    }
+    span{
+      color: var(--white);
+      transition: all 0.3s;
+
+      @extend %messengers-span !optional;
+
+      @media($tablet-mad){
+        font-size: 18px;
+      }
+
+      // &:hover{
+      //   color: var(--primary-c);
+      // }
+    }
+  }
+  &__phone-label {
+    margin-right: 12px;
+  }
+  &__button {
+    height: 100%;
+    border: none;
+    padding: 7px;
+    background-color: transparent;
+
+    svg {
+      color: var(--text-c);
+      display: block;
+      transform: rotate(0deg);
+      transition: transform 0.3s;
+
+      @media ($header-min) {
+        %hover-to-open-hover & {
+          color: var(--primary-c);
+          transform: rotate(90deg);
+        }
+      }
+      @media ($header-max) {
+        %hover-to-open-opened & {
+          color: var(--primary-c);
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+  &__list-wrapper {
+    top: calc(100% + 7px);
+    left: -1rem;
+    padding: 0.6rem 1rem;
+    box-shadow: var(--box-shadow-default);
+    background-color: var(--white);
+  }
+  // &__list {}
+  // &__li {}
+
+  
+
+  @extend %messengers !optional;
+}

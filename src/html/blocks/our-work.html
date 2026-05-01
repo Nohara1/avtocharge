@@ -1,0 +1,11 @@
+<section class="our-work">
+  <div class="container">
+    <h2 class="our-work__heading _heading _h1">Наши работы</h2>
+    <div class="our-work__items">
+      @@loop('./src/html/components/portfolio-card.html', '../json/portfolios-homepage.json')
+    </div>
+    <div class="our-work__button-wrapper">
+      <a href="portfolio" class="_btn">Перейти в портфолио</a>
+    </div>
+  </div>
+</section>

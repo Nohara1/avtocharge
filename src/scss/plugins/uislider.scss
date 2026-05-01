@@ -1,0 +1,35 @@
+body {
+  #mse2_filters {
+    .mse2_number_slider {
+      width: calc(100% - 2em);
+      border: none;
+      cursor: pointer;
+      margin: 2.25rem 2em 2em;
+      font-size: 5px;
+      border-radius: 0;
+      margin-bottom: 10px;
+      background-color: var(--secondary-c);
+    }
+    .ui-slider-handle {
+      top: -1.75em;
+      width: 4em;
+      border: none;
+      height: 4em;
+      cursor: pointer;
+      margin-left: -2em;
+      border-radius: 0;
+      border-radius: 50%;
+      background-color: var(--primary-c);
+
+      &:focus-visible {
+        @include focus-styles($color: var(--text-c));
+      }
+    }
+    .ui-slider-range {
+      background-color: var(--primary-c);
+    }
+    .ui-slider-horizontal {
+      height: 0.6em;
+    }
+  }
+}

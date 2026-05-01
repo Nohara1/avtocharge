@@ -1,0 +1,21 @@
+.text-component {
+  @extend %text-component !optional;
+
+  &__items {
+    @include row(2.7rem, 3.125rem);
+
+    > * {
+      flex: 1 1 50%;
+      max-width: 50%;
+
+      @media ($tablet-max) {
+        max-width: 100%;
+        flex-basis: 100%;
+      }
+    }
+  }
+  // &__item {
+  // }
+  // &__content {
+  // }
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./src/html/page/head.html', {
+  title: "Виза для белорусов 2025 Запись в визовый центр более 50 стран",
+  sliderPreload: false
+})
+
+<body>
+  <div class="wrapper">
+    @@include('./src/html/page/header.html', {
+      transparent: false
+    })
+
+    @@include('./src/html/blocks/banner.html', {
+      extraClass: 'b_no-gap',
+      slideClass: 'b__slide_blackout',
+      image: 'images/banners/visa_spain.jpg',
+      heading: 'Получение визы в Испанию',
+      text: '<p>Наш специалист по визам разберет ваш случай и составит индивидуальный перечень документов</p>',
+      achievements: '[{ icon: "check", title: "> 97%", text: "одобрения на получение визы" },{ icon: "ya", title: "5.0", text: "рейтинг Яндекса" },{ icon: "exp", title: "> 10 лет", text: "опыт наших специалистов" },{ icon: "review", title: "> 100 000", text: "довольных клиентов" }]',
+      component: './src/html/forms/request-a-call.html'
+    })
+
+    @@include('./src/html/components/breadcrumbs.html', {
+      elements: [
+        { name: 'Главная', link: '/' },
+        { name: 'Услуги', link: '/services' },
+        { name: 'Получение визы в Испанию', link: '' }
+      ]
+    })
+
+    @@include('./src/html/blocks/country-params.html', {
+      items: './src/html/include/country-params-country.html'
+    })
+
+    @@include('./src/html/blocks/inner-items.html', {
+      extraClass: '',
+      heading: 'Мы открываем следующие типы виз в Испанию',
+      subheading: '',
+      text: '',
+      columns: '',
+      columnsMobile: '',
+      subcategoriesTitle: '',
+      subcategoriesJson: '',
+      itemPath: './src/html/components/inner-items/card-visa.html',
+      jsonPath: '"../json/inner-items-card-visa.json"'
+    })
+
+    @@include('./src/html/blocks/how-we-work.html', {
+      heading: 'Как мы работаем'
+    })
+
+    @@include('./src/html/blocks/inner-items.html', {
+      extraClass: 'ii_docs _plane',
+      heading: 'Документы для оформления визы',
+      subheading: '',
+      text: '',
+      columns: 4,
+      columnsMobile: '',
+      subcategoriesTitle: '',
+      subcategoriesJson: '',
+      itemPath: './src/html/components/inner-items/docs.html',
+      jsonPath: '[{ title: "Для всех типов виз", popup: "docs" },{ title: "Туристическая виза", popup: "docs" },{ title: "Гостевая виза", popup: "docs" },{ title: "Бизнес виза", popup: "docs" },{ title: "Студенческая виза", popup: "docs" },{ title: "Рабочая виза", popup: "docs" },{ title: "Деловая виза", popup: "docs" }]'
+    })
+
+    @@include('./src/html/blocks/inner-items.html', {
+      extraClass: 'ii_why-us _heading-wave',
+      heading: 'Почему стоит выбрать нас',
+      subheading: '',
+      text: '',
+      columns: 5,
+      columnsMobile: '',
+      subcategoriesTitle: '',
+      subcategoriesJson: '',
+      itemPath: './src/html/components/inner-items/inner-items-item.html',
+      jsonPath: '"../json/inner-items-why-us.json"'
+    })
+
+    @@include('./src/html/blocks/custom-slider.html', {
+      extraClass: '',
+      gap: 40,
+      slides: 'auto',
+      mobSlides: 'auto',
+      filter: false,
+      heading: 'Сопутствующие услуги',
+      text: '',
+      navigation: true,
+      navigationStyle: 2,
+      pagination: false,
+      itemPath: './src/html/include/custom-slider-inner-items-item.html',
+      jsonPath: '../json/custom-slider-inner-items-services.json',
+      linkUrl: '',
+      linkName: '',
+      linkOnTop: false
+    })
+
+    @@include('./src/html/blocks/banner.html', {
+      extraClass: 'b_bdrs',
+      slideClass: 'b__slide_right',
+      image: 'images/banners/visa_vsem.jpg',
+      heading: 'Весь мир с ВизаВсем!',
+      text: '',
+      achievements: '',
+      component: './src/html/forms/request-a-call.html'
+    })
+
+    @@include('./src/html/blocks/custom-slider.html', {
+      extraClass: '_heading-wave',
+      gap: 40,
+      slides: '3',
+      mobSlides: '1',
+      filter: false,
+      heading: 'Популярные направления',
+      text: '',
+      navigation: true,
+      navigationStyle: 2,
+      pagination: false,
+      itemPath: './src/html/include/custom-slider-card-country.html',
+      jsonPath: '../json/inner-items-card-country-2.json',
+      linkUrl: '',
+      linkName: '',
+      linkOnTop: false
+    })
+
+    @@include('./src/html/blocks/reviews-links.html', {
+      extraClass: '',
+      heading: 'Отзывы'
+    })
+
+    @@include('./src/html/blocks/collapse.html', {
+      extraClass: '_heading-wave _plane',
+      heading: 'Вопрос-ответ (FAQ)',
+      self: true,
+      jsonPath: '../json/collapse-6-pieces.json'
+    })
+
+    @@include('./src/html/blocks/two-components.html', {
+      hStyle: 2,
+      heading: 'Открыть визу в Испанию для белорусов - это возможно?',
+      subheading: '',
+      title01: '',
+      extraClass: '',
+      component01url: './src/html/components/custom-content.html',
+      component01params: '{ contents: "<p>Нужна шенгенская виза в Испанию? Хотите оформить ее быстро и без проблем? Тогда наше визовое агентство к вашим услугам. Мы работаем по всей Беларуси!<br>Подача на испанскую визу будет проходить в визовом центре Испании в Минске или Москве.</p><h3>Уменьшаем риски отказа и экономим ваше время:</h3><p>- помогаем собрать необходимые документы для визы в Испанию,<br>- заполняем анкету для подачи на испанскую визу,<br>- делаем запись в визовый центр Испании в Минске или Москве,<br>- в офисе делаем фото и медицинский страховой полис,<br>- консультируем до момента получения визы.</p><h3>Какие типы испанских виз можно получить? Их несколько, и все зависит от периода пребывания в стране:</h3><p>- Однократная испанская виза для белорусов – позволяет находиться на территории Испании в течение 21 дня. Въезд в страну возможен только один раз.<br>- Многократная испанская виза – открывает многократный въезд в Испанию на год. Общее количество дней пребывания должно быть не более 90 дней в течение каждого полугодия. Документы на визу в Испанию стандартные. Присутствие заявителя в посольстве обязательно.</p><p><mark>С испанской шенгенской визой можно посещать все страны шенгенского союза.</mark></p><h3>Также есть различные виды испанских виз в зависимости от целей поездки:</h3><ul><li><b>гостевая виза в Испанию</b> – позволяет навестить родственников или близких друзей, проживающих на территории Испании;</li><li><b>туристическая виза в Испанию</b> – оформляется с целью отдыха, путешествия, шопинга или краткосрочного обучения;</li><li><b>студенческая</b> – опозволяет гражданам нашей страны обучаться в любом испанском вузе.</li></ul><p>Стоимость, период действия и срок оформления каждой из перечисленных виз разные. Перед тем, как открыть визу в Испанию, стоит уточнить данную информацию у менеджеров нашего центра визовой поддержки. Для этого просто позвоните по телефону или заполните форму на сайте, и мы ответим на все интересующие вопросы!</p>", extraClass: "_cc_background" }',
+      title02: '',
+      component02url: './src/html/components/image.html',
+      component02params: '{ src: "images/additional/content_spain.jpg", thumb: "images/additional/content_spain.jpg", alt: "описание изображения для SEO", width: "850", height: "652", class: "image_content" }',
+    })
+
+    @@include('./src/html/blocks/two-components.html', {
+      hStyle: 2,
+      heading: 'Где оформить визу в Испанию в Минске',
+      subheading: '',
+      title01: '',
+      extraClass: 'tc_proportions _heading-wave',
+      component01url: './src/html/components/map.html',
+      component01params: '{ mapUrl: "https://yandex.by/map-widget/v1/org/vizavsem/84805976119/?ll=27.587011%2C53.916563&z=18.09", }',
+      title02: '',
+      component02url: './src/html/forms/request-a-call.html',
+      component02params: 'null',
+    })
+
+    @@include('./src/html/page/footer.html')
+  </div>
+  @@include("./src/html/page/body-bottom.html", {
+    docs: true
+  })
+</body>
+
+</html>

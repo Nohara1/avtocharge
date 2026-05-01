@@ -1,0 +1,11 @@
+<div class="category-item">
+  <div class="category-item__inner">
+    <p class="category-item__iw _iw _iw--contain">
+      <img src="@@imageSrc" srcset="images/placeholder.png"
+        data-srcset="@@if(context.imageThumb){@@imageThumb}@@if(!context.imageThumb){@@imageSrc}"
+        alt="@@if(context.imageAlt){@@imageAlt}@@if(!context.imageAlt){@@name}" width="@@imageWidth"
+        height="@@imageHeight" decoding="async">
+    </p>
+    <a href="@@url" class="category-item__link _title">@@name</a>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+._nav-slider {
+  z-index: 1;
+  display: inline-flex;
+  // overflow: hidden;
+  position: relative;
+  max-width: 100%;
+  list-style: none;
+  margin-left: auto;
+  margin-right: auto;
+  touch-action: pan-y;
+
+  &__wrapper {
+    z-index: 1;
+    display: flex;
+    position: relative;
+    box-sizing: content-box;
+    transition-property: transform;
+    transition-timing-function: initial;
+
+    @extend %_nav-slider-wrapper !optional;
+  }
+  &__slide {
+    position: relative;
+    flex-shrink: 0;
+
+    @extend %_nav-slider-slide !optional;
+  }
+
+  @extend %_nav-slider !optional;
+}

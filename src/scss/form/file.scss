@@ -1,0 +1,49 @@
+%form-file {
+  align-items: center;
+  justify-content: space-between;
+  @include row(10px, 10px, true);
+
+  [type="file"] {
+    &:focus-visible {
+      @extend %form-file-focus !optional;
+    }
+  }
+  [data-file-name] {
+    color: inherit;
+    font-size: 20px;
+    font-weight: 700;
+
+    @at-root {
+      %form-file-focus ~ & {
+        @include focus-styles($offset: 1px);
+      }
+    }
+  }
+  %_btn {
+    --px: 2em;
+    cursor: pointer;
+  }
+}
+.form__file-dropdown {
+  color: var(--text-l);
+  height: 100%;
+  border: 2px dashed var(--primary-c);
+  display: flex;
+  padding: 3.125rem;
+  border-radius: 3px;
+  flex-direction: column;
+  justify-content: center;
+
+  > %form-label {
+    margin-bottom: 20px;
+  }
+
+  &_hovered {
+    border-style: solid;
+    background-color: change-color($color: $primary-color, $alpha: 0.05);
+
+    > * {
+      pointer-events: none;
+    }
+  }
+}

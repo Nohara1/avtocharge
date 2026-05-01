@@ -1,0 +1,58 @@
+<div class="custom-slider cs
+  @@if(context.filter){ cs_filter}
+  @@if(context.pagination){ cs_pagination}
+  @@if(context.navigation){ cs_navigation}
+  @@if(context.overflow){ cs_overflow}
+  @@if(context.dark){ cs_dark}
+  @@if(context.navigation && context.navigationStyle){ cs_nav-style-0@@navigationStyle}
+  @@if(context.extraClass){ @@extraClass}"
+  @@if(context.animate){ data-animate="appearing" }>
+  @@if(context.filter){
+  <nav class="cs__filter tabs@@if(context.tabsWrap){ tabs_rows}@@if(!context.tabsWrap){ _nav-slider}" role="tablist">
+    <button class="cs__filter-button _btn _btn--tab-02 _nav-slider__slide active" type="button"
+      data-switch-category="" role="tab">Все сотрудники</button>
+    @@for(var i = 1; i < filter.length; i++){
+    <button class="cs__filter-button _btn _btn--tab-02 _nav-slider__slide" type="button"
+      data-switch-category="c0`+i+`" role="tab">`+filter[i]+`</button>
+    }
+  </nav>
+  }
+  <div class="cs__swiper" @@if(context.gap){ data-gap="@@gap" } @@if(context.slides){
+    data-slides="@@slides" }@@if(context.mobSlides){ data-mob-slides="@@mobSlides" }>
+    <div class="cs__swiper-wrapper">
+      @@if(context.itemPath){@@loop('@@itemPath', @@jsonPath)}
+    </div>
+
+    @@if(context.pagination){
+    <div class="cs__pagination"></div>
+    }
+
+    @@if(context.navigation){
+    <div class="cs__nav-buttons">
+      <div
+        class="cs__nav-btn cs__nav-btn_prev @@if(context.navigationStyle == 1){_btn _btn--nav}"
+        role="button">
+        <span class="_sr-only">Предыдущий слайд</span>
+        <svg width="13" height="13" aria-hidden="true">
+          <use href="images/icons.svg#chevron-right@@if(context.navigationStyle == 4){-thick}"></use>
+        </svg>
+      </div>
+      @@if(context.navigationStyle == 3){
+      <div class="cs__counter">
+        <span class="cs__counter-current">1</span>
+        <span class="cs__counter-separator">/</span>
+        <span class="cs__counter-total">3</span>
+      </div>
+      }
+      <div
+        class="cs__nav-btn cs__nav-btn_next @@if(context.navigationStyle == 1){_btn _btn--nav}"
+        role="button">
+        <span class="_sr-only">Следующий слайд</span>
+        <svg width="13" height="13" aria-hidden="true">
+          <use href="images/icons.svg#chevron-right@@if(context.navigationStyle == 4){-thick}"></use>
+        </svg>
+      </div>
+    </div>
+    }
+  </div>
+</div>

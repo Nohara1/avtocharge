@@ -1,0 +1,39 @@
+<div class="country-params cp _section@@if(context.extraClass){ @@extraClass}">
+  <div class="container">
+    @@include('./src/html/components/heading.html', {
+      heading: '@@if(context.heading){@@heading}',
+      hLevel: '@@if(context.hLevel){@@hLevel}',
+      hStyle: '@@if(context.hStyle){@@hStyle}',
+      hExtraClass: 'cp__heading'
+    })
+    @@if(context.slider){
+    <div class="cp__slider-container">
+      <div class="cp__slider">}
+    @@for(var i = 1; i < @@if(context.slider){3}@@if(!context.slider){2}; i++){
+    <div class="cp__inner">
+      <ul class="cp__items">
+        @@if(context.items){
+          @@include('@@items')
+        }
+      </ul>
+      @@if(context.images){
+        @@include('./src/html/components/gallery01.html', {
+          navigation: false,
+          images: @@if(context.images){@@images}@@if(!context.images){[]}
+        })
+      }
+    </div>
+    }
+    @@if(context.slider){
+      </div>
+      <div class="cp__navigation">
+        <button class="cp__nav cp__nav_prev" type="button" aria-label="Предыдущий слайд">
+          <svg width="20" height="10" aria-hidden="true"><use href="images/icons.svg#chevron"></use></svg>
+        </button>
+        <button class="cp__nav cp__nav_next" type="button" aria-label="Следующий слайд">
+          <svg width="20" height="10" aria-hidden="true"><use href="images/icons.svg#chevron"></use></svg>
+        </button>  
+      </div>
+    </div>}
+  </div>
+</div>

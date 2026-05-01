@@ -1,0 +1,31 @@
+<aside class="related-product">
+  <div class="related-product__inner">
+    <p class="related-product__iw _iw _iw--contain">
+      <img class="related-product__image" src="@@imageSrc" srcset="images/placeholder.png" data-srcset="@@imageSrc"
+        alt="@@title" width="95" height="95" decoding="async">
+    </p>
+    <div class="related-product__content">
+      @@if (context.in_stock || context.not_available || context.on_order) {
+      <div class="availability">
+        @@if (context.in_stock) {
+        <span class="availability__item availability__item_in-stock">в налачии</span>
+        }
+        @@if (context.not_available) {
+        <span class="availability__item availability__item_not-available">нет в наличии</span>
+        }
+        @@if (context.on_order) {
+        <span class="availability__item availability__item_on-order">под заказ</span>
+        }
+      </div>
+      }
+      <a class="related-product__title" href="@@link">@@title</a>
+    </div>
+    <div class="related-product__button-wrapper">
+      <div class="related-product__btn">
+        <svg class="related-product__btn-arrow" width="30" height="12">
+          <use href="images/icons.svg#arrow-right"></use>
+        </svg>
+      </div>
+    </div>
+  </div>
+</aside>

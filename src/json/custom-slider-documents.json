@@ -1,0 +1,90 @@
+[
+  {
+    "src": "images/certificates/certificate-01.jpg",
+    "thumb": "images/certificates/thumbs/certificate-01.jpg",
+    "alt": "описание сертификата",
+    "orientation": "vertical",
+    "contain": "true",
+    "width": "250",
+    "height": "345",
+    "class": "image_certificates",
+    "title": "Сертифицированная фабричная продукция"
+  },
+  {
+    "src": "images/certificates/certificate-02.jpg",
+    "thumb": "images/certificates/thumbs/certificate-02.jpg",
+    "alt": "описание сертификата",
+    "orientation": "vertical",
+    "contain": "true",
+    "width": "250",
+    "height": "345",
+    "class": "image_certificates",
+    "title": "Сертифицированная фабричная продукция"
+  },
+  {
+    "src": "images/certificates/certificate-01.jpg",
+    "thumb": "images/certificates/thumbs/certificate-01.jpg",
+    "alt": "описание сертификата",
+    "orientation": "vertical",
+    "contain": "true",
+    "width": "250",
+    "height": "345",
+    "class": "image_certificates",
+    "title": "Сертифицированная фабричная продукция"
+  },
+  {
+    "src": "images/certificates/certificate-02.jpg",
+    "thumb": "images/certificates/thumbs/certificate-02.jpg",
+    "alt": "описание сертификата",
+    "orientation": "vertical",
+    "contain": "true",
+    "width": "250",
+    "height": "345",
+    "class": "image_certificates",
+    "title": "Сертифицированная фабричная продукция"
+  },
+  {
+    "src": "images/certificates/certificate-01.jpg",
+    "thumb": "images/certificates/thumbs/certificate-01.jpg",
+    "alt": "описание сертификата",
+    "orientation": "vertical",
+    "contain": "true",
+    "width": "250",
+    "height": "345",
+    "class": "image_certificates",
+    "title": "Сертифицированная фабричная продукция"
+  },
+  {
+    "src": "images/certificates/certificate-02.jpg",
+    "thumb": "images/certificates/thumbs/certificate-02.jpg",
+    "alt": "описание сертификата",
+    "orientation": "vertical",
+    "contain": "true",
+    "width": "250",
+    "height": "345",
+    "class": "image_certificates",
+    "title": "Сертифицированная фабричная продукция"
+  },
+  {
+    "src": "images/certificates/certificate-01.jpg",
+    "thumb": "images/certificates/thumbs/certificate-01.jpg",
+    "alt": "описание сертификата",
+    "orientation": "vertical",
+    "contain": "true",
+    "width": "250",
+    "height": "345",
+    "class": "image_certificates",
+    "title": "Сертифицированная фабричная продукция"
+  },
+  {
+    "src": "images/certificates/certificate-02.jpg",
+    "thumb": "images/certificates/thumbs/certificate-02.jpg",
+    "alt": "описание сертификата",
+    "orientation": "vertical",
+    "contain": "true",
+    "width": "250",
+    "height": "345",
+    "class": "image_certificates",
+    "title": "Сертифицированная фабричная продукция"
+  }
+]

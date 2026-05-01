@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./src/html/page/head.html', {
+"title": "О нас"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('./src/html/page/header.html')
+    @@include('./src/html/components/breadcrumbs.html', {
+    'jsonPath': '../json/breadcrumbs/o-nas.json'
+    })
+
+    @@loop('./src/html/blocks/custom-content-03.html', '../json/o-nas-custom-content.json')
+
+    @@include('./src/html/blocks/custom-slider.html', {
+    'h1style': false,
+    'gap': 50,
+    'slides': 4,
+    'mobSlides': "auto",
+    'filter': false,
+    'heading': 'Ключевые сотрудники',
+    'subheading': '',
+    'navigation': true,
+    'navigationStyle': 2,
+    'pagination': false,
+    'itemPath': './src/html/include/custom-slider-employee-item.html',
+    'jsonPath': '../json/o-nas-custom-slider-images.json'
+    })
+
+    @@include('./src/html/blocks/custom-slider.html', {
+    'h1style': false,
+    'gap': 25,
+    'slides': 4,
+    'mobSlides': "auto",
+    'filter': false,
+    'heading': 'Ещё больше о нас на нашем канале youtube',
+    'subheading': 'Более 400 видео обзоров на наши изделия и отзывы заказчиков на нашем YouTube канале:',
+    'navigation': true,
+    'navigationStyle': 2,
+    'pagination': false,
+    'itemPath': './src/html/include/custom-slider-video-item.html',
+    'jsonPath': '../json/homepage-custom-slider-videos.json',
+    'linkName': 'Перейти на YouTube',
+    'linkUrl': 'https://youtube.com'
+    })
+
+    @@include('./src/html/blocks/form-with-image.html', {
+      'heading': 'Остались вопросы?',
+      'pathToForm': './src/html/forms/leave-a-request.html',
+      'subheading': 'Заполните форму и менеджер свяжется с вами!'
+    })
+
+
+    @@if(false){
+    @@include('./src/html/blocks/custom-content-02.html', {
+    'animate': false,
+    'gallery': true,
+    'imageUrl': 'images/certificates/certificate-01.jpg',
+    'videoId': 'EY590aR1Pe8',
+    'videoHeight': '559',
+    'videoWidth': '1000'
+    })
+
+    @@loop('./src/html/blocks/custom-content-01.html', '../json/o-nas-custom-content-02.json')
+    @@include('./src/html/blocks/features.html', {
+    'animate': false,
+    'h1style': true,
+    'heading': 'Мы в цифрах',
+    'jsonPath': '../json/o-nas-features.json'
+    })
+    @@include('./src/html/blocks/two-colored.html', {
+    'animate': false,
+    'h1style': true,
+    'heading': 'Наши конкурентные преимуществ',
+    'title01': 'Собственный сервисный центр',
+    'text01': 'Своевременное обслуживание — залог долгой и беспроблемной работы вашего спа. Мы готовы Вам в этом
+    помочь.',
+    'title02': 'Все работы “под ключ”',
+    'text02': 'от подготовки основания для установки до запуска'
+    })
+    @@include('./src/html/blocks/custom-slider.html', {
+    'animate': false,
+    'h1style': true,
+    'gap': 50,
+    'slides': 3.1,
+    'navigation': true,
+    'mobSlides': 1,
+    'heading': 'Наши работы',
+    'itemPath': './src/html/include/custom-slider-portfolio-item.html',
+    'jsonPath': '../json/portfolios-02.json'
+    })
+    @@include('./src/html/blocks/custom-slider.html', {
+    'animate': false,
+    'h1style': true,
+    'gap': 50,
+    'slides': 3,
+    'mobSlides': 1,
+    'heading': 'Отзывы',
+    'filter': false,
+    'navigation': true,
+    'pagination': true,
+    'itemPath': './src/html/include/custom-slider-review-item.html',
+    'jsonPath': '../json/product-entry-custom-slider-videos.json'
+    })}
+    @@include('./src/html/page/footer.html')
+  </div>
+  @@include("./src/html/page/body-bottom.html")
+</body>
+
+</html>

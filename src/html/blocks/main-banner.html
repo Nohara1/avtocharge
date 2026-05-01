@@ -1,0 +1,56 @@
+<main class="main-banner mb@@if(context.extraClass){ @@extraClass}">
+  @@if (context.ticker){@@include('./src/html/components/main-banner/ticker.html')}
+  <div class="mb__slider">
+    @@for(var i = 0; i < 1; i++){ <div class="mb__slide">
+      <div class="container">
+        @@if(context.imageDesktop && context.imageMobile){<p class="mb__iw _iw">
+          <img class="mb__image" src="@@imageDesktop" srcset="@@imageDesktop 1920w, @@imageMobile 767w"
+            sizes="(min-width: 768px) 1920px, (max-width: 767.98px) 767px" alt="@@imageAlt" decoding="async">
+        </p>}
+        @@if(context.imageDesktop && !context.imageMobile){<p class="mb__iw _iw">
+          <img class="mb__image" src="@@imageDesktop" srcset="@@imageDesktop" alt="@@imageAlt" decoding="async">
+        </p>}
+        @@if(context.videoLink && context.videoPoster){<video class="mb__vw" poster="@@videoPoster" playsinline loop muted autoplay width="1440" height="793">
+          <source src="@@videoLink" type="video/mp4" />
+          <a href="@@videoLink" targte="_blank" download>Download the MP4 video.</a>
+        </video>}
+        <div class="mb__content">
+          
+          @@if(context.heading){<div class="mb__heading-wrapper">
+            <h1 class="mb__heading _heading _h1">@@heading</h1>
+          </div>}
+          @@if(context.image){<img src="@@image" alt="Логотип" srcset="@@image" width="512" height="304" decoding="async">}
+          @@if(context.text){<div class="mb__text _cc">@@text</div>}
+          
+          @@if(context.buttonName){<div class="mb__bottom">
+            @@if(context.achievements){@@include('./src/html/components/main-banner/banner-achievements.html', {
+              attr: 'data-animate="appearing" data-animate-delay="900"',
+              achievements: @@achievements
+            })}
+            
+            @@if(context.linkName){<a href="@@if(context.linkHref){@@linkHref}@@if(!context.linkHref){#}"
+              class="mb__button _btn @@linkClass">@@linkName</a>}
+            @@if(context.buttonName){<button data-open-popup="@@if(context.buttonPopup){@@buttonPopup}" type="button"
+              class="mb__button _btn @@buttonClass">@@buttonName</button>}
+          </div>}
+          @@if(context.features){@@include('./src/html/components/main-banner/banner-features.html', { features: "@@features" })}
+          @@if(context.project){@@include('./src/html/components/main-banner/banner-project.html')}
+          @@if(context.badges){@@include('./src/html/components/main-banner/banner-badges.html')}
+        </div>
+        @@if(context.categories){@@include('./src/html/main-banner/banner-categories.html')}
+      </div>
+  </div>
+  }
+  @@if(false){<div class="mb__nav mb__nav_prev">
+    <svg width="20" height="40" aria-hidden="true">
+      <use href="images/icons.svg#chevron-right-thick"></use>
+    </svg>
+  </div>
+  <div class="mb__nav mb__nav_next">
+    <svg width="20" height="40" aria-hidden="true">
+      <use href="images/icons.svg#chevron-right-thick"></use>
+    </svg>
+  </div>
+  <div class="mb__pagination"></div>}
+  </div>
+</main>

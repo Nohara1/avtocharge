@@ -1,0 +1,236 @@
+<section class="cart">
+  <div class="container">
+    @@if(context.heading){<h1 class="cart__heading _heading">@@heading</h1>}
+    <div class="cart__items">
+      <div class="cart__inner-item cart__inner-item_full">
+        @@include('./src/html/components/product-card-mini.html', {
+        'link': 'product-page',
+        'imageSrc': 'images/products/example__product.png',
+        'title': 'Название продукта/услуги',
+        'oldPrice': '200 000',
+        'price': '150 000',
+        'closeButton': true,
+        'feature01': {
+          'key': 'Размер, см:',
+          'value': '230 х 230 х 88'
+        },
+        'feature02': {
+          'key': 'Комплектация:',
+          'value': 'комплектация'
+        },
+        'feature03': {
+          'key': 'Комплектация:',
+          'value': 'комплектация'
+        },
+        })
+      </div>
+      <div class="cart__inner-item cart__inner-item_full">
+        @@include('./src/html/components/product-card-mini.html', {
+        'link': 'product-page',
+        'imageSrc': 'images/products/example__product.png',
+        'title': 'Название продукта/услуги',
+        'oldPrice': '200 000',
+        'price': '150 000',
+        'closeButton': true,
+        'feature01': {
+          'key': 'Размер, см:',
+          'value': '230 х 230 х 88'
+        },
+        'feature02': {
+          'key': 'Комплектация:',
+          'value': 'комплектация'
+        },
+        'feature03': {
+          'key': 'Комплектация:',
+          'value': 'комплектация'
+        },
+        })
+      </div>
+    </div>
+    <form class="cart__items form" method="post">
+      <div class="cart__item">
+        <div class="cart__items">
+          <div class="cart__inner-item">
+            <div class="cart__inner">
+              <div class="form__items">
+                <span class="cart__title _heading">
+                  <svg width="24" height="24">
+                    <use href="images/icons.svg#truck"></use>
+                  </svg>Варианты доставки
+                </span>
+                <fieldset class="form__item-wrapper">
+                  <legend class="_sr-only">Варианты доставки</legend>
+                  <div class="form__item">
+                    <label>
+                      <input class="form__radio" type="radio" name="delivery" value="courier" checked="">
+                      <span class="form__label">Доставка курьером</span>
+                    </label>
+                  </div>
+                  <div class="form__item">
+                    <label>
+                      <input class="form__radio" type="radio" name="delivery" value="pickup">
+                      <span class="form__label">Самовывоз г.Минск Маяковского 24</span>
+                    </label>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+          <div class="cart__inner-item">
+            <div class="cart__inner">
+              <div class="form__items">
+                <span class="cart__title _heading">
+                  <svg width="24" height="24">
+                    <use href="images/icons.svg#payment"></use>
+                  </svg>Способы оплаты
+                </span>
+                <fieldset class="form__item-wrapper">
+                  <legend class="_sr-only">Способы оплаты</legend>
+                  <div class="form__item">
+                    <label>
+                      <input class="form__radio" type="radio" name="payment" value="cash" checked="">
+                      <span class="form__label">Наличные</span>
+                    </label>
+                  </div>
+                  <div class="form__item">
+                    <label>
+                      <input class="form__radio" type="radio" name="payment" value="card">
+                      <span class="form__label">Банковская карта</span>
+                    </label>
+                  </div>
+                  <div class="form__item">
+                    <label>
+                      <input class="form__radio" type="radio" name="payment" value="pickup">
+                      <span class="form__label">Ерип</span>
+                    </label>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+          <div class="cart__inner-item">
+            <div class="cart__inner">
+              <div class="form__items">
+                <span class="cart__title _heading">
+                  <svg width="24" height="24">
+                    <use href="images/icons.svg#user"></use>
+                  </svg>Данные получатели
+                </span>
+                <div class="form__item">
+                  <label>
+                    <span class="form__label _sr-only">Получатель</span>
+                    <input class="form__input" type="text" name="name" value="" data-required=""
+                      placeholder="Получатель">
+                    <span class="form__error-message"></span>
+                  </label>
+                </div>
+                <div class="form__item">
+                  <label>
+                    <span class="form__label _sr-only">Ваш телефон</span>
+                    <input class="form__input" type="tel" name="phone" value="" data-required=""
+                      placeholder="Ваш телефон">
+                    <span class="form__error-message"></span>
+                  </label>
+                </div>
+                <div class="form__item">
+                  <label>
+                    <span class="form__label _sr-only">E-mail</span>
+                    <input class="form__input" type="email" name="email" value="" data-required="" placeholder="E-mail">
+                    <span class="form__error-message"></span>
+                  </label>
+                </div>
+                <div class="form__item">
+                  <label>
+                    <span class="form__label _sr-only">Комментарий</span>
+                    <textarea class="form__input" name="description" placeholder="Комментарий"></textarea>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cart__inner-item">
+            <div class="cart__inner">
+              <div class="form__items">
+                <span class="cart__title _heading">
+                  <svg width="24" height="24">
+                    <use href="images/icons.svg#delivery-address"></use>
+                  </svg>Данные получатели
+                </span>
+                <div class="form__item">
+                  <label>
+                    <span class="form__label _sr-only">Почтовый индекс</span>
+                    <input class="form__input" type="text" name="index" value="" data-required=""
+                      placeholder="Почтовый индекс">
+                    <span class="form__error-message"></span>
+                  </label>
+                </div>
+                <div class="form__item">
+                  <label>
+                    <span class="form__label _sr-only">Область</span>
+                    <input class="form__input" type="text" name="region" value="" data-required=""
+                      placeholder="Область">
+                    <span class="form__error-message"></span>
+                  </label>
+                </div>
+                <div class="form__item">
+                  <label>
+                    <span class="form__label _sr-only">Город</span>
+                    <input class="form__input" type="text" name="city" value="" data-required="" placeholder="Город">
+                    <span class="form__error-message"></span>
+                  </label>
+                </div>
+                <div class="form__item">
+                  <div class="form__item-wrapper form__item-wrapper_row">
+                    <div class="form__item">
+                      <label>
+                        <span class="form__label _sr-only">Улица</span>
+                        <input class="form__input" type="text" name="street" value="" data-required=""
+                          placeholder="Улица">
+                        <span class="form__error-message"></span>
+                      </label>
+                    </div>
+                    <div class="form__item">
+                      <label>
+                        <span class="form__label _sr-only">Дом</span>
+                        <input class="form__input" type="text" name="house" value="" data-required="" placeholder="Дом">
+                        <span class="form__error-message"></span>
+                      </label>
+                    </div>
+                    <div class="form__item">
+                      <label>
+                        <span class="form__label _sr-only">Кв</span>
+                        <input class="form__input" type="text" name="apartment" value="" data-required=""
+                          placeholder="Кв">
+                        <span class="form__error-message"></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cart__item cart__item_result">
+        <div class="cart__result _cc">
+          <span class="cart__title _title">Ваш заказ</span>
+          <table class="cart__summary">
+            <tr>
+              <th scope="row">Товар</th>
+              <td><b>150 000 RUB</b></td>
+            </tr>
+            <tr class="cart--red">
+              <th scope="row">Скидка</th>
+              <td><b>15%</b></td>
+            </tr>
+            <tr>
+              <th scope="row">Доставка курьером</th>
+              <td><b>30 руб.</b></td>
+            </tr>
+          </table>
+          <button class="cart__submit _btn" type="submit" name="cart-submit">Оформить заказ</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>

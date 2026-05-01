@@ -1,0 +1,19 @@
+<div class="form-content">
+  @@include('./src/html/components/heading.html', {
+    heading: '@@if(context.heading){@@heading}',
+    hLevel: '@@if(context.hLevel){@@hLevel}',
+    hStyle: '@@if(context.hStyle){@@hStyle}',
+    hExtraClass: '',
+  })
+  <p class="fc-text _cc">
+     Чтобы получить услугу IT-аутсорсинга, свяжитесь с «Грани IT» любым удобным способом, либо заполните форму:
+  </p>
+  @@include('./src/html/components/messengers.html',{
+    hideViber: 'true',
+    hideTelegram: 'true'
+  })
+  @@include('./src/html/components/email.html')
+  <p class="fc-text _cc">
+    Если необходимо, дадим подробную бесплатную консультацию, в ходе которой рассчитаем предварительную цену работы.
+ </p>
+</div>

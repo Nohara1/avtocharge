@@ -1,0 +1,92 @@
+[
+    {
+      "src": "images/team/employee_01.jpg",
+      "thumb": "images/team/employee_01.jpg",
+      "alt": "Иванов Иван Иванович",
+      "orientation": "vertical",
+      "width": "305",
+      "height": "417",
+      "class": "image_team image--grayscale",
+      "title": "Иванов Иван Иванович",
+      "subtitle": "Директор"
+    },
+    {
+      "src": "images/team/employee_02.jpg",
+      "thumb": "images/team/employee_02.jpg",
+      "alt": "Иванов Иван Иванович",
+      "orientation": "vertical",
+      "width": "305",
+      "height": "417",
+      "class": "image_team image--grayscale",
+      "title": "Иванов Иван Иванович",
+      "subtitle": "Директор"
+    },
+    {
+      "src": "images/team/employee_03.jpg",
+      "thumb": "images/team/employee_03.jpg",
+      "alt": "Иванов Иван Иванович",
+      "orientation": "vertical",
+      "width": "305",
+      "height": "417",
+      "class": "image_team image--grayscale",
+      "title": "Иванов Иван Иванович",
+      "subtitle": "Директор"
+    },
+    {
+      "src": "images/team/employee_01.jpg",
+      "thumb": "images/team/employee_01.jpg",
+      "alt": "Иванов Иван Иванович",
+      "orientation": "vertical",
+      "width": "305",
+      "height": "417",
+      "class": "image_team image--grayscale",
+      "title": "Иванов Иван Иванович",
+      "subtitle": "Директор"
+    },
+    {
+      "src": "images/team/employee_02.jpg",
+      "thumb": "images/team/employee_02.jpg",
+      "alt": "Иванов Иван Иванович",
+      "orientation": "vertical",
+      "width": "305",
+      "height": "417",
+      "class": "image_team image--grayscale",
+      "title": "Иванов Иван Иванович",
+      "subtitle": "Директор"
+    },
+    {
+      "src": "images/team/employee_03.jpg",
+      "thumb": "images/team/employee_03.jpg",
+      "alt": "Иванов Иван Иванович",
+      "orientation": "vertical",
+      "width": "305",
+      "height": "417",
+      "class": "image_team image--grayscale",
+      "title": "Иванов Иван Иванович",
+      "subtitle": "Директор"
+    }
+    ,
+    {
+      "src": "images/team/employee_03.jpg",
+      "thumb": "images/team/employee_03.jpg",
+      "alt": "Иванов Иван Иванович",
+      "orientation": "vertical",
+      "width": "305",
+      "height": "417",
+      "class": "image_team image--grayscale",
+      "title": "Иванов Иван Иванович",
+      "subtitle": "Директор"
+    }
+    ,
+    {
+      "src": "images/team/employee_03.jpg",
+      "thumb": "images/team/employee_03.jpg",
+      "alt": "Иванов Иван Иванович",
+      "orientation": "vertical",
+      "width": "305",
+      "height": "417",
+      "class": "image_team image--grayscale",
+      "title": "Иванов Иван Иванович",
+      "subtitle": "Директор"
+    }
+  ]

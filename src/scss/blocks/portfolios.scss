@@ -1,0 +1,19 @@
+.portfolios {
+  &__items {
+    @include row(3.125rem, 3.125rem);
+
+    > * {
+      flex: 1 1 33.3333%;
+      max-width: 33.3333%;
+
+      @media ($desktop-max) and ($tablet-mid) {
+        max-width: 50%;
+        flex-basis: 50%;
+      }
+      @media ($tablet-mad) {
+        max-width: 100%;
+        flex-basis: 100%;
+      }
+    }
+  }
+}

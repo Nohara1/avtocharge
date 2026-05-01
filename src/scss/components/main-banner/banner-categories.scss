@@ -1,0 +1,17 @@
+.banner-categories {
+  @extend %banner-categories !optional;
+
+  &__items {
+    @include row(1.25rem);
+  }
+  &__item {
+    flex: 1 1 100%;
+    max-width: 100%;
+
+    @extend %banner-categories-item !optional;
+  }
+  &__link {
+    width: 100%;
+    white-space: nowrap;
+  }
+}

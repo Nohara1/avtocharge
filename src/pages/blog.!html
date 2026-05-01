@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./src/html/page/head.html', {
+  title: "Новости",
+  sliderPreload: false
+})
+
+<body>
+  <div class="wrapper">
+    @@include('./src/html/page/header.html', {
+      transparent: false
+    })
+
+    @@include('./src/html/blocks/background.html')
+
+    @@include('./src/html/components/breadcrumbs.html', {
+      elements: [
+        { name: 'Главная', link: '/' },
+        { name: 'Новости', link: '' }
+      ]
+    })
+
+    @@include('./src/html/blocks/inner-items.html', {
+      extraClass: 'ii_blog',
+      heading: 'Новости',
+      tabs: '[{ name: "Тема 1", href: "#" }, { name: "Тема 2", href: "#" }, { name: "Тема 3", href: "#" }, { name: "Тема 4", href: "#" }]',
+      tabsActive: true,
+      tabsLinks: true,
+      style: '_btn--tab-02',
+      tabsSlider: false,
+      text: '',
+      columns: '4',
+      columnsMobile: '',
+      itemPath: './src/html/components/blog-item.html',
+      jsonPath: '"../json/blog.json"',
+      pagination: 'blog'
+    })
+
+    @@include('./src/html/page/footer.html')
+  </div>
+  @@include("./src/html/page/body-bottom.html")
+</body>
+
+</html>

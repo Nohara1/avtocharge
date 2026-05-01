@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./src/html/page/head.html', {
+"title": "Строительство дома из блока под ключ, г. Минск"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('./src/html/page/header.html', { 'variant': 3 })
+
+    @@include('./src/html/components/breadcrumbs.html', {
+    'jsonPath': '../json/breadcrumbs/portfolio-entry.json'
+    })
+
+    @@include('./src/html/blocks/portfolio-entry.html', {
+      'title': 'Строительство дома из блока под ключ, г. Минск',
+      'galleryUrl': '../json/portfolio-entry-gallery.json',
+      'bestseller': true,
+      'novelty': false,
+      'discount': true,
+      'feature01': {
+        'key': 'Площадь',
+        'value': '120 м2'
+      },
+      'feature02': {
+        'key': 'Габариты',
+        'value': '10 x 10'
+      },
+      'feature03': {
+        'key': 'Спальня',
+        'value': '4'
+      },
+      'feature04': '',
+      'feature05': '',
+      'review': true
+    })
+
+    @@include('./src/html/blocks/form-with-image.html', {
+      'heading': '',
+      'subheading': '',
+      'imageSrc': 'images/additional/content-02.jpg',
+      'imageAlt': 'описание изображения',
+      'imageWidth': 850,
+      'imageHeight': 450,
+      'pathToForm': './src/html/forms/leave-a-request.html'
+    })
+
+    @@include('./src/html/page/footer.html')
+  </div>
+  @@include("./src/html/page/body-bottom.html")
+</body>
+
+</html>

@@ -1,0 +1,230 @@
+@@if(!context.headerVariant || context.headerVariant == 1) {
+<header class="header">
+  <div class="header__mobile">
+    <div class="header__mobile-inner">
+      <div class="header__mobile-item">
+        @@include("./src/html/components/burger.html")
+      </div>
+      <div class="header__mobile-item">
+        @@include("./src/html/components/logo.html")
+      </div>
+      <div class="header__mobile-item">
+        @@include('./src/html/components/feature-buttons.html', { comparison: true, wishlist: true })
+      </div>
+    </div>
+  </div>
+  <div class="header__navigation">
+    <div class="header__item">
+      @@include('./src/html/page/header-top.html')
+    </div>
+    <div class="header__item">
+      @@include('./src/html/page/header-middle.html')
+    </div>
+    <div class="header__item">
+      @@include('./src/html/page/header-bottom.html')
+    </div>
+  </div>
+</header>
+}
+@@if(context.headerVariant == 2) {
+<header class="header">
+  <div class="container">
+    <div class="header__wrapper">
+      <div class="header__item header__item_logo">
+        @@include('./src/html/components/logo.html')
+      </div>
+      <div class="header__item _mobile">
+        @@include("./src/html/components/info.html", {
+        icon: "instagram",
+        href: "https://www.instagram.com/komplektdom",
+        label: "@komplektdom"
+        })
+      </div>
+      <div class="header__item _mobile">
+        @@include("./src/html/components/burger.html")
+      </div>
+      <div class="header__navigation">
+        <div class="header__item">
+          @@include('./src/html/page/header-middle.html')
+        </div>
+        <div class="header__item">
+          @@include('./src/html/page/header-bottom.html')
+        </div>
+        <div class="header__item">
+          <button class="header__callback _btn _btn--dark _mobile" type="button"
+            data-open-popup="request-a-call"><span>Заказать звонок</span></button>
+        </div>
+        @@if(false){<div class="header__item _mobile">
+          <div class="container">
+            @@include('./src/html/components/feature-buttons.html', { comparison: true, cart: true })
+          </div>
+        </div>}
+      </div>
+      <button class="header__callback _btn _btn--dark _desktop" type="button" data-open-popup="request-a-call">
+        @@if(false){<svg width="18" height="18">
+          <use href="images/icons.svg#call"></use>
+        </svg>}<span>Заказать звонок</span>
+      </button>
+      @@if(false){<div class="header__item _mobile">
+        @@include('./src/html/components/feature-buttons.html', { cart: true })
+      </div>}
+    </div>
+  </div>
+</header>
+}
+@@if(context.headerVariant == 3) {
+<header class="header">
+  <div class="header__mobile">
+    <div class="header__mobile-inner">
+      <div class="header__mobile-item">
+        @@include("./src/html/components/logo.html")
+      </div>
+      <div class="header__mobile-item _desktop">
+        @@include("./src/html/components/email.html")
+      </div>
+      <div class="header__mobile-item">
+        @@include("./src/html/components/burger.html")
+      </div>
+    </div>
+  </div>
+  <div class="header__navigation">
+    <div class="header__item">
+      @@include('./src/html/page/header-top.html')
+    </div>
+    <div class="header__item">
+      @@include('./src/html/page/header-bottom.html')
+    </div>
+  </div>
+</header>
+}
+@@if(context.headerVariant == 4) {
+<header class="header">
+  <div class="header__mobile">
+    <div class="header__mobile-inner">
+      <div class="header__mobile-item">
+        @@include("./src/html/components/logo.html")
+      </div>
+      <div class="header__mobile-item">
+        @@include('./src/html/components/search-form.html')
+      </div>
+      <div class="header__mobile-item">
+        @@include("./src/html/components/burger.html")
+      </div>
+    </div>
+  </div>
+  <div class="header__navigation">
+    <div class="header__item">
+      @@include('./src/html/page/header-top.html')
+    </div>
+    <div class="header__item">
+      @@include('./src/html/page/header-bottom.html')
+    </div>
+  </div>
+</header>
+}
+@@if(context.headerVariant == 5) {
+<header class="header h">
+  <div class="container">
+    <div class="h__mobile">
+      @@if(false){@@include('./src/html/components/address.html')
+      @@include('./src/html/components/schedule.html')}
+      <button class="h__callback text-icon" type="button" data-open-popup="request-a-call" aria-label="Заказать звонок">
+        <svg class="text-icon__icon" width="18" height="18"><use href="images/icons.svg#phone"></use></svg>
+      </button>
+      @@include("./src/html/components/logo.html")
+      @@include("./src/html/components/burger.html")
+    </div>
+    <div class="h__navigation">
+      @@include("./src/html/components/logo.html")
+      @@if(false){@@include('./src/html/components/search-form.html')}
+      <nav class="h__links">
+        <ul class="h__links-list">
+          <li class="h__li">
+            <a href="about" class="h__link">
+              О компании
+            </a>
+          </li>
+          <li class="h__li _hto">
+            <div class="h__buttons">
+              <a href="/catalog" class="h__link" >Услуги</a>
+              <button class="h__collapse" type="button" name="button-collapse" aria-label="Развернуть/свернуть меню">
+                <svg class="h__collapse-image" width="16" height="16">
+                  <use href="images/icons.svg#chevron_down"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="h__menu _hto__target">
+              @@include('./src/html/page/catalog-uslugi.html')
+            </div>
+          </li>
+          <li class="h__li _hto">
+            <div class="h__buttons">
+              <a href="/project" class="h__link">Проекты</a>
+              <button class="h__collapse" type="button" name="button-collapse" aria-label="Развернуть/свернуть меню">
+                <svg class="h__collapse-image" width="16" height="16">
+                  <use href="images/icons.svg#chevron_down"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="h__menu _hto__target">
+              @@include('./src/html/page/catalog-uslugi.html')
+            </div>
+          </li>
+          <li class="h__li">
+            <a href="contacts" class="h__link">
+              Контакты
+            </a>
+          </li>
+          <li class="h__li">
+            <a href="blog" class="h__link">
+              Новости
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- <div class="h__info">
+       
+      </div> -->
+      <button class="h__callback _btn _btn--transparent _btn--expandable" type="button" data-open-popup="request-a-call">
+        <svg width="17" height="17" aria-hidden="true">
+          <use href="images/icons.svg#phone"></use>
+        </svg>
+        <span>Заказать звонок</span>
+      </button>
+      <div class="h__info _hto">
+        @@if(false){@@include('./src/html/components/address.html')
+        @@include('./src/html/components/schedule.html')}
+        @@include('./src/html/components/messengers.html', {hideTelegram: true,hideViber: true,solid: true,hideWhatsapp: true,'number': '<span>7 (846) 205-13-12</span>', 'fNumber': '78462051312'})
+        @@include('./src/html/components/email.html')
+        @@include('./src/html/components/socials.html', {
+          solid: true,
+          whatsapp: true,
+          viber: true
+        })  
+        @@include('./src/html/components/phone.html',{
+          icon: 'hide',
+          chevron: 'true'
+        })
+        <div class="_hto__target">
+          @@include('./src/html/components/email.html',{
+            target: true,
+          })
+          @@include('./src/html/components/socials.html', {
+            viber: true,
+            solid: true,
+            whatsapp: true,
+            target: true,
+          })
+        </div>
+      </div>
+      @@if(false){@@include('./src/html/components/socials.html', {
+        instagram: true,
+        facebook: true,
+        vk: true,
+        tiktok: true,
+        telegram: true,
+      })}
+    </div>
+  </div>
+</header>
+}

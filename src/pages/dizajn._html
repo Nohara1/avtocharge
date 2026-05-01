@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./src/html/page/head.html', {
+  "title": "Дизайн интерьера"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('./src/html/page/header.html', { 'variant': 3 })
+
+    @@include('./src/html/components/breadcrumbs.html', {
+      'jsonPath': '../json/breadcrumbs/design.json'
+    })
+
+    @@include('./src/html/blocks/inner-banner.html', {
+      'heading': 'Дизайн интерьера',
+      'backgroundImage': 'images/additional/header-banner-01.jpg',
+      'subheadingLevel': '3',
+      'subheading': 'Получите консультацию дизайнера',
+      'text': '<p>Создаем дизайн-проекты интерьера под ваш бюджет с командой профессиональных дизайнеров </p>',
+      'formPath': './src/html/forms/request-a-messenger.html'
+    })
+
+    @@include('./src/html/blocks/cards.html', {
+      'heading': 'Почему выбирают нас',
+      'variant': 3,
+      'reverseColors': false,
+      'itemPath': './src/html/components/cards-item.html',
+      'jsonPath': '../json/cards-02.json'
+    })
+
+    @@include('./src/html/blocks/custom-content-01.html', {
+      "h1": false,
+      "full": true,
+      "reverse": false,
+      "h1style": false,
+      "heading": "",
+      "content01": '<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including.</p>',
+    })
+
+    @@include('./src/html/blocks/custom-content-01.html', {
+      "h1": false,
+      "full": false,
+      "reverse": true,
+      "h1style": false,
+      "heading": "Описание и стоимость  дизайна интерьера ",
+      "content01": '<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including.</p><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including.</p><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type</p>',
+      image01: "{ src: 'images/additional/content-08.jpg' }"
+    })
+
+    @@include('./src/html/blocks/cards-steps.html', {
+      'heading': 'Этапы строительства дома',
+      'jsonPath': '../json/construction-cards-steps.json'
+    })
+
+    @@include('./src/html/blocks/product-slider.html', {
+      'h1': false,
+      'heading': 'Пример проекта',
+      'text': '<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the</p>'
+    })
+
+    @@include('./src/html/blocks/inner-items.html', {
+      'h1': false,
+      'heading': 'Примеры выполненных работ',
+      'text': '',
+      'subcategoriesJson': '',
+      'itemPath': './src/html/components/product-card-03.html',
+      'jsonPath': '../json/products-03-three.json',
+      'button': 'Смотреть больше'
+    })
+
+    @@include('./src/html/blocks/inner-items.html', {
+      'h1': false,
+      'heading': 'Команда, которая будет работать над вашим проектом',
+      'text': '',
+      'columns': '4',
+      'columnsMobile': '2',
+      'subcategoriesJson': '',
+      'itemPath': './src/html/components/image.html',
+      'jsonPath': '../json/our-team-four.json'
+    })
+
+    @@include('./src/html/blocks/form-with-image.html', {
+      'heading': 'Как заказать строительство дома под ключ',
+      'subheading': '',
+      'imageSrc': 'images/additional/content-09.jpg',
+      'imageAlt': 'описание изображения',
+      'imageWidth': 850,
+      'imageHeight': 450,
+      'pathToForm': './src/html/forms/leave-a-request.html'
+    })
+
+    @@include('./src/html/page/footer.html')
+  </div>
+  @@include("./src/html/page/body-bottom.html", {
+    'checkout': false,
+    'promo': false,
+    'exhibition': false
+  })
+</body>
+
+</html>

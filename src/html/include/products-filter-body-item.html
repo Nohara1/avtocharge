@@ -1,0 +1,24 @@
+<div class="filter__body-item active">
+  <fieldset class="form__item-wrapper">
+    <legend class="form__item-heading">@@name
+      @@if(false){<button class="filter__toggle-item" type="button" name="filter-toggle-item" aria-label="Развернуть/Свернуть">
+        <svg class="" width="16" height="16" aria-hidden="true">
+          <use href="images/icons.svg#chevron-up" />
+        </svg>
+      </button>}
+    </legend>
+    <div class="form__item filter__checkboxes-wrapper">
+      @@for (var i = 1; i <= elementsCount; i++) { @@if(context.tooltips){<div class="filter__checkboxes-with-tooltip">}
+        <label>
+          <input class="form__checkbox" type="checkbox">
+          <span class="form__label">Параметр `+i+`</span>
+        </label>
+        @@if(context.tooltips){ @@include('./src/html/components/tooltip.html') }
+        @@if(context.tooltips){</div>}
+    }
+</div>
+@@if (false) {
+<button class="filter__toggle-checkboxes" type="button" name="filter-toggle-checkboxes">Показать все</button>
+}
+</fieldset>
+</div>

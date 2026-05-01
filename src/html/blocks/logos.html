@@ -1,0 +1,13 @@
+<section class="logos">
+  <div class="container">
+    @@if(context.heading){
+      <@@if(context.h1){h1}@@if(!context.h1){h2} class="logos__heading _heading@@if(context.h1style){ _h1}">@@heading</@@if(context.h1){h1}@@if(!context.h1){h2}>
+    }
+    @@if(context.text){<div class="logos__text _cc">
+      @@text
+    </div>}
+    <div class="logos__items">
+      @@loop('./src/html/include/logos-item.html', '../json/logos.json')
+    </div>
+  </div>
+</section>

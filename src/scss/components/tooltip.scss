@@ -1,0 +1,28 @@
+.tooltip {
+  cursor: default;
+  display: inline-block;
+  line-height: 1;
+  margin-left: 5px;
+  vertical-align: 0.05em;
+
+  &__sign {
+    color: var(--primary-c);
+    width: 16px;
+    height: 16px;
+    display: flex;
+    font-size: 13px;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+    line-height: 1;
+    font-weight: 600;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+    background-color: var(--secondary-c);
+
+    &.active {
+      color: var(--white);
+      background-color: var(--primary-c);
+    }
+  }
+}

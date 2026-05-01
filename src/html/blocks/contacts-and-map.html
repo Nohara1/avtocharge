@@ -1,0 +1,20 @@
+<section class="contacts-and-map">
+  <div class="container">
+    <div class="contacts-and-map__items">
+      <div class="contacts-and-map__item">
+        <div class="contacts-and-map__inner">
+          @@include('./src/html/components/address.html', {
+            'address': 'г. Санкт-Петербург, ул. Учительская, д. 23 литер А, пом. 228-229. БЦ Атолл'
+          })
+          @@include('./src/html/components/phone.html')
+          @@include('./src/html/components/email.html')
+        </div>
+      </div>
+      <div class="contacts-and-map__item">
+        <div class="contacts-and-map__inner">
+          @@include('./src/html/components/map.html')
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

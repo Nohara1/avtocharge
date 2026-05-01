@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./src/html/page/head.html', {
+  title: "Виза для белорусов 2025 Запись в визовый центр более 50 стран",
+  sliderPreload: false
+})
+
+<body>
+  <div class="wrapper">
+    @@include('./src/html/page/header.html', {
+      transparent: false
+    })
+
+    @@include('./src/html/components/breadcrumbs.html', {
+      elements: [
+        { name: 'Главная', link: '/' },
+        { name: 'Услуги', link: '' }
+      ]
+    })
+
+    @@include('./src/html/blocks/inner-items.html', {
+      extraClass: 'ii_services _heading-wave _plane',
+      heading: 'Дополнительные услуги',
+      subheading: '',
+      text: '',
+      columns: '',
+      columnsMobile: '',
+      subcategoriesTitle: '',
+      subcategoriesJson: '',
+      itemPath: './src/html/components/inner-items/card-visa.html',
+      jsonPath: '"../json/inner-items-card-visa-services.json"'
+    })
+
+    @@include('./src/html/blocks/two-components.html', {
+      hStyle: 2,
+      heading: 'Преимущества',
+      subheading: '',
+      title01: '',
+      extraClass: '',
+      component01url: './src/html/blocks/inner-items.html',
+      component01params: '{ component: true, extraClass: "ii_advantages", columns: "2", columnsMobile: "1", itemPath: "./src/html/components/inner-items/inner-items-item.html", jsonPath: "\'../json/inner-items-advantages.json\'" }',
+      title02: '',
+      component02url: './src/html/components/image.html',
+      component02params: '{ src: "images/additional/adventures.jpg", thumb: "images/additional/adventures.jpg", alt: "описание изображения для SEO", width: "850", height: "652", class: "image_content _plane" }',
+    })
+
+    @@include('./src/html/blocks/reviews-links.html', {
+      extraClass: '',
+      heading: 'Отзывы'
+    })
+
+    @@include('./src/html/blocks/inner-items.html', {
+      extraClass: 'ii_why-us',
+      heading: 'Почему стоит выбрать нас',
+      subheading: '',
+      text: '',
+      columns: 5,
+      columnsMobile: '',
+      subcategoriesTitle: '',
+      subcategoriesJson: '',
+      itemPath: './src/html/components/inner-items/inner-items-item.html',
+      jsonPath: '"../json/inner-items-why-us.json"'
+    })
+
+    @@include('./src/html/blocks/how-we-work.html', {
+      heading: 'Как мы работаем'
+    })
+
+    @@include('./src/html/blocks/two-components.html', {
+      hStyle: 2,
+      heading: '',
+      subheading: '',
+      title01: '',
+      extraClass: 'tc_proportions',
+      component01url: './src/html/components/map.html',
+      component01params: '{ mapUrl: "https://yandex.by/map-widget/v1/org/vizavsem/84805976119/?ll=27.587011%2C53.916563&z=18.09", }',
+      title02: '',
+      component02url: './src/html/forms/request-a-call.html',
+      component02params: 'null',
+    })
+
+    @@include('./src/html/page/footer.html')
+  </div>
+  @@include("./src/html/page/body-bottom.html")
+</body>
+
+</html>

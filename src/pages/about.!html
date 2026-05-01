@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./src/html/page/head.html', {
+  title: "О компании",
+  sliderPreload: true
+})
+
+<body>
+  <div class="wrapper">
+    @@include('./src/html/page/header.html', {
+      transparent: false
+    })
+
+    @@include('./src/html/blocks/background.html')
+
+    @@include('./src/html/components/breadcrumbs.html', {
+      elements: [
+        { name: 'Главная', link: '/' },
+        { name: 'О компании', link: '' }
+      ]
+    })
+
+    @@if(false){@@include('./src/html/blocks/about-us.html', {
+      heading: 'О компании',
+    })}
+
+    @@include('./src/html/blocks/two-components.html', {
+      heading: 'О компании',
+      subheading: '',
+      title02: '',
+      extraClass: 'tc_about',
+      component02url: './src/html/components/custom-content.html',
+      component02params: '{ contents: "<p>Lorem ipsum dolor sit amet consectetur.</p><p>Lorem ipsum dolor sit amet consectetur. Tellus nunc accumsan viverra consectetur commodo semper commodo. Id sagittis fringilla viverra egestas cum. Venenatis feugiat purus aliquam leo proin duis nunc sit. Pretium nullam etiam ultrices in augue curabitur sed.</p><p>Lorem ipsum dolor sit amet consectetur. Ut duis eget amet arcu mollis odio. Turpis mattis sit elementum pulvinar odio. Dolor ut diam ipsum elit tellus in placerat ipsum. Eu cursus volutpat non nunc mollis semper nam velit. Integer adipiscing leo nunc sodales id amet lectus. Leo varius pharetra phasellus diam et. Eget nascetur aliquam augue orci enim gravida. Sapien tortor sodales lectus aliquam parturient. Viverra risus eget viverra fermentum consectetur sit maecenas. Quis vitae ac mauris condimentum ut cursus faucibus ut. Sollicitudin nunc morbi ut fermentum aliquam ut quam. Neque fermentum ut egestas risus aliquet. Mauris purus ac malesuada tortor nisl. Nec sit porttitor sit varius netus pulvinar nam.</p><p>Lorem ipsum dolor sit amet consectetur. Viverra sem lorem cursus lectus ornare ornare non in iaculis. Viverra in nunc arcu tortor sit vitae vitae elit. Lectus urna sed sit sed elit sapien vitae porttitor. Convallis tincidunt dui nibh malesuada elit sed commodo.</p><p>Lorem ipsum dolor sit amet consectetur. Sit nulla pellentesque augue posuere id. Potenti in tempor diam varius adipiscing enim quis diam.</p><p>Lorem ipsum dolor sit amet consectetur. Viverra sem lorem cursus lectus ornare ornare non in iaculis. Viverra in nunc arcu tortor sit vitae vitae elit. Lectus urna sed sit sed elit sapien vitae porttitor. Convallis tincidunt dui nibh malesuada elit sed commodo.</p>", extraClass: "" }',
+      title01: '',
+      component01url: './src/html/components/video-content.html',
+      component01params: '{ videoLink: "videos/content-2.mp4",videoPoster: "images/uslugi/uslugi3.png"}',
+    })
+
+
+    @@include('./src/html/blocks/inner-items.html', {
+      extraClass: 'ii_advantages',
+      heading: 'Преимущества',
+      subheading: '',
+      text: '',
+      columns: 3,
+      columnsMobile: '',
+      subcategoriesTitle: '',
+      subcategoriesJson: '',
+      itemPath: './src/html/components/inner-items/inner-items-item.html',
+      jsonPath: '"../json/inner-items-advantages.json"'
+    })
+
+    @@include('./src/html/blocks/custom-slider.html', {
+      extraClass: 'cs_team',
+      gap: 0,
+      looped: true,
+      slides: 'auto',
+      mobSlides: 'auto',
+      filter: false,
+      heading: 'Наша команда',
+      hLevel: 2,
+      speed: 5000,
+      delay: 0,
+      autoplay: true,
+      hStyle: 2,
+      text: '',
+      navigation: false,
+      navigationStyle: 2,
+      pagination: false,
+      itemPath: './src/html/include/custom-slider-image-item.html',
+      jsonPath: '../json/custom-slider-team.json',
+    })
+
+    @@include('./src/html/page/footer.html')
+  </div>
+  @@include("./src/html/page/body-bottom.html", {
+    contactManager: false,
+    checkout: false,
+    promo: false
+  })
+</body>
+
+</html>

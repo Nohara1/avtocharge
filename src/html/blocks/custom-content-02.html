@@ -1,0 +1,46 @@
+<section class="custom-content custom-content-02@@if(context.noGap){ custom-content_no-gap}"@@if(context.animate){ data-animate="appearing"}>
+  <div class="container">
+    <div class="custom-content__items@@if(context.mirrored){ custom-content__items_mirrored}">
+      <div class="custom-content__item">
+        @@if(context.heading01){
+          <@@if(context.h1){h1}@@if(!context.h1){h2} class="custom-content__heading _heading@@if(context.h1style){ _h1}">@@heading01</@@if(context.h1){h1}@@if(!context.h1){h2}>
+        }
+        @@if(context.imageUrl){
+        <p class="custom-content__iw@@if(context.imageCover){ _iw}" @@if(context.gallery){data-gallery="" role="button" tabindex="0"}>
+          <img src="@@imageUrl" alt="@@if(context.imageAlt){@@imageAlt}" srcset="images/placeholder.png"
+            data-srcset="@@imageUrl" width="700" height="495" decoding="async">
+        </p>
+        }
+        @@if(context.text){
+          <div class="custom-content__text _cc">
+            @@text
+          </div>
+        }
+      </div>
+      <div class="custom-content__item@@if(context.heading01 && !context.heading02){ custom-content__item_no-heading}@@if(context.h1style || context.h1){ custom-content__item_h1}">
+        @@if(context.heading02){
+        <h2 class="custom-content__heading _heading@@if(context.h1style){ _h1}">@@heading02</h2>
+        }
+        @@if(context.collapseJson){
+        <div class="custom-content__collapse">
+          @@include('./src/html/components/collapse.html', {
+            'jsonPath': '@@collapseJson',
+            'style': '@@if(context.collapseStyle){@@collapseStyle}@@if(!context.collapseStyle){2}',
+            'self': '@@if(context.collapseSelf){@@collapseSelf}'
+          })
+        </div>
+        }
+        @@if(context.videoId){
+        <div class="custom-content__video">
+          @@include('./src/html/components/video.html', {
+            'id': '@@videoId',
+            'styled': true,
+            'width': '@@videoWidth',
+            'height': '@@videoHeight'
+          })
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

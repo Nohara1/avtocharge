@@ -1,0 +1,44 @@
+<section class="two-components tc@@if(context.extraClass){ @@extraClass}" @@if(context.animate){ data-animate="" }>
+  <div class="container">
+    @@include('./src/html/components/heading.html', {
+      heading: '@@if(context.heading){@@heading}',
+      hLevel: '@@if(context.hLevel){@@hLevel}',
+      hStyle: '@@if(context.hStyle){@@hStyle}',
+      hExtraClass: 'tc__heading',
+    })
+    @@if(context.subheading){
+    <h2 class="tc__heading _heading">@@subheading</h2>
+    }
+    <div class="tc__wrapper">
+      <div class="tc__items">
+        @@if(context.component01url && context.component01params) {
+        <div class="tc__item">
+          @@if(context.title01){<span class="tc__title _title">@@title01</span>}
+          @@include('@@component01url', @@component01params)
+          @@if(context.extraComponent01url && context.extraComponent01params) {
+          @@include('@@extraComponent01url', @@extraComponent01params)
+          }
+        </div>
+        }
+        @@if(context.component02url && context.component02params) {
+        <div class="tc__item">
+          @@if(context.title02){<span class="tc__title _title">@@title02</span>}
+          @@include('@@component02url', @@component02params)
+          @@if(context.extraComponent02url && context.extraComponent02params) {
+          @@include('@@extraComponent02url', @@extraComponent02params)
+          }
+        </div>
+        }
+        @@if(context.component03url && context.component03params) {
+          <div class="tc__item">
+            @@if(context.title03){<span class="tc__title _title">@@title03</span>}
+            @@include('@@component03url', @@component03params)
+            @@if(context.extraComponent03url && context.extraComponent03params) {
+            @@include('@@extraComponent03url', @@extraComponent03params)
+            }
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

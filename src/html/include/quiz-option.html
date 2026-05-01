@@ -1,0 +1,10 @@
+<label class="quiz__option">
+  <input class="quiz__input" type="radio" name="quiz-option" value="@@title">
+  @@include('./src/html/components/image.html', {
+    'src': '@@imageSrc',
+    'alt': '@@title',
+    'width': '180',
+    'height': '120'
+  })
+  <span class="quiz__option-title">@@title</span>
+</label>

@@ -1,0 +1,41 @@
+<section class="contacts">
+  <div class="container">
+    <h1 class="contacts__heading _heading">Контакты</h1>
+    <div class="contacts__items">
+      <div class="contacts__item">
+        <div class="contacts__inner _cc">
+          <p>Everyone is a manager. People learn how to manage their lives and their relationships with others. They
+            learn how to organize their time and work. In business, management is usually a team of people who operate
+            the business and try to get the work done. They organize the time and work, and they manage relationships
+            among the employees who work together.</p>
+          <p>Everyone is a manager. People learn how to manage their lives and their relationships with others. They
+            learn how to organize their time and work. In business, management is usually a team of people who operate
+            the business and try to get the work done. They organize the time and work.</p>
+        </div>
+      </div>
+      <div class="contacts__item">
+        <div class="contacts__inner contacts__inner_border _cc">
+          <p>ООО “Велнестрейд”<br>
+            официальный дилер Wellis (EU) в РБ</p>
+        </div>
+        <div class="contacts__inner contacts__inner_border _cc">
+          <strong>Шоу-рум:</strong>
+          @@include('./src/html/components/address.html', { 'address': 'ТЦ «Корона Дом», г.Минск, пр-т Независимости 154д, пав.42' })
+          @@include('./src/html/components/schedule.html')
+        </div>
+      </div>
+      <div class="contacts__item">
+        <div class="contacts__inner contacts__inner_border _cc">
+          <strong>Офис:</strong>
+          @@include('./src/html/components/address.html', { 'address': 'аг. Ждановичи, ул. Цветочная 25, офис. 3/2' })
+          @@include('./src/html/components/schedule.html')
+          @@include('./src/html/components/email.html')
+          <div class="contacts__messengers-wrapper">
+            @@include('./src/html/components/messengers.html', { 'hideWhatsapp': true })
+            @@include('./src/html/components/messengers.html', { 'number': '<span>+375 29 670 60 40</span>', 'fNumber': '+375296706040' })
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

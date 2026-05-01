@@ -1,0 +1,27 @@
+%form {
+  &__personal-data {
+    color: var(--white);
+    font-size: 12px;
+
+    @media ($tablet-max) {
+      color: #fff;
+      margin: 0 auto;
+      font-size: 12px;
+      max-width: 250px;
+      text-align: center;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+
+      @media ($transition-min) {
+        transition: color var(--transition);
+
+        &:hover {
+          color: var(--white);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+<form class="form" name="request-an-exhibition" novalidate="">
+  <div class="form__items">
+    <div class="form__item">
+      <h2 class="form__heading _heading">Оставьте заявку!</h2>
+    </div>
+    <div class="form__item">
+      <p class="form__description">И наш специалист запишет вас к нам на выставку в удобный день и время</p>
+    </div>
+    <div class="form__item">
+      <div class="specialist-message">
+        <div class="specialist-message__items">
+          <div class="specialist-message__item">
+            @@include('./src/html/components/image.html', {
+            'src': 'images/additional/specialist-message.jpg',
+            'alt': 'наш специалист запишет вас к нам на выставку',
+            'width': '100',
+            'height': '100'
+            })
+          </div>
+          <div class="specialist-message__item">
+            <div class="specialist-message__inner">
+              <span class="specialist-message__name _title">Елена 😊</span>
+              <div class="specialist-message__message _cc">
+                <p>Я с удовольствием проведу экскурсию по нашей выставке в СПб Жду Вас, Записывайтесь!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form__item form__item_half">
+      <label>
+        <span class="form__label _sr-only ">Номер телефона</span>
+        <input class="form__input" type="tel" name="phone" value="" data-required="" placeholder="Номер телефона">
+        <span class="form__error-message"></span>
+      </label>
+    </div>
+    <div class="form__item form__item_half">
+      <label>
+        <span class="form__label _sr-only">Ваша почта</span>
+        <input class="form__input" type="email" name="email" value="" data-required="" placeholder="Ваша почта">
+        <span class="form__error-message"></span>
+      </label>
+    </div>
+    <div class="form__item">
+      <label>
+        <span class="form__label _sr-only">Комментарий</span>
+        <textarea class="form__input" name="description" placeholder="Комментарий"></textarea>
+      </label>
+    </div>
+    <div class="form__item">
+      <label>
+        <input class="form__checkbox" type="checkbox" name="agree" data-required="">
+        <span class="form__label">Я <a href="files/test.pdf"
+            target="_blank">согласен(а)</a> на обработку персональных данных</span>
+      </label>
+    </div>
+    <div class="form__item">
+      <div class="form__buttons-wrapper">
+        <button class="form__button _btn _btn--brown" type="submit" name="submit">Отправить</button>
+      </div>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,8 @@
+<section class="cards-steps">
+  <div class="container">
+    @@if(context.heading){<h2 class="cards-steps__heading _heading">@@heading</h2>}
+    <div class="cards-steps__items">
+      @@loop('./src/html/include/cards-steps-item.html', '@@jsonPath')
+    </div>
+  </div>
+</section>

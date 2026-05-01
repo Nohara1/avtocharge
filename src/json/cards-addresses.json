@@ -1,0 +1,22 @@
+[
+  {
+    "icon": "pin",
+    "title": "Представительство 1",
+    "text": "<p>Тут будет ваш адрес, улица и дом 12345678910</p>@@include('./src/html/components/phone.html')@@include('./src/html/components/schedule.html')"
+  },
+  {
+    "icon": "pin",
+    "title": "Представительство 2",
+    "text": "<p>Тут будет ваш адрес, улица и дом 12345678910</p>@@include('./src/html/components/phone.html')@@include('./src/html/components/schedule.html')"
+  },
+  {
+    "icon": "pin",
+    "title": "Представительство 3",
+    "text": "<p>Тут будет ваш адрес, улица и дом 12345678910</p>@@include('./src/html/components/phone.html')@@include('./src/html/components/schedule.html')"
+  },
+  {
+    "icon": "pin",
+    "title": "Представительство 4",
+    "text": "<p>Тут будет ваш адрес, улица и дом 12345678910</p>@@include('./src/html/components/phone.html')@@include('./src/html/components/schedule.html')"
+  }
+]

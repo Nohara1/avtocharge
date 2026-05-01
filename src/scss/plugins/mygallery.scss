@@ -1,0 +1,279 @@
+.my-gallery {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: 1060;
+  display: flex;
+  overflow: hidden;
+  visibility: hidden;
+  align-items: center;
+  pointer-events: none;
+  justify-content: center;
+  transition:
+    opacity var(--transition),
+    visibility var(--transition);
+
+  &_active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+  &__close {
+    @extend %close-button;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    // border-radius: 3px;
+    background-color: var(--primary-c);
+    box-shadow: 0 3px 5px
+      change-color($color: $primary-color, $lightness: 15%, $alpha: 0.4);
+
+    @media ($transition-min) {
+      transition:
+        transform var(--transition),
+        box-shadow var(--transition);
+
+      &:hover {
+        box-shadow: 0 3px 15px
+          change-color($color: $primary-color, $lightness: 15%, $alpha: 0.3);
+        transform: scale(1.15);
+      }
+    }
+    // @media ($mobile-max) {
+    //   top: 15px;
+    //   right: 15px;
+    //   width: 50px;
+    //   height: 50px;
+    // }
+
+    &%my-gallery-close-pseudo {
+      width: 20px;
+      background-color: var(--white);
+
+      @media ($mobile-max) {
+        width: 25px;
+      }
+    }
+    &:before {
+      @extend %my-gallery-close-pseudo;
+    }
+    &:after {
+      @extend %my-gallery-close-pseudo;
+    }
+    &:focus-visible {
+      @include focus-styles;
+    }
+  }
+  &__inner {
+    position: relative;
+  }
+  &__prev,
+  &__next {
+    top: 50%;
+    top: calc(50% - 20px);
+    width: 40px;
+    height: 40px;
+    border: none;
+    padding: 0;
+    display: flex;
+    position: absolute;
+    transform: scale(1);
+    visibility: visible;
+    align-items: center;
+    border-radius: 50%;
+    // border-radius: 3px;
+    justify-content: center;
+    background-color: var(--primary-c);
+    transition: opacity var(--transition);
+    box-shadow: 0 3px 5px
+      change-color($color: $primary-color, $lightness: 15%, $alpha: 0.4);
+
+    @media ($transition-min) {
+      transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        opacity var(--transition),
+        visibility var(--transition);
+
+      &:hover {
+        box-shadow: 0 3px 15px
+          change-color($color: $primary-color, $lightness: 15%, $alpha: 0.3);
+        transform: scale(1.15);
+      }
+    }
+
+    &:focus-visible {
+      @include focus-styles;
+    }
+    &.disabled {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  %my-gallery-arrow-pseudo {
+    content: "";
+    width: 12px;
+    height: 2px;
+    display: block;
+    position: absolute;
+    background-color: var(--white);
+  }
+  &__prev {
+    left: 20px;
+
+    &:before {
+      @extend %my-gallery-arrow-pseudo;
+      transform-origin: left bottom;
+      transform: rotate(-45deg);
+    }
+    &:after {
+      @extend %my-gallery-arrow-pseudo;
+      transform-origin: left top;
+      transform: rotate(45deg);
+    }
+  }
+  &__next {
+    right: 20px;
+
+    &:before {
+      @extend %my-gallery-arrow-pseudo;
+      transform-origin: right top;
+      transform: rotate(-45deg);
+    }
+    &:after {
+      @extend %my-gallery-arrow-pseudo;
+      transform-origin: right bottom;
+      transform: rotate(45deg);
+    }
+  }
+  @at-root {
+    [data-gallery] {
+      user-select: none;
+    }
+  }
+
+  img {
+    border: 5px solid #fff;
+    // max-width: 90%;
+    // max-height: 90%;
+    // max-width: calc(100% - 50px);
+    // max-height: calc(100% - 50px);
+    object-fit: cover;
+    transition:
+      width 0.3s,
+      height 0.3s;
+    box-shadow: 0px 1px 2px 2px rgba(0, 0, 0, 0.02);
+    background-color: var(--white);
+    border-radius: 10px;
+
+    // @media ($mobile-max) {
+    //   max-width: 93%;
+    //   max-height: 93%;
+    //   max-width: calc(100% - 30px);
+    //   max-height: calc(100% - 30px);
+    // }
+  }
+}
+[data-gallery] {
+  cursor: pointer;
+  position: relative;
+
+  &::before {
+    right: 1rem;
+    width: 2.5rem;
+    bottom: 1rem;
+    height: 2.5rem;
+    z-index: 2;
+    opacity: 1;
+    content: "";
+    display: block;
+    position: absolute;
+    min-width: 30px;
+    min-height: 30px;
+    border-radius: 50%;
+    pointer-events: none;
+    background: url("../images/icons.svg#search-white") center / 38% auto no-repeat
+      var(--primary-c);
+  }
+  &::after {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    z-index: 1;
+    content: "";
+    opacity: 0;
+    position: relative;
+    background-color: var(--white);
+
+    %image-grayscale & {
+      content: normal;
+    }
+  }
+
+  @media ($transition-min) {
+    &::before {
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    &::after {
+      transition: opacity 0.3s;
+    }
+    &:hover {
+      &::before {
+        opacity: 1;
+      }
+      &::after {
+        opacity: 0.2;
+      }
+    }
+  }
+}
+.my-gallery-toggle-button {
+  border-radius: 9px;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  padding: 0;
+  height: 100%;
+  border: 0;
+  width: 100%;
+  left: 0;
+  top: 0;
+
+  @media ($transition-min) {
+    transform: scale(1);
+    transition: transform var(--transition);
+
+    img {
+      transition: transform var(--transition);
+    }
+    &:hover {
+      img {
+        transform: translate(-50%, -50%) scale(1.05);
+      }
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    right: 20px;
+    bottom: 20px;
+    width: 25px;
+    height: 25px;
+    opacity: 0;
+    background: url("../images/fullscreen.svg") center/contain no-repeat
+      transparent;
+    transition: opacity var(--transition);
+  }
+}

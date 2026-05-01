@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Дома по типовому проектом",
+    "link": "subcategory-01"
+  },
+  {
+    "title": "Дома по индивидуальному проектом",
+    "link": "subcategory-02"
+  },
+  {
+    "title": "Дизайн-проект",
+    "link": "subcategory-03"
+  },
+  {
+    "title": "Дом из кирпича",
+    "link": "subcategory-04"
+  },
+  {
+    "title": "Дом из блока",
+    "link": "subcategory-05"
+  }
+]

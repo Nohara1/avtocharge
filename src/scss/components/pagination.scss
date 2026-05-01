@@ -1,0 +1,186 @@
+.pagination {
+  text-align: center;
+
+  &-01 {
+    @extend %pagination-01 !optional;
+  }
+  &-02 {
+    @extend %pagination-02 !optional;
+  }
+  &-03 {
+    @extend %pagination-03 !optional;
+  }
+
+  &__list {
+    @extend %flex-center;
+
+    %pagination-03 & {
+      justify-content: flex-end;
+    }
+  }
+  @at-root {
+    .page-item {
+      display: inline-block;
+      position: relative;
+
+      %pagination-01 & {
+        &::before {
+          top: 50%;
+          left: 50%;
+          width: 2.5rem;
+          height: 2.5rem;
+          opacity: 0;
+          content: "";
+          display: block;
+          position: absolute;
+          transform: translate(-50%, -50%) scale(0);
+          min-width: 35px;
+          min-height: 35px;
+          transition:
+            transform 0.3s,
+            opacity 0.3s;
+          border-radius: 50%;
+          background-color: var(--grey-30);
+        }
+      }
+      %pagination-03 & + & {
+        margin-left: 10px;
+      }
+
+      &.active {
+        %pagination-01 & {
+          &::before {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+          }
+        }
+
+        @extend %pagination-active-item !optional;
+      }
+    }
+    .page-link {
+      color: inherit;
+      display: block;
+      position: relative;
+      line-height: 1;
+      text-decoration: none;
+      border: 1px solid transparent;
+
+      &:not([href]) {
+        cursor: default;
+      }
+
+      %pagination-01 & {
+        color: var(--grey-30);
+        padding: 0.6em 0.8em;
+        &:before{
+          top: 50%;
+          left: 50%;
+          width: 2.5rem;
+          height: 2.5rem;
+          opacity: 0;
+          content: "";
+          display: block;
+          position: absolute;
+          transform: translate(-50%, -50%) scale(0);
+          min-width: 35px;
+          min-height: 35px;
+          transition: transform 0.3s, opacity 0.3s;
+          border-radius: 50%;
+          border: 1px solid var(--grey-30);
+        }
+        &:hover{
+          &:before{
+          opacity: 1;
+          transform: translate(-50%, -50%) scale(1);
+          }
+        }
+      }
+      %pagination-02 & {
+        padding: 0 8px;
+        font-size: 20px;
+        font-weight: 600;
+
+        @media ($mobile-max) {
+          font-size: 18px;
+        }
+      }
+      %pagination-01 &,
+      %pagination-02 & {
+        @media ($transition-min) {
+          transform: scale(1);
+          transition:
+            transform 0.2s,
+            color 0.2s;
+
+          &[href]:hover {
+            // border: 1px solid var(--grey-30);
+            // border-radius: 50%;
+            transform: scale(1.1);
+          }
+        }
+      }
+      %pagination-03 & {
+        color: var(--primary-c);
+        width: 40px;
+        height: 40px;
+        border: 2px solid var(--primary-c);
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+        justify-content: center;
+        background-color: var(--white);
+
+        @media ($transition-min) {
+          transition:
+            background-color 0.2s,
+            color 0.2s;
+
+          &[href]:hover {
+            color: var(--white);
+            background-color: var(--primary-c);
+          }
+        }
+      }
+
+      %pagination-active-item & {
+        cursor: default;
+        pointer-events: none;
+
+        %pagination-01 & {
+          color: var(--black);
+          padding: 0.6em 1.7em;
+        }
+        %pagination-02 & {
+          color: var(--primary-c);
+          text-decoration: underline;
+        }
+        %pagination-03 & {
+          color: var(--white);
+          background-color: var(--primary-c);
+        }
+      }
+    }
+  }
+  .page-separator {
+    width: auto;
+    color: var(--grey-30);
+    align-items: flex-end;
+    border-width: 0;
+    background-color: transparent;
+  }
+  &__description-wrapper {
+    margin-top: 20px;
+  }
+  &__description {
+    font-size: 13px;
+    font-weight: 300;
+    text-transform: uppercase;
+
+    @media ($mobile-max) {
+      font-size: 12px;
+    }
+  }
+
+  @extend %pagination !optional;
+}

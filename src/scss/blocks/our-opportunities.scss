@@ -1,0 +1,82 @@
+.our-opportunities {
+  padding: 4rem 0;
+
+  @media ($tablet-max) {
+    padding: 3rem 0;
+  }
+
+  &__heading {
+    margin-bottom: 3.1rem;
+  }
+  &__items {
+    justify-content: center;
+    @include row($gapB: 1.25rem, $gapL: 5rem);
+
+    > * {
+      flex: 1 1 46.5%;
+      max-width: 46.5%;
+
+      @media ($tablet-mad) {
+        flex: 0 1 auto;
+        max-width: 80%;
+      }
+    }
+  }
+  &__item {
+    &:nth-child(2n + 1) {
+      @media ($tablet-mid) {
+        text-align: left;
+      }
+
+      @extend %oo-first-item !optional;
+    }
+    &:nth-child(2n + 2) {
+      @media ($tablet-mid) {
+        text-align: right;
+      }
+
+      @extend %oo-second-item !optional;
+    }
+  }
+  &__content {
+    width: 36rem;
+    padding: 5.3rem;
+    display: inline-block;
+    position: relative;
+    max-width: 100%;
+    font-size: 20px;
+    text-align: center;
+    line-height: 1;
+    font-weight: 300;
+    animation: border-02 15s linear 0s infinite;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    background-color: change-color($color: $primary-color, $alpha: 0.08);
+
+    @media ($tablet-max) {
+      padding: 3.3rem;
+      font-size: 16px;
+    }
+
+    %oo-second-item & {
+      animation-delay: 2.5s;
+    }
+    * {
+      display: block;
+    }
+  }
+  &__title {
+    color: var(--primary-c);
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 2.5rem;
+
+    @media ($tablet-max) {
+      font-size: 2.3rem;
+    }
+
+    span {
+      font-size: 1.333333em;
+      white-space: nowrap;
+    }
+  }
+}

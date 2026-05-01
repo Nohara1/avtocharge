@@ -1,0 +1,42 @@
+[
+  {
+    "imageSrc": "images/additional/step-01.jpg",
+    "imageThumb": "images/additional/thumbs/step-01.jpg",
+    "imageAlt": "описание изображения",
+    "imageWidth": "311",
+    "imageHeight": "204",
+    "title": "Этап 1"
+  },
+  {
+    "imageSrc": "images/additional/step-02.jpg",
+    "imageThumb": "images/additional/thumbs/step-02.jpg",
+    "imageAlt": "описание изображения",
+    "imageWidth": "311",
+    "imageHeight": "204",
+    "title": "Этап 2"
+  },
+  {
+    "imageSrc": "images/additional/step-03.jpg",
+    "imageThumb": "images/additional/thumbs/step-03.jpg",
+    "imageAlt": "описание изображения",
+    "imageWidth": "311",
+    "imageHeight": "204",
+    "title": "Этап 3"
+  },
+  {
+    "imageSrc": "images/additional/step-04.jpg",
+    "imageThumb": "images/additional/thumbs/step-04.jpg",
+    "imageAlt": "описание изображения",
+    "imageWidth": "311",
+    "imageHeight": "204",
+    "title": "Этап 4"
+  },
+  {
+    "imageSrc": "images/additional/step-05.jpg",
+    "imageThumb": "images/additional/thumbs/step-05.jpg",
+    "imageAlt": "описание изображения",
+    "imageWidth": "311",
+    "imageHeight": "204",
+    "title": "Этап 5"
+  }
+]

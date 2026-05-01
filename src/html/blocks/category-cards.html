@@ -1,0 +1,8 @@
+<section class="category-cards@@if(context.variant){ category-cards-0@@variant}">
+  <div class="container">
+    <h2 class="category-cards__heading _heading@@if(context.h1style){ _h1}">@@heading</h2>
+    <div class="category-cards__items">
+      @@loop('@@items-path', '@@jsonPath')
+    </div>
+  </div>
+</section>

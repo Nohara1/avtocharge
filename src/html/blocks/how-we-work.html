@@ -1,0 +1,27 @@
+<section class="how-we-work hww" @@if(true){data-animate=""}>
+  <div class="container">
+    @@include('./src/html/components/heading.html', {
+      heading: '@@if(context.heading){@@heading}',
+      hLevel: '@@if(context.hLevel){@@hLevel}',
+      hStyle: '@@if(context.hStyle){@@hStyle}',
+    })
+    <div class="hww__inner">
+      <svg class="hww__path" width="50" height="14.6743" aria-hidden="true"><use href="images/icons.svg#path"></use></svg>
+      <div class="hww__start">
+        <svg width="71" height="95" aria-hidden="true"><use href="images/icons.svg#hww"></use></svg>
+      </div>
+      <ol class="hww__list">
+        <li class="hww__li">Встреча</li>
+        <li class="hww__li">Общение</li>
+        <li class="hww__li">Расчет сметы</li>
+        <li class="hww__li">Заключение договора</li>
+        <li class="hww__li">Работа в оговоренном режиме</li>
+        <!-- <li class="hww__li">Подача документов личная или безличная в посольство/визовый центр</li>
+        <li class="hww__li">Забор готовой визы или доставка</li> -->
+      </ol>
+      <div class="hww__finish">
+        <svg width="71" height="95" aria-hidden="true"><use href="images/icons.svg#location_c"></use></svg>
+      </div>
+    </div>
+  </div>
+</section>

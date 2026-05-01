@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./src/html/page/head.html', {
+  title: "Каталог товаров"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('./src/html/page/header.html', { 'variant': 3 })
+    @@if(false){@@include('./src/html/components/breadcrumbs.html', {
+      jsonPath: '../json/breadcrumbs/katalog.json'
+    })}
+    @@include('./src/html/blocks/products/category.html', {
+      sort: false,
+      filter: false,
+      subcategoriesFilter: true,
+      categories: false,
+      categoriesVersion: 2,
+      categoriesJson: '../json/categories-projects.json',
+      subcategories: false,
+      subcategoriesVersion: 2,
+      subcategoriesJson: '../json/category-subcategories.json',
+      url: 'category-01',
+      heading: 'Категория товаров'
+    })
+    @@include('./src/html/page/footer.html')
+  </div>
+  @@include("./src/html/page/body-bottom.html", {
+    checkout: false,
+    contactManager: true
+  })
+</body>
+
+</html>

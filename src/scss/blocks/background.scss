@@ -1,0 +1,48 @@
+.background{
+    z-index: 0;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    bottom: 0;
+    @media($desktop-max){
+        flex-direction: column;
+    }
+    img{
+        width: 860px;
+        height: 860px;
+        user-select: none;
+        animation: scale 8s linear infinite;
+       
+        @media($desktop-max){
+            width: 420px;
+            height: 420px;
+        }
+        &:last-child{
+            position: absolute;
+            right: -100px;
+            bottom: 0;
+        }
+        @media($mobile-max){
+            width: 300px;
+            height: 300px;
+        }
+    }
+    @keyframes scale {
+        0%,100%{
+          transform: scale(1);
+        }
+        20%{
+          transform: scale(1.5);
+        }
+        50%{
+          transform: scale(0.6);
+        }
+        80%{
+          transform: scale(1.4);
+        }
+      }
+  }

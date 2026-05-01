@@ -1,0 +1,5 @@
+<div class="collapse collapse_component@@if(context.style){ collapse_style-0@@style}">
+  <div class="collapse__items" data-toggle-container="toggle@@if(context.self){,self}" role="tablist">
+    @@loop('./src/html/include/collapse-item.html', '@@jsonPath')
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./src/html/page/head.html', {
+  "title": "Архитектор-визуализатор",
+})
+
+<body>
+  <div class="wrapper">
+    @@include('./src/html/page/header.html', { 'variant': 3 })
+
+    @@include('./src/html/components/breadcrumbs.html', {
+      'jsonPath': '../json/breadcrumbs/vacancy-page.json'
+    })
+
+    @@include('./src/html/blocks/inner/blog-entry.html', {
+      'heading': 'Архитектор-визуализатор',
+      'hasMainImage': true,
+      'imageSrc': 'images/additional/vacancy.jpg',
+      'link': '/magniya-citrat-bezvodnyy',
+      'date': '',
+      'tag': '',
+      'description': '',
+      'contents': '<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including.</p><h2>Обязанности</h2><ul><li>Lorem Ipsum is simply dummy text of the printing</li><li>Lorem Ipsum is simply dummy text of the printing</li><li>Lorem Ipsum is simply dummy text of the printing</li><li>Lorem Ipsum is simply dummy text of the printing</li><li>Lorem Ipsum is simply dummy text of the printing</li></ul><h2>Требования</h2><ul><li>Lorem Ipsum is simply dummy text of the printing</li><li>Lorem Ipsum is simply dummy text of the printing</li><li>Lorem Ipsum is simply dummy text of the printing</li><li>Lorem Ipsum is simply dummy text of the printing</li><li>Lorem Ipsum is simply dummy text of the printing</li></ul><h2>Условия</h2><ul><li>Lorem Ipsum is simply dummy text of the printing</li><li>Lorem Ipsum is simply dummy text of the printing</li><li>Lorem Ipsum is simply dummy text of the printing</li><li>Lorem Ipsum is simply dummy text of the printing</li><li>Lorem Ipsum is simply dummy text of the printing</li></ul>',
+    })
+
+    @@include('./src/html/blocks/form-with-image.html', {
+      'heading': 'Понравилась вакансия?',
+      'pathToForm': './src/html/forms/vacancy.html',
+      'text': ''
+    })
+
+    @@include('./src/html/page/footer.html')
+  </div>
+  @@include("./src/html/page/body-bottom.html")
+</body>
+
+</html>

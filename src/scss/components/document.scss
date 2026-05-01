@@ -1,0 +1,32 @@
+.document {
+  color: var(--text-c);
+  display: flex;
+  max-width: 325px;
+  font-weight: 600;
+  line-height: 1.225;
+  align-items: center;
+  letter-spacing: 0;
+  text-decoration: none;
+
+  @media ($transition-min) {
+    transition: color 0.3s;
+
+    &:hover {
+      color: var(--primary-c);
+
+      svg {
+        transform: translateY(-3px);
+      }
+    }
+  }
+  @media ($mobile-max) {
+    max-width: 100%;
+  }
+
+  svg {
+    align-self: flex-start;
+    margin-right: 20px;
+  }
+
+  @extend %document !optional;
+}

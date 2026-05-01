@@ -1,0 +1,53 @@
+<article class="product">
+  <div class="product__inner">
+    <p class="product__iw _iw _iw--contain">
+      <img class="product__image" src="@@imageSrc" srcset="images/placeholder.png" data-srcset="@@imageSrc"
+        alt="@@title" width="243" height="185" decoding="async">
+    </p>
+    <form method="post" class="product__form">
+      <input type="hidden" name="id" value="@@id">
+      <input type="hidden" name="count" value="1">
+      <input type="hidden" name="options" value="[]">
+
+      <div class="product__content">
+        <a href="@@link" class="product__title _title">@@title</a>
+        @@include('./src/html/components/availability.html', {
+        'in_stock': @@in_stock,
+        'not_available': @@not_available,
+        'on_order': @@on_order
+        })
+        <div class="product__features">
+          @@if(context.seats){
+          <p>Количество мест: <strong>@@seats</strong></p>
+          }
+          @@if(context.collection){
+          <p>Коллекция: <strong>@@collection</strong></p>
+          }
+          @@if(context.size){
+          <p>Размеры бассейна (ДхШхВ): <strong>@@size</strong></p>
+          }
+          @@if(context.nozzles){
+          <p>Общее количество форсунок: <strong>@@nozzles</strong></p>
+          }
+        </div>
+      </div>
+      <div class="product__bottom">
+        <div class="product__price-wrapper">
+          @@if (context.old_price) {
+          <span class="product__price product__price_old">@@old_price RUB</span>
+          }
+          <span class="product__price">@@price RUB</span>
+        </div>
+        <button class="product__btn _btn" type="submit" name="ms2_action" value="cart/add" @@if(context.not_available){
+          disabled="" }>В корзину</button>
+        <button class="product__btn _btn _btn--text" type="button" data-open-popup="checkout"
+          @@if(context.not_available){ disabled="" }>Купить в 1 клик</button>
+      </div>
+    </form>
+    @@include('./src/html/components/product-badges.html', {
+    'bestseller': @@bestseller,
+    'discount': @@discount,
+    'novelty': @@novelty
+    })
+  </div>
+</article>

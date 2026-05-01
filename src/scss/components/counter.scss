@@ -1,0 +1,56 @@
+.counter {
+  $size: 45px;
+
+  border: 1px solid change-color($color: $primary-color, $alpha: 0.5);
+  display: inline-flex;
+
+  @extend %counter !optional;
+
+  &__button {
+    color: var(--white);
+    width: $size;
+    border: none;
+    z-index: 1;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: var(--primary-c);
+
+    &:focus-visible {
+      @include focus-styles($color: var(--star-color));
+    }
+
+    // &[data-action="minus"] {
+    //   border-radius: 50% 0 0 50%;
+    // }
+    // &[data-action="plus"] {
+    //   border-radius: 0 50% 50% 0;
+    // }
+
+    // @extend %form-counter-button !optional;
+  }
+  &__input {
+    width: $size;
+    color: inherit;
+    height: 100%;
+    padding: 0;
+    font-size: 22px;
+    min-height: $size;
+    text-align: center;
+    border-radius: 0;
+    appearance: none;
+    -moz-appearance: textfield;
+
+    @extend %f-item-element;
+    @extend %counter-input !optional;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      appearance: none;
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    &:focus-visible {
+      @include focus-styles($color: var(--star-color), $offset: -2px);
+    }
+  }
+}

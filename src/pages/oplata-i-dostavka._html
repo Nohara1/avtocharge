@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./src/html/page/head.html', {
+  title: "Оплата и доставка"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('./src/html/page/header.html')
+
+    @@include('./src/html/blocks/custom-content-01.html', {
+      h1: true,
+      full: false,
+      reverse: false,
+      hStyle: 2,
+      heading: "Оплата и доставка",
+      content01: "<h3>Способы оплаты</h3><p>Lorem ipsum dolor sit amet consectetur. Adipiscing risus praesent felis netus imperdiet dignissim. Vel dictum id proin dignissim egestas felis et tristique et. Non maecenas massa congue feugiat. Blandit tincidunt dictum eu commodo. Lectus sollicitudin risus arcu vitae pellentesque ac. Nulla sed vitae turpis facilisi purus turpis eros lectus tellus. Eget sed tellus pulvinar pharetra. Quis massa id molestie viverra dictum in dis lacinia. Nec quam pretium semper sit sed posuere viverra. Aliquam placerat velit id nec ullamcorper risus in hendrerit. Quis nibh turpis enim fermentum amet sodales. Varius amet ante feugiat tincidunt tincidunt fusce lobortis vitae ultrices.</p>",
+      content02: "<h3>Варианты доставки</h3><p>Lorem ipsum dolor sit amet consectetur. Adipiscing risus praesent felis netus imperdiet dignissim. Vel dictum id proin dignissim egestas felis et tristique et. Non maecenas massa congue feugiat. Blandit tincidunt dictum eu commodo. Lectus sollicitudin risus arcu vitae pellentesque ac. Nulla sed vitae turpis facilisi purus turpis eros lectus tellus. Eget sed tellus pulvinar pharetra. Quis massa id molestie viverra dictum in dis lacinia. Nec quam pretium semper sit sed posuere viverra. Aliquam placerat velit id nec ullamcorper risus in hendrerit. Quis nibh turpis enim fermentum amet sodales. Varius amet ante feugiat tincidunt tincidunt fusce lobortis vitae ultrices.</p>",
+    })
+
+    @@include('./src/html/page/footer.html')
+  </div>
+  @@include('./src/html/page/body-bottom.html')
+</body>
+
+</html>

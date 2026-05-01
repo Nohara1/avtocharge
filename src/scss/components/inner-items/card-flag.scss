@@ -1,0 +1,62 @@
+@use "sass:color";
+// card-flag
+.cf {
+  &__inner {
+    height: 100%;
+    border: 2px solid color.change($primary-color, $alpha: 0);
+    padding: 2.6rem 3.625rem;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+    border-radius: 18px;
+    flex-direction: column;
+    // justify-content: center;
+    background-color: var(--primary-c-10);
+
+    @media ($transition-min) {
+      transition: border-color var(--transition);
+
+      &:hover {
+        @extend %card-country-hover !optional;
+
+        border-color: var(--primary-c);
+      }
+    }
+    @media ($tablet-mad) {
+      padding: 23px 28px;
+    }
+  }
+  &__image-wrapper {
+    @media ($transition-min) {
+      transform: translateY(0px);
+      transition: transform var(--transition);
+
+      %card-country-hover & {
+        transform: translateY(-5px);
+      }
+    }
+
+    img {
+      width: 100px;
+      border-radius: 5px;
+    }
+  }
+  &__title {
+    --c: inherit;
+    --fz-lg: 20px;
+    --fz-sm: 14px;
+    z-index: 1;
+    text-align: center;
+    margin-top: 1.875rem;
+
+    &::after {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      content: "";
+      position: absolute;
+    }
+  }
+}

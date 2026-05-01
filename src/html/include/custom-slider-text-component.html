@@ -1,0 +1,16 @@
+<div class="cs__slide cs__slide_text-component">
+  <div class="text-component">
+    <div class="text-component__items">
+      <div class="text-component__item">
+        <div class="text-component__content _cc">
+          @@text
+        </div>
+      </div>
+      <div class="text-component__item">
+        @@if(context.itemPath || context.itemPath){
+        @@loop('@@itemPath', '@@itemJson')
+        }
+      </div>
+    </div>
+  </div>
+</div>

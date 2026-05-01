@@ -1,0 +1,303 @@
+// banner
+.b {
+  @extend %banner !optional;
+
+  &_no-gap {
+    --pt: 0;
+    --mt: 0;
+  }
+  &_bdrs {
+    @extend %banner-bdrs !optional;
+  }
+
+  &__slider {
+    z-index: 1;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    max-width: 100%;
+    list-style: none;
+    transition: margin 0.3s;
+    margin-left: 0;
+    margin-right: 0;
+    touch-action: pan-y;
+    // flex-direction: column;
+
+    %banner-bdrs & {
+      border-radius: 20px;
+    }
+
+    &.swiper-initialized {
+      @extend %banner-initialized !optional;
+    }
+  }
+  &__slider-wrapper {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    position: relative;
+    box-sizing: content-box;
+  }
+  &__slide {
+    padding: 180px 0 180px 0;
+    position: relative;
+    max-width: 100%;
+    flex-shrink: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media ($desktop-max) and ($tablet-min) {
+      padding: 80px 0;
+    }
+    @media ($desktop-max) {
+      background-position: 50% 50%;
+    }
+    @media ($mobile-max) {
+      padding: 70px 0;
+    }
+
+    &::before {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      content: "";
+      position: absolute;
+
+      @media ($desktop-max) {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 40%, rgba(0, 0, 0, 0) 100%);
+      }
+    }
+
+    &#{&}_blackout {
+      &::before {
+        @media ($desktop-min-xl) {
+          background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 35%, rgba(0, 0, 0, 0) 100%);
+        }
+        @media ($desktop-max) {
+          background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 40%, rgba(0, 0, 0, 0) 100%);
+        }
+      }
+    }
+    &_right {
+      @extend %banner-right !optional;
+    }
+    > * {
+      position: relative;
+    }
+  }
+  // &__iw {}
+  // &__image {}
+  &__content {
+    color: var(--white);
+    display: grid;
+    column-gap: 60px;
+    margin-bottom: -30px;
+    grid-template-areas: "heading component" "text component" "button component" "achievements component";
+    grid-template-columns: 0.5fr 0.5fr;
+
+    @media ($desktop-max) {
+      grid-template-areas: "heading" "text" "achievements" "component";
+      grid-template-columns: 1fr;
+    }
+    
+    @media($header-max){
+      display: flex;
+      flex-direction: column;
+      padding-top: 10px;
+    }
+
+    %banner-right & {
+      grid-template-areas: "text heading" "text component" "achievements component";
+
+      @media ($desktop-max) {
+        grid-template-areas: "heading" "text" "achievements" "component";
+      }
+    }
+
+    > * {
+      margin-bottom: 30px;
+    }
+  }
+  &__heading {
+    --c: inherit;
+    --mb: 0;
+    grid-area: heading;
+    align-self: end;
+
+    %banner-right & {
+      --tt: none;
+    }
+    @media($header-max){
+      align-self: flex-start;
+      margin-bottom: 10px;
+    }
+  }
+  &__button{
+    grid-area: button;
+    max-width: 260px;
+    padding: 20px 40px;
+    font-size: 24px;
+    
+    @media ($tablet-mad) {
+      max-width: 165px;
+      font-size: 14px;
+      padding: 10px 30px;
+      margin-bottom: 10px;
+    }
+  }
+  &__text {
+    font-size: 30px;
+    font-weight: 600;
+    grid-area: text;
+    
+
+    @media ($tablet-mad) {
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    > ul {
+      li {
+        &:before {
+          background-color: var(--secondary-c);
+        }
+      }
+    }
+  }
+  &__component {
+    grid-area: component;
+
+    %form {
+      color: var(--grey-100);
+      padding: 50px;
+      border-radius: 30px;
+      background-color: var(--form-b);
+      @media ($mobile-max) {
+        padding: 30px 20px;
+      }
+      %form-input{
+        border: 1px solid var( --primary-c-30);
+        @media ($mobile-max) {
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+  %banner-achievements {
+    grid-area: achievements;
+  }
+  &__nav {
+    color: var(--white);
+    width: var(--container-p);
+    height: 100%;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0;
+    display: flex;
+    position: absolute;
+    user-select: none;
+    align-items: center;
+    justify-content: center;
+
+    @media ($tablet-mad) {
+      display: none;
+    }
+
+    %banner-initialized & {
+      opacity: 1;
+
+      &.swiper-button-disabled {
+        visibility: hidden;
+      }
+    }
+    &::before {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      content: "";
+      display: block;
+      position: absolute;
+      background-image: radial-gradient(
+        ellipse farthest-side at right center,
+        var(--white) 0%,
+        transparent 100%
+      );
+
+      @media ($transition-min) {
+        transition: opacity 0.3s;
+      }
+    }
+    svg {
+      width: 40px;
+      height: auto;
+      position: relative;
+      max-width: 100%;
+    }
+
+    @media ($transition-min) {
+      &:hover::before {
+        opacity: 0.4;
+      }
+    }
+
+    &_prev {
+      left: 0;
+      transform: scaleX(-1);
+    }
+    &_next {
+      right: 0;
+    }
+    &.swiper-button-lock {
+      display: none;
+    }
+  }
+  &__pagination {
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    z-index: 2;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+
+    @media ($tablet-max) {
+      bottom: 15px;
+    }
+    @media ($tablet-mad) {
+      transform: scale(0.8);
+    }
+
+    .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+      display: block;
+      transition:
+        transform 0.3s,
+        background-color 0.3s;
+      transform: scale(1);
+      border-radius: 3px;
+      background-color: change-color($color: $white, $alpha: 0.6);
+
+      &-active {
+        transform: scale(1.65);
+        background-color: var(--white);
+      }
+    }
+    &.swiper-pagination-clickable {
+      .swiper-pagination-bullet {
+        cursor: pointer;
+      }
+    }
+    &.swiper-pagination-lock {
+      display: none;
+    }
+    > * + * {
+      margin-left: 20px;
+    }
+  }
+}

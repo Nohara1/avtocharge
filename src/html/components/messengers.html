@@ -1,0 +1,43 @@
+<div class="messengers">
+  @@if(!context.hideTelegram) {
+  <a href="https://t.me/+@@siteFormattedPhone" class="messengers__link _btn _btn--square" target="_blank" aria-label="Telegram" data-tippy-content="Telegram">
+    <svg width="25" height="25" aria-hidden="true">
+      <use href="images/icons.svg#telegram@@if(!context.solid){_s}"></use>
+    </svg>
+  </a>}
+  @@if(!context.hideViber) {
+  <a href="viber://chat?number=%2B@@siteFormattedPhone" class="messengers__link _btn _btn--square" target="_blank" aria-label="Viber" data-tippy-content="Viber">
+    <svg width="25" height="25" aria-hidden="true">
+      <use href="images/icons.svg#viber@@if(!context.solid){_s}"></use>
+    </svg>
+  </a>}
+  @@if(!context.hideWhatsapp) {
+  <a href="https://wa.me/@@siteFormattedPhone" class="messengers__link _btn _btn--square" target="_blank" aria-label="WhatsApp" data-tippy-content="WhatsApp">
+    <svg width="35" height="35" aria-hidden="true">
+      <use href="images/icons.svg#whatsapp@@if(!context.solid){_s}"></use>
+    </svg>
+  </a>}
+  <div class="messengers__phones @@if(context.multi){_hto}">
+    <div class="messengers__phone-wrapper">
+      @@if(context.label){<span class="messengers__phone-label">@@label</span>}
+      <a href="tel:@@if(!context.number){@@siteFormattedPhone}@@if(context.number){@@number}"
+        class="messengers__phone" target="_blank">
+        @@if(true){<svg width="35" height="35" aria-hidden="true">
+          <use href="images/icons.svg#phone"></use>
+        </svg>}
+        @@if(context.number){@@number}@@if(!context.number){<span>@@sitePhone</span>}</a>
+      @@if(context.multi){<button class="messengers__button" type="button" name="button-collapse" aria-label="Показать дополнительные номера">
+        <svg width="6" height="10" aria-hidden="true">
+          <use href="images/icons.svg#chevron-right"></use>
+        </svg>
+      </button>}
+    </div>@@if(context.multi){
+    <div class="messengers__list-wrapper _hto__target">
+      <ul class="messengers__list">
+        <li class="messengers__li">
+          <a href="tel:88000000000" class="messengers__phone" target="_blank"><span>8 (800) 000 00 00</span></a>
+        </li>
+      </ul>
+    </div>}
+  </div>
+</div>

@@ -1,0 +1,75 @@
+.form__radio {
+  // top: 0.3em;
+  top: 0.25em;
+  left: auto;
+  width: 1em;
+  margin: 0;
+  height: 1em;
+  cursor: pointer;
+  // @extend %f-checkbox-pseudo;
+  @extend %flex-center;
+  position: absolute;
+  font-size: 16px;
+  transform: scale(1.001);
+  min-height: 0;
+  appearance: none;
+  box-shadow: 0 0 0 2px var(--text-l);
+  transition: background-color var(--transition);
+  border-radius: 50%;
+  // background-color: var(--secondary-c);
+  background-color: transparent;
+
+  @extend %form-radio !optional;
+
+  &:focus,
+  &:focus-visible,
+  label:active > & {
+    outline-offset: 2px;
+    @include focus-styles;
+  }
+  &::after {
+    @extend %f-checkbox-pseudo;
+    top: auto;
+    left: auto;
+    width: 0.6em;
+    height: 0.6em;
+    opacity: 0;
+    background: var(--primary-c);
+    transition: opacity var(--transition);
+    border-radius: 50%;
+  }
+  &:checked {
+    box-shadow: 0 0 0 2px var(--primary-c);
+
+    &::after {
+      opacity: 1;
+    }
+  }
+  & + %form-label {
+    color: var(--text-c);
+    cursor: pointer;
+    display: inline-block;
+    // font-size: 15px;
+    text-align: left;
+    // font-weight: 500;
+    // padding-left: 33px;
+    padding-left: 26px;
+
+    @media ($mobile-max) {
+      font-size: 14px;
+    }
+  }
+}
+.form .form__radio-input {
+  right: 20px;
+  height: auto;
+  bottom: calc($form-input-height / 2);
+  position: absolute;
+  min-width: 1em;
+  transform: translateY(50%);
+  min-height: 1.5em;
+
+  @media ($tablet-mad) {
+    bottom: 25px;
+  }
+}

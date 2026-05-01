@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('./src/html/page/head.html', {
+  title: "Блог"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('./src/html/page/header.html')
+
+    @@include('./src/html/components/breadcrumbs.html', {
+      elements: [
+        { name: 'Главная', link: '/' },
+        { name: 'Блог', link: '' }
+      ]
+    })
+
+    @@include('./src/html/blocks/custom-content-01.html', {
+      extraClass: '',
+      heading: 'Блог',
+      hLevel: 1,
+      hStyle: 2,
+      content01: '<p>Добро пожаловать на наш блог, где мы делимся своими знаниями и опытом в сфере digital-маркетинга!<br>Мы команда профессионалов, которые стараются рассказать просто и доступно обо всём, что касается SEO, PPC, таргетинга, SMM и многого другого. Мы понимаем, что мир интернет-маркетинга может казаться сложным и запутанным, поэтому делаем все возможное, чтобы разобраться в нем можно было даже новичкам. Наш блог станет для вас полезным ресурсом в изучении digital-маркетинга.</p><span class="cc__logo">CWEB</span>',
+      image01: "{ src: 'images/blog/blog-01.jpg', alt: 'описание изображения' }",
+    })
+
+    @@include('./src/html/blocks/inner-items.html', {
+      extraClass: 'ii_blog',
+      heading: 'Все материалы категории',
+      tabs: '[ "Все статьи", "Web-аналитика", "SEO", "Маркетинг", "Дизайн", "Контекст", "Новости" ]',
+      tabsActive: true,
+      tabsSlider: false,
+      text: '',
+      columns: '',
+      columnsMobile: 1,
+      itemPath: './src/html/components/blog-item.html',
+      jsonPath: '"../json/blog.json"',
+      pagination: 'blog'
+    })
+
+    @@include('./src/html/blocks/inner-items.html', {
+      extraClass: '_primary-background _section-p _section-p_bdrs _section-p_bdrs-t',
+      heading: 'Популярное',
+      text: '',
+      columns: 4,
+      columnsMobile: 1,
+      itemPath: './src/html/components/blog-item.html',
+      jsonPath: '[{imageSrc: "images/blog/blog-01.jpg", width: 550, height: 300, class: "image_blog", orientation: "horizontal", title: "Как дизайн может убить продажи?", link: "/blog-entry", date: "01.01.2023",text: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh neque, venenatis sed quam vitae, facilisis placerat lectus. Aliquam sapien ex, sodales ac nunc a, viverra lacinia</p>"},{imageSrc: "images/blog/blog-01.jpg", width: 550, height: 300, class: "image_blog", orientation: "horizontal", title: "Как дизайн может убить продажи?", link: "/blog-entry", date: "01.01.2023",text: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh neque, venenatis sed quam vitae, facilisis placerat lectus. Aliquam sapien ex, sodales ac nunc a, viverra lacinia</p>"},{imageSrc: "images/blog/blog-01.jpg", width: 550, height: 300, class: "image_blog", orientation: "horizontal", title: "Как дизайн может убить продажи?", link: "/blog-entry", date: "01.01.2023",text: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh neque, venenatis sed quam vitae, facilisis placerat lectus. Aliquam sapien ex, sodales ac nunc a, viverra lacinia</p>"},{imageSrc: "images/blog/blog-01.jpg", width: 550, height: 300, class: "image_blog", orientation: "horizontal", title: "Как дизайн может убить продажи?", link: "/blog-entry", date: "01.01.2023",text: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh neque, venenatis sed quam vitae, facilisis placerat lectus. Aliquam sapien ex, sodales ac nunc a, viverra lacinia</p>"},]'
+    })
+
+    @@include('./src/html/blocks/custom-content-01.html', {
+      extraClass: '_primary-background _section-p',
+      full: true,
+      heading: "Подпишись на наши социальные сети",
+      content01: '<div class="_cc__buttons"><a href="https://www.instagram.com/cweb.by/" class="_btn _btn--transparent _btn--circle-icon" target="_blank">Instagram<svg width="21" height="21" aria-hidden="true"><use href="images/icons.svg#arrow"></use></svg></a><a href="https://www.behance.net/cweb/" class="_btn _btn--transparent _btn--circle-icon" target="_blank">Behance<svg width="21" height="21" aria-hidden="true"><use href="images/icons.svg#arrow"></use></svg></a><a href="https://www.linkedin.com/company/crystal-web-bel/" class="_btn _btn--transparent _btn--circle-icon"  target="_blank">LinkedIn<svg width="21" height="21" aria-hidden="true"><use href="images/icons.svg#arrow"></use></svg></a><a href="https://www.tiktok.com/@cweb.by" class="_btn _btn--transparent _btn--circle-icon" target="_blank">TikTok<svg width="21" height="21" aria-hidden="true"><use href="images/icons.svg#arrow"></use></svg></a></div>'
+    })
+
+    @@if(false){@@include('./src/html/blocks/blog.html', {
+      heading: 'Блог',
+      tabs: false,
+      headingLevel: 'h1',
+      jsonPath: '../json/blog.json'
+    })}
+
+    @@include('./src/html/page/footer.html')
+  </div>
+  @@include("./src/html/page/body-bottom.html")
+</body>
+
+</html>

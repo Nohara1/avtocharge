@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./src/html/page/head.html', {
+  "title": "Гарантия и срок службы"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('./src/html/page/header.html', { 'variant': 2 })
+
+    @@include('./src/html/components/breadcrumbs.html', {
+      'jsonPath': '../json/breadcrumbs/garantiya-i-servis.json'
+    })
+
+    @@include('./src/html/blocks/custom-content-01.html', {
+      "h1": true,
+      "full": true,
+      "heading": "Гарантия и срок службы",
+      "content01": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh neque, venenatis sed quam vitae, facilisis placerat lectus. Aliquam sapien ex, sodales ac nunc a, viverra lacinia lectus. Sed dapibus eleifend fermentum. Aenean laoreet leo vitae molestie commodo. Aenean in libero porta, viverra lorem at, cursus turpis. Duis ut congue est. Nullam non euismod tellus. Phasellus a lobortis augue, laoreet finibus ipsum.</p>"
+    })
+
+    @@include('./src/html/blocks/custom-content-01.html', {
+      "heading": "",
+      "reverse": false,
+      "content01": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh neque, venenatis sed quam vitae, facilisis placerat lectus. Aliquam sapien ex, sodales ac nunc a, viverra lacinia lectus. Sed dapibus eleifend fermentum. Aenean laoreet leo vitae molestie commodo. Aenean in libero porta, viverra lorem at, cursus turpis. Duis ut congue est. Nullam non euismod tellus. Phasellus a lobortis augue, laoreet finibus ipsum.</p><p>Suspendisse tincidunt facilisis libero at consequat. Nulla ut ante id urna sagittis pellentesque. In ut urna mauris. Cras diam ipsum, semper sit amet eros vitae, sollicitudin tincidunt massa. Phasellus vehicula neque at nunc venenatis posuere. Etiam sed elit a est accumsan fringilla. Quisque ante augue, ornare sed iaculis a, luctus et mauris.</p><p>Vestibulum sollicitudin nisi ante, ut fermentum urna commodo eu. Donec posuere ante vitae turpis laoreet luctus. Quisque mollis vehicula pharetra. Quisque hendrerit ex nec metus convallis, in finibus enim posuere. Etiam sollicitudin eleifend sapien, sit amet dictum sapien faucibus eu. Phasellus tempor erat ut dolor imperdiet, vel tempor felis lacinia. Ut tempus scelerisque convallis. Suspendisse potenti. Phasellus et elit sollicitudin, porttitor nisl et, porttitor nisl. Vestibulum venenatis mi nisi, eget ultricies mauris congue a. Cras tempus lorem quis quam faucibus, ut fermentum urna cursus.</p>",
+      image01: '{ src: "images/additional/content-07.jpg", alt: "Гарантия и срок службы", contain: true, }',
+    })
+
+    @@include('./src/html/page/footer.html')
+  </div>
+  @@include("./src/html/page/body-bottom.html")
+</body>
+
+</html>

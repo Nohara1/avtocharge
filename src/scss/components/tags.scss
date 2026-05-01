@@ -1,0 +1,13 @@
+.tags {
+  @include row(10px, 10px, true);
+
+  &__item {
+    color: inherit;
+    cursor: default;
+    border: 2px solid var(--grey-10);
+    padding: 10px 20px;
+    border-radius: 50px;
+  }
+
+  @extend %tags !optional;
+}

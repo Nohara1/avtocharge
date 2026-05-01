@@ -1,0 +1,28 @@
+<div class="products">
+  <div class="products__wrapper">
+    @@if(context.subcategories && context.subcategoriesJson) {
+    <div class="products__subcategories">
+      @@include('./src/html/blocks/products/subcategories.html', {
+        jsonPath: '@@subcategoriesJson',
+        title: 'Популярное:'
+      })
+    </div>
+    }
+    @@if(context.sort){<div class="products__sort">
+      @@include('./src/html/blocks/products/sort.html', {
+        pageUrl: '@@url',
+        viewNumber: false,
+        viewGrid: false,
+        sortButtons: true
+      })
+    </div>}
+    <div class="products__items" data-lazy-observe="">
+      @@loop('./src/html/components/product-like.html', '../json/category-01-product-like.json')
+    </div>
+    @@include('./src/html/components/pagination.html', {
+      pageUrl: '@@categoryUrl',
+      description: false,
+      variant: 3
+    })
+  </div>
+</div>

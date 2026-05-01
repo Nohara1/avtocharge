@@ -1,0 +1,41 @@
+<section class="about-us au@@if(context.extraClass){ @@extraClass}">
+  <div class="container">
+    @@include('./src/html/components/heading.html', {
+      heading: '@@if(context.heading){@@heading}',
+      hLevel: '@@if(context.hLevel){@@hLevel}',
+      hStyle: '@@if(context.hStyle){@@hStyle}',
+      hExtraClass: 'au__heading'
+    })
+    <div class="au__inner">
+      <svg class="au__label au__label_w" width="55" height="320" aria-hidden="true"><use href="images/icons.svg#about_label"></use></svg>
+      <svg class="au__label au__label_h" width="320" height="55" aria-hidden="true"><use href="images/icons.svg#about_label_h"></use></svg>
+      <div class="au__content-wrapper">
+        <svg class="au__background au__background_1" width="100" height="22" aria-hidden="true"><use href="images/icons.svg#about_background_1"></use></svg>
+        <div class="au__content _cc">
+          <p><b>Наша задача:</b> заключается в предоставлении высококачественных услуг по получению визы, сопровождая каждого клиента на пути к успешному оформлению документов для поездок в любую точку мира.</p>
+          <p><b>Наша цель:</b> сделать процесс получения визы легким, быстрым и без стрессов, чтобы вы могли сосредоточиться на важных моментах вашей жизни.</p>
+        </div>
+        <svg class="au__background au__background_2" width="100" height="42" aria-hidden="true"><use href="images/icons.svg#about_background_2"></use></svg>
+      </div>
+      @@include('./src/html/components/image.html', {
+        src: 'images/team/sigejkina-ekaterina.jpg',
+        thumb: 'images/team/thumbs/sigejkina-ekaterina.jpg',
+        alt: 'Сигейкина Екатерина - директор визового направления',
+        link: '',
+        gallery: false,
+        orientation: 'square',
+        responsive: false,
+        contain: false,
+        width: 500,
+        height: 500,
+        class: 'image_about',
+        title: '<span>Сигейкина Екатерина</span> - директор визового направления',
+        subtitle: ''
+      })
+    </div>
+    <div class="au__text _cc">
+      <p><span>VizaVsem (ВизаВсем)</span> - мы работаем в области визовой поддержки <span>уже более 10 лет</span>. Наша команда помогает оформить документы и консультирует по открытию виз <span>в более чем 50 странах мира</span> для клиентов по всей Беларуси.</p>
+      <p>Доверьтесь нам, и мы поможем вам осуществить все ваши планы, будь то отдых, приключения, новые знакомства или важные семейные встречи.</p>
+    </div>
+  </div>
+</section>

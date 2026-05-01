@@ -1,0 +1,28 @@
+<section class="services">
+  <div class="container">
+    <h2 class="services__heading _heading">Этапы внедрения</h2>
+    <div class="services__items">
+      @@loop('./src/html/components/services-item.html', [{
+        small: true,
+        title: "Первый этап",
+        link: "",
+        text: "<p>Определение целей и задач, что зачем и почему мы будем внедрять, что отслеживать</p>"
+      },{
+        small: true,
+        title: "Второй этап",
+        link: "",
+        text: "<p>Составление \"карты конверсий\", определения макро- и микроконверсий сайта</p>"
+      },{
+        small: true,
+        title: "Третий этап",
+        link: "",
+        text: "<p>Анализ технического состояния кода сайта на возможность внедрения веб-аналитики, при необходимости исправление ошибок, например: валидация форм.</p>"
+      },{
+        small: true,
+        title: "Четвёртый этап",
+        link: "",
+        text: "<p>Внедрение аналитики по средству Google Tag Manager</p>"
+      }])
+    </div>
+  </div>
+</section>

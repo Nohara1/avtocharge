@@ -1,0 +1,96 @@
+<section class="reviews @@if(context.full){_full-review}">
+  <div class="container">
+    @@if(context.heading){
+      <@@if(context.h1){h1}@@if(!context.h1){h2} class="reviews__heading _heading@@if(context.h1style){ _h1}">@@heading</@@if(context.h1){h1}@@if(!context.h1){h2}>
+    }
+    <div class="reviews__items">
+      <div class="reviews__item">
+        @@if(context.full){
+          @@include('./src/html/components/pagination.html', {
+            'pageUrl': 'otzyvy',
+            'description': false,
+            'variant': 1
+          })
+        }
+
+        <div class="reviews__reviews-wrapper">
+          @@loop('./src/html/components/review-item.html', '@@jsonPath')
+        </div>
+
+        @@if(context.description){
+        <div class="reviews__description _cc">
+          @@description
+        </div>
+        }
+      </div>
+      @@if(context.form){
+      <div class="reviews__item reviews__item_side">
+        @@include('./src/html/forms/review.html')
+      </div>
+      }
+      @@if(context.widget){
+      <div class="reviews__item reviews__item_side">
+        <div class="reviews-widget">
+          <span class="reviews-widget__heading _title">Средняя оценка магазина</span>
+          <div class="reviews-widget__overall-wrapper">
+            <span class="reviews-widget__overall-rating">5</span>
+            <div class="reviews-widget__overall-inner" data-review-rating="" data-rating="5">
+              <div class="reviews-widget__overall-stars">
+                <div class="reviews-widget__overall-star" data-star="">
+                  <svg width="38" height="34.38" aria-hidden="true">
+                    <use href="images/icons.svg#star-rating" />
+                  </svg>
+                </div>
+                <div class="reviews-widget__overall-star" data-star="">
+                  <svg width="38" height="34.38" aria-hidden="true">
+                    <use href="images/icons.svg#star-rating" />
+                  </svg>
+                </div>
+                <div class="reviews-widget__overall-star" data-star="">
+                  <svg width="38" height="34.38" aria-hidden="true">
+                    <use href="images/icons.svg#star-rating" />
+                  </svg>
+                </div>
+                <div class="reviews-widget__overall-star" data-star="">
+                  <svg width="38" height="34.38" aria-hidden="true">
+                    <use href="images/icons.svg#star-rating" />
+                  </svg>
+                </div>
+                <div class="reviews-widget__overall-star" data-star="">
+                  <svg width="38" height="34.38" aria-hidden="true">
+                    <use href="images/icons.svg#star-rating" />
+                  </svg>
+                </div>
+              </div>
+              <p class="reviews-widget__overall-title">Всего оценок: <span
+                  class="reviews-widget__overall-amount">5</span></p>
+            </div>
+          </div>
+          <div class="reviews-widget__ratings">
+            <div class="reviews-widget__rating">
+              <span class="reviews-widget__score">5</span>
+              <svg class="reviews-widget__star" width="21" height="20" aria-hidden="true">
+                <use href="images/icons.svg#star-rating" />
+              </svg>
+              <div class="reviews-widget__progress" style="width:100%"></div>
+              <span class="reviews-widget__amount">5x</span>
+            </div>
+            @@for (var i = 4; i > 0; i--) {
+            <div class="reviews-widget__rating">
+              <span class="reviews-widget__score">`+[i]+`</span>
+              <svg class="reviews-widget__star" width="21" height="20" aria-hidden="true">
+                <use href="images/icons.svg#star-rating" />
+              </svg>
+              <div class="reviews-widget__progress" style="width:0%"></div>
+              <span class="reviews-widget__amount">0x</span>
+            </div>
+            }
+          </div>
+          <button class="reviews-widget__button _btn" data-open-popup="leave-a-review" type="button">Оставить
+            отзыв</button>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</section>

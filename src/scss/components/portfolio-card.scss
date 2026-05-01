@@ -1,0 +1,111 @@
+.portfolio {
+  &__inner {
+    height: 100%;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-direction: column;
+
+    @media ($transition-min) {
+      transform: translateY(0);
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: translateY(-5px);
+
+        @extend %portfolio-inner-hover !optional;
+      }
+    }
+  }
+  &__iw {
+    width: 100%;
+    padding-bottom: 58.18%;
+
+    @media ($transition-min) {
+      transform: translateY(0);
+      transition: transform 0.3s;
+
+      %portfolio-inner-hover & {
+        transform: translateY(-3px);
+      }
+      &::before {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        opacity: 0;
+        content: "";
+        display: block;
+        position: absolute;
+        transition: opacity 0.3s;
+        background-color: var(--white);
+      }
+      %portfolio-inner-hover & {
+        &::before {
+          opacity: 0.1;
+        }
+      }
+    }
+  }
+  %tag-badge {
+    z-index: 2;
+  }
+  &__image {
+    @media ($transition-min) {
+      transition: transform 0.3s;
+
+      %portfolio-inner-hover & {
+        transform: translate(-50%, -50%) scale(1.05);
+      }
+    }
+  }
+  &__title {
+    color: var(--primary-c);
+    flex-grow: 1;
+    // margin-top: 1.25rem;
+    margin-top: 10px;
+
+    &::before {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
+      content: "";
+      display: block;
+      position: absolute;
+    }
+    @media ($transition-min) {
+      transition: color 0.3s;
+
+      %portfolio-inner-hover & {
+        color: var(--primary-h);
+      }
+    }
+  }
+  &__text {
+    color: var(--text-l);
+    margin-top: 1.25rem;
+  }
+  &__category {
+    color: var(--text-l);
+    display: flex;
+    margin-top: 1.875rem;
+    align-items: center;
+
+    svg {
+      margin-right: 10px;
+    }
+  }
+  %product-mini {
+    z-index: 3;
+    position: relative;
+    margin-top: 1.25rem;
+  }
+  &__button {
+    margin-top: 1.25rem;
+  }
+
+  @extend %portfolio !optional;
+}

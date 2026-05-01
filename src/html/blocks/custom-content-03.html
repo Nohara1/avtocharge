@@ -1,0 +1,32 @@
+<section class="cc cc-03@@if(context.noGap){ cc_no-gap}"@@if(context.id){ id="@@id"}@@if(context.animate){ data-animate="appearing"}>
+  <div class="container">
+    @@if(context.heading){
+      <@@if(context.h1){h1}@@if(!context.h1){h2} class="cc__heading _heading@@if(context.h1style){ _h1}">@@heading</@@if(context.h1){h1}@@if(!context.h1){h2}>
+    }
+    <div
+      class="cc__items@@if(context.full){ cc__items_full}@@if(context.reverse){ cc__items_reverse}">
+      @@if(context.content01) {
+      <div class="cc__item">
+        <div class="cc__content _cc">
+          @@content01
+        </div>
+      </div>
+      }
+      @@if(context.image01){
+        <div class="cc__item">
+          @@include('./src/html/components/image.html', @@image01)
+        </div>
+      }
+    </div>
+    @@include('./src/html/components/custom-slider.html', {
+      'gap': '@@gap',
+      'slides': '@@slides',
+      'mobSlides': '@@mobSlides',
+      'navigation': @@if(context.navigation){'@@navigation'}@@if(!context.navigation){false},
+      'navigationStyle': @@if(context.navigationStyle){'@@navigationStyle'}@@if(!context.navigationStyle){0},
+      'pagination': @@if(context.pagination){'@@pagination'}@@if(!context.pagination){false},
+      'itemPath': '@@itemPath',
+      'jsonPath': '@@jsonPath'
+    })
+  </div>
+</section>

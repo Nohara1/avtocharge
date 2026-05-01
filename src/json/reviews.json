@@ -1,0 +1,74 @@
+[
+  {
+    "author": "Алексей",
+    "photo": "",
+    "rating": 5,
+    "date": "21.10.2022",
+    "dateFormat": "2022-10-21",
+    "commentary": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh neque, venenatis sed quam vitae, facilisis placerat lectus. AliquamLorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh neque, venenatis sed quam vitae, facilisis placerat lectus. Aliquam Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh neque, venenatis sed quam vitae, facilisis placerat lectus. Aliquam</p>",
+    "positive": "",
+    "negative": "",
+    "images": false,
+    "button": "Читать полностью"
+  },
+  {
+    "author": "Алексей",
+    "photo": "",
+    "rating": 5,
+    "date": "21.10.2022",
+    "dateFormat": "2022-10-21",
+    "commentary": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh neque, venenatis sed quam vitae, facilisis placerat lectus. AliquamLorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh neque, venenatis sed quam vitae, facilisis placerat lectus. Aliquam Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh neque, venenatis sed quam vitae, facilisis placerat lectus. Aliquam</p>",
+    "positive": "",
+    "negative": "",
+    "images": false,
+    "button": "Читать полностью"
+  },
+  {
+    "author": "Алексей",
+    "photo": "",
+    "rating": 5,
+    "date": "21.10.2022",
+    "dateFormat": "2022-10-21",
+    "commentary": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh neque, venenatis sed quam vitae, facilisis placerat lectus. AliquamLorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh neque, venenatis sed quam vitae, facilisis placerat lectus. Aliquam Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh neque, venenatis sed quam vitae, facilisis placerat lectus. Aliquam</p>",
+    "positive": "",
+    "negative": "",
+    "images": false,
+    "button": "Читать полностью"
+  },
+  {
+    "author": "Алексей",
+    "photo": "",
+    "rating": 5,
+    "date": "21.10.2022",
+    "dateFormat": "2022-10-21",
+    "commentary": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh neque, venenatis sed quam vitae, facilisis placerat lectus. AliquamLorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh neque, venenatis sed quam vitae, facilisis placerat lectus. Aliquam Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh neque, venenatis sed quam vitae, facilisis placerat lectus. Aliquam</p>",
+    "positive": "",
+    "negative": "",
+    "images": false,
+    "button": "Читать полностью"
+  },
+  {
+    "author": "Алексей",
+    "photo": "",
+    "rating": 5,
+    "date": "21.10.2022",
+    "dateFormat": "2022-10-21",
+    "commentary": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh neque, venenatis sed quam vitae, facilisis placerat lectus. AliquamLorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh neque, venenatis sed quam vitae, facilisis placerat lectus. Aliquam Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh neque, venenatis sed quam vitae, facilisis placerat lectus. Aliquam</p>",
+    "positive": "",
+    "negative": "",
+    "images": false,
+    "button": "Читать полностью"
+  },
+  {
+    "author": "Алексей",
+    "photo": "",
+    "rating": 5,
+    "date": "21.10.2022",
+    "dateFormat": "2022-10-21",
+    "commentary": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh neque, venenatis sed quam vitae, facilisis placerat lectus. AliquamLorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh neque, venenatis sed quam vitae, facilisis placerat lectus. Aliquam Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh neque, venenatis sed quam vitae, facilisis placerat lectus. Aliquam</p>",
+    "positive": "",
+    "negative": "",
+    "images": false,
+    "button": "Читать полностью"
+  }
+]

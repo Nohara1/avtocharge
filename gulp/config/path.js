@@ -1,0 +1,54 @@
+import * as nodePath from "path";
+const rootFolder = nodePath.basename(nodePath.resolve());
+
+const buildFolder = `./build`;
+const srcFolder = `./src`;
+
+export const path = {
+  build: {
+    html: `${buildFolder}/`,
+    fonts: `${buildFolder}/fonts/`,
+    files: `${buildFolder}/files/`,
+    styles: `${buildFolder}/styles/`,
+    videos: `${buildFolder}/videos/`,
+    images: `${buildFolder}/images/`,
+    favicon: `${buildFolder}/images/favicon/`,
+    scripts: `${buildFolder}/scripts/`,
+  },
+  src: {
+    html: `${srcFolder}/pages/*.html`,
+    scss: `${srcFolder}/scss/styles.scss`,
+    fonts: `${srcFolder}/fonts/**/*.*`,
+    fontsTTF: `${srcFolder}/fonts/**/*.ttf`,
+    files: `${srcFolder}/files/**/*.*`,
+    videos: `${srcFolder}/videos/**/*.*`,
+    images: [
+      `${srcFolder}/images/**/*.{jpg,jpeg,png,svg}`,
+      `!${srcFolder}/images/favicon/**`,
+    ],
+    imagesWebp: [
+      `${srcFolder}/images/**/*.{jpg,jpeg,webp}`,
+      `!${srcFolder}/images/favicon/**`,
+    ],
+    favicon: `${srcFolder}/images/favicon/**/*.*`,
+    scripts: `${srcFolder}/scripts/*.js`,
+    svgs: `${srcFolder}/svg/*.svg`,
+    svgSprite: `${srcFolder}/images/`,
+    robots: `${srcFolder}/robots.txt`,
+  },
+  watch: {
+    html: [
+      `${srcFolder}/**/*.html`,
+      `${srcFolder}/**/*.json`,
+    ],
+    scss: `${srcFolder}/scss/**/*.scss`,
+    files: `${srcFolder}/files/**/*.*`,
+    videos: `${srcFolder}/videos/**/*.*`,
+    images: `${srcFolder}/images/**/*.{jpg,jpeg,png,webp,ico,svg}`,
+    scripts: `${srcFolder}/scripts/**/*.js`,
+  },
+  clean: `${buildFolder}/**`,
+  buildFolder: buildFolder,
+  srcFolder: srcFolder,
+  rootFolder: rootFolder,
+};

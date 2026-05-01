@@ -1,0 +1,57 @@
+[
+  {
+    "src": "images/certificates/cert_01.jpg",
+    "thumb": "images/certificates/thumbs/cert_01.jpg",
+    "alt": "Рейтинг seo-агенств 3 2023 место Строительство",
+    "gallery": "project",
+    "orientation": "square",
+    "contain": true,
+    "width": 520,
+    "height": 520,
+    "class": "image_trophy"
+  },
+  {
+    "src": "images/certificates/trophy-02.jpg",
+    "thumb": "images/certificates/thumbs/trophy-02.jpg",
+    "alt": "Рейтинг seo-агенств 3 2023 место Интернет-магазины/ритейл",
+    "gallery": "trophy",
+    "orientation": "vertical",
+    "contain": true,
+    "width": 250,
+    "height": 340,
+    "class": "image_trophy image--grayscale"
+  },
+  {
+    "src": "images/certificates/trophy-03.jpg",
+    "thumb": "images/certificates/thumbs/trophy-03.jpg",
+    "alt": "Рейтинг seo-агенств 2022 4 место Строительство",
+    "gallery": "trophy",
+    "orientation": "vertical",
+    "contain": true,
+    "width": 250,
+    "height": 340,
+    "class": "image_trophy image--grayscale"
+  },
+  {
+    "src": "images/certificates/trophy-04.jpg",
+    "thumb": "images/certificates/thumbs/trophy-04.jpg",
+    "alt": "Рейтинг seo-агенств 2023 7 место",
+    "gallery": "trophy",
+    "orientation": "vertical",
+    "contain": true,
+    "width": 250,
+    "height": 340,
+    "class": "image_trophy image--grayscale"
+  },
+  {
+    "src": "images/certificates/trophy-05.jpg",
+    "thumb": "images/certificates/thumbs/trophy-05.jpg",
+    "alt": "Рейтинг seo-агенств 2022 12 место",
+    "gallery": "trophy",
+    "orientation": "vertical",
+    "contain": true,
+    "width": 250,
+    "height": 340,
+    "class": "image_trophy image--grayscale"
+  }
+]

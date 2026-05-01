@@ -1,0 +1,230 @@
+<div class="product-entry">
+  <div class="container">
+    <div class="product-entry__wrapper">
+      <div class="product-entry__item">
+        <main class="product-entry__main">
+          <h1 class="product-entry__heading _heading _h2">@@title</h1>
+          <form class="product-entry__form form" name="checkout" novalidate>
+            <div class="product-entry__main-items">
+              @@if(false){<div class="product-entry__main-item">
+                <div class="product-entry__row">
+                  <div class="form__item">
+                    <label>
+                      <input class="form__checkbox" type="checkbox" name="mirror">
+                      <span class="form__label">Зеркальная версия проекта (без доплаты)</span>
+                    </label>
+                  </div>
+                  <div class="product-entry__link-wrapper">
+                    <a href="#" class="product-entry__link" onclick="window.print();">
+                      <span>Распечатать проект</span><svg width="15" height="15" aria-hidden="true">
+                        <use href="images/icons.svg#print"></use>
+                      </svg></a>
+                  </div>
+                </div>
+              </div>}
+              @@if(context.code){<div class="product-entry__main-item">
+                <div class="product-entry__code">Артикул: <span>DE0194</span></div>
+              </div>}
+              @@if(false){<div class="product-entry__main-item">
+                @@include("./src/html/components/feature-buttons-add.html", {
+                  labels: true, wishlist: true, comparison: true
+                })
+              </div>
+              <div class="product-entry__separator"></div>
+              @@if(context.feature01){<div class="product-entry__main-item">
+                <div class="product-entry__features">
+                  @@if(context.feature01){
+                  <p><svg width="20" height="20" aria-hidden="true">
+                      <use href="images/icons.svg#floor"></use>
+                    </svg>@@if(context.feature01.key){<span>@@feature01.key</span>}
+                    <b>@@if(context.feature01.value){@@feature01.value}</b>
+                  </p>
+                  }
+                  @@if(context.feature02){
+                  <p><svg width="20" height="20" aria-hidden="true">
+                      <use href="images/icons.svg#resize"></use>
+                    </svg>@@if(context.feature02.key){<span>@@feature02.key</span>}
+                    <b>@@if(context.feature02.value){@@feature02.value}</b>
+                  </p>
+                  }
+                  @@if(context.feature03){
+                  <p><svg width="20" height="20" aria-hidden="true">
+                      <use href="images/icons.svg#bed"></use>
+                    </svg>@@if(context.feature03.key){<span>@@feature03.key</span>}
+                    <b>@@if(context.feature03.value){@@feature03.value}</b>
+                  </p>
+                  }
+                  @@if(context.feature04){
+                  <p>@@if(context.feature04.key){<span>@@feature04.key</span>}
+                    <b>@@if(context.feature04.value){@@feature04.value}</b>
+                  </p>
+                  }
+                  @@if(context.feature05){
+                  <p>@@if(context.feature05.key){<span>@@feature05.key</span>}
+                    <b>@@if(context.feature05.value){@@feature05.value}</b>
+                  </p>
+                  }
+                </div>
+              </div>}
+              <div class="product-entry__separator"></div>
+              <div class="product-entry__main-item">
+                <div class="form__item">
+                  <label>
+                    <input class="form__checkbox" type="checkbox" name="mirror">
+                    <span class="form__label">Архитектурный проект: <b>300 руб.</b></span>
+                  </label>
+                </div>
+                <div class="form__item">
+                  <label>
+                    <input class="form__checkbox" type="checkbox" name="mirror">
+                    <span class="form__label">Строительный проект: <b>1000 руб.</b></span>
+                  </label>
+                </div>
+                <div class="form__item">
+                  <label>
+                    <input class="form__checkbox" type="checkbox" name="mirror">
+                    <span class="form__label">Инженерные сети: <b>200 руб.</b></span>
+                  </label>
+                </div>
+              </div>
+              <div class="product-entry__separator"></div>}
+              @@if(false){<div class="product-entry__main-item">
+                <div class="product-entry__price-block-wrapper">
+                  <div class="product-entry__price-block">
+                    @@include('./src/html/components/counter.html')
+                    <div class="product-entry__price-wrapper">
+                      @@if (context.old_price) {
+                      <span class="product-entry__price product-entry__price_old">@@old_price RUB</span>
+                      }
+                      <span class="product-entry__price">@@price RUB</span>
+                    </div>
+                  </div>
+                </div>
+              </div>}
+              <div class="product-entry__main-item">
+                <div class="product-entry__price-block">
+                  <p class="product-entry__price-wrapper">
+                    @@if (context.old_price) {
+                    <span class="product-entry__price product-entry__price_old">от @@old_price руб. за м.п.</span>
+                    }
+                    <span class="product-entry__price">от @@price руб. за м.п.</span>
+                  </p>
+                  @@if(false){<p class="product-entry__price-wrapper">
+                    <span>Стоимость строительства <span class="product-entry__price">~ @@construction руб.</span></span>
+                  </p>
+                  <p class="product-entry__price-wrapper">
+                    <span>Сроки подготовки: <span class="product-entry__price product-entry__price_green">готов к
+                        отправке</span></span>
+                  </p>}
+                </div>
+              </div>
+              @@if(context.availability){
+              <div class="product-entry__main-item">
+                @@include('./src/html/components/availability.html', {
+                  in_stock: '@@if(availability == "in_stock"){true}',
+                  not_available: '@@if(availability == "not_available"){true}',
+                  on_order: '@@if(availability == "on_order"){true}'
+                })
+              </div>
+              }
+              <div class="product-entry__main-item">
+                <div class="_cc">
+                  <p class="_title">Краткая информация о доставке и оплате</p>
+                  <p>Lorem ipsum dolor sit amet consectetur. Etiam in massa ut eget ultrices aliquam etiam orci. Neque
+                    maecenas eu dis duis adipiscing nunc nulla arcu tincidunt. Vitae sit volutpat enim eget vel ut nunc
+                    eget. Ut velit quam quam amet viverra in praesent.</p>
+                </div>
+              </div>
+              <div class="product-entry__main-item">
+                <div class="product-entry__btn-wrapper">
+                  @@if(false){<button class="product-entry__btn _btn" type="submit" name="ms2_action" value="cart/add">В
+                    корзину</button>}
+                  <button class="product-entry__btn _btn" type="button" data-open-popup="contact-a-manager">Связаться с менеджером</button>
+                  @@if(false){<button class="product-entry__btn _btn" type="submit" name="project-order">Заказать
+                    проект</button>
+                  <div class="product-entry__link-wrapper">
+                    <a href="files/test.pdf" class="product-entry__link" target="_blank">
+                      <span>Образец готового проекта</span><svg width="15" height="15" aria-hidden="true">
+                        <use href="images/icons.svg#undo"></use>
+                      </svg></a>
+                  </div>}
+                </div>
+              </div>
+              @@if(context.listIcons){<div class="product-entry__main-item">
+                <div class="product-entry__additional-info">
+                  @@include('./src/html/components/list-icons.html', {
+                    jsonPath: '../json/product-page-list-icons.json'
+                  })
+                </div>
+              </div>}
+            </div>
+          </form>
+        </main>
+      </div>
+      <div class="product-entry__item product-entry__item_sliders">
+        <div class="product-entry__sliders-wrapper">
+          @@include('./src/html/include/product-entry-slider.html', {
+            sliderUrl: './src/html/include/product-entry-slider-item.html',
+            sliderThumbUrl: './src/html/include/product-entry-slider-item-thumb.html',
+            galleryUrl: '@@galleryUrl',
+            additionalClass: 'pcs-slider-01',
+            visible: true,
+            badges: false,
+            bestseller: @@bestseller,
+            novelty: @@novelty,
+            discount: @@discount
+          })
+        </div>
+        <div class="tabs" data-toggle-container="">
+          <nav class="tabs__nav _nav-slider swiper-initialized swiper-horizontal swiper-backface-hidden" role="tablist">
+            <div class="tabs__buttons _nav-slider__wrapper">
+              <button class="tabs__tab _nav-slider__slide _title swiper-slide-active" data-toggle="characteristics" type="button" aria-expanded="true" aria-controls="characteristics" role="tab">Характеристики</button>
+              <button class="tabs__tab _nav-slider__slide _title swiper-slide-next" data-toggle="description" type="button" aria-expanded="false" aria-controls="description" role="tab">Описание</button>
+            </div>
+          </nav>
+          <div class="tabs__content-wrapper">
+            <div id="characteristics" class="tabs__item active" data-target="characteristics" role="tabpanel">
+              <div class="tabs__inner _cc">
+                <table>
+                  <caption class="_sr-only">Характеристики</caption>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Параметр 1</th>
+                      <td><b>230 × 230 × 94 см</b></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Параметр 1</th>
+                      <td><b>230 × 230 × 94 см</b></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Параметр 1</th>
+                      <td><b>230 × 230 × 94 см</b></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Параметр 1</th>
+                      <td><b>230 × 230 × 94 см</b></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Параметр 1</th>
+                      <td><b>230 × 230 × 94 см</b></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div id="description" class="tabs__item" data-target="description" role="tabpanel">
+              <div class="tabs__inner _cc">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                  industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                  scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+                  electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+                  Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+                  Aldus PageMaker including.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

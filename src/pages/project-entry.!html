@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./src/html/page/head.html', {
+  title: "Проекты",
+  sliderPreload: false
+})
+
+<body>
+  <div class="wrapper">
+    @@include('./src/html/page/header.html', {
+      transparent: false
+    })
+
+    @@include('./src/html/blocks/background.html')
+
+    @@include('./src/html/components/breadcrumbs.html', {
+      elements: [
+        { name: 'Главная', link: '/' },
+        { name: 'Проекты', link: '/blog' },
+        { name: 'Название проекта', link: '' }
+      ]
+    })
+
+    @@include('./src/html/blocks/two-components.html', {
+        hStyle: 2,
+        heading: 'Прокат оборудования',
+        subheading: '',
+        extraClass: 'tc_full tc_banner',
+        title01: '',
+        component01url: './src/html/components/video-content.html',
+        component01params: '{ videoLink: "videos/content-1.mp4",videoPoster: "images/uslugi/uslugi3.png"}',
+        title02: '',
+        component02url: './src/html/components/custom-content.html',
+        component02params: '{ contents: "<p>Lorem ipsum dolor sit amet consectetur. Pellentesque dictumst diam lorem fusce penatibus. Egestas venenatis ac eget scelerisque a enim tellus eu mollis. Nulla eget nibh id integer facilisi vulputate. Etiam auctor eu porta faucibus cursus morbi. Euismod arcu proin varius eget nibh diam lacus duis nulla. Dictum aenean convallis in ultrices ut. Lacinia hac aliquet dolor semper.</p><p>Lorem ipsum dolor sit amet consectetur. Pellentesque dictumst diam lorem fusce penatibus. Egestas venenatis ac eget scelerisque a enim tellus eu mollis. Nulla eget nibh id integer facilisi vulputate. Etiam auctor eu porta faucibus cursus morbi. Euismod arcu proin varius eget nibh diam lacus duis nulla. Dictum aenean convallis in ultrices ut. Lacinia hac aliquet dolor semper.</p>" }',
+    })
+
+    @@include('./src/html/blocks/inner-items.html', {
+        extraClass: '_section_no-gap',
+        heading: '',
+        columns: '3',
+        columnsMobile: '',
+        itemPath: './src/html/components/image.html',
+        jsonPath: '"../json/certificates.json"',
+      })
+
+    @@include('./src/html/page/footer.html')
+  </div>
+  @@include("./src/html/page/body-bottom.html")
+</body>
+
+</html>

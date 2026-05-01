@@ -1,0 +1,35 @@
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>@@title</title>
+  <meta name="description" content="@@if(context.description){@@description}@@if(!context.description){Описание заглушка, заменить!}">
+
+  @@include("./src/html/page/favicon.html")
+
+  <!-- base preloads -->
+  <link rel="preload" href="images/placeholder.png" as="image">
+  <link rel="preload" href="fonts/ppneuemontreal_500.woff2" as="font" type="font/woff2" crossorigin="">
+
+  @@if (context.sliderPreload) {
+  <!-- main-banner first slide images preload -->
+  <link rel="preload" href="images/banners/home_01.webp" as="image" type="image/webp">
+  @@if(false){<link rel="preload" href="images/main-banner/banner-desktop-01.webp" as="image" media="(min-width: 768px)">
+  <link rel="preload" href="images/main-banner/banner-mobile-01.webp" as="image" media="(max-width: 767.98px)">
+  <link rel="preload" href="fonts/Hauora-SemiBold.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/Hauora-Light.woff2" as="font" type="font/woff2">}
+  }
+
+  <link media="screen" rel="stylesheet" href="styles/styles.min.css">
+  <!-- need to be hidden -->
+  <link media="screen" rel="stylesheet" href="files/jquery-ui.min.css" fetchpriority="low">
+  <link media="screen" rel="stylesheet" href="files/msearch2/default.css" fetchpriority="low">
+
+  <script src="scripts/main.js" async fetchpriority="high"></script>
+  <script src="scripts/slider.js" async></script>
+  <script src="scripts/inputmask.js" async fetchpriority="low"></script>
+  @@if(true){<script src="scripts/tippy.js" async></script>}
+
+  @@include('./src/html/page/noscript.html')
+</head>

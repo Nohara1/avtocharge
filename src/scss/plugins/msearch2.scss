@@ -1,0 +1,36 @@
+body {
+  #mse2_sort .sort {
+    span {
+      width: 10px;
+      color: var(--grey-100);
+      height: 11px;
+      display: block;
+      margin-right: 0.5em;
+
+      &::after {
+        width: 100%;
+        height: 100%;
+        content: "";
+        opacity: 0.95;
+        display: block;
+        transform: scaleY(-1);
+        background: url("../images/icons.svg#chevron-up") center/contain no-repeat;
+      }
+    }
+    &[data-dir="desc"] span::after {
+      content: "";
+      // background-image: url("../images/icons.svg#arrows-down");
+    }
+    &[data-dir="asc"] span::after {
+      content: "";
+      transform: scaleY(1);
+      // background-image: url("../images/icons.svg#arrows-up");
+    }
+  }
+  #mse2_sort a.active,
+  #mse2_tpl a.active {
+    color: var(--grey-100);
+    // color: var(--primary-c);
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,303 @@
+[
+  {
+    "id": "001",
+    "link": "product-page",
+    "imageSrc": "images/products/product.jpg",
+    "title": "Проект классического одноэтажного дома с гаражом",
+    "price": "1500",
+    "construction": "80000",
+    "feature01": {
+      "key": "Площадь",
+      "value": "120 м2"
+    },
+    "feature02": {
+      "key": "Габариты",
+      "value": "10 x 10"
+    },
+    "feature03": {
+      "key": "Спальня",
+      "value": "4"
+    },
+    "feature04": "",
+    "feature05": "",
+    "bestseller": false,
+    "novelty": true,
+    "discount": false
+  },
+  {
+    "id": "002",
+    "link": "product-page",
+    "imageSrc": "images/products/product.jpg",
+    "title": "Проект классического одноэтажного дома с гаражом",
+    "price": "1500",
+    "construction": "80000",
+    "feature01": {
+      "key": "Площадь",
+      "value": "120 м2"
+    },
+    "feature02": {
+      "key": "Габариты",
+      "value": "10 x 10"
+    },
+    "feature03": {
+      "key": "Спальня",
+      "value": "4"
+    },
+    "feature04": "",
+    "feature05": "",
+    "bestseller": false,
+    "novelty": true,
+    "discount": false
+  },
+  {
+    "id": "003",
+    "link": "product-page",
+    "imageSrc": "images/products/product.jpg",
+    "title": "Проект классического одноэтажного дома с гаражом",
+    "price": "1500",
+    "construction": "80000",
+    "feature01": {
+      "key": "Площадь",
+      "value": "120 м2"
+    },
+    "feature02": {
+      "key": "Габариты",
+      "value": "10 x 10"
+    },
+    "feature03": {
+      "key": "Спальня",
+      "value": "4"
+    },
+    "feature04": "",
+    "feature05": "",
+    "bestseller": false,
+    "novelty": true,
+    "discount": false
+  },
+  {
+    "id": "004",
+    "link": "product-page",
+    "imageSrc": "images/products/product.jpg",
+    "title": "Проект классического одноэтажного дома с гаражом",
+    "price": "1500",
+    "construction": "80000",
+    "feature01": {
+      "key": "Площадь",
+      "value": "120 м2"
+    },
+    "feature02": {
+      "key": "Габариты",
+      "value": "10 x 10"
+    },
+    "feature03": {
+      "key": "Спальня",
+      "value": "4"
+    },
+    "feature04": "",
+    "feature05": "",
+    "bestseller": false,
+    "novelty": true,
+    "discount": false
+  },
+  {
+    "id": "005",
+    "link": "product-page",
+    "imageSrc": "images/products/product.jpg",
+    "title": "Проект классического одноэтажного дома с гаражом",
+    "price": "1500",
+    "construction": "80000",
+    "feature01": {
+      "key": "Площадь",
+      "value": "120 м2"
+    },
+    "feature02": {
+      "key": "Габариты",
+      "value": "10 x 10"
+    },
+    "feature03": {
+      "key": "Спальня",
+      "value": "4"
+    },
+    "feature04": "",
+    "feature05": "",
+    "bestseller": true,
+    "novelty": true,
+    "discount": false
+  },
+  {
+    "id": "006",
+    "link": "product-page",
+    "imageSrc": "images/products/product.jpg",
+    "title": "Проект классического одноэтажного дома с гаражом",
+    "price": "1500",
+    "old_price": "1800",
+    "construction": "80000",
+    "feature01": {
+      "key": "Площадь",
+      "value": "120 м2"
+    },
+    "feature02": {
+      "key": "Габариты",
+      "value": "10 x 10"
+    },
+    "feature03": {
+      "key": "Спальня",
+      "value": "4"
+    },
+    "feature04": "",
+    "feature05": "",
+    "bestseller": false,
+    "novelty": true,
+    "discount": true
+  },
+  {
+    "id": "007",
+    "link": "product-page",
+    "imageSrc": "images/products/product.jpg",
+    "title": "Проект классического одноэтажного дома с гаражом",
+    "price": "1500",
+    "construction": "80000",
+    "feature01": {
+      "key": "Площадь",
+      "value": "120 м2"
+    },
+    "feature02": {
+      "key": "Габариты",
+      "value": "10 x 10"
+    },
+    "feature03": {
+      "key": "Спальня",
+      "value": "4"
+    },
+    "feature04": "",
+    "feature05": "",
+    "bestseller": false,
+    "novelty": true,
+    "discount": false
+  },
+  {
+    "id": "008",
+    "link": "product-page",
+    "imageSrc": "images/products/product.jpg",
+    "title": "Проект классического одноэтажного дома с гаражом",
+    "price": "1500",
+    "construction": "80000",
+    "feature01": {
+      "key": "Площадь",
+      "value": "120 м2"
+    },
+    "feature02": {
+      "key": "Габариты",
+      "value": "10 x 10"
+    },
+    "feature03": {
+      "key": "Спальня",
+      "value": "4"
+    },
+    "feature04": "",
+    "feature05": "",
+    "bestseller": false,
+    "novelty": true,
+    "discount": false
+  },
+  {
+    "id": "005",
+    "link": "product-page",
+    "imageSrc": "images/products/product.jpg",
+    "title": "Проект классического одноэтажного дома с гаражом",
+    "price": "1500",
+    "construction": "80000",
+    "feature01": {
+      "key": "Площадь",
+      "value": "120 м2"
+    },
+    "feature02": {
+      "key": "Габариты",
+      "value": "10 x 10"
+    },
+    "feature03": {
+      "key": "Спальня",
+      "value": "4"
+    },
+    "feature04": "",
+    "feature05": "",
+    "bestseller": false,
+    "novelty": true,
+    "discount": false
+  },
+  {
+    "id": "006",
+    "link": "product-page",
+    "imageSrc": "images/products/product.jpg",
+    "title": "Проект классического одноэтажного дома с гаражом",
+    "price": "1500",
+    "construction": "80000",
+    "feature01": {
+      "key": "Площадь",
+      "value": "120 м2"
+    },
+    "feature02": {
+      "key": "Габариты",
+      "value": "10 x 10"
+    },
+    "feature03": {
+      "key": "Спальня",
+      "value": "4"
+    },
+    "feature04": "",
+    "feature05": "",
+    "bestseller": false,
+    "novelty": true,
+    "discount": false
+  },
+  {
+    "id": "007",
+    "link": "product-page",
+    "imageSrc": "images/products/product.jpg",
+    "title": "Проект классического одноэтажного дома с гаражом",
+    "price": "1500",
+    "construction": "80000",
+    "feature01": {
+      "key": "Площадь",
+      "value": "120 м2"
+    },
+    "feature02": {
+      "key": "Габариты",
+      "value": "10 x 10"
+    },
+    "feature03": {
+      "key": "Спальня",
+      "value": "4"
+    },
+    "feature04": "",
+    "feature05": "",
+    "bestseller": false,
+    "novelty": true,
+    "discount": false
+  },
+  {
+    "id": "008",
+    "link": "product-page",
+    "imageSrc": "images/products/product.jpg",
+    "title": "Проект классического одноэтажного дома с гаражом",
+    "price": "1500",
+    "construction": "80000",
+    "feature01": {
+      "key": "Площадь",
+      "value": "120 м2"
+    },
+    "feature02": {
+      "key": "Габариты",
+      "value": "10 x 10"
+    },
+    "feature03": {
+      "key": "Спальня",
+      "value": "4"
+    },
+    "feature04": "",
+    "feature05": "",
+    "bestseller": false,
+    "novelty": true,
+    "discount": false
+  }
+]

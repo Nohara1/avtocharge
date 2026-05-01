@@ -1,0 +1,27 @@
+<article class="product-like">
+  <div class="product-like__inner">
+    <p class="product-like__iw _iw">
+      <img class="product-like__image" src="@@imageSrc" srcset="images/placeholder.png" data-srcset="@@imageSrc"
+        alt="@@title" width="380" height="350" decoding="async">
+    </p>
+    <a href="product-page" class="product-like__title _title">@@title</a>
+    @@if(context.availability) {
+      @@include('./src/html/components/availability.html', {
+        in_stock: '@@if(availability == "in_stock"){true}',
+        not_available: '@@if(availability == "not_available"){true}',
+        on_order: '@@if(availability == "on_order"){true}'
+      })
+    }
+    @@if(!context.features){<div class="product-like__text _cc"><p>Производитель 1, Производитель 2, Производитель 3, Производитель 4</p></div>}
+    @@if(context.features){<ul class="product-like__features">
+      <li>Характеристика 1</li>
+      <li>Характеристика 2</li>
+      <li>Характеристика 3</li>
+      <li>Характеристика 4</li>
+    </ul>}
+    <div class="product-like__bottom">
+      <p class="product-like__price _title">20 000 BYN</p>
+      <button class="product-like__btn _btn" type="button" data-open-popup="contact-a-manager">Связаться с менеджером</button>
+    </div>
+  </div>
+</article>

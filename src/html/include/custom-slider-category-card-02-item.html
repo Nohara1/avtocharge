@@ -1,0 +1,18 @@
+<div class="cs__slide"
+  @@if(context.c01){data-slide-category="@@if(c01){c01,}@@if(c02){c02,}@@if(c03){c03,}@@if(c04){c04,}}">
+  @@include('./src/html/components/category-card-02.html', {
+  "url": "@@url",
+  "name": "@@name",
+  "imageWidth": "@@imageWidth",
+  "imageHeight": "@@imageHeight",
+  "imageSrc": "@@imageSrc",
+  "tags": @@if(context.tags){
+  {
+  "t01": @@if(context.tags.t01){'@@tags.t01'}@@if(!context.tags.t01){null},
+  "t02": @@if(context.tags.t02){'@@tags.t02'}@@if(!context.tags.t02){null},
+  }
+  }@@if(!context.tags){null},
+  "price": "@@price",
+  "date": "@@date"
+  })
+</div>

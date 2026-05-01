@@ -1,0 +1,42 @@
+<div class="socials @@if(context.target){socials__target}">
+  @@if(context.facebook || context.all){<a href="https://www.facebook.com/" class="socials__link _btn _btn--square" target="_blank" aria-label="Facebook" data-tippy-content="Facebook">
+    <svg width="14" height="14" aria-hidden="true">
+      <use href="images/icons.svg#facebook@@if(!context.solid){_s}"></use>
+    </svg>
+  </a>}
+  @@if(context.vk || context.all){<a href="https://vk.com/" class="socials__link _btn _btn--square" target="_blank" aria-label="ВКонтакте" data-tippy-content="ВКонтакте">
+    <svg width="14" height="14" aria-hidden="true">
+      <use href="images/icons.svg#vk@@if(!context.solid){_s}"></use>
+    </svg>
+  </a>}
+  @@if(context.instagram || context.all){<a href="https://www.instagram.com/" class="socials__link _btn _btn--square" target="_blank" aria-label="Instagram" data-tippy-content="Instagram">
+    <svg class="svg-instagram" width="14" height="14" aria-hidden="true">
+      <use href="images/icons.svg#instagram@@if(!context.solid){_s}"></use>
+    </svg>
+  </a>}
+  @@if(context.tiktok || context.all){<a href="https://www.tiktok.com/" class="socials__link _btn _btn--square" target="_blank" aria-label="TikTok" data-tippy-content="TikTok">
+    <svg width="14" height="14" aria-hidden="true">
+      <use href="images/icons.svg#tiktok@@if(!context.solid){_s}"></use>
+    </svg>
+  </a>}
+  @@if(context.telegram || context.all){<a href="https://t.me/" class="socials__link _btn _btn--square" target="_blank" aria-label="Telegram" data-tippy-content="Telegram">
+    <svg width="14" height="14" aria-hidden="true">
+      <use href="images/icons.svg#telegram@@if(!context.solid){_s}"></use>
+    </svg>
+  </a>}
+  @@if(context.viber || context.all){<a href="https://www.viber.com/ru/" class="socials__link _btn _btn--square" target="_blank" aria-label="Viber" data-tippy-content="Viber">
+    <svg width="14" height="14" aria-hidden="true">
+      <use href="images/icons.svg#viber@@if(!context.solid){_s}"></use>
+    </svg>
+  </a>}
+  @@if(context.whatsapp || context.all){<a href="https://www.whatsapp.com/" class="socials__link _btn _btn--square" target="_blank" aria-label="WhatsApp" data-tippy-content="WhatsApp">
+    <svg width="14" height="14" aria-hidden="true">
+      <use href="images/icons.svg#whatsapp@@if(!context.solid){_s}"></use>
+    </svg>
+  </a>}
+  @@if(context.youtube || context.all){<a href="https://www.youtube.com/" class="socials__link _btn _btn--square" target="_blank" aria-label="YouTube" data-tippy-content="YouTube">
+    <svg width="14" height="14" aria-hidden="true">
+      <use href="images/icons.svg#youtube@@if(!context.solid){_s}"></use>
+    </svg>
+  </a>}
+</div>

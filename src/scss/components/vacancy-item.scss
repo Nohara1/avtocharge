@@ -1,0 +1,37 @@
+.vacancy {
+  &__inner {
+    > * {
+      padding-left: 2.25rem;
+      padding-right: 2.25rem;
+    }
+  }
+  &__top {
+    display: flex;
+    position: relative;
+    min-height: 3.75rem;
+    align-items: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: var(--grey-50);
+  }
+  // &__title {}
+  &__bottom {
+    font-size: 16px;
+    box-shadow: var(--box-shadow-default2);
+    padding-top: 1.875rem;
+    padding-bottom: 1.75rem;
+    background-color: var(--white);
+  }
+  &__text {
+    font-size: inherit;
+    font-weight: 400;
+    margin-bottom: 1.875rem;
+  }
+  &__link {
+    color: var(--primary-c);
+    line-height: 1.2;
+    font-weight: 600;
+    text-decoration: none;
+    @include link-hover-underline(var(--primary-c));
+  }
+}

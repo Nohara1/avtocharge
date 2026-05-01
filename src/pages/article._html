@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./src/html/page/head.html', {
+  title: "Виза для белорусов 2025 Запись в визовый центр более 50 стран",
+  sliderPreload: false
+})
+
+<body>
+  <div class="wrapper">
+    @@include('./src/html/page/header.html', {
+      transparent: false
+    })
+
+    @@include('./src/html/components/breadcrumbs.html', {
+      elements: [
+        { name: 'Главная', link: '/' },
+        { name: 'О нас', link: '/about' },
+        { name: 'Клиентам', link: '/clients' },
+        { name: 'Публичный договор оказания услуги', link: '' }
+      ]
+    })
+
+    @@include('./src/html/blocks/two-components.html', {
+      hStyle: 2,
+      heading: 'Публичный договор оказания услуги',
+      subheading: '',
+      title01: '',
+      extraClass: 'tc_proportions-rev _heading-wave _plane',
+      component01url: './src/html/include/blog-entry-nav.html',
+      component01params: 'null',
+      title02: '',
+      component02url: './src/html/components/custom-content.html',
+      component02params: '{ contents: "<p>Lorem ipsum dolor sit amet consectetur. Amet tincidunt dolor diam facilisi arcu habitant enim ornare massa. Quis ultrices sed facilisis dictumst neque arcu nunc tincidunt. Tempor tempus erat viverra vestibulum amet neque nisi. Lacus auctor euismod at morbi pharetra. Sociis a aliquet neque ut. Dolor risus volutpat magna nulla. Sagittis non viverra elit nibh. Quam enim nam ipsum dui tincidunt quam. Interdum purus egestas commodo habitant ipsum neque sed felis adipiscing. Tristique commodo nisi amet mattis blandit. Sollicitudin donec bibendum nunc sed vitae volutpat nulla et augue. Ultrices tempor quisque consequat sapien. Consequat euismod tincidunt lectus non. Vel ornare dignissim semper augue eu. Porttitor mollis sodales arcu ipsum arcu. Nisl id quis massa mauris curabitur scelerisque neque. Eleifend volutpat nec lorem viverra amet integer ipsum viverra. Imperdiet pellentesque amet commodo lorem odio enim etiam sem. Adipiscing sagittis ornare nam feugiat.</p><p>Lorem ipsum dolor sit amet consectetur. Amet tincidunt dolor diam facilisi arcu habitant enim ornare massa. Quis ultrices sed facilisis dictumst neque arcu nunc tincidunt. Tempor tempus erat viverra vestibulum amet neque nisi. Lacus auctor euismod at morbi pharetra. Sociis a aliquet neque ut. Dolor risus volutpat magna nulla. Sagittis non viverra elit nibh. Quam enim nam ipsum dui tincidunt quam.</p><p>Lorem ipsum dolor sit amet consectetur. Amet tincidunt dolor diam facilisi arcu habitant enim ornare massa. Quis ultrices sed facilisis dictumst neque arcu nunc tincidunt. Tempor tempus erat viverra vestibulum amet neque nisi. Lacus auctor euismod at morbi pharetra. Sociis a aliquet neque ut. Dolor risus volutpat magna nulla. Sagittis non viverra elit nibh. Quam enim nam ipsum dui tincidunt quam. Interdum purus egestas commodo habitant ipsum neque sed felis adipiscing. Tristique commodo nisi amet mattis blandit. Sollicitudin donec bibendum nunc sed vitae volutpat nulla et augue. Ultrices tempor quisque consequat sapien. Consequat euismod tincidunt lectus non. Vel ornare dignissim semper augue eu. Porttitor mollis sodales arcu ipsum arcu. Nisl id quis massa mauris curabitur scelerisque neque. Eleifend volutpat nec lorem viverra amet integer ipsum viverra. Imperdiet pellentesque amet commodo lorem odio enim etiam sem. Adipiscing sagittis ornare nam feugiat.</p><p>Lorem ipsum dolor sit amet consectetur. Amet tincidunt dolor diam facilisi arcu habitant enim ornare massa. Quis ultrices sed facilisis dictumst neque arcu nunc tincidunt. Tempor tempus erat viverra vestibulum amet neque nisi. Lacus auctor euismod at morbi pharetra. Sociis a aliquet neque ut.</p><p>Lorem ipsum dolor sit amet consectetur. Amet tincidunt dolor diam facilisi arcu habitant enim ornare massa. Quis ultrices sed facilisis dictumst neque arcu nunc tincidunt. Tempor tempus erat viverra vestibulum amet neque nisi. Lacus auctor euismod at morbi pharetra. Sociis a aliquet neque ut. Dolor risus volutpat magna nulla. Sagittis non viverra elit nibh. Quam enim nam ipsum dui tincidunt quam. Interdum purus egestas commodo habitant ipsum neque sed felis adipiscing. Tristique commodo nisi amet mattis blandit. Sollicitudin donec bibendum nunc sed vitae volutpat nulla et augue. Ultrices tempor quisque consequat sapien. Consequat euismod tincidunt lectus non. Vel ornare dignissim semper augue eu. Porttitor mollis sodales arcu ipsum arcu.</p>", extraClass: "_cc_contacts" }',
+    })
+
+    @@include('./src/html/blocks/banner.html', {
+      extraClass: 'b_bdrs',
+      slideClass: 'b__slide_right',
+      image: 'images/banners/visa_vsem.jpg',
+      heading: '',
+      text: '',
+      achievements: '',
+      component: './src/html/forms/request-a-call.html'
+    })
+
+    @@include('./src/html/page/footer.html')
+  </div>
+  @@include("./src/html/page/body-bottom.html")
+</body>
+
+</html>

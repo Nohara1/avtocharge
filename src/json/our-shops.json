@@ -1,0 +1,9 @@
+[
+  {
+    "name": "",
+    "address": "Адрес вашего шоу-рума номер 123, 56, 78, 910",
+    "schedule": "пн-вс 00:00-00:00",
+    "phoneElement": "<a href=\"tel:+375111111111\" target=\"_blank\">+375 11 111-11-11</a>",
+    "emailElement": "<a href=\"mailto:info@sandverlux.by\" target=\"_blank\">info@sandverlux.by</a>"
+  }
+]

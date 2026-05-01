@@ -1,0 +1,7 @@
+%form {
+  &__slider {
+    width: 100%;
+
+    @extend %form-slider !optional;
+  }
+}

@@ -1,0 +1,15 @@
+@@if(!context.arrow){<div class="cards-item">
+  <div class="cards-item__inner">
+    @@if(context.icon){<svg class="cards-item__icon" width="@@if(context.width){@@width}@@if(!context.width){50}"
+      height="@@if(context.height){@@height}@@if(!context.height){50}" aria-hidden="true">
+      <use href="images/icons.svg#@@icon"></use>
+    </svg>}
+    <div class="cards-item__content">
+      @@if(context.title){<p class="cards-item__title _title">@@title</p>}
+      @@if(context.text){<div class="cards-item__text _cc">@@text</div>}
+    </div>
+  </div>
+</div>}
+@@if(context.arrow){<div class="cards__arrow">
+  <div></div>
+</div>}

@@ -1,0 +1,68 @@
+// reviews-links
+.rl {
+  &%_plane {
+    &::after {
+      left: 0;
+      right: auto;
+      transform: scaleX(-1) translateX(20%);
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  &__heading {
+    --mb-lg: 0;
+    --mb-sm: 0;
+  }
+  &__button {
+    margin-left: 20px;
+  }
+  &__inner {
+    color: inherit;
+    border: 2px solid var(--primary-c-10);
+    display: block;
+    padding: 5.4% 11%;
+    margin-top: 3.125rem;
+    border-radius: 20px;
+    text-decoration: none;
+    background-color: var(--primary-c-10);
+
+    @media ($transition-min) {
+      transition: border-color var(--transition);
+
+      &[href] {
+        &:hover {
+          border-color: var(--primary-c-60);
+
+          @extend %review-links-inner-hover !optional;
+        }
+      }
+    }
+
+    @media ($mobile-max) {
+      padding: 30px 20px;
+    }
+  }
+  &__subheading {
+    --c: var(--primary-c);
+    --tt: uppercase;
+  }
+  &__items {
+    margin-top: 2.5rem;
+    align-items: center;
+    @include row(30px, 30px);
+
+    > * {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  &__iw {
+    img {
+      width: 18.75rem;
+    }
+  }
+}

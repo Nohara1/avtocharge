@@ -1,0 +1,16 @@
+@@if (name != '') {
+<li class="crumbs__li" itemscope itemprop="itemListElement" itemtype="https://schema.org/ListItem">
+  @@if (!current) {
+  <a class="crumbs__link" href="@@link" itemprop="item">
+    <span itemprop="name">@@name</span>
+    <meta itemprop="position" content="@@number">
+  </a>
+  }
+  @@if (current) {
+  <span class="crumbs__link" itemprop="name">
+    @@name
+    <meta itemprop="position" content="@@number">
+  </span>
+  }
+</li>
+}

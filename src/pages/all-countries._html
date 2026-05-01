@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./src/html/page/head.html', {
+  title: "Виза для белорусов 2025 Запись в визовый центр более 50 стран",
+  sliderPreload: false
+})
+
+<body>
+  <div class="wrapper">
+    @@include('./src/html/page/header.html', {
+      transparent: false
+    })
+
+    @@include('./src/html/components/breadcrumbs.html', {
+      elements: [
+        { name: 'Главная', link: '/' },
+        { name: 'Визы', link: '' }
+      ]
+    })
+
+    @@include('./src/html/blocks/inner-items.html', {
+      extraClass: 'ii_all-countries _heading-wave _plane',
+      heading: 'Визы в Европу',
+      subheading: '',
+      text: '',
+      columns: '6',
+      columnsMobile: '',
+      subcategoriesTitle: '',
+      subcategoriesJson: '',
+      itemPath: './src/html/components/inner-items/card-flag.html',
+      jsonPath: '"../json/inner-items-card-flag-18.json"'
+    })
+
+    @@include('./src/html/blocks/inner-items.html', {
+      extraClass: 'ii_all-countries _plane _plane_center',
+      heading: 'Визы в Азию',
+      subheading: '',
+      text: '',
+      columns: '6',
+      columnsMobile: '',
+      subcategoriesTitle: '',
+      subcategoriesJson: '',
+      itemPath: './src/html/components/inner-items/card-flag.html',
+      jsonPath: '"../json/inner-items-card-flag-12.json"'
+    })
+
+    @@include('./src/html/blocks/inner-items.html', {
+      extraClass: 'ii_all-countries _heading-wave _plane _plane_bottom',
+      heading: 'Визы в Северную и Южную Америку',
+      subheading: '',
+      text: '',
+      columns: '6',
+      columnsMobile: '',
+      subcategoriesTitle: '',
+      subcategoriesJson: '',
+      itemPath: './src/html/components/inner-items/card-flag.html',
+      jsonPath: '"../json/inner-items-card-flag-9.json"'
+    })
+
+    @@include('./src/html/blocks/inner-items.html', {
+      extraClass: 'ii_all-countries',
+      heading: 'Визы в Африку',
+      subheading: '',
+      text: '',
+      columns: '6',
+      columnsMobile: '',
+      subcategoriesTitle: '',
+      subcategoriesJson: '',
+      itemPath: './src/html/components/inner-items/card-flag.html',
+      jsonPath: '"../json/inner-items-card-flag-8.json"'
+    })
+
+    @@include('./src/html/blocks/inner-items.html', {
+      extraClass: 'ii_all-countries _heading-wave',
+      heading: 'Визы в Океанию и Австралию',
+      subheading: '',
+      text: '',
+      columns: '6',
+      columnsMobile: '',
+      subcategoriesTitle: '',
+      subcategoriesJson: '',
+      itemPath: './src/html/components/inner-items/card-flag.html',
+      jsonPath: '"../json/inner-items-card-flag-6.json"'
+    })
+
+    @@include('./src/html/blocks/two-components.html', {
+      hStyle: 2,
+      heading: '',
+      subheading: '',
+      title01: '',
+      extraClass: 'tc_proportions',
+      component01url: './src/html/components/map.html',
+      component01params: '{ mapUrl: "https://yandex.by/map-widget/v1/org/vizavsem/84805976119/?ll=27.587011%2C53.916563&z=18.09", }',
+      title02: '',
+      component02url: './src/html/forms/request-a-call.html',
+      component02params: 'null',
+    })
+
+    @@include('./src/html/page/footer.html')
+  </div>
+  @@include("./src/html/page/body-bottom.html")
+</body>
+
+</html>

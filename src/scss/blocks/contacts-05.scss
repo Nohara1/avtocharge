@@ -1,0 +1,166 @@
+.cont-05 {
+  $c05-breakpoint: "max-width: 1799px"; // start breakpoint
+  --c05-ip: 3.125rem; // item padding
+
+  %c05-border {
+    border: 2px solid var(--primary-c);
+    overflow: hidden;
+    border-radius: 30px;
+  }
+
+  &_image {
+    @extend %contacts-05-image !optional;
+  }
+
+  &__items {
+    @include row(3.125rem, 3.125rem);
+  }
+  &__item {
+    --fxb: 0%;
+    flex: 1 1 var(--fxb);
+    display: flex;
+    flex-direction: column;
+
+    @media ($c05-breakpoint) and ($tablet-min) {
+      %contacts-05-image & {
+        --fxb: 50%;
+      }
+    }
+    @media ($mobile-max) {
+      --fxb: 100%;
+    }
+
+    > * {
+      flex-grow: 1;
+      border-radius: 30px;
+    }
+    // &_info {}
+    &_phones {
+      @media ($tablet-mid) {
+        max-width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    &_map {
+      %contacts-05-image & {
+        order: 3;
+      }
+    }
+    &_image {
+      order: 4;
+      margin-left: auto;
+      margin-right: auto;
+
+      @media ($c05-breakpoint) and ($tablet-mid) {
+        %contacts-05-image & {
+          --fxb: 0%;
+          flex-grow: 0;
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
+  &__info {
+    @extend %c05-border;
+    color: var(--white);
+    display: flex;
+    padding: var(--c05-ip);
+    min-width: 370px;
+    flex-direction: column;
+    background-color: var(--primary-c);
+
+    %_heading {
+      color: inherit;
+      margin-bottom: 10px;
+    }
+    %_custom-content {
+      margin-bottom: 30px;
+    }
+  }
+  &__title {
+    text-transform: uppercase;
+
+    &%_heading {
+      margin-bottom: 50px;
+    }
+  }
+  &__extra {
+    color: var(--grey-10);
+    font-size: 16px;
+    margin-top: auto;
+  }
+  &__phones {
+    @extend %c05-border;
+    display: flex;
+    padding: var(--c05-ip);
+    font-size: 20px;
+    flex-direction: column;
+
+    %_heading {
+      margin-bottom: 10px;
+
+      + * {
+        margin-bottom: 30px;
+      }
+    }
+    %_custom-content {
+      a {
+        color: inherit;
+        text-decoration: none;
+
+        @media ($transition-min) {
+          transition: color var(--transition);
+
+          &:hover {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+    %_btn {
+      margin-top: auto;
+    }
+  }
+  &__map {
+    height: 25rem;
+    min-height: 300px;
+
+    @extend %c05-border;
+  }
+  &__button {
+    flex-grow: 0;
+    margin-top: 30px;
+    text-align: left;
+    justify-content: flex-start;
+
+    @media ($tablet-max) and ($tablet-min) {
+      --fz: 18px;
+      max-width: 460px;
+    }
+    @media ($mobile-max) {
+      --fz: 16px;
+    }
+
+    & + & {
+      margin-top: 20px;
+    }
+  }
+  %image {
+    width: 400px;
+    max-width: 100%;
+    @extend %c05-border;
+
+    @media ($desktop-max) and ($tablet-min) {
+      width: 330px;
+    }
+    @media ($mobile-max) {
+      width: 100%;
+    }
+
+    %image-wrapper {
+      height: 100%;
+      border-radius: 30px;
+    }
+  }
+}

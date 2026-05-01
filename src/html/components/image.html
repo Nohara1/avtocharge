@@ -1,0 +1,13 @@
+@@if(context.src){<div class="image@@if(context.class){ @@class}">
+  <p class="image__wrapper@@if(!context.responsive){ _iw}
+    @@if(!context.responsive && context.contain){ _iw--contain}
+    @@if(!context.responsive && context.orientation){ _iw--@@orientation}"
+    @@if(context.gallery){ role="button" data-gallery="@@gallery" tabindex="0" }>
+    <img src="@@src" alt="@@if(context.alt){@@alt}" srcset="images/placeholder.png"
+      data-srcset="@@if(context.thumb){@@thumb}@@if(!context.thumb){@@src}" @@if(context.width){width="@@width" }
+      @@if(context.height){height="@@height" } decoding="async">
+      @@if(context.tag){@@include('./src/html/components/tag-badge.html', { tag: '@@tag' })}
+  </p>
+  @@if(context.title){<@@if(!context.link){span}@@if(context.link){a href="@@link"} class="image__title _title">@@title</@@if(!context.link){span}@@if(context.link){a}>}
+  @@if(context.subtitle){<div class="image__subtitle _cc">@@subtitle</div>}
+</div>}

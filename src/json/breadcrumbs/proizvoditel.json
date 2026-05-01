@@ -1,0 +1,20 @@
+[
+  {
+    "number": "1",
+    "name": "Главная",
+    "link": "/",
+    "current": false
+  },
+  {
+    "number": "2",
+    "name": "Производители",
+    "link": "/proizvoditeli",
+    "current": false
+  },
+  {
+    "number": "3",
+    "name": "Название производителя",
+    "link": "",
+    "current": true
+  }
+]

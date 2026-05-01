@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./src/html/page/head.html', {
+"title": "Гидромассажные спа-бассейны"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('./src/html/page/header.html', { 'variant': 3 })
+    @@include('./src/html/components/breadcrumbs.html', {
+    'jsonPath': '../json/breadcrumbs/katalog.json'
+    })
+    @@include('./src/html/blocks/heading.html', {
+    'h1': true,
+    'heading': 'Модульные мини-дома hygge box под ключ'
+    })
+    @@include('./src/html/blocks/cards.html', {
+    'itemPath': './src/html/components/cards-item.html',
+    'jsonPath': '../json/cards-01.json'
+    })
+    @@include('./src/html/blocks/custom-slider.html', {
+    'h1style': false,
+    'gap': 25,
+    'slides': 4,
+    'mobSlides': 2,
+    'filter': false,
+    'heading': '',
+    'navigation': false,
+    'navigationStyle': 2,
+    'pagination': false,
+    'overflow': true,
+    'itemPath': './src/html/include/custom-slider-product-02-item.html',
+    'jsonPath': '../json/products-02.json'
+    })
+    @@include('./src/html/blocks/callback.html', {
+    'h1style': false,
+    'heading': 'Скачайте полный каталог домов',
+    'subheading': 'и выберете подходящую комплектацию!',
+    'formPath': './src/html/forms/request-a-messenger.html',
+    'image01': 'images/additional/callback-01.png',
+    'image01webp': 'images/additional/callback-01.webp',
+    'component': './src/html/components/animated/particles.html'
+    })
+    @@include('./src/html/blocks/cards.html', {
+    'variant': 5,
+    'itemPath': './src/html/components/cards-item.html',
+    'jsonPath': '../json/cards-02.json'
+    })
+    @@include('./src/html/blocks/custom-slider.html', {
+    'h1style': false,
+    'gap': 50,
+    'slides': 1,
+    'mobSlides': 1,
+    'filter': false,
+    'heading': 'Что такое модульный дом "Hygge"?',
+    'navigation': true,
+    'navigationStyle': 3,
+    'pagination': false,
+    'overflow': true,
+    'itemPath': './src/html/include/custom-slider-text-component.html',
+    'jsonPath': '../json/category-02-slider-text-component.json'
+    })
+    @@include('./src/html/blocks/cards.html', {
+    'heading': 'Преимущества модульного дома "Hygge"',
+    'itemPath': './src/html/components/cards-item.html',
+    'jsonPath': '../json/cards-01-8-items.json'
+    })
+    @@include('./src/html/blocks/callback.html', {
+    'h1style': false,
+    'features': true,
+    'heading': 'Соберите свой дом онлайн!',
+    'subheading': 'Узнайте стоимость Вашего дома под ключ учитывая:',
+    'component': './src/html/components/animated/house.html'
+    })
+    @@include('./src/html/blocks/custom-slider.html', {
+    'h1style': false,
+    'gap': 0,
+    'slides': 4,
+    'mobSlides': "auto",
+    'filter': false,
+    'heading': 'Наши конструктивные решения:',
+    'subheading': 'Мы используем современные технологии и материалы, отвечающие высокой экологичности!',
+    'navigation': false,
+    'navigationStyle': 2,
+    'pagination': true,
+    'itemPath': './src/html/include/custom-slider-card-fade-item.html',
+    'jsonPath': '../json/category-02-slider-fade-cards.json'
+    })
+    @@include('./src/html/blocks/collapse.html', {
+    'style': 2,
+    'self': true,
+    'jsonPath': '../json/collapse-6-pieces.json'
+    })
+    @@include('./src/html/blocks/cards.html', {
+    'heading': 'Почему Мы?',
+    'itemPath': './src/html/components/cards-item.html',
+    'jsonPath': '../json/cards-01-8-items.json'
+    })
+    @@include('./src/html/blocks/cards-steps.html', {
+    'heading': 'Этапы строительства модульного дома:'
+    })
+    @@include('./src/html/blocks/cards.html', {
+    'variant': 6,
+    'heading': 'Как мы работаем?',
+    'itemPath': './src/html/components/cards-item.html',
+    'jsonPath': '../json/cards-06.json'
+    })
+    @@include('./src/html/blocks/custom-slider.html', {
+    'h1style': false,
+    'gap': 25,
+    'slides': 4,
+    'mobSlides': "auto",
+    'filter': false,
+    'heading': 'Ещё больше о нас на нашем канале youtube',
+    'subheading': 'Более 400 видео обзоров на наши изделия и отзывы заказчиков на нашем YouTube канале:',
+    'navigation': true,
+    'navigationStyle': 2,
+    'pagination': false,
+    'itemPath': './src/html/include/custom-slider-video-item.html',
+    'jsonPath': '../json/homepage-custom-slider-videos.json',
+    'linkName': 'Перейти на YouTube',
+    'linkUrl': 'https://youtube.com'
+    })
+    @@include('./src/html/blocks/custom-slider.html', {
+    'h1style': false,
+    'gap': 25,
+    'slides': 3,
+    'mobSlides': "auto",
+    'filter': true,
+    'heading': 'Некоторые реализованные нами модульные дома и бани:',
+    'navigation': false,
+    'navigationStyle': 2,
+    'pagination': true,
+    'itemPath': './src/html/include/custom-slider-portfolio-item.html',
+    'jsonPath': '../json/portfolios-03.json',
+    })
+    @@include('./src/html/blocks/collapse.html', {
+    'heading': "Частые вопросы и ответы:",
+    'style': 2,
+    'self': true,
+    'jsonPath': '../json/collapse-6-pieces.json'
+    })
+    @@include('./src/html/blocks/form-with-image.html', {
+    'heading': 'Получите готовый зимний дом за 1 день',
+    'pathToForm': './src/html/forms/leave-a-request.html',
+    'subheading': 'Отмечайте новоселье в кругу семьи и друзей в день монтажа!'
+    })
+    @@include('./src/html/blocks/maps.html', {
+    'heading': 'Запишитесь на нашу выставку',
+    'subheading': 'У нас вы сможете посмотреть бани, купели и гриль беседки:',
+    'address01': 'г. Санкт-Петербург, п. Парголово, ул. Ломоносова д. 1 (выставка "Практика")',
+    'map01Url':
+    'https://yandex.by/map-widget/v1/?ll=30.265000%2C60.082853&mode=poi&poi%5Bpoint%5D=30.265000%2C60.082853&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D67226998196&z=17',
+    'button01': 'Посетить выставку',
+    'address02': 'г. Москва, МКАД, 25-ый км, ТК Конструктор, павильон Ж1.14',
+    'map02Url':
+    'https://yandex.ru/map-widget/v1/?um=constructor%3Ad8b2f4e73c1b59733796ae0b7919ca2f18f667c6c4f1eca2e07fe81239e1c288&source=constructor',
+    'button02': 'Посетить выставку'
+    })
+    @@include('./src/html/page/footer.html')
+  </div>
+  @@include("./src/html/page/body-bottom.html", {
+  'checkout': true,
+  'consultation': true
+  })
+</body>
+
+</html>

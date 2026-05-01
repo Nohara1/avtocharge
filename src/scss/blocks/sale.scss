@@ -1,0 +1,50 @@
+.sale {
+  overflow: hidden;
+
+  &__inner {
+    color: var(--white);
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    text-decoration: none;
+    justify-content: flex-end;
+
+    &::before {
+      top: 25%;
+      left: auto;
+      right: calc(var(--container-p) / -2);
+      color: var(--white);
+      z-index: 0;
+      opacity: 0.1;
+      content: "CWEB";
+      display: block;
+      position: absolute;
+      font-size: 19vw;
+      transform: translateY(-25%);
+      text-align: center;
+      font-weight: 700;
+      line-height: 0.77;
+      user-select: none;
+      pointer-events: none;
+      text-transform: uppercase;
+  
+      @media ($tablet-max) {
+        font-size: 28vw;
+      }
+    }
+  }
+  &__title {
+    margin-bottom: 3.125rem;
+  }
+  &__text {
+    --c: inherit;
+    margin-bottom: 30px;
+
+    @media ($desktop-min) {
+      max-width: 50%;
+    }
+  }
+  &__button {
+    align-self: flex-end;
+  }
+}

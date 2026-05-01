@@ -1,0 +1,58 @@
+.inner-banner {
+  // &__heading {}
+  &__inner {
+    color: var(--white);
+    padding: 5.1875rem;
+    position: relative;
+    overflow: hidden;
+    background: none center/cover no-repeat var(--secondary-c);
+    border-radius: 5px;
+
+    @media ($tablet-mad) {
+      padding: 2.5rem;
+    }
+
+    &::before {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      content: "";
+      // opacity: 0.5;
+      display: block;
+      position: absolute;
+      // background-color: var(--grey-100);
+      background-image: var(--linear-gradient1);
+    }
+
+    > * {
+      position: relative;
+      max-width: 600px;
+    }
+  }
+  &__subheading {
+    color: inherit;
+    margin-bottom: 30px;
+
+    &%_h3 {
+      font-weight: 700;
+    }
+  }
+  &__text {
+    font-size: 18px;
+    line-height: 1.67;
+
+    @media ($desktop-max) and ($tablet-min) {
+      font-size: 16px;
+    }
+    @media ($mobile-max) {
+      font-size: 14px;
+    }
+  }
+  &__button {
+    margin-top: 30px;
+  }
+  %form {
+    margin-top: 20px;
+  }
+}

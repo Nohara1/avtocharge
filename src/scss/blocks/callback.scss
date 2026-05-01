@@ -1,0 +1,114 @@
+.callback {
+  &_features {
+    @extend %callback-features !optional;
+  }
+  // &__heading {}
+  &__subheading {
+    max-width: 550px;
+  }
+  &__items-wrapper {
+    display: flex;
+    margin-top: 2rem;
+    background: none center/cover no-repeat hsla(43, 35%, 78%, 1);
+    // background-image: url("../images/icons.svg#wave");
+    flex-direction: column;
+    background-image: var(--linear-gradient);
+    border-radius: 10px;
+  }
+  &__items {
+    flex-grow: 1;
+    align-items: center;
+    @include row($gapL: 3.125rem);
+  }
+  &__item {
+    @media ($desktop-min) {
+      flex: 1 1 50%;
+      max-width: 50%;
+
+      %callback-features & {
+        &:nth-child(2n + 1) {
+          flex: 1 1 65%;
+          max-width: 65%;
+        }
+        &:nth-child(2n + 2) {
+          flex: 1 1 35%;
+          max-width: 35%;
+        }
+      }
+    }
+    @media ($tablet-max) {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+
+    &_to-bottom {
+      align-self: flex-end;
+    }
+  }
+  &__text {
+    color: var(--white);
+    padding: 3.8125rem 8%;
+
+    %_h3 {
+      color: var(--white);
+      margin-bottom: 0.75rem;
+    }
+  }
+  &__form {
+    padding: 3.8125rem 8%;
+  }
+  &__images {
+    display: flex;
+    // overflow: hidden;
+    position: relative;
+    max-width: 885px;
+    margin-left: auto;
+    align-items: flex-start;
+    border-radius: 0 0 5px 0;
+
+    @media ($desktop-min) {
+      margin-top: -10rem;
+
+      %callback-features & {
+        margin-top: 0;
+      }
+    }
+    @media ($tablet-max) {
+      padding: 0 0.5rem;
+      // margin-top: 5%;
+      margin-bottom: 5%;
+    }
+  }
+  &__image {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  &__additional-image {
+    right: 0;
+    width: 69%;
+    bottom: 0;
+    height: 100%;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+  }
+
+  &__features {
+    padding: 3.8125rem 0 3.8125rem 8%;
+  }
+  &__features-list {
+    @include row(1.875rem, 1.875rem, true);
+  }
+  &__features-list-item {
+    display: flex;
+    color: var(--white);
+    align-items: center;
+  }
+  &__features-title {
+    margin-left: 10px;
+  }
+  &__features-button {
+    margin-top: 2.625rem;
+  }
+}

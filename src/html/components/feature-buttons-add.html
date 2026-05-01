@@ -1,0 +1,35 @@
+@@if(context.comparison || context.wishlist || context.cart || context.search){<div
+  class="feature-buttons feature-buttons_addings">
+  @@if(context.wishlist){<div class="feature-buttons__item">
+    <a class="feature-buttons__link-wrapper" href="/wishlist" @@if(!context.labels){data-tippy-content="В желаемое" }>
+      <span class="feature-buttons__link">
+        <svg class="feature-buttons__icon" width="16" height="16" aria-hidden="true">
+          <use href="images/icons.svg#heart"></use>
+        </svg>
+      </span>
+      <span class="feature-buttons__label@@if(!context.labels){ _sr-only}">В желаемое</span>
+    </a>
+  </div>}
+  @@if(context.comparison){<div class="feature-buttons__item">
+    <a class="feature-buttons__link-wrapper" href="/comparison" @@if(!context.labels){data-tippy-content="В сравнение"
+      }>
+      <span class="feature-buttons__link">
+        <svg class="feature-buttons__icon" width="20" height="20" aria-hidden="true">
+          <use href="images/icons.svg#comparison"></use>
+        </svg>
+      </span>
+      <span class="feature-buttons__label@@if(!context.labels){ _sr-only}">В сравнение</span>
+    </a>
+  </div>}
+  @@if(context.cart){<div class="feature-buttons__item">
+    <button class="feature-buttons__link-wrapper" type="button" name="cart-button"
+      @@if(!context.labels){data-tippy-content="В корзину" }>
+      <span class="feature-buttons__link">
+        <svg class="feature-buttons__icon" width="20" height="20" aria-hidden="true">
+          <use href="images/icons.svg#cart"></use>
+        </svg>
+      </span>
+      <span class="feature-buttons__label@@if(!context.labels){ _sr-only}">В корзину</span>
+    </button>
+  </div>}
+</div>}

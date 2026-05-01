@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./src/html/page/head.html', {
+  title: 'Название продукта'
+})
+
+<body>
+  <div class="wrapper">
+    @@include('./src/html/page/header.html')
+
+    @@include('./src/html/components/breadcrumbs.html', {
+      jsonPath: '../json/breadcrumbs/product-page.json'
+    })
+
+    @@include('./src/html/blocks/products/product-entry.html', {
+      id: '002',
+      title: 'Название товара',
+      url: 'product-page',
+      code: false,
+      availability: 'in_stock',
+      listIcons: false,
+      galleryUrl: '../json/product-page-gallery.json',
+      price: '1500',
+      old_price: '2000',
+      construction: '80000',
+      feature01: {
+        key: 'Площадь',
+        value: '120 м2'
+      },
+      feature02: {
+        key: 'Габариты',
+        value: '10 x 10'
+      },
+      feature03: {
+        key: 'Спальня',
+        value: '4'
+      },
+      feature04: '',
+      feature05: '',
+      bestseller: true,
+      novelty: false,
+      discount: true
+    })
+
+    @@if(false){@@include('./src/html/blocks/products/tabs.html', {
+      anchors: true,
+      facades: true,
+      plans: true,
+      description: true,
+      characteristics: true,
+      video: false,
+      documents: false,
+      equipment: false,
+      specialOffer: true
+    })
+
+    @@include('./src/html/blocks/callback.html', {
+      h1style: false,
+      heading: 'Скачайте полный каталог домов',
+      subheading: 'и выберете подходящую комплектацию!',
+      formPath: './src/html/forms/request-a-messenger.html',
+      image01: 'images/additional/callback-01.png',
+      image01webp: 'images/additional/callback-01.webp',
+      component: './src/html/components/animated/particles.html'
+    })
+
+    @@include('./src/html/blocks/custom-slider.html', {
+      h1style: false,
+      gap: 50,
+      slides: 4,
+      mobSlides: 2,
+      heading: 'Похожие модели',
+      itemPath: './src/html/include/custom-slider-product-02-item.html',
+      jsonPath: '../json/products-02.json'
+    })}
+
+    @@include('./src/html/blocks/cards.html', {
+      heading: 'Заголовок',
+      variant: 2,
+      reverseColors: false,
+      itemPath: './src/html/components/cards-item.html',
+      jsonPath: '../json/cards-01.json'
+    })
+
+    @@include('./src/html/blocks/custom-slider.html', {
+      h1style: false,
+      gap: 70,
+      slides: 4,
+      mobSlides: 1.2,
+      filter: false,
+      heading: 'Похожие товары',
+      text: '',
+      navigation: true,
+      navigationStyle: 1,
+      pagination: false,
+      itemPath: './src/html/include/custom-slider-product-like.html',
+      jsonPath: '../json/custom-slider-product-like.json',
+      linkUrl: '',
+      linkName: ''
+    })
+
+    @@if(false){@@include('./src/html/blocks/products/related-products.html', {
+      heading: 'Похожие товары'
+    })}
+
+    @@include('./src/html/page/footer.html')
+  </div>
+  @@include('./src/html/page/body-bottom.html', {
+    checkout: false,
+    contactManager: true
+  })
+</body>
+
+</html>

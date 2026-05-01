@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('./src/html/page/head.html', {
+  "title": "Новости компании"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('./src/html/page/header.html', { 'variant': 4 })
+
+    @@include('./src/html/blocks/blog.html', {
+      'heading': 'Новости компании',
+      'tabs': false,
+      'headingLevel': 'h1',
+      'jsonPath': '../json/blog.json'
+    })
+
+    @@include('./src/html/blocks/form-block.html', {
+      'pathToForm': './src/html/forms/feedback.html'
+    })
+
+    @@include('./src/html/page/footer.html')
+  </div>
+  @@include("./src/html/page/body-bottom.html")
+</body>
+
+</html>

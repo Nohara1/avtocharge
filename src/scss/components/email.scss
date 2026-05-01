@@ -1,0 +1,16 @@
+.email {
+  display: flex;
+  &-icon{
+    align-items: center
+  }
+
+  &__target{
+    @extend %email-target !optional;
+  }
+
+  %two-components-form &{
+    margin-top: 15px;
+  }
+
+  @extend %email !optional;
+}

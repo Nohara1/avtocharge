@@ -1,0 +1,65 @@
+<form class="form form_gradient" name="request" novalidate="">
+  <div class="form__items">
+    <div class="form__item form__item_third">
+      <label>
+        <span class="form__label _sr-only">Имя</span>
+        <svg class="form__input-icon" width="16" height="16" aria-hidden="true">
+          <use href="images/icons.svg#user"></use>
+        </svg>
+        <input class="form__input" type="text" name="name" value="" data-required="" placeholder="Имя">
+        <span class="form__error-message"></span>
+      </label>
+    </div>
+    <div class="form__item form__item_third">
+      <label>
+        <span class="form__label _sr-only">Телефон</span>
+        <svg class="form__input-icon" width="16" height="16" aria-hidden="true">
+          <use href="images/icons.svg#phone"></use>
+        </svg>
+        <input class="form__input" type="tel" name="phone" value="" data-required="" placeholder="Телефон">
+        <span class="form__error-message"></span>
+      </label>
+    </div>
+    <div class="form__item form__item_third">
+      <label>
+        <span class="form__label _sr-only">Ваш e-mail</span>
+        <svg class="form__input-icon" width="16" height="16" aria-hidden="true">
+          <use href="images/icons.svg#email"></use>
+        </svg>
+        <input class="form__input" type="email" name="email" value="" data-required="" placeholder="Ваш e-mail*">
+        <span class="form__error-message"></span>
+      </label>
+    </div>
+    <div class="form__item form__item_third">
+      <label>
+        <span class="form__label _sr-only">Интересующая вакансия</span>
+        <input class="form__input" type="text" name="vacancy" value="" data-required="" placeholder="Интересующая вакансия*">
+        <span class="form__error-message"></span>
+      </label>
+    </div>
+    <div class="form__item form__item_auto">
+      <div class="form__item-wrapper form__item-wrapper_row">
+        <span class="form__item-heading">Резюме</span>
+        <div class="form__file">
+          <label>
+            <input class="_sr-only" type="file" name="files" multiple="multiple"
+              accept=".jpg,.jpeg,.png,.tiff,.webp,.bmp,.jp2" data-max-size="5">
+            <span>Выбрать файл</span>
+            <span class="form__label" data-file-name="">Файл не выбран</span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form__item">
+      <label>
+        <span class="form__label _sr-only">Комментарий</span>
+        <textarea class="form__input" name="description" placeholder="Комментарий"></textarea>
+      </label>
+    </div>
+    <div class="form__item">
+      <div class="form__buttons-wrapper">
+        <button class="form__button _btn _btn--transparent" type="submit" name="submit">Отправить</button>
+      </div>
+    </div>
+  </div>
+</form>

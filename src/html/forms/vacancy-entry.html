@@ -1,0 +1,52 @@
+<form class="form" name="vacancy-entry" novalidate="">
+  <div class="form__items">
+    <div class="form__item">
+      <p class="form__heading _heading _h3">Заполните форму и мы свяжемся с вами, для обсуждения деталей.</p>
+    </div>
+    <div class="form__item">
+      <label>
+        <span class="form__label _sr-only">Имя*</span>
+        <input class="form__input" type="text" name="name" value="" data-required="" placeholder="Имя*">
+        <span class="form__error-message"></span>
+      </label>
+    </div>
+    <div class="form__item">
+      <label>
+        <span class="form__label _sr-only">Телефон*</span>
+        <input class="form__input" type="tel" name="phone" value="" data-required="" placeholder="Телефон*">
+        <span class="form__error-message"></span>
+      </label>
+    </div>
+    <div class="form__item">
+      <label>
+        <span class="form__label _sr-only">Сопроводительное письмо*</span>
+        <textarea class="form__input" name="letter" data-required="" placeholder="Сопроводительное письмо*"></textarea>
+      </label>
+    </div>
+    <div class="form__item form__item_small-gap">
+      <div class="form__item-wrapper form__item-wrapper_row">
+        <span class="form__item-heading">Прикрепить резюме*:</span>
+        <div class="form__item">
+          <label class="form__file">
+            <input class="_sr-only" type="file" name="files" multiple="multiple"
+              accept=".jpg,.jpeg,.png,.tiff,.webp,.bmp,.jp2" data-max-size="5">
+            <span class="form__label" data-file-name="">Файл не выбран</span>
+            <span class="_btn _btn--transparent" data-file-button="Изменить файл">Выбрать файл</span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form__item form__item_small-gap">
+      <div class="form__buttons-wrapper">
+        <button class="form__button _btn _btn--transparent" type="submit" name="submit">Отправить</button>
+        <label class="form__personal">
+          <input class="form__checkbox" type="checkbox" name="agree" data-required="">
+          <span class="form__label">Согласен(а) с условиями <a href="files/test.pdf" target="_blank">политики обработки
+              персональных данных</a></span>
+        </label>
+        @@if(false){<span class="form__personal">Нажимая на кнопку, вы соглашаетесь с условиями <a href="files/test.pdf"
+            target="_blank">политики обработки персональных данных</a></span>}
+      </div>
+    </div>
+  </div>
+</form>

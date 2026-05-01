@@ -1,0 +1,98 @@
+.vacs {
+  // %_heading {}
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__logo-wrapper {
+    --vacs-logo-fz: 300px;
+    --vacs-logo-fz: calc(32vh - calc(var(--sticky-el-header) + var(--sticky-el-indent)) / 3);
+    flex: 0 1 34%;
+    display: flex;
+    position: relative;
+    min-width: calc(var(--vacs-logo-fz) * 0.8);
+    margin-right: 3.125rem;
+    margin-bottom: -50%;
+    justify-content: center;
+
+    @media ($tablet-mad) {
+      flex: 0 1 100%;
+      position: absolute;
+    }
+  }
+  &__logo {
+    @extend %sticky-element;
+    color: var(--primary-c);
+    width: 0;
+    height: 0;
+    z-index: -1;
+    display: block;
+
+    span {
+      display: block;
+      position: absolute;
+      font-size: var(--vacs-logo-fz);
+      line-height: 0;
+      font-weight: 700;
+      user-select: none;
+      transform: translateX(-100%) rotate(-90deg);
+      transition: font-size var(--transition);
+      letter-spacing: 0.01em;
+      transform-origin: 100% 50%;
+    }
+  }
+  &__items {
+    flex: 1 1 0%;
+    flex-direction: column;
+    @include row(50px, 50px);
+  }
+  &__item {
+    &_closed {
+      @extend %vacancies-item-closed !optional;
+    }
+  }
+  &__header {
+    align-items: center;
+    @include row(20px, 30px, true);
+  }
+  &__title {
+    --c: var(--grey-100);
+    --fw: 300;
+    transition: color 0.2s;
+    text-transform: none;
+    text-decoration: underline;
+
+    @media ($transition-min) {
+      &:hover {
+        --c: var(--primary-c);
+      }
+    }
+
+    %vacancies-item-closed & {
+      --c: var(--grey-80);
+    }
+
+    svg {
+      margin-left: 10px;
+    }
+  }
+  &__tag {
+    --bc: var(--primary-c);
+    color: var(--white);
+    padding: 10px 20px;
+    font-size: 14px;
+    line-height: 1.4;
+    border-radius: 10px;
+    background-color: var(--bc);
+
+    %vacancies-item-closed & {
+      --bc: var(--grey-80);
+    }
+  }
+  %_custom-content {
+    margin-top: 20px;
+  }
+  %vacancies-item-closed %_custom-content {
+    --c: var(--grey-80);
+  }
+}

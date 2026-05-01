@@ -1,0 +1,42 @@
+<div class="gallery01 g01">
+  <div class="g01__items">
+    <div class="g01__main">
+      <div class="g01__swiper-wrapper">
+        @@for(var i = 0; i < images.length; i++){
+          <div class="g01__slide">
+            <p class="g01__iw _iw" data-gallery="g01" role="button" tabindex="0">
+              <img src="`+images[i].src+`" srcset="images/placeholder.png" data-srcset="`+images[i].thumb+`"
+                alt="Изображение галереи `+i+`" width="`+images[i].width+`" height="`+images[i].height+`" decoding="async">
+            </p>
+          </div>
+        }
+      </div>
+      @@if(context.navigation){
+      <button class="g01__nav-btn g01__nav-btn_prev" type="button" aria-label="Предыдущий слайд">
+        <svg width="20" height="10" aria-hidden="true"><use href="images/icons.svg#chevron"></use></svg>
+      </button>
+      <button class="g01__nav-btn g01__nav-btn_next" type="button" aria-label="Следующий слайд">
+        <svg width="20" height="10" aria-hidden="true"><use href="images/icons.svg#chevron"></use></svg>
+      </button>
+      }
+    </div>
+    <div class="g01__thumbs">
+      @@if(false){<button class="g01__nav-btn g01__nav-btn_prev _btn _btn--nav" type="button" aria-label="Предыдущий слайд">
+        <svg width="20" height="10" aria-hidden="true"><use href="images/icons.svg#chevron"></use></svg>
+      </button>}
+      <div class="g01__swiper-wrapper">
+        @@for(var i = 0; i < images.length; i++){
+          <div class="g01__slide">
+            <p class="g01__iw _iw _iw--square">
+              <img src="`+images[i].thumb+`" srcset="images/placeholder.png" data-srcset="`+images[i].thumb+`" alt=""
+                width="100" height="100" decoding="async">
+            </p>
+          </div>
+        }
+      </div>
+      @@if(false){<button class="g01__nav-btn g01__nav-btn_next _btn _btn--nav" type="button" aria-label="Следующий слайд">
+        <svg width="20" height="10" aria-hidden="true"><use href="images/icons.svg#chevron"></use></svg>
+      </button>}
+    </div>
+  </div>
+</div>

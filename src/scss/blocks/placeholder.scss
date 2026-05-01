@@ -1,0 +1,20 @@
+.placeholder {
+  // &__heading {
+  // }
+  &__inner {
+    color: var(--white);
+    height: 32rem;
+    display: flex;
+    font-size: 1.875rem;
+    font-weight: 600;
+    align-items: center;
+    text-transform: uppercase;
+    justify-content: center;
+    background-color: change-color($color: $primary-color, $alpha: 0.6);
+
+    @media ($mobile-max) {
+      height: 26rem;
+      font-size: 1.5rem;
+    }
+  }
+}

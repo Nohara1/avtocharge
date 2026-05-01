@@ -1,0 +1,26 @@
+.our-work {
+  // &__heading {
+  // }
+  &__items {
+    @include row(3.125rem, 3.125rem);
+
+    > * {
+      flex: 1 1 33.3333%;
+      max-width: 33.3333%;
+
+      @media ($tablet-max) and ($tablet-min) {
+        max-width: 50%;
+        flex-basis: 50%;
+      }
+      @media ($mobile-max) {
+        max-width: 100%;
+        flex-basis: 100%;
+      }
+    }
+  }
+  &__button-wrapper {
+    margin-top: 1.625rem;
+    justify-content: center;
+    @include row(1.5rem, 1.5rem, true);
+  }
+}

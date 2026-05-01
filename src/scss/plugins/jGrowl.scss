@@ -1,0 +1,23 @@
+#jGrowl {
+  font-family: inherit;
+
+  .jGrowl-notification {
+    .jGrowl-close {
+      margin: -0.3em -0.3em 0 0;
+      font-size: 2em;
+      line-height: 0.85;
+    }
+    &.ms2-message-success {
+      background-color: var(--valid) !important;
+    }
+    &.ms2-message-error {
+      background-color: var(--error) !important;
+    }
+    &.ms2-message-info {
+      background-color: var(--heading-c) !important;
+    }
+  }
+  .jGrowl-closer {
+    background-color: var(--heading-c);
+  }
+}

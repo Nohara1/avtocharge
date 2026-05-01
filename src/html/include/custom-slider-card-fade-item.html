@@ -1,0 +1,16 @@
+<div class="cs__slide cs__slide_card">
+  <div class="fade-card">
+    <div class="fade-card__inner" @@if(context.image){style="background-image:url(@@image)" }>
+      @@if(context.title){<p class="fade-card__title _title">@@title</p>}
+      @@if(context.icon || context.fadedIcon){<div class="fade-card__icons">
+        @@if(context.icon){<svg class="fade-card__icon" width="77" height="77">
+          <use href="images/icons.svg#@@icon"></use>
+        </svg>}
+        @@if(context.fadedIcon){<svg class="fade-card__icon" width="77" height="77">
+          <use href="images/icons.svg#@@fadedIcon"></use>
+        </svg>}
+      </div>}
+      @@if(context.text){<div class="fade-card__text _cc">@@text</div>}
+    </div>
+  </div>
+</div>

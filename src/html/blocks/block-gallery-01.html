@@ -1,0 +1,21 @@
+<section class="block-gallery-01 bg01@@if(context.extraClass){ @@extraClass}">
+  <div class="container">
+    @@include('./src/html/components/heading.html', {
+      heading: '@@if(context.heading){@@heading}',
+      hLevel: '@@if(context.hLevel){@@hLevel}',
+      hStyle: '@@if(context.hStyle){@@hStyle}'
+    })
+    <div class="bg01__items">
+      @@for(var i = 0; i < images.length; i++){
+        <div class="bg01__item">
+          <div class="image image--grayscale">
+            <p class="image__wrapper _iw" role="button" data-gallery="bg01" tabindex="0">
+              <img src="`+images[i].src+`" alt="Изображение галереи `+i+`" srcset="`+images[i].thumb+`"
+                width="`+images[i].width+`" height="`+images[i].height+`" decoding="async">
+            </p>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,23 @@
+<div id="@@id" class="sw__tabpanel sw__content @@if(context.active){@@active}" data-target="@@id" role="tabpanel">
+    <!-- <div class="sw__interlayer"> -->
+    <div class="sw__content _cc">
+            @@include('./src/html/blocks/two-components.html', {
+                hStyle: 2,
+                heading: '',
+                subheading: '',
+                title01: '',
+                extraClass: 'sw_tc',
+                component01url: './src/html/components/custom-content.html',
+                component01params: '{ contents: "<h3>Проектирование</h3><p>При подготовке проекта учитывают несколько важных критериев:</p><p><strong>Задачи фирмы-заказчика.</strong><br>Компьютерная сеть должна решать задачи компании-владельца. Поэтому они — первое, что учитывается при подготовке проекта.</p><p><strong>Возможности.</strong><br>Проектирование ограничено площадью имеющегося помещения. С учетом нее готовят топонимику сети, располагают ее узлы.</p><p><strong>Бюджет.</strong><br>От того, сколько денег готов потратить заказчик на реализацию проекта, зависит перечень используемого оборудования.</p><p>Когда проект готов, его согласовывают с заказчиком. Если все в порядке, приступают к монтажу.</p>", extraClass: "" }',
+                title02: '',
+                component02url: './src/html/components/image.html',
+                component02params: '{ src: "images/uslugi/uslugi2.png", thumb: "images/uslugi/uslugi2.png", alt: "описание изображения для uslugi", width: "680", height: "400", class: "image_uslugi", }',
+        })
+    </div>
+    @@if(context.link){
+    <div class="sw__link-wrapper">
+        <a href="@@link" class="sw__link _btn _btn--text">Подробнее</a>
+    </div>
+    }
+    <!-- </div> -->
+</div> 

@@ -1,0 +1,122 @@
+[
+  {
+    "imageSrc": "images/products/product-example.jpg",
+    "title": "Название товара",
+    "features": true,
+    "availability": "in_stock",
+    "c01": true,
+    "c02": false,
+    "c03": false,
+    "c04": false
+  },
+  {
+    "imageSrc": "images/products/product-example.jpg",
+    "title": "Название товара",
+    "features": true,
+    "availability": "in_stock",
+    "c01": true,
+    "c02": false,
+    "c03": false,
+    "c04": false
+  },
+  {
+    "imageSrc": "images/products/product-example.jpg",
+    "title": "Название товара",
+    "features": true,
+    "availability": "in_stock",
+    "c01": false,
+    "c02": true,
+    "c03": false,
+    "c04": false
+  },
+  {
+    "imageSrc": "images/products/product-example.jpg",
+    "title": "Название товара",
+    "features": true,
+    "availability": "in_stock",
+    "c01": false,
+    "c02": true,
+    "c03": false,
+    "c04": false
+  },
+  {
+    "imageSrc": "images/products/product-example.jpg",
+    "title": "Название товара",
+    "features": true,
+    "availability": "in_stock",
+    "c01": false,
+    "c02": false,
+    "c03": true,
+    "c04": false
+  },
+  {
+    "imageSrc": "images/products/product-example.jpg",
+    "title": "Название товара",
+    "features": true,
+    "availability": "in_stock",
+    "c01": false,
+    "c02": false,
+    "c03": true,
+    "c04": false
+  },
+  {
+    "imageSrc": "images/products/product-example.jpg",
+    "title": "Название товара",
+    "features": true,
+    "availability": "in_stock",
+    "c01": false,
+    "c02": false,
+    "c03": false,
+    "c04": true
+  },
+  {
+    "imageSrc": "images/products/product-example.jpg",
+    "title": "Название товара",
+    "features": true,
+    "availability": "in_stock",
+    "c01": false,
+    "c02": false,
+    "c03": false,
+    "c04": true
+  },
+  {
+    "imageSrc": "images/products/product-example.jpg",
+    "title": "Название товара",
+    "features": true,
+    "availability": "in_stock",
+    "c01": true,
+    "c02": false,
+    "c03": false,
+    "c04": false
+  },
+  {
+    "imageSrc": "images/products/product-example.jpg",
+    "title": "Название товара",
+    "features": true,
+    "availability": "in_stock",
+    "c01": false,
+    "c02": true,
+    "c03": false,
+    "c04": false
+  },
+  {
+    "imageSrc": "images/products/product-example.jpg",
+    "title": "Название товара",
+    "features": true,
+    "availability": "in_stock",
+    "c01": false,
+    "c02": false,
+    "c03": true,
+    "c04": false
+  },
+  {
+    "imageSrc": "images/products/product-example.jpg",
+    "title": "Название товара",
+    "features": true,
+    "availability": "in_stock",
+    "c01": false,
+    "c02": false,
+    "c03": false,
+    "c04": true
+  }
+]

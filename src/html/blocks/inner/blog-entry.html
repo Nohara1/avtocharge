@@ -1,0 +1,67 @@
+<div class="be blog-entry@@if(context.extraClass){ @@extraClass} _section">
+  <div class="container">
+    <header class="be__heading-wrapper">
+      <h1 class="be__heading _heading _h2">@@heading</h1>
+    </header>
+    <div class="be__items">
+      @@include('./src/html/include/blog-entry-nav.html', {
+        extraClass: 'be__nav'
+      })
+      <main class="be__inner">
+        @@if(context.hasMainImage){
+        <p class="be__iw _iw">
+          <img class="be__image" src="@@imageSrc" srcset="images/placeholder.png" data-srcset="@@imageSrc"
+            alt="@@title" width="1150" height="616">
+            @@if(context.tag){@@include('./src/html/components/tag-badge.html', { 'tag': '@@tag' })}
+        </p>
+        }
+        @@if(context.date){<time class="be__date" datetime="@@dateFormat">@@date</time>}
+        @@if(context.author){<div class="be__author">Автор: @@author</div>}
+        @@if(context.description){
+        <div class="be__description _cc">
+          @@description
+        </div>
+        }
+        @@if(context.relatedProduct){
+        <div class="be__related-product">
+          @@loop('./src/html/components/related-product.html', '@@relatedProduct')
+        </div>
+        }
+        <div class="be__content _cc">
+          @@contents
+        </div>
+        @@if(context.buttons){
+        <div class="be__buttons">
+          <a href="#" class="be__button be__button--prev">
+            <svg width="30" height="30" aria-hidden="true">
+              <use href="images/icons.svg#arrow"></use>
+            </svg>
+            Предыдущая статья
+          </a>
+          <a href="#" class="be__button be__button--next">
+            Следующая статья
+            <svg width="30" height="30" aria-hidden="true">
+              <use href="images/icons.svg#arrow"></use>
+            </svg>
+          </a>
+        </div>}
+      </main>
+    </div>
+    @@if(context.hasRelatedBlogs){
+    <aside class="be__related-entries">
+      <p class="be__subheading _heading _h2">Рекомендуемые статьи</p>
+      <div class="be__related-entries-items">
+        @@loop('./src/html/components/blog-item.html', '../json/related-blog-entries.json')
+      </div>
+    </aside>
+    }
+    @@if(context.hasRelatedProducts){
+      <aside class="be__related-entries">
+        @@if(false){<p class="be__subheading _heading _h2">Похожие товары</p>}
+        <div class="be__related-entries-items">
+          @@loop('./src/html/components/product-card-03.html', '../json/products-03-three.json')
+        </div>
+      </aside>
+      }
+  </div>
+</div>

@@ -1,0 +1,134 @@
+.two-colored {
+  // &__heading {
+  // }
+  &__items {
+    @include row(3.125rem, 3.125rem);
+
+    > * {
+      flex: 1 1 50%;
+      max-width: 50%;
+
+      @media ($tablet-max) {
+        max-width: 100%;
+        flex-basis: 100%;
+      }
+    }
+  }
+  &__item {
+    &:nth-child(2n + 1) {
+      @extend %two-colored-item-first !optional;
+    }
+    &:nth-child(2n + 2) {
+      @extend %two-colored-item-second !optional;
+    }
+  }
+  &__inner {
+    color: var(--white);
+    height: 100%;
+    padding: 5.125rem 7.8125rem;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    // background: url("../images/icons.svg#wave") center/cover no-repeat;
+    border-radius: 5px;
+
+    @media ($desktop-max) and ($desktop-min) {
+      padding: 7.8125rem 5.125rem;
+    }
+    @media ($tablet-mad) {
+      padding: 5.5625rem 2.375rem;
+    }
+
+    %two-colored-item-first & {
+      background-color: var(--valid);
+    }
+    %two-colored-item-second & {
+      background-color: var(--primary-c);
+    }
+  }
+  &__image {
+    position: absolute;
+    background: none center/contain no-repeat;
+
+    &-01 {
+      top: -100px;
+      left: -100px;
+      width: 277px;
+      height: 277px;
+      background-position: left top;
+
+      @media ($desktop-max) {
+        transform: scale(0.8);
+      }
+      @media ($mobile-max) {
+        top: -120px;
+        left: -120px;
+        transform: scale(0.6);
+      }
+    }
+    &-02 {
+      right: 0;
+      width: 115px;
+      bottom: 45%;
+      height: 240px;
+      transform: translateY(50%);
+      background-position: right center;
+
+      @media ($desktop-max) {
+        bottom: 5%;
+        height: 140px;
+        transform: none;
+      }
+      @media ($mobile-max) {
+        height: 120px;
+      }
+    }
+    &-03 {
+      top: 0;
+      left: 0;
+      width: 246px;
+      height: 241px;
+      background-position: left top;
+
+      @media ($desktop-max) {
+        top: -40px;
+        left: -40px;
+      }
+      @media ($mobile-max) {
+        top: -60px;
+        left: -60px;
+        transform: scale(0.8);
+      }
+    }
+    &-04 {
+      right: 0;
+      width: 372px;
+      bottom: 0;
+      height: 122px;
+      background-position: right bottom;
+
+      @media ($desktop-max) {
+        right: -20px;
+        bottom: -40px;
+      }
+      @media ($mobile-max) {
+        right: -80px;
+        bottom: -50px;
+        transform: scale(0.8);
+      }
+    }
+  }
+  &__title {
+    position: relative;
+  }
+  &__text {
+    position: relative;
+    font-size: 18px;
+    margin-top: 30px;
+    line-height: 1.67;
+
+    @media ($desktop-max) {
+      font-size: 16px;
+    }
+  }
+}

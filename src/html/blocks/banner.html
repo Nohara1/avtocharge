@@ -1,0 +1,46 @@
+<section class="banner b@@if(context.extraClass){ @@extraClass}">
+  <div class="b__slider">
+    @@for(var i = 0; i < 2; i++){
+    <div class="b__slide@@if(context.slideClass){ @@slideClass}"@@if(context.image){ style="background-image: url('@@image');"}>
+      <div class="container">
+        @@if(context.imageDesktop && context.imageMobile){
+        <p class="b__iw _iw" data-animate="appearing" data-animate-delay="500">
+          <img class="b__image" src="@@imageDesktop" srcset="@@imageDesktop 1920w, @@imageMobile 767w"
+            sizes="(min-width: 768px) 1920px, (max-width: 767.98px) 767px" alt="@@imageAlt" decoding="async">
+        </p>}
+        @@if(context.imageDesktop && !context.imageMobile){
+        <p class="b__iw _iw" data-animate="appearing" data-animate-delay="500">
+          <img class="b__image" src="@@imageDesktop" srcset="@@imageDesktop" alt="@@imageAlt" decoding="async">
+        </p>}
+        <div class="b__content">
+          <h1 class="b__heading _heading _h1" data-animate="appearing" data-animate-delay="0">@@heading</h1>
+          @@if(context.text){<div class="b__text _cc" data-animate="appearing" data-animate-delay="300">@@text</div>}
+          @@if(context.button){<button class="b__button _btn _btn--transparent" data-animate="appearing" data-animate-delay="600">@@button</button>}
+          @@if(context.achievements){@@include('./src/html/components/main-banner/banner-achievements.html', {
+            attr: 'data-animate="appearing" data-animate-delay="600"',
+            achievements: @@achievements
+          })}
+          @@if(context.component){
+          <div class="b__component" data-animate="appearing" data-animate-delay="900">
+            @@include('@@component')
+          </div>
+          }
+        </div>
+      </div>
+    </div>
+    }
+    @@if(true){
+    <div class="b__nav b__nav_prev">
+      <svg width="20" height="40" aria-hidden="true">
+        <use href="images/icons.svg#chevron"></use>
+      </svg>
+    </div>
+    <div class="b__nav b__nav_next">
+      <svg width="20" height="40" aria-hidden="true">
+        <use href="images/icons.svg#chevron"></use>
+      </svg>
+    </div>
+    @@if(false){<div class="b__pagination"></div>}
+    }
+  </div>
+</section>

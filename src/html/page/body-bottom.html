@@ -1,0 +1,36 @@
+<aside class="popups-wrapper" aria-label="Всплывающие окна">
+  @@loop('./src/html/page/popup.html', [{
+    enabled: true,
+    id: 'request-a-call',
+    autoOpen: false,
+    autoOpenDelay: '0.5',
+    autoOpenTime: '11,8',
+    formSrc: './src/html/forms/request-a-call.html'
+  },{
+    enabled: true,
+    id: 'thank-you',
+    formSrc: './src/html/forms/thank-you.html'
+  },{
+    enabled: '@@if(context.contactManager){@@contactManager}',
+    id: 'contact-a-manager',
+    formSrc: './src/html/forms/contact-a-manager.html'
+  },{
+    enabled: '@@if(context.docs){@@docs}',
+    id: 'docs',
+    extraClass: 'popup_lg',
+    formSrc: './src/html/include/popup-docs.html'
+  },{
+    enabled: '@@if(context.promo){@@promo}',
+    id: 'promo',
+    autoOpen: true,
+    autoOpenInterval: 1,
+    autoOpenDelay: 1,
+    imageSrc: 'images/additional/popup.jpg',
+    formSrc: './src/html/forms/promo.html'
+  }])
+  @@if(false){@@include("./src/html/components/cookie.html")}
+</aside>
+@@if(false){@@include("./src/html/components/search-popup.html", { images: false })}
+@@include("./src/html/components/scroll-top.html")
+@@if(true){<svg xmlns="http://www.w3.org/2000/svg" class="_sr-only" aria-hidden="true"><defs><linearGradient id="instagram-fill" x1="2.23374" y1="27.7663" x2="27.272" y2="2.72802" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#E09B3D"/><stop offset="0.3" stop-color="#C74C4D"/><stop offset="0.6" stop-color="#C21975"/><stop offset="1" stop-color="#7024C4"/></linearGradient><filter id="baBlur" width="200%" height="200%" x="-50%" y="-50%" color-interpolation-filters="sRGB"><feGaussianBlur in="SourceGraphic" stdDeviation="30" /></filter></defs></svg>}
+@@if(true){@@include('./src/html/components/service-widget.html')}

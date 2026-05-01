@@ -1,0 +1,8 @@
+{
+  "disabled": [
+    "ritwickdey.LiveServer",
+    "glenn2223.live-sass"
+  ],
+  "autoReload": true,
+  "openInNewWindow": true
+}

@@ -1,0 +1,40 @@
+.subcategories-filter {
+  border: 2px solid var(--text-l);
+  padding: 1.9rem 2.8rem;
+  border-radius: 10px;
+  width: 23.75rem;
+  @extend %sticky-element;
+
+  @media ($tablet-max) {
+    width: 100%;
+  }
+
+  &__heading {
+    color: var(--primary-c);
+    margin-bottom: 20px;
+  }
+  &__items {
+    @include row(20px, 20px);
+  }
+  &__item {
+    flex: 1 1 100%;
+    max-width: 100%;
+
+    @media ($tablet-max) and ($tablet-min) {
+      max-width: 50%;
+      flex-basis: 50%;
+    }
+  }
+  &__link {
+    color: var(--text-l);
+    text-decoration: none;
+
+    @media ($transition-min) {
+      transition: color 0.3s;
+    
+      &:hover {
+        color: var(--text-c);
+      }
+    }
+  }
+}

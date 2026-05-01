@@ -1,0 +1,58 @@
+[
+  {
+    "src": "images/additional/review.jpg",
+    "thumb": "images/additional/review.jpg",
+    "alt": "опсание отзыва",
+    "orientation": "vertical",
+    "contain": false,
+    "gallery": true,
+    "width": 230,
+    "height": 326,
+    "responsive": false,
+    "class": "image_review",
+    "title": "",
+    "subtitle": ""
+  },
+  {
+    "src": "images/additional/review.jpg",
+    "thumb": "images/additional/review.jpg",
+    "alt": "опсание отзыва",
+    "orientation": "vertical",
+    "contain": false,
+    "gallery": true,
+    "width": 230,
+    "height": 326,
+    "responsive": false,
+    "class": "image_review",
+    "title": "",
+    "subtitle": ""
+  },
+  {
+    "src": "images/additional/review.jpg",
+    "thumb": "images/additional/review.jpg",
+    "alt": "опсание отзыва",
+    "orientation": "vertical",
+    "contain": false,
+    "gallery": true,
+    "width": 230,
+    "height": 326,
+    "responsive": false,
+    "class": "image_review",
+    "title": "",
+    "subtitle": ""
+  },
+  {
+    "src": "images/additional/review.jpg",
+    "thumb": "images/additional/review.jpg",
+    "alt": "опсание отзыва",
+    "orientation": "vertical",
+    "contain": false,
+    "gallery": true,
+    "width": 230,
+    "height": 326,
+    "responsive": false,
+    "class": "image_review",
+    "title": "",
+    "subtitle": ""
+  }
+]

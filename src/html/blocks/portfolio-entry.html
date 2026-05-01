@@ -1,0 +1,127 @@
+<div class="portfolio-entry">
+  <div class="container">
+    <h1 class="portfolio-entry__heading _heading _h2">@@title</h1>
+    <div class="portfolio-entry__wrapper">
+      @@if(false){<div class="portfolio-entry__item">
+        <span class="portfolio-entry__title _heading _h2">Товар из нашего каталога</span>
+        @@include('./src/html/components/product-card-01.html', {
+        "id": "001",
+        "link": "cpa-basseyn-wellis-saturn",
+        "imageSrc": "images/products/example-font-01.png",
+        "title": "Cпа-бассейн Wellis Saturn",
+        "price": 158,
+        "seats": 5,
+        "collection": "My line",
+        "size": "230 х 230 х 88 см",
+        "nozzles": 50,
+        "bestseller": false,
+        "novelty": false,
+        "discount": false,
+        "in_stock": true,
+        "not_available": false,
+        "on_order": false
+        })
+      </div>}
+      <div class="portfolio-entry__item">
+        <div class="portfolio-entry__main-items">
+          @@if(context.feature01){<div class="portfolio-entry__main-item">
+            <div class="portfolio-entry__features">
+              @@if(context.feature01){
+              <p><svg width="20" height="20" aria-hidden="true">
+                  <use href="images/icons.svg#floor"></use>
+                </svg>@@if(context.feature01.key){<span>@@feature01.key</span>}
+                <b>@@if(context.feature01.value){@@feature01.value}</b>
+              </p>
+              }
+              @@if(context.feature02){
+              <p><svg width="20" height="20" aria-hidden="true">
+                  <use href="images/icons.svg#resize"></use>
+                </svg>@@if(context.feature02.key){<span>@@feature02.key</span>}
+                <b>@@if(context.feature02.value){@@feature02.value}</b>
+              </p>
+              }
+              @@if(context.feature03){
+              <p><svg width="20" height="20" aria-hidden="true">
+                  <use href="images/icons.svg#bed"></use>
+                </svg>@@if(context.feature03.key){<span>@@feature03.key</span>}
+                <b>@@if(context.feature03.value){@@feature03.value}</b>
+              </p>
+              }
+              @@if(context.feature04){
+              <p>@@if(context.feature04.key){<span>@@feature04.key</span>}
+                <b>@@if(context.feature04.value){@@feature04.value}</b>
+              </p>
+              }
+              @@if(context.feature05){
+              <p>@@if(context.feature05.key){<span>@@feature05.key</span>}
+                <b>@@if(context.feature05.value){@@feature05.value}</b>
+              </p>
+              }
+            </div>
+          </div>}
+          <div class="portfolio-entry__separator"></div>
+          <div class="portfolio-entry__main-item">
+            <div class="portfolio-entry__info _cc">
+              <p>Строительство дома под ключ по типовому <a href="#">проекту 123456</a></p>
+            </div>
+          </div>
+          <div class="portfolio-entry__main-item">
+            <div class="portfolio-entry__description _cc">
+              <p class="_heading _h3">Описание проекта</p>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
+                of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+                like Aldus PageMaker including.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-entry__item portfolio-entry__item_sliders">
+        <div class="portfolio-entry__sliders-wrapper">
+          @@include('./src/html/include/product-entry-slider.html', {
+          'sliderUrl': './src/html/include/product-entry-slider-item.html',
+          'sliderThumbUrl': './src/html/include/product-entry-slider-item-thumb.html',
+          'galleryUrl': '@@galleryUrl',
+          'additionalClass': 'pcs-slider-01',
+          'visible': true,
+          'badges': false,
+          'bestseller': @@bestseller,
+          'novelty': @@novelty,
+          'discount': @@discount
+          })
+        </div>
+      </div>
+    </div>
+    @@if(false){<div class="portfolio-entry__description _cc _section">
+      <p><strong>Гидромассажная ванна</strong> — это привычная ванна, дополнительно оснащенная системой форсунок и
+        насосов для образования струй и воздушных пузырьков.</p>
+      <p><a href="#">Гидромассажную ванну</a> можно вынести на террасу или во двор, но чаще всего ее устанавливают
+        внутри помещения. Данный вид оборудования требует подключения к центральному водоснабжению и канализации. Такую
+        ванну устанавливают в домах и квартирах в качестве основной. В ней ежедневно купаются или принимают душ,
+        используя мыло и шампунь. Функция гидромассажа выступает приятным дополнением к основному гигиеническому
+        назначению.</p>
+      <p>Системы фильтрации и нагрева воды, предусмотренные в некоторых моделях, служат для упрощения установки и
+        продления срока эксплуатации форсунок. Габариты и форма гидромассажной ванны могут отличаться в зависимости от
+        производителя и модели, но, как правило, не превышают 700 литров. Такой объем резервуара позволяет оборудовать
+        максимум два или три массажных места.</p>
+    </div>}
+    @@if(context.review){<div class="portfolio-entry__review _section">
+      <h2 class="_heading _h2">Отзыв заказчика</h2>
+      @@include('./src/html/components/review-item.html', {
+        "author": "Алексей",
+        "photo": "",
+        "rating": 5,
+        "date": "21.10.2022",
+        "dateFormat": "2022-10-21",
+        "commentary": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh neque, venenatis sed quam vitae, facilisis placerat lectus. AliquamLorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh neque, venenatis sed quam vitae, facilisis placerat lectus. Aliquam Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh neque, venenatis sed quam vitae, facilisis placerat lectus. Aliquam</p>",
+        "positive": "",
+        "negative": "",
+        "images": false,
+        "button": "",
+        "image": true
+      })
+    </div>}
+  </div>
+</div>

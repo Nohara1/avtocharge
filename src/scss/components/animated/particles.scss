@@ -1,0 +1,51 @@
+.particle {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+
+  &::before,
+  &::after {
+    top: 0;
+    left: 0;
+    content: "";
+    display: block;
+    position: absolute;
+    animation: pulse 10s ease-in-out infinite;
+    border-radius: 50%;
+    background-color: var(--primary-c);
+  }
+  &-01 {
+    &::before {
+      top: -13%;
+      left: 9%;
+      width: 11.2%;
+      padding-bottom: 11.2%;
+      animation-delay: 2s;
+    }
+    &::after {
+      top: -20%;
+      left: 85%;
+      width: 5.6%;
+      padding-bottom: 5.6%;
+      animation-delay: 1s;
+    }
+  }
+  &-02 {
+    &::before {
+      top: 88%;
+      left: 65%;
+      width: 13.1%;
+      padding-bottom: 13.1%;
+      animation-delay: 5s;
+    }
+    &::after {
+      top: 39%;
+      left: 81%;
+      width: 17.6%;
+      padding-bottom: 17.6%;
+      animation-delay: 7s;
+    }
+  }
+}

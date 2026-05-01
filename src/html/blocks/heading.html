@@ -1,0 +1,9 @@
+<div class="heading@@if(context.noGap){ heading--no-gap} _section">
+  <div class="container">
+    @@include('./src/html/components/heading.html', {
+      heading: '@@if(context.heading){@@heading}',
+      hLevel: '@@if(context.hLevel){@@hLevel}',
+      hStyle: '@@if(context.hStyle){@@hStyle}'
+    })
+  </div>
+</div>

@@ -1,0 +1,123 @@
+.house {
+  left: 50%;
+  width: 90%;
+  z-index: 1;
+  position: relative;
+  max-width: 520px;
+
+  @media ($tablet-max) and ($tablet-mid) {
+    left: 70%;
+    max-width: 300px;
+    padding-bottom: 5%;
+  }
+  @media ($tablet-mad) {
+    width: 70%;
+    padding: 90px 0;
+    max-width: 250px;
+  }
+
+  &:hover {
+    @extend %house-hover !optional;
+  }
+  // &._animate {
+  //   @extend %house-animate !optional;
+  // }
+  // &[data-animate="appearing"]:not(._animate) {
+  //   transform: translateY(-50%);
+  // }
+  // &:not([data-animate="appearing"]._animate) {
+  //   @extend %house-no-animation !optional;
+  // }
+  &__item {
+    position: absolute;
+    transition: transform 0.3s;
+
+    svg {
+      height: auto;
+      // opacity: 0;
+      max-width: 100%;
+      //   animation: house 2s cubic-bezier(0.25, 1, 0.5, 1) forwards paused;
+      animation: house 6s ease-in-out forwards infinite;
+
+      //   %house-no-animation & {
+      //     opacity: 1;
+      //     transform: translateY(30%);
+      //   }
+    }
+
+    // %house-animate & {
+    //   svg {
+    //     animation-play-state: running;
+    //   }
+    // }
+    %house-hover & {
+      svg {
+        animation: none;
+      }
+    }
+  }
+  &__roof {
+    z-index: 2;
+    max-width: 100%;
+    transform: translate(-50%, -77.5%);
+
+    %house-hover & {
+      transform: translate(-50%, -73.5%);
+    }
+
+    svg {
+      animation-delay: 0.6s;
+    }
+  }
+  &__wall-01 {
+    z-index: 1;
+    max-width: 50.4%;
+    transform: translate(-96%, -20%);
+
+    %house-hover & {
+      transform: translate(-91%, -24%);
+    }
+
+    svg {
+      animation-delay: 1.9s;
+    }
+  }
+  &__wall-02 {
+    z-index: 1;
+    max-width: 43.1%;
+    transform: translate(13%, -19%);
+
+    %house-hover & {
+      transform: translate(10%, -17%);
+    }
+
+    // svg {
+    //   animation-delay: 0.2s;
+    // }
+  }
+}
+// @keyframes house {
+//   0% {
+//     opacity: 0;
+//     transform: translateY(0);
+//   }
+//   100% {
+//     opacity: 1;
+//     transform: translateY(30%);
+//   }
+// }
+@keyframes house {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(-1%, -0.5%);
+  }
+  50% {
+    transform: translate(1%, 0);
+  }
+  85% {
+    transform: translate(-0.25%, 1%);
+  }
+}

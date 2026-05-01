@@ -1,0 +1,28 @@
+img-comparison-slider {
+  display: block;
+  --divider-width: 3px;
+  --divider-color: #{var(--grey-10)};
+  --default-handle-color: #{var(--primary-c)};
+  --default-handle-opacity: 1;
+
+  [slot="handle"] {
+    color: var(--primary-c);
+    width: 3.125rem;
+    height: 3.125rem;
+    padding: 0.8125rem;
+    min-width: 40px;
+    min-height: 40px;
+    border-radius: 50%;
+    background-color: var(--grey-10);
+  }
+  img {
+    width: auto;
+  }
+  &:focus {
+    --default-handle-opacity: 0;
+  }
+  // &:hover {
+  //   [slot="handle"] {
+  //   }
+  // }
+}

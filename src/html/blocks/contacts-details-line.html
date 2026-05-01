@@ -1,0 +1,26 @@
+<div class="contacts-details-line _section">
+  <div class="container">
+    @@if(context.heading){
+      <@@if(context.h1){h1}@@if(!context.h1){h2} class="contacts-details-line__heading _heading@@if(context.h1style){ _h1}">@@heading</@@if(context.h1){h1}@@if(!context.h1){h2}>
+    }
+    <div class="contacts-details-line__items">
+      <div class="contacts-details-line__item">
+        <span class="contacts-details-line__title">Директор</span>
+        <p class="contacts-details-line__row">Почта: @@include("./src/html/components/email.html")</p>
+        <p class="contacts-details-line__row">Телефон: @@include("./src/html/components/phone.html")</p>
+      </div>
+      <div class="contacts-details-line__line"></div>
+      <div class="contacts-details-line__item">
+        <span class="contacts-details-line__title">Зам.директора</span>
+        <p class="contacts-details-line__row">Почта: @@include("./src/html/components/email.html")</p>
+        <p class="contacts-details-line__row">Телефон: @@include("./src/html/components/phone.html")</p>
+      </div>
+      <div class="contacts-details-line__line"></div>
+      <div class="contacts-details-line__item">
+        <span class="contacts-details-line__title">Отдел продаж</span>
+        <p class="contacts-details-line__row">Почта: @@include("./src/html/components/email.html")</p>
+        <p class="contacts-details-line__row">Телефон: @@include("./src/html/components/phone.html")</p>
+      </div>
+    </div>
+  </div>
+</div>

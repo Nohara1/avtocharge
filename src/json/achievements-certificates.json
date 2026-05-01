@@ -1,0 +1,44 @@
+[
+  {
+    "src": "images/certificates/certificate-02.jpg",
+    "thumb": "images/certificates/thumbs/certificate-02.jpg",
+    "alt": "сертификат",
+    "orientation": "vertical",
+    "contain": true,
+    "gallery": "certificate",
+    "width": 250,
+    "height": 354,
+    "responsive": false,
+    "class": "",
+    "title": "Название награды",
+    "subtitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's"
+  },
+  {
+    "src": "images/certificates/certificate-02.jpg",
+    "thumb": "images/certificates/thumbs/certificate-02.jpg",
+    "alt": "сертификат",
+    "orientation": "vertical",
+    "contain": true,
+    "gallery": "certificate",
+    "width": 250,
+    "height": 354,
+    "responsive": false,
+    "class": "",
+    "title": "Название награды",
+    "subtitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's"
+  },
+  {
+    "src": "images/certificates/certificate-02.jpg",
+    "thumb": "images/certificates/thumbs/certificate-02.jpg",
+    "alt": "сертификат",
+    "orientation": "vertical",
+    "contain": true,
+    "gallery": "certificate",
+    "width": 250,
+    "height": 354,
+    "responsive": false,
+    "class": "",
+    "title": "Название награды",
+    "subtitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's"
+  }
+]

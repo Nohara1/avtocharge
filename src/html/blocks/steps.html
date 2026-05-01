@@ -1,0 +1,40 @@
+<section class="steps" data-toggle-container="">
+  <div class="container">
+    @@include('./src/html/components/heading.html', {
+      heading: '@@if(context.heading){@@heading}',
+      hLevel: '@@if(context.hLevel){@@hLevel}',
+      hStyle: '@@if(context.hStyle){@@hStyle}',
+      hExtraClass: 'steps__heading'
+    })
+    @@if(context.steps){
+    <div class="steps__slider">
+      @@for(var i = 0; i < 1; i++){
+        <article class="steps__slide active" data-target="`+i+`">
+          <h3 class="steps__title _heading _h3">`+steps[i].title+`</h3>
+          <div class="steps__text _cc">`+steps[i].text+`</div>
+        </article>
+      }
+      @@for(var i = 1; i < steps.length; i++){
+        <article class="steps__slide" data-target="`+i+`">
+          <h3 class="steps__title _heading _h3">`+steps[i].title+`</h3>
+          <div class="steps__text _cc">`+steps[i].text+`</div>
+        </article>
+      }
+    </div>
+    <nav class="steps__crumbs">
+      <ul class="steps__ul">
+        @@for(var i = 0; i < 1; i++){
+        <li class="steps__li">
+          <button class="steps__button" type="button" data-toggle="`+i+`" aria-expanded="true">`+steps[i].title+`</button>
+        </li>
+        }
+        @@for(var i = 1; i < steps.length; i++){
+        <li class="steps__li">
+          <button class="steps__button" type="button" data-toggle="`+i+`" aria-expanded="false">`+steps[i].title+`</button>
+        </li>
+        }
+      </ul>
+    </nav>
+    }
+  </div>
+</section>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./src/html/page/head.html', {
+  title: "Контакты"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('./src/html/page/header.html')
+
+    @@include('./src/html/components/breadcrumbs.html', {
+      elements: [
+        { name: 'Главная', link: '/' },
+        { name: 'Контакты', link: '' }
+      ]
+    })
+
+    @@include('./src/html/blocks/contacts-05.html', {
+      heading: 'Контакты'
+    })
+    
+    @@include('./src/html/blocks/inner-items.html', {
+      extraClass: '',
+      heading: 'Персональные менеджеры',
+      itemPath: './src/html/components/inner-items/manager.html',
+      jsonPath: '[{name: "Сергей Дешук", image: "images/team/person.jpg" }, {name: "Наталья Богдан", image: "images/team/person.jpg" }, {name: "Мария Марковская", image: "images/team/person.jpg" },]'
+    })
+
+    @@include('./src/html/page/footer.html')
+  </div>
+  @@include("./src/html/page/body-bottom.html")
+</body>
+
+</html>

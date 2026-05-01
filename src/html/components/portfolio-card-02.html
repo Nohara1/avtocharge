@@ -1,0 +1,18 @@
+<article class="portfolio">
+  <div class="portfolio__inner">
+    <p class="portfolio__iw _iw">
+      <img class="portfolio__image" src="@@imageSrc" srcset="images/placeholder.png" data-srcset="@@imageSrc"
+        alt="@@title" width="243" height="185" decoding="async">
+    </p>
+    @@if(context.category){
+    <p class="portfolio__category">
+      <svg width="20" height="20" aria-hidden="true">
+        <use href="images/icons.svg#sections"></use>
+      </svg>@@category
+    </p>
+    }
+    @@if(context.title){
+    <a href="@@link" class="portfolio__title _title">@@title</a>
+    }
+  </div>
+</article>

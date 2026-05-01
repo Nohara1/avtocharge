@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./src/html/page/head.html', {
+  "title": "Оплата"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('./src/html/page/header.html', { 'variant': 3 })
+
+    @@include('./src/html/components/breadcrumbs.html', {
+      'jsonPath': '../json/breadcrumbs/payment.json'
+    })
+
+    @@include('./src/html/blocks/heading.html', {
+      'h1': true,
+      'gap': true,
+      'heading': 'Оплата'
+    })
+
+    @@include('./src/html/blocks/custom-content-01.html', {
+      "h1": false,
+      "full": true,
+      "reverse": false,
+      "h1style": false,
+      "heading": "Как оплатить заказ",
+      "content01": '<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived </p>',
+    })
+
+    <div class="tabs tabs_anchor _section">
+      <div class="container">
+        <h2 class="tabs__heading _heading">Способы оплаты</h2>
+        <nav class="tabs__nav tabs__nav_stuck">
+          <div class="tabs__buttons tabs__buttons_variant-2">
+            <button class="tabs__tab _btn _btn--tab-02" type="button" data-target="#tab-01">Наличный расчет</button>
+            <button class="tabs__tab _btn _btn--tab-02" type="button" data-target="#tab-02">Безналичный расчет</button>
+            <button class="tabs__tab _btn _btn--tab-02" type="button" data-target="#tab-03">Оплата через интернет-банкинг</button>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <div id="tab-01" class="custom-content custom-content-02 _section">
+      <div class="container">
+        <div class="custom-content__items">
+          <div class="custom-content__item">
+            <p class="custom-content__iw _iw">
+              <img src="images/additional/content-10.jpg" alt="Наличный расчет" srcset="images/placeholder.png"
+                data-srcset="images/additional/content-10.jpg" width="630" height="473" decoding="async">
+            </p>
+          </div>
+          <div class="custom-content__item">
+            <h3 class="custom-content__heading _heading">Наличный расчет</h3>
+            <div class="custom-content__text _cc">
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+                type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                passages, and more recently with desktop publishing software like Aldus PageMaker including.</p>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+                type specimen book.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="tab-02" class="custom-content custom-content-02 _section">
+      <div class="container">
+        <div class="custom-content__items">
+          <div class="custom-content__item">
+            <p class="custom-content__iw _iw">
+              <img src="images/additional/content-11.jpg" alt="Безналичный расчет (подходит юр. лицам)" srcset="images/placeholder.png"
+                data-srcset="images/additional/content-11.jpg" width="630" height="473" decoding="async">
+            </p>
+          </div>
+          <div class="custom-content__item">
+            <h3 class="custom-content__heading _heading">Безналичный расчет (подходит юр. лицам)</h3>
+            <div class="custom-content__text _cc">
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+                type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                passages, and more recently with desktop publishing software like Aldus PageMaker including.</p>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+                type specimen book.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="tab-03" class="custom-content custom-content-02 _section">
+      <div class="container">
+        <div class="custom-content__items">
+          <div class="custom-content__item">
+            <p class="custom-content__iw _iw">
+              <img src="images/additional/content-12.jpg" alt="Оплата через интернет-банкинг" srcset="images/placeholder.png"
+                data-srcset="images/additional/content-12.jpg" width="630" height="473" decoding="async">
+            </p>
+          </div>
+          <div class="custom-content__item">
+            <h3 class="custom-content__heading _heading">Оплата через интернет-банкинг</h3>
+            <div class="custom-content__text _cc">
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</p>
+              <table>
+                <tbody>
+                  <tr>
+                    <th scope="row">УНП получателя:</th>
+                    <td><b>1234567891011</b></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Название услуги</th>
+                    <td><b>1234567891011</b></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">IBAN - счет получателя:</th>
+                    <td><b>1234567891011</b></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Код банка получателя (BIC):</th>
+                    <td><b>1234567891011</b></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Банк получателя:</th>
+                    <td><b>1234567891011</b></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Плательщик:</th>
+                    <td><b>1234567891011</b></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Назначение платежа (перевода):</th>
+                    <td><b>1234567891011</b></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    @@include('./src/html/page/footer.html')
+  </div>
+  @@include("./src/html/page/body-bottom.html", {
+    'checkout': false,
+    'promo': false,
+    'exhibition': false
+  })
+</body>
+
+</html>

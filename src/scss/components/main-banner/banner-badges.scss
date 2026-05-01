@@ -1,0 +1,34 @@
+.banner-badges {
+  left: auto;
+  color: var(--white);
+  bottom: 0;
+  display: flex;
+  position: absolute;
+
+  @media ($mobile-max) {
+    left: 0;
+    right: 0;
+    padding: 0 $container-mobile;
+    justify-content: center;
+  }
+
+  &__item {
+    width: 145px;
+    padding: 2rem 0.875rem 1.2rem;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+    background-color: change-color($color: $white, $alpha: 0.5);
+
+    & + & {
+      margin-left: 1.375rem;
+    }
+  }
+  &__text {
+    display: block;
+    margin-top: 22px;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
+  @extend %banner-badges !optional;
+}

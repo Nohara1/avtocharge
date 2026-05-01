@@ -1,0 +1,105 @@
+@use "sass:color";
+// card-country
+.ccy {
+  &__inner {
+    color: var(--white);
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    min-height: 24rem;
+    align-items: flex-end;
+    border-radius: 20px;
+    justify-content: space-between;
+    background-size: auto 35%;
+    background-color: var(--primary-c-10);
+    background-repeat: no-repeat;
+    background-position: 50% 35%;
+
+    @media ($transition-min) {
+      transition:
+        background-position var(--transition),
+        color var(--transition);
+
+      &:hover {
+        @extend %card-country-hover !optional;
+
+        color: var(--text-c);
+        background-position: 50% 30%;
+      }
+    }
+    @media ($tablet-mad) {
+      padding: 20px;
+    }
+  }
+  %_image-wrapper {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+
+    @media ($transition-min) {
+      opacity: 1;
+      transition: opacity var(--transition);
+    }
+
+    &::after {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      content: "";
+      position: absolute;
+      background-image: linear-gradient(
+        0deg,
+        $grey-100 -5%,
+        color.change($grey-100, $alpha: 0) 50%
+      );
+    }
+  }
+  @media ($transition-min) {
+    %card-country-hover %_image-wrapper {
+      opacity: 0;
+    }
+  }
+  &__title {
+    --c: inherit;
+    z-index: 1;
+  }
+  &__extra {
+    z-index: 1;
+    margin-left: 15px;
+  }
+  &__price {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.25;
+    margin-bottom: 10px;
+
+    @media ($tablet-mad) {
+      font-size: 16px;
+    }
+  }
+  &__button {
+    position: static;
+    transform: none;
+
+    @media ($tablet-mad) {
+      // --fz: 14px;
+      --px: 0.71em;
+      // --py: 0.5em;
+      min-height: 20px;
+    }
+
+    &::after {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      content: "";
+      position: absolute;
+    }
+  }
+}

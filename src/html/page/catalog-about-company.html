@@ -1,0 +1,47 @@
+<nav class="catalog">
+  <div class="catalog__list">
+    <ul class="catalog__list-inner">
+      <li class="catalog__li">
+        <a href="reviews" class="catalog__link">Отзывы</a>
+      </li>
+      <li class="catalog__li _hto">
+        <div class="catalog__buttons-wrapper">
+          <a href="#" class="catalog__link">Клиентам</a>
+          <button class="h__collapse" type="button" name="button-collapse" aria-label="Развернуть/свернуть меню">
+            <svg class="h__collapse-image" width="16" height="16">
+              <use href="images/icons.svg#chevron_down"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="catalog__list-wrapper _hto__target">
+          @@include('./src/html/page/catalog-uslugi.html')
+        </div>
+      </li>
+      <li class="catalog__li _hto">
+        <div class="catalog__buttons-wrapper">
+          <span class="catalog__link">Услуги</span>
+          <button class="h__collapse" type="button" name="button-collapse" aria-label="Развернуть/свернуть меню">
+            <svg class="h__collapse-image" width="16" height="16">
+              <use href="images/icons.svg#chevron_down"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="catalog__list-wrapper _hto__target">
+          @@include('./src/html/page/catalog-uslugi.html')
+        </div>
+      </li>
+      <li class="catalog__li">
+        <a href="predstavitelstva" class="catalog__link">Работаем по всей Беларуси</a>
+      </li>
+      <li class="catalog__li">
+        <a href="payments" class="catalog__link">Способы оплаты</a>
+      </li>
+      <li class="catalog__li">
+        <a href="team" class="catalog__link">Наша команда</a>
+      </li>
+      <li class="catalog__li">
+        <a href="faq" class="catalog__link">FAQ</a>
+      </li>
+    </ul>
+  </div>
+</nav>

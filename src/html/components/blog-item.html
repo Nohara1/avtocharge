@@ -1,0 +1,32 @@
+<div class="blog-item bi@@if(context.extraClass){ @@extraClass}">
+  <div class="bi__inner">
+    @@if(context.imageSrc){
+    @@include('./src/html/components/image.html', {
+      'src': '@@if(context.imageSrc){@@imageSrc}',
+      'tag': '@@if(context.tag){@@tag}',
+      'thumb': '@@if(context.imageThumb){@@imageThumb}',
+      'alt': '@@if(context.imageAlt){@@imageAlt}',
+      'width': '@@width',
+      'height': '@@height',
+      'responsive': '@@if(context.responsive){@@responsive}',
+      'orientation': '@@if(context.orientation){@@orientation}',
+      'class': '@@if(context.class){@@class}',
+      'gallery': '@@if(context.imageGallery){@@imageGallery}',
+      'title': '@@if(context.imageTitle){@@imageTitle}',
+      'subtitle': '@@if(context.imageSubtitle){@@imageSubtitle}'
+    })
+    }
+    <div class="bi__content">
+      <p class="bi__heading _title">@@title</p>
+      @@if(context.date){<time class="bi__date" datetime="@@dateFormat">@@date</time>}
+      @@if(context.author){<div class="bi__author">Автор: @@author</div>}
+      @@if(context.text){<div class="_cc">@@text</div>}
+      @@if(context.link){
+      <a href="@@link" class="bi__button _btn--circle _btn _btn--pseudo@@if(context.btnClass){ @@btnClass}" data-title="">
+        <svg class="us__arrow" width="32" height="24" aria-hidden="true">
+          <use href="images/icons.svg#arrow"></use>
+        </svg>
+      </a>}
+    </div>
+  </div>
+</div>

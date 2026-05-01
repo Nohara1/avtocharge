@@ -1,0 +1,79 @@
+<form class="form" name="review" novalidate="">
+  <div class="form__items">
+    <div class="form__item">
+      <h2 class="form__heading _heading">Оставить отзыв</h2>
+    </div>
+    <div class="form__item form__item_half">
+      <label>
+        <span class="form__label _sr-only">Имя</span>
+        <svg class="form__input-icon" width="16" height="16" aria-hidden="true">
+          <use href="images/icons.svg#user"></use>
+        </svg>
+        <input class="form__input" type="text" name="name" value="" data-required="" placeholder="Имя">
+        <span class="form__error-message"></span>
+      </label>
+    </div>
+    <div class="form__item form__item_half">
+      <label>
+        <span class="form__label _sr-only">Телефон</span>
+        <svg class="form__input-icon" width="16" height="16" aria-hidden="true">
+          <use href="images/icons.svg#phone"></use>
+        </svg>
+        <input class="form__input" type="tel" name="phone" value="" data-required="" placeholder="Телефон">
+        <span class="form__error-message"></span>
+      </label>
+    </div>
+    <div class="form__item">
+      <div class="form__item-wrapper form__item-wrapper_row">
+        <span class="form__label">Ваша оценка</span>
+        <div class="ec-rating">
+          <div class="ec-rating-stars">
+            <span data-rating="1" data-description="Плохо"></span>
+            <span data-rating="2" data-description="Есть и получше"></span>
+            <span data-rating="3" data-description="Средне"></span>
+            <span data-rating="4" data-description="Хорошо"></span>
+            <span data-rating="5" data-description="Отлично! Рекомендую!"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    @@if(false){<div class="form__item">
+      <label>
+        <span class="form__label _sr-only">Достоинства</span>
+        <textarea class="form__input form__input_small" name="advantages" placeholder="Достоинства"></textarea>
+      </label>
+    </div>
+    <div class="form__item">
+      <label>
+        <span class="form__label _sr-only">Недостатки</span>
+        <textarea class="form__input form__input_small" name="disadvantages" placeholder="Недостатки"></textarea>
+      </label>
+    </div>}
+    <div class="form__item">
+      <label>
+        <span class="form__label _sr-only">Комментарий</span>
+        <textarea class="form__input" name="commentary" placeholder="Комментарий"></textarea>
+      </label>
+    </div>
+    @@if(false){<div class="form__item">
+      <div class="form__item-wrapper form__item-wrapper_row">
+        <span class="form__label">Загрузить фото</span>
+        <div class="form__file">
+          <label>
+            <input class="_sr-only" type="file" name="files" multiple="multiple"
+              accept=".jpg,.jpeg,.png,.tiff,.webp,.bmp,.jp2" data-max-size="5">
+            <span>Выбрать файл</span>
+            <span class="form__label" data-file-name="">Файл не выбран</span>
+          </label>
+        </div>
+      </div>
+    </div>}
+    <div class="form__item">
+      <div class="form__buttons-wrapper">
+        <button class="form__button--reset _btn _btn--link" type="reset">Очистить форму</button>
+        <button class="form__button _btn _btn--transparent" type="submit" name="submit">Отправить</button>
+        <div class="dummy"></div>
+      </div>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,13 @@
+<div class="cs__slide">
+  @@if(context.imageObj){
+    @@include('./src/html/components/image.html', @@imageObj)
+  }
+  @@if(context.text){
+    <div class="_cc">
+      @@text
+    </div>
+  }
+  @@if(context.videoObj){
+    @@include('./src/html/components/video.html', @@videoObj)
+  }
+</div>

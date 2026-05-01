@@ -1,0 +1,38 @@
+[
+  {
+    "id": "faq01",
+    "title": "Lorem ipsum dolor sit amet consectetur",
+    "contents": "<p>Lorem ipsum dolor sit amet consectetur. Ipsum rhoncus sed commodo elementum non lectus. Sit sociis enim volutpat libero eu nunc ut erat. In tellus urna augue massa risus habitasse sed viverra morbi. Nunc tincidunt eu scelerisque erat ultricies sollicitudin consequat cursus. Platea tortor turpis penatibus aliquet. Odio quisque lorem tellus purus felis. Odio magnis risus nisi morbi urna amet sollicitudin. Velit dui egestas ultrices quis eget placerat suscipit phasellus. Quam eleifend tincidunt diam egestas proin.</p>",
+    "link": "answer"
+  },
+  {
+    "id": "faq02",
+    "title": "Lorem ipsum dolor sit amet consectetur",
+    "contents": "<p>Lorem ipsum dolor sit amet consectetur. Ipsum rhoncus sed commodo elementum non lectus. Sit sociis enim volutpat libero eu nunc ut erat. In tellus urna augue massa risus habitasse sed viverra morbi.</p>",
+    "link": "answer"
+  },
+  {
+    "id": "faq03",
+    "title": "Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur",
+    "contents": "<p>Lorem ipsum dolor sit amet consectetur. Ipsum rhoncus sed commodo elementum non lectus. Sit sociis enim volutpat libero eu nunc ut erat. In tellus urna augue massa risus habitasse sed viverra morbi. Nunc tincidunt eu scelerisque erat ultricies sollicitudin consequat cursus. Platea tortor turpis penatibus aliquet. Odio quisque lorem tellus purus felis. Odio magnis risus nisi morbi urna amet sollicitudin. Velit dui egestas ultrices quis eget placerat suscipit phasellus. Quam eleifend tincidunt diam egestas proin.</p>",
+    "link": "answer"
+  },
+  {
+    "id": "faq04",
+    "title": "Lorem ipsum dolor sit amet consectetur",
+    "contents": "<p>Lorem ipsum dolor sit amet consectetur. Ipsum rhoncus sed commodo elementum non lectus. Sit sociis enim volutpat libero eu nunc ut erat. In tellus urna augue massa risus habitasse sed viverra morbi. Nunc tincidunt eu scelerisque erat ultricies sollicitudin consequat cursus. Platea tortor turpis penatibus aliquet. Odio quisque lorem tellus purus felis. Odio magnis risus nisi morbi urna amet sollicitudin. Velit dui egestas ultrices quis eget placerat suscipit phasellus. Quam eleifend tincidunt diam egestas proin.</p>",
+    "link": "answer"
+  },
+  {
+    "id": "faq05",
+    "title": "Lorem ipsum dolor sit amet consectetur",
+    "contents": "<p>Lorem ipsum dolor sit amet consectetur. Ipsum rhoncus sed commodo elementum non lectus. Sit sociis enim volutpat libero eu nunc ut erat. In tellus urna augue massa risus habitasse sed viverra morbi. Nunc tincidunt eu scelerisque erat ultricies sollicitudin consequat cursus. Platea tortor turpis penatibus aliquet. Odio quisque lorem tellus purus felis. Odio magnis risus nisi morbi urna amet sollicitudin. Velit dui egestas ultrices quis eget placerat suscipit phasellus. Quam eleifend tincidunt diam egestas proin.</p>",
+    "link": "answer"
+  },
+  {
+    "id": "faq06",
+    "title": "Lorem ipsum dolor sit amet consectetur",
+    "contents": "<p>Lorem ipsum dolor sit amet consectetur. Ipsum rhoncus sed commodo elementum non lectus. Sit sociis enim volutpat libero eu nunc ut erat. In tellus urna augue massa risus habitasse sed viverra morbi. Nunc tincidunt eu scelerisque erat ultricies sollicitudin consequat cursus. Platea tortor turpis penatibus aliquet. Odio quisque lorem tellus purus felis. Odio magnis risus nisi morbi urna amet sollicitudin. Velit dui egestas ultrices quis eget placerat suscipit phasellus. Quam eleifend tincidunt diam egestas proin.</p>",
+    "link": "answer"
+  }
+]

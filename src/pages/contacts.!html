@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./src/html/page/head.html', {
+  title: "Контакты",
+  sliderPreload: false
+})
+
+<body>
+  <div class="wrapper">
+    @@include('./src/html/page/header.html', {
+      transparent: false
+    })
+
+    @@include('./src/html/blocks/background.html')
+
+    @@include('./src/html/components/breadcrumbs.html', {
+      elements: [
+        { name: 'Главная', link: '/' },
+        { name: 'Контакты', link: '' }
+      ]
+    })
+
+    @@include('./src/html/blocks/two-components.html', {
+      hStyle: 2,
+      heading: 'Контакты',
+      subheading: '',
+      title01: '',
+      extraClass: 'tc_proportions-rev',
+      component01url: './src/html/components/custom-content.html',
+      component01params: '{ contents: "<h3>Контактная информация</h3><p><span>Адрес</span><br>220000 г. Минск, ул. Уличная, 11, оф. 11 <p><span>Телефоны</span><br><a class=\'phone\' href=\'tel:89879551312\'><svg width=\'20\' height=\'20\' aria-hidden=\'true\'><use href=\'images/icons.svg#phone\'></use></svg> 8 (987) 955-13-12</a><br><a class=\'phone\' href=\'tel:89967234688 \'><svg width=\'20\' height=\'20\' aria-hidden=\'true\'><use href=\'images/icons.svg#phone\'></use></svg> 8 (996) 723-46-88 </a><br><a class=\'phone\' href=\'tel:78462051312\'><svg width=\'20\' height=\'20\' aria-hidden=\'true\'><use href=\'images/icons.svg#phone\'></use></svg> + 7 (846) 205-13-12</a></p><p><span>Электронная почта</span><br><a class=\'email text-icon\' href=\'mailto:info@grani-it.ru\' target=\'_blank\'><svg width=\'20\' height=\'20\'><use href=\'images/icons.svg#email\'></use></svg>info@grani-it.ru</a></p><p><span>Мессенджеры</span></p>@@include(\'./src/html/components/socials.html\', {solid: true,whatsapp: true,viber: true})",extraClass: "_cc_contacts"}',
+      title02: '',
+      component02url: './src/html/components/map.html',
+      component02params: '{ mapUrl: "https://yandex.by/map-widget/v1/org/cweb_by/160308665139/?ll=27.505246%2C53.910532&z=17.09", }',
+    })
+
+    @@include('./src/html/page/footer.html')
+  </div>
+  @@include("./src/html/page/body-bottom.html")
+</body>
+
+</html>

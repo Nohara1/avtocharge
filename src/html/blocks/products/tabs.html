@@ -1,0 +1,168 @@
+<section class="tabs@@if(context.anchors){ tabs_anchor}" @@if(!context.anchors){ data-toggle-container="" }>
+  <div class="container">
+    <nav class="tabs__nav _nav-slider" role="tablist">
+      <div class="tabs__buttons _nav-slider__wrapper@@if(context.tabsVariant){ tabs__buttons_variant-@@tabsVariant}">
+        @@if(context.plans){<button
+          class="tabs__tab _nav-slider__slide _btn @@if(context.tabsVariant){_btn--tab-0@@tabsVariant}@@if(!context.tabsVariant){_btn--tab-01}"
+          @@if(!context.anchors){data-toggle="plans" type="button" aria-expanded="true" aria-controls="plans" role="tab"
+          }@@if(context.anchors){ data-target="#plans" }>Планы</button>}
+        @@if(context.facades){<button
+          class="tabs__tab _nav-slider__slide _btn @@if(context.tabsVariant){_btn--tab-0@@tabsVariant}@@if(!context.tabsVariant){_btn--tab-01}"
+          @@if(!context.anchors){data-toggle="facades" type="button" aria-expanded="true" aria-controls="facades"
+          role="tab" }@@if(context.anchors){ data-target="#facades" }>Фасады</button>}
+        @@if(context.characteristics){<button
+          class="tabs__tab _nav-slider__slide _btn @@if(context.tabsVariant){_btn--tab-0@@tabsVariant}@@if(!context.tabsVariant){_btn--tab-01}"
+          @@if(!context.anchors){data-toggle="characteristics" type="button" aria-expanded="false"
+          aria-controls="characteristics" role="tab" }@@if(context.anchors){ data-target="#characteristics"
+          }>Характеристики</button>}
+        @@if(context.description){<button
+          class="tabs__tab _nav-slider__slide _btn @@if(context.tabsVariant){_btn--tab-0@@tabsVariant}@@if(!context.tabsVariant){_btn--tab-01}"
+          @@if(!context.anchors){data-toggle="description" type="button" aria-expanded="false"
+          aria-controls="description" role="tab" }@@if(context.anchors){ data-target="#description" }>Описание</button>}
+        @@if(context.video){<button
+          class="tabs__tab _nav-slider__slide _btn @@if(context.tabsVariant){_btn--tab-0@@tabsVariant}@@if(!context.tabsVariant){_btn--tab-01}"
+          @@if(!context.anchors){data-toggle="video" type="button" aria-expanded="false" aria-controls="video"
+          role="tab" }@@if(context.anchors){ data-target="#video" }>Видео</button>}
+        @@if(context.documents){<button
+          class="tabs__tab _nav-slider__slide _btn @@if(context.tabsVariant){_btn--tab-0@@tabsVariant}@@if(!context.tabsVariant){_btn--tab-01}"
+          @@if(!context.anchors){data-toggle="documents" type="button" aria-expanded="false" aria-controls="documents"
+          role="tab" }@@if(context.anchors){ data-target="#documents" }>Документы</button>}
+        @@if(context.equipment){<button
+          class="tabs__tab _nav-slider__slide _btn @@if(context.tabsVariant){_btn--tab-0@@tabsVariant}@@if(!context.tabsVariant){_btn--tab-01}"
+          @@if(!context.anchors){data-toggle="equipment" type="button" aria-expanded="false" aria-controls="equipment"
+          role="tab" }@@if(context.anchors){ data-target="#equipment" }>Комплектация</button>}
+      </div>
+    </nav>
+    <div class="tabs__content-wrapper">
+      @@if(context.plans){<div id="plans" class="tabs__item@@if(context.anchors && context.plans){ active}" @@if(!context.anchors){data-target="plans"
+        role="tabpanel" }>
+        <div class="tabs__inner">
+          @@if(context.anchors){<h2 class="tabs__title _heading _h3">Планы</h2>}
+          <div class="tabs__images">
+            @@include('./src/html/components/image.html', {
+              src: 'images/plans/plan-01.jpg',
+              thumb: 'images/plans/thumbs/plan-01.jpg',
+              alt: 'План первого этажа',
+              width: 551,
+              height: 390,
+              responsive: true,
+              gallery: true,
+              title: 'План первого этажа',
+              subtitle: ''
+            })
+            @@include('./src/html/components/image.html', {
+              src: 'images/plans/plan-02.jpg',
+              thumb: 'images/plans/thumbs/plan-02.jpg',
+              alt: 'План второго этажа',
+              width: 551,
+              height: 390,
+              responsive: true,
+              gallery: true,
+              title: 'План второго этажа',
+              subtitle: ''
+            })
+          </div>
+        </div>
+      </div>}
+      @@if(context.facades){<div id="facades" class="tabs__item@@if(context.anchors || !context.plans){ active}" @@if(!context.anchors){data-target="facades"
+        role="tabpanel" }>
+        <div class="tabs__inner">
+          @@if(context.anchors){<h2 class="tabs__title _heading _h3">Фасады дома</h2>}
+          @@include('./src/html/components/custom-slider.html', {
+            h1style: false,
+            gap: 50,
+            slides: 1,
+            mobSlides: 1,
+            filter: true,
+            heading: '',
+            navigation: true,
+            navigationStyle: 2,
+            pagination: false,
+            itemPath: './src/html/include/custom-slider-image-item.html',
+            jsonPath: '../json/product-page-gallery.json'
+          })
+        </div>
+      </div>}
+      @@if(context.characteristics){<div id="characteristics" class="tabs__item@@if(context.anchors || !context.facades){ active}"
+        @@if(!context.anchors){data-target="characteristics" role="tabpanel" }>
+        <div class="tabs__inner _cc">
+          @@if(context.anchors){<h2 class="tabs__title _heading _h3">Характеристики</h2>}
+          <table>
+            <caption class="_sr-only">Характеристики</caption>
+            <tbody>
+              <tr>
+                <th scope="row">Параметр 1</th>
+                <td><b>230 × 230 × 94 см</b></td>
+              </tr>
+              <tr>
+                <th scope="row">Параметр 1</th>
+                <td><b>230 × 230 × 94 см</b></td>
+              </tr>
+              <tr>
+                <th scope="row">Параметр 1</th>
+                <td><b>230 × 230 × 94 см</b></td>
+              </tr>
+              <tr>
+                <th scope="row">Параметр 1</th>
+                <td><b>230 × 230 × 94 см</b></td>
+              </tr>
+              <tr>
+                <th scope="row">Параметр 1</th>
+                <td><b>230 × 230 × 94 см</b></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>}
+      @@if(context.description){<div id="description" class="tabs__item@@if(context.anchors){ active}"
+        @@if(!context.anchors){data-target="description" role="tabpanel" }>
+        <div class="tabs__inner _cc">
+          @@if(context.anchors){<h2 class="tabs__title _heading _h3">Описание проекта</h2>}
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including.</p>
+        </div>
+      </div>}
+      @@if(context.video){<div id="video" class="tabs__item@@if(context.anchors){ active}"
+        @@if(!context.anchors){data-target="video" role="tabpanel" }>
+        @@include('./src/html/blocks/custom-slider.html', {
+          h1style: true,
+          gap: 50,
+          mobSlides: 1,
+          filter: false,
+          navigation: false,
+          pagination: false,
+          itemPath: './src/html/include/custom-slider-review-item.html',
+          jsonPath: '../json/product-entry-custom-slider-videos.json'
+        })
+      </div>}
+      @@if(context.documents){<div id="documents" class="tabs__item@@if(context.anchors){ active}"
+        @@if(!context.anchors){data-target="documents" role="tabpanel" }>
+        @@include('./src/html/blocks/documents.html', {
+          jsonPath: '../json/documents.json'
+        })
+      </div>}
+      @@if(context.equipment){<div id="equipment" class="tabs__item@@if(context.anchors){ active}"
+        @@if(!context.anchors){data-target="equipment" role="tabpanel" }>
+        <div class="tabs__inner _cc">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh neque, venenatis sed quam vitae, facilisis
+            placerat lectus. Aliquam sapien ex, sodales ac nunc a, viverra lacinia lectus. Sed dapibus eleifend
+            fermentum. Aenean laoreet leo vitae molestie commodo. Aenean in libero porta, viverra lorem at, cursus
+            turpis. Duis ut congue est. Nullam non euismod tellus. Phasellus a lobortis augue, laoreet finibus ipsum.
+          </p>
+        </div>
+      </div>}
+      @@if(context.specialOffer){<div class="tabs__item@@if(context.anchors){ active}">
+        <div class="tabs__inner _cc">
+          @@if(context.anchors){<h2 class="tabs__title _heading _h3">Специальное предложение</h2>}
+          @@include('./src/html/components/project-item.html', {
+            title: 'Проект классического одноэтажного дома с гаражом'
+          })
+        </div>
+      </div>}
+    </div>
+  </div>
+</section>

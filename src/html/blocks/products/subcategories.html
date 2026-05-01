@@ -1,0 +1,9 @@
+<div class="subcategories@@if(context.subcategoriesVersion){ subcategories_0@@subcategoriesVersion}">
+  @@if(context.title){<p class="subcategories__heading">@@title</p>}
+  <div class="subcategories__items _nav-slider">
+    <div class="subcategories__item _nav-slider__slide">
+      <a class="subcategories__link _btn _btn--tab-02 active" href="nashi-raboty">Все</a>
+    </div>
+    @@loop('./src/html/include/subcategories-item.html', '@@jsonPath')
+  </div>
+</div>

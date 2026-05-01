@@ -1,0 +1,25 @@
+.services {
+  // &__heading {}
+  &__items {
+    @include row(3.125rem, 3.125rem);
+
+    > * {
+      --services-w: 50%;
+      flex: 1 1 var(--services-w);
+      max-width: var(--services-w);
+
+      @media ($tablet-mad) {
+        --services-w: 100%;
+      }
+
+      &%services-item-small {
+        @media ($custom-breakpoint-01-min) {
+          --services-w: 25%;
+        }
+        @media ($custom-breakpoint-01) and ($tablet-mid) {
+          --services-w: 50%;
+        }
+      }
+    }
+  }
+}

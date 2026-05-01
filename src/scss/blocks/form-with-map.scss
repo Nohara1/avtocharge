@@ -1,0 +1,58 @@
+.form-with-map {
+  // &__heading {}
+  // &__items-wrapper {
+  //   padding: 3.45rem 2.7rem;
+  //   border-radius: 10px;
+  //   // background-image: var(--linear-gradient);
+  //   background-color: var(--secondary-c);
+
+  //   @media ($tablet-mad) {
+  //     padding: 2.4rem 2.7rem 2.7rem;
+  //   }
+  // }
+  &__items {
+    @include row(1.875rem, 4.375rem);
+
+    // @media ($tablet-mad) {
+    //   @include row-breakpoint($gapB: 3rem);
+    // }
+  }
+  &__item {
+    // flex: 1 1 50%;
+    // max-width: 50%;
+
+    @media ($desktop-min) {
+      &:nth-child(1) {
+        flex: 1 1 42%;
+        max-width: 42%;
+      }
+      &:nth-child(2) {
+        flex: 1 1 58%;
+        max-width: 58%;
+      }
+    }
+    @media ($tablet-max) {
+      max-width: 100%;
+      flex-basis: 100%;
+    }
+  }
+  &__inner {
+    height: 100%;
+  }
+  // %form {
+  //   padding: 0 1.7rem;
+
+  //   @media ($tablet-mad) {
+  //     padding: 0;
+  //   }
+  // }
+  %map {
+    height: 100%;
+
+    iframe {
+      @media ($desktop-min) {
+        height: 100%;
+      }
+    }
+  }
+}

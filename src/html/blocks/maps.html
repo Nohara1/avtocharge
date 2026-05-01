@@ -1,0 +1,43 @@
+<section class="maps maps_no-gap maps-01@@if(!context.address02 || !context.map02Url){ maps_full}">
+  <div class="container">
+    @@if(context.heading){<h2 class="maps__heading _heading">@@heading</h2>}
+    @@if(context.subheading){<p class="maps__subheading">@@subheading</p>}
+    @@if(context.text){<div class="maps__text _cc">
+      @@text
+    </div>}
+    <div class="maps__items">
+      @@if(context.address01){<div class="maps__item">
+        <div class="maps__address">
+          <svg width="40" height="46">
+            <use href="images/icons.svg#pin"></use>
+          </svg>@@address01
+        </div>
+      </div>}
+      @@if(context.map01Url){<div class="maps__item maps__item_map">
+        @@include('./src/html/components/map.html', {
+          'mapUrl': '@@map01Url'
+        })
+        @@if(context.button01){
+          <a href="#" class="maps__button _btn" type="button">@@button01</a>
+        }
+      </div>}
+      @@if(context.address02 && context.map02Url) {
+        @@if(context.address02){<div class="maps__item">
+          <div class="maps__address">
+            <svg width="40" height="46">
+              <use href="images/icons.svg#pin"></use>
+            </svg>@@address02
+          </div>
+        </div>}
+        @@if(context.map02Url){<div class="maps__item maps__item_map">
+          @@include('./src/html/components/map.html', {
+            'mapUrl': '@@map02Url'
+          })
+          @@if(context.button02){
+            <a href="#" class="maps__button _btn" type="button">@@button02</a>
+          }
+        </div>}
+      }
+    </div>
+  </div>
+</section>

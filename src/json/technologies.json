@@ -1,0 +1,83 @@
+[
+  {
+    "src": "images/technology/google_analytics.png",
+    "alt": "Google аналитика",
+    "orientation": "horizontal",
+    "contain": true,
+    "width": 130,
+    "height": 130,
+    "class": "image_technology"
+  },
+  {
+    "src": "images/technology/key-collector.png",
+    "alt": "key collector",
+    "orientation": "horizontal",
+    "contain": true,
+    "width": 130,
+    "height": 130,
+    "class": "image_technology"
+  },
+  {
+    "src": "images/technology/rank-tracker.png",
+    "alt": "rank tracker",
+    "orientation": "horizontal",
+    "contain": true,
+    "width": 130,
+    "height": 130,
+    "class": "image_technology"
+  },
+  {
+    "src": "images/technology/search_console.png",
+    "alt": "search console",
+    "orientation": "horizontal",
+    "contain": true,
+    "width": 130,
+    "height": 130,
+    "class": "image_technology"
+  },
+  {
+    "src": "images/technology/seo-spyglass.png",
+    "alt": "seo spyglass",
+    "orientation": "horizontal",
+    "contain": true,
+    "width": 130,
+    "height": 130,
+    "class": "image_technology"
+  },
+  {
+    "src": "images/technology/topvisor.svg",
+    "alt": "topvisor",
+    "orientation": "horizontal",
+    "contain": true,
+    "width": 130,
+    "height": 130,
+    "class": "image_technology"
+  },
+  {
+    "src": "images/technology/website-auditor.png",
+    "alt": "website auditor",
+    "orientation": "horizontal",
+    "contain": true,
+    "width": 130,
+    "height": 130,
+    "class": "image_technology"
+  },
+  {
+    "src": "images/technology/yandex_metrika.svg",
+    "alt": "yandex metrika",
+    "orientation": "horizontal",
+    "contain": true,
+    "width": 130,
+    "height": 130,
+    "class": "image_technology"
+  },
+  {
+    "src": "images/technology/yandex_webmaster.svg",
+    "alt": "yandex webmaster",
+    "orientation": "horizontal",
+    "contain": true,
+    "width": 130,
+    "height": 130,
+    "class": "image_technology"
+  }
+]

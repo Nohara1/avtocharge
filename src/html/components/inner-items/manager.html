@@ -1,0 +1,15 @@
+<div class="manager mgr">
+  <div class="mgr__inner">
+    @@include('./src/html/components/image.html', {
+      src: '@@image',
+      alt: '@@name',
+      width: 220,
+      height: 214
+    })
+    <div class="mgr__content _r-selection">
+      <p class="_title">@@name</p>
+      @@include('./src/html/components/messengers.html')
+      @@include('./src/html/components/email.html')
+    </div>
+  </div>
+</div>

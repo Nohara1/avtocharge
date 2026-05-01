@@ -1,0 +1,28 @@
+.tabs-block {
+  --pb: 0px;
+  --tb-indent: 10px;
+  overflow: hidden;
+
+  &_sticky {
+    z-index: 10;
+    --sticky-el-indent: calc(var(--pt) * -1 + var(--tb-indent));
+    @extend %sticky-element;
+
+    @extend %tabs-sticky !optional;
+
+    %container {
+      position: relative;
+
+      &::before {
+        top: calc(var(--tb-indent) * -1);
+        left: 0;
+        right: 0;
+        bottom: calc(var(--tb-indent) * -1);
+        content: "";
+        display: block;
+        position: absolute;
+        backdrop-filter: blur(10px);
+      }
+    }
+  }
+}

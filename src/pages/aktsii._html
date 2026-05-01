@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./src/html/page/head.html', {
+  title: "Акции"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('./src/html/page/header.html')
+
+    @@if(false){@@include('./src/html/components/breadcrumbs.html', {
+      jsonPath: '../json/breadcrumbs/akcii.json'
+    })
+
+    @@include('./src/html/blocks/inner-banner.html', {
+      heading: 'Акции',
+      backgroundImage: 'images/additional/header-banner-02.jpg',
+      subheadingLevel: '3',
+      subheading: 'Банер с главной акцией',
+      text: '<p>Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including.</p>'
+    })}
+
+    @@include('./src/html/blocks/inner-items.html', {
+      h1: true,
+      hStyle: '2',
+      heading: 'Акции',
+      text: '',
+      columns: 4,
+      columnsMobile: 1,
+      subcategoriesTitle: '',
+      subcategoriesJson: '',
+      itemPath: './src/html/components/inner-item.html',
+      jsonPath: '../json/aktsii-inner-items.json'
+    })
+
+    @@if(false){@@include('./src/html/blocks/inner-items.html', {
+      h1: false,
+      heading: 'Почему выбирают нас',
+      text: '',
+      columns: '2',
+      itemPath: './src/html/components/project-item.html',
+      jsonPath: '../json/empty-objects-2.json'
+    })}
+
+    @@include('./src/html/page/footer.html')
+  </div>
+  @@include("./src/html/page/body-bottom.html")
+</body>
+
+</html>

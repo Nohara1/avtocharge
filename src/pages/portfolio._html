@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./src/html/page/head.html', {
+  "title": "Портфолио"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('./src/html/page/header.html', { 'variant': 3 })
+
+    @@include('./src/html/components/breadcrumbs.html', {
+      'jsonPath': '../json/breadcrumbs/portfolio.json'
+    })
+
+    @@include('./src/html/blocks/inner-items.html', {
+      'h1': true,
+      'heading': 'Портфолио',
+      'text': '',
+      'subcategoriesJson': '../json/portfolio-subcategories.json',
+      'itemPath': './src/html/components/portfolio-card-02.html',
+      'jsonPath': '../json/portfolios-04.json'
+    })
+
+    @@include('./src/html/components/pagination.html', {
+      'pageUrl': 'portfolio',
+      'description': false,
+      'variant': 1
+    })
+
+    @@include('./src/html/page/footer.html')
+  </div>
+  @@include("./src/html/page/body-bottom.html")
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+<div class="cs__slide"
+  data-slide-category="@@if(c01){c01,}@@if(c02){c02,}@@if(c03){c03,}@@if(c04){c04,}">
+  @@include('./src/html/components/product-card-02.html', {
+  'id': '@@id',
+  'link': '@@link',
+  'imageSrc': '@@imageSrc',
+  'title': '@@title',
+  'price': '@@price',
+  'old_price': @@if(context.old_price){'@@old_price'}@@if(!context.old_price){null},
+  'size': @@if(context.size){'@@size'}@@if(!context.size){null},
+  'feature': @@if(context.feature){'@@feature'}@@if(!context.feature){null},
+  'equipment': @@if(context.equipment){'@@equipment'}@@if(!context.equipment){null},
+  'c01': @@if(context.c01){'@@c01'}@@if(!context.c01){false},
+  'c02': @@if(context.c02){'@@c02'}@@if(!context.c02){false},
+  'c03': @@if(context.c03){'@@c03'}@@if(!context.c03){false},
+  'c04': @@if(context.c04){'@@c04'}@@if(!context.c04){false}
+  })
+</div>

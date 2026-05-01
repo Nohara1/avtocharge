@@ -1,0 +1,26 @@
+[
+  {
+    "src": "images/additional/instagram-01.jpg",
+    "alt": "описание изображения",
+    "orientation": "square",
+    "width": "550",
+    "height": "550",
+    "class": "image_instagram"
+  },
+  {
+    "src": "images/additional/instagram-02.jpg",
+    "alt": "описание изображения",
+    "orientation": "square",
+    "width": "550",
+    "height": "550",
+    "class": "image_instagram"
+  },
+  {
+    "src": "images/additional/instagram-03.jpg",
+    "alt": "описание изображения",
+    "orientation": "square",
+    "width": "550",
+    "height": "550",
+    "class": "image_instagram"
+  }
+]

@@ -1,0 +1,58 @@
+<form class="form" name="feedback" novalidate="">
+  <div class="form__items">
+    <div class="form__item">
+      <h2 class="form__heading _heading">Форма обратной связи</h2>
+    </div>
+    <div class="form__item form__item_third">
+      <div class="form__items">
+        <div class="form__item">
+          <label>
+            <span class="form__label _sr-only">Имя*</span>
+            <input class="form__input" type="text" name="name" value="" data-required="" placeholder="Имя*">
+            <span class="form__error-message"></span>
+          </label>
+        </div>
+        <div class="form__item">
+          <label>
+            <span class="form__label _sr-only">E-mail*</span>
+            <input class="form__input" type="email" name="email" value="" data-required="" placeholder="E-mail*">
+            <span class="form__error-message"></span>
+          </label>
+        </div>
+        <div class="form__item">
+          <label>
+            <span class="form__label _sr-only">Номер телефона</span>
+            <input class="form__input" type="tel" name="phone" value="" data-required="" placeholder="Номер телефона">
+            <span class="form__error-message"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form__item form__item_third">
+      <label>
+        <span class="form__label _sr-only">Текст сообщения*</span>
+        <textarea class="form__input" name="description" placeholder="Текст сообщения*"></textarea>
+      </label>
+    </div>
+    <div class="form__item form__item_third">
+      <div class="form__item-wrapper form__file-dropdown" data-dropzone="">
+        <span class="form__heading _heading _h3">Прикрепить файл</span>
+        <p class="form__label">Перетащите файлы сюда, чтобы загрузить их</p>
+        <div class="form__file">
+          <label>
+            <input class="_sr-only" type="file" name="files" multiple="multiple"
+              accept=".jpg,.jpeg,.png,.tiff,.webp,.bmp,.jp2" data-max-size="5">
+            <span class="_btn _btn--small">Выбрать файл</span>
+            <span class="form__label" data-file-name="">Файл не выбран</span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form__item">
+      <div class="form__buttons-wrapper">
+        <button class="form__button _btn _btn--big" type="submit" name="submit">Отправить заявку</button>
+      </div>
+      <p class="form__personal">Нажимая на кнопку вы соглашаетесь на обработку персональных данных</p>
+    </div>
+  </div>
+</form>

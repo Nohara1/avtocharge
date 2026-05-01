@@ -1,0 +1,10 @@
+<div class="cs__slide" @@if(context.c01 || context.c02 || context.c03 || context.c04){
+  data-slide-category="@@if(context.c01){c01,}@@if(context.c02){c02,}@@if(context.c03){c03,}@@if(context.c04){c04,}"}>
+  @@include('./src/html/components/inner-items/card-country.html', {
+    title: '@@if(context.title){@@title}',
+    url: '@@if(context.url){@@url}',
+    price: '@@if(context.price){@@price}',
+    image: '@@if(context.image){@@image}',
+    background: '@@if(context.background){@@background}',
+  })
+</div>

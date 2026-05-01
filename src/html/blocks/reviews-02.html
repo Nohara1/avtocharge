@@ -1,0 +1,44 @@
+<div class="reviews-02 r-02 _section@@if(context.extraClass){ @@extraClass}">
+  <div class="container">
+    <div class="r-02__wrapper">
+      @@include('./src/html/components/heading.html', {
+        heading: '@@if(context.heading){@@heading}',
+        hLevel: '@@if(context.hLevel){@@hLevel}',
+        hStyle: '@@if(context.hStyle){@@hStyle}',
+        hExtraClass: 'r-02__heading'
+      })
+      @@if(context.linkUrl && context.linkName){
+        <a href="@@linkUrl" class="r-02__link _btn _btn--white"@@if(linkUrl.includes('http')){target="_blank"}>@@linkName</a>
+      }
+      <div class="r-02__items">
+        @@for(var i = 0; i < reviews.length; i++){
+          <div class="r-02__item">
+            <div class="r-02__inner">
+              <span class="r-02__title">`+reviews[i].title+`</span>
+              <div class="image">
+                <p class="image__wrapper"@@if(false){ role="button" data-gallery="" tabindex="0"}>
+                  <img src="`+reviews[i].src+`" alt="Изображение галереи `+i+`" srcset="`+reviews[i].srcset+`"
+                    width="`+reviews[i].width+`" height="`+reviews[i].height+`" decoding="async">
+                </p>
+              </div>
+              <div class="r-02__content">
+                <time class="r-02__date" datetime="`+reviews[i].dateFormat+`">`+reviews[i].date+`</time>
+                <div class="_cc">`+reviews[i].text+`</div>
+                @@if(false){<div class="r-02__buttons">
+                  <a href="#" class="_btn _btn--white _btn--pseudo" data-title="Подробнее">`+reviews[i].title+`</a>
+                </div>}
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+      @@if(context.pagination){
+        @@include('./src/html/components/pagination.html', {
+          pageUrl: '@@pagination',
+          description: false,
+          variant: 3
+        })
+      }
+    </div>
+  </div>
+</div>

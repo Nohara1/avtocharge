@@ -1,0 +1,20 @@
+.socials {
+  @include row(8px, 8px, true, false, false);
+
+  &__link {
+    @extend %socials-link !optional;
+
+    // svg {}
+  }
+
+  &__target{
+    @extend %socials-target !optional;
+  }
+
+  @extend %socials !optional;
+}
+.svg-instagram {
+  fill: #fa608e;
+  fill: url("/#instagram-fill");
+  fill: url("#instagram-fill");
+}

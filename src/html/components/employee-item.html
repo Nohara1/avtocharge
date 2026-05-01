@@ -1,0 +1,65 @@
+<div class="employee-item ei">
+  <div class="ei__inner">
+    <p class="ei__image _iw">
+      <img src="@@image" alt="@@name" srcset="images/placeholder.png" data-srcset="@@image" width="400" height="370"
+        decoding="async">
+    </p>
+    <div class="ei__content _r-selection" data-toggle-container="toggle,click-outside">
+      <p class="_title">@@name</p>
+      <p class="ei__position _cc">@@position</p>
+      <div class="ei__button-wrapper">
+        <button class="ei__button _btn _btn--transparent" type="button" data-toggle="skills"
+          aria-expanded="false">Навыки</button>
+        <div class="ei__popup ei__popup_skills" data-target="skills">
+          <ul class="ei__list">
+            <li class="ei__li">
+              <svg width="14" height="24" aria-hidden="true">
+                <use href="images/icons.svg#crystal"></use>
+              </svg>Основы и принципы SEO
+            </li>
+            <li class="ei__li">
+              <svg width="14" height="24" aria-hidden="true">
+                <use href="images/icons.svg#crystal"></use>
+              </svg>Ведение проектов по разработке, SEO, PPC
+            </li>
+            <li class="ei__li">
+              <svg width="14" height="24" aria-hidden="true">
+                <use href="images/icons.svg#crystal"></use>
+              </svg>Контроль работы ключевых специалистов
+            </li>
+            <li class="ei__li">
+              <svg width="14" height="24" aria-hidden="true">
+                <use href="images/icons.svg#crystal"></use>
+              </svg>Внедрение систем аналитики, настройка событий и целей
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="ei__button-wrapper">
+        <button class="ei__button _btn _btn--transparent" type="button" data-toggle="certificates"
+          aria-expanded="false">Сертификаты</button>
+        <div class="ei__popup ei__popup_certificates" data-target="certificates">
+          <div class="ei__items">
+            @@for (var i = 1; i <= 9; i++) { <div class="ei__item">
+              @@include('./src/html/components/image.html', {
+              tag: '',
+              src: 'images/certificates/certificate-01.jpg',
+              thumb: 'images/certificates/thumbs/certificate-01.jpg',
+              alt: 'сертификат',
+              width: 93,
+              height: 133,
+              responsive: false,
+              orientation: 'vertical',
+              class: '',
+              gallery: 'employee@@id',
+              title: '',
+              subtitle: ''
+              })
+          </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

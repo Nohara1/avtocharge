@@ -1,0 +1,30 @@
+.tabs {
+  &_rows {
+    @include row(10px, 30px, true);
+    @media ($mobile-max) {
+      @include row(10px, 10px, true);
+    }
+
+    justify-content: center;
+
+    @extend %tabs-rows !optional;
+  }
+
+  &%tabs-rows %_btn {
+    @media ($mobile-max) {
+      flex-grow: 1;
+      width: 100%;
+    }
+  }
+  // &%_nav-slider {}
+  // %_nav-slider-wrapper {}
+  %_nav-slider-slide {
+    + %_nav-slider-slide {
+      @media ($mobile-max) {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  @extend %tabs !optional;
+}

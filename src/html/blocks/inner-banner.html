@@ -1,0 +1,12 @@
+<section class="inner-banner">
+  <div class="container">
+    @@if(context.heading){<h1 class="inner-banner__heading _heading">@@heading</h1>}
+    <div class="inner-banner__inner"
+      style="background-image:url('@@if(context.backgroundImage){@@backgroundImage}@@if(!context.backgroundImage){images/additional/slide-example.jpg}')">
+      <h2 class="inner-banner__subheading _heading@@if(context.subheadingLevel){ _h@@subheadingLevel}">@@subheading</h2>
+      @@if(context.text){<div class="inner-banner__text">@@text</div>}
+      @@if(context.link){<a href="@@link" class="inner-banner__button _btn">Подробнее</a>}
+      @@if(context.formPath){@@include('@@formPath')}
+    </div>
+  </div>
+</section>

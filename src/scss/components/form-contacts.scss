@@ -1,0 +1,16 @@
+.form-contacts {
+  @extend %form-contacts !optional;
+
+  &__items {
+    justify-content: space-between;
+    @include row(1.875rem, 1.875rem);
+  }
+  // &__item {}
+  &__title {
+    margin-bottom: 15px;
+
+    @media ($tablet-mad) {
+      margin-bottom: 10px;
+    }
+  }
+}

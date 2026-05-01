@@ -1,0 +1,9 @@
+.logo {
+  position: relative;
+  vertical-align: middle;
+
+  @extend %logo !optional;
+
+  // & svg,
+  // & img {}
+}

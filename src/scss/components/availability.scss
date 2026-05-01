@@ -1,0 +1,36 @@
+.availability {
+  font-size: 18px;
+  line-height: 1;
+
+  @media ($tablet-max) {
+    font-size: 16px;
+  }
+
+  &__item {
+    font-size: inherit;
+    line-height: 1;
+    // font-weight: 600;
+
+    &::before {
+      width: 0.5em;
+      height: 0.5em;
+      content: "";
+      display: block;
+      display: inline-block;
+      margin-right: 0.3em;
+      border-radius: 50%;
+      background-color: currentColor;
+    }
+    &_in-stock {
+      color: var(--valid);
+    }
+    &_not-available {
+      color: var(--discount-color);
+    }
+    &_on-order {
+      color: var(--primary-c);
+    }
+  }
+
+  @extend %availability !optional;
+}

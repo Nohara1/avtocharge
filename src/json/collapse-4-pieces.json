@@ -1,0 +1,27 @@
+[
+  {
+    "id": "faq01",
+    "title": "анализ",
+    "active": "active",
+    "aria": "true",
+    "arrow": true,
+    "contents": "<p>Lorem ipsum dolor sit amet consectetur. Ipsum rhoncus sed commodo elementum non lectus. Sit sociis enim volutpat libero eu nunc ut erat. In tellus urna augue massa risus habitasse sed viverra morbi. Nunc tincidunt eu scelerisque erat ultricies sollicitudin consequat cursus. Platea tortor turpis penatibus aliquet. Odio quisque lorem tellus purus felis. Odio magnis risus nisi morbi urna amet sollicitudin. Velit dui egestas ultrices quis eget placerat suscipit phasellus. Quam eleifend tincidunt diam egestas proin.</p>"
+  },
+  {
+    "id": "faq02",
+    "title": "Моделирование",
+    "arrow": true,
+    "contents": "<p>Lorem ipsum dolor sit amet consectetur. Ipsum rhoncus sed commodo elementum non lectus. Sit sociis enim volutpat libero eu nunc ut erat. In tellus urna augue massa risus habitasse sed viverra morbi.</p>"
+  },
+  {
+    "id": "faq03",
+    "title": "Перенос данных",
+    "arrow": true,
+    "contents": "<p>Lorem ipsum dolor sit amet consectetur. Ipsum rhoncus sed commodo elementum non lectus. Sit sociis enim volutpat libero eu nunc ut erat. In tellus urna augue massa risus habitasse sed viverra morbi. Nunc tincidunt eu scelerisque erat ultricies sollicitudin consequat cursus. Platea tortor turpis penatibus aliquet. Odio quisque lorem tellus purus felis. Odio magnis risus nisi morbi urna amet sollicitudin. Velit dui egestas ultrices quis eget placerat suscipit phasellus. Quam eleifend tincidunt diam egestas proin.</p>"
+  },
+  {
+    "id": "faq04",
+    "title": "Проектирование",
+    "contents": "<p>Lorem ipsum dolor sit amet consectetur. Ipsum rhoncus sed commodo elementum non lectus. Sit sociis enim volutpat libero eu nunc ut erat. In tellus urna augue massa risus habitasse sed viverra morbi.</p>"
+  }
+]

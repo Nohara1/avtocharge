@@ -1,0 +1,107 @@
+<section class="quiz@@if(context.big){ quiz_big}">
+  <div class="container">
+    @@if(context.heading){
+    <h2 class="quiz__heading _heading@@if(context.h1style){ _h1}">@@heading</h2>
+    }
+    <form class="quiz__wrapper form">
+      <div class="quiz__slide quiz__slide_shown" aria-hidden="false">
+        <div class="quiz__inner">
+          <fieldset class="quiz__options">
+            <legend class="quiz__title quiz__title_counter _title">Выберите модель бани</legend>
+            @@loop('./src/html/include/quiz-option.html', '../json/quiz-options.json')
+          </fieldset>
+          <div class="quiz__buttons">
+            <button class="quiz__button _btn _btn--brown" type="button" name="quiz-next">Далее</button>
+          </div>
+        </div>
+      </div>
+      <div class="quiz__slide" aria-hidden="true">
+        <div class="quiz__inner">
+          <span class="quiz__title quiz__title_counter _title">Выберите модель бани</span>
+          <div class="form__item">
+            <label>
+              <span class="form__label" hidden="">Выберите модель бани</span>
+              <select class="form__select" name="model-type">
+                <option value="Свайный">Свайный + монтаж (рекомендуем)</option>
+                <option value="Блочный">Блочный + монтаж</option>
+                <option value="Свой">Свой фундамент</option>
+              </select>
+            </label>
+          </div>
+          <div class="quiz__buttons">
+            <button class="quiz__button _btn _btn--brown" type="button" name="quiz-previous">Назад</button>
+            <button class="quiz__button _btn _btn--brown" type="button" name="quiz-next">Далее</button>
+          </div>
+        </div>
+      </div>
+      <div class="quiz__slide" aria-hidden="true">
+        <div class="quiz__inner">
+          <span class="quiz__title quiz__title_counter _title">Может ли к Вам на участок подъехать манипулятор для
+            разгрузки в готовом виде?</span>
+          <div class="form__item">
+            <label>
+              <span class="form__label" hidden="">Может ли к Вам на участок подъехать манипулятор для разгрузки в
+                готовом виде?</span>
+              <select class="form__select" name="manipulator">
+                <option value="Да">Да, заедет</option>
+                <option value="Нет">Нет, не заедет</option>
+              </select>
+            </label>
+          </div>
+          <div class="quiz__buttons">
+            <button class="quiz__button _btn _btn--brown" type="button" name="quiz-previous">Назад</button>
+            <button class="quiz__button _btn _btn--brown" type="button" name="quiz-next">Далее</button>
+          </div>
+        </div>
+      </div>
+      <div class="quiz__slide" aria-hidden="true">
+        <div class="quiz__inner">
+          <span class="quiz__title quiz__title_counter _title">Когда Вам нужна баня?</span>
+          <div class="form__item">
+            <label>
+              <span class="form__label" hidden="">Когда Вам нужна баня?</span>
+              <select class="form__select" name="time">
+                <option value="ближашее">В ближайшее время</option>
+                <option value="ближашее">В ближайшее время</option>
+                <option value="ближашее">В ближайшее время</option>
+              </select>
+            </label>
+          </div>
+          <div class="quiz__buttons">
+            <button class="quiz__button _btn _btn--brown" type="button" name="quiz-previous">Назад</button>
+            <button class="quiz__button _btn _btn--brown" type="button" name="quiz-next">Далее</button>
+          </div>
+        </div>
+      </div>
+      <div class="quiz__slide" aria-hidden="true">
+        <div class="quiz__inner">
+          <span class="quiz__title quiz__title_final _title">Отлично! Мы подготовили для Вас предложение и
+            бонусы!</span>
+          <span class="quiz__text _title">Заполните форму и получите расчет стоимости вашей бани под ключ и <b>полный
+              каталог бань с ценами в WhatsApp</b></span>
+          <div class="form__items">
+            <div class="form__item form__item_half">
+              <label>
+                <span class="form__label _sr-only">Ваше имя</span>
+                <input class="form__input" type="text" name="name" value="" data-required="" placeholder="Ваше имя">
+                <span class="form__error-message"></span>
+              </label>
+            </div>
+            <div class="form__item form__item_half">
+              <label>
+                <span class="form__label _sr-only ">Номер телефона</span>
+                <input class="form__input" type="tel" name="phone" value="" data-required=""
+                  placeholder="Номер телефона">
+                <span class="form__error-message"></span>
+              </label>
+            </div>
+          </div>
+          <div class="quiz__buttons">
+            <button class="quiz__button _btn _btn--brown" type="button" name="quiz-previous">Назад</button>
+            <button class="quiz__button _btn _btn--brown" type="submit">Получить каталог</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>

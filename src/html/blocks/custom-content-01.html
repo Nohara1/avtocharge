@@ -1,0 +1,49 @@
+<@@if(context.heading){section}@@if(!context.heading){div}
+  class="custom-content cc cc-01@@if(context.extraClass){ @@extraClass}@@if(!context.heading){ _section}@@if(context.extraClass){ @@extraClass}"
+  @@if(context.id){ id='@@id'}@@if(context.animate){ data-animate="appearing"}>
+  <div class="container">
+    @@include('./src/html/components/heading.html', {
+      heading: '@@if(context.heading){@@heading}',
+      hLevel: '@@if(context.hLevel){@@hLevel}',
+      hStyle: '@@if(context.hStyle){@@hStyle}',
+      hExtraClass: 'cc__heading'
+    })
+    @@if(context.subheading){
+      @@include('./src/html/components/heading.html', { heading: '@@subheading' })
+    }
+    @@if(context.tabs){
+      @@include('./src/html/components/tabs.html', {
+        tabs: @@tabs,
+        tabsSlider: '@@if(context.tabsSlider){@@tabsSlider}',
+        tabsLinks: '@@if(context.tabsLinks){@@tabsLinks}',
+        tabsActive: '@@if(context.tabsActive){@@tabsActive}'
+      })
+    }
+    <div class="cc__items@@if(context.full){ cc__items_full}@@if(context.reverse){ cc__items_revers}">
+      @@if(context.content01){
+      <div class="cc__item">
+        <div class="_cc@@if(context.content01ExtraClass){ @@content01ExtraClass}">
+          @@content01
+        </div>
+      </div>
+      }
+      @@if(context.image01){
+      <div class="cc__item">
+        @@include('./src/html/components/image.html', @@image01)
+      </div>
+      }
+      @@if(context.image02){
+      <div class="cc__item">
+        @@include('./src/html/components/image.html', @@image02)
+      </div>
+      }
+      @@if(context.content02){
+      <div class="cc__item">
+        <div class="_cc@@if(context.content02ExtraClass){ @@content02ExtraClass}">
+          @@content02
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</@@if(context.heading){section}@@if(!context.heading){div}>

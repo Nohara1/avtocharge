@@ -1,0 +1,17 @@
+<div class="cs__slide cs__slide_review">
+  @@if(context.videoId){
+    @@include('./src/html/components/video.html', {
+    'id': '@@videoId',
+    'styled': @@if(context.styled){@@styled}@@if(!context.styled){false},
+    'width': '550',
+    'height': '312',
+    'title': @@if(context.title){'@@title'}@@if(!context.title){false},
+    })
+  }
+  @@if(context.imageName) {
+  <p class="cs__image" role="button" data-gallery="" tabindex="0">
+    <img src="images/reviews/@@imageName" alt="" srcset="images/placeholder.png"
+      data-srcset="images/reviews/thumbs/@@imageName" width="250" height="354" decoding="async">
+  </p>
+  }
+</div>

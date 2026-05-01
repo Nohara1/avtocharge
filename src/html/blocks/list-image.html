@@ -1,0 +1,23 @@
+<div class="list-image">
+  <div class="container">
+    <h2 class="list-image__headin _heading">@@heading</h2>
+    <div class="list-image__items">
+      <div class="list-image__item">
+        <div class="list-image__item-inner">
+          <span class="list-image__heading">@@subheading</span>
+          <ul class="list-image__list">
+          @@loop('./src/html/include/list-image-list-item.html', '@@jsonPath')
+          </ul>
+          <button class="list-image__button _btn" data-open-popup="@@popupID" type="button">@@buttonName</button>
+        </div>
+      </div>
+      <div class="list-image__item">
+        <div class="list-image__item-inner">
+          <p class="list-image__iw _iw" role="button" data-gallery="" tabindex="0">
+            <img src="@@imageSrc" alt="@@alt" class="list-image__image _bkgr-image">
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

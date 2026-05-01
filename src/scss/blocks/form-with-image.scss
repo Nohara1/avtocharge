@@ -1,0 +1,82 @@
+.form-with-image {
+  // &__heading {}
+  // &__subheading {}
+  // &__items-wrapper {}
+  &__text {
+    margin-bottom: 3.125rem;
+
+    > * {
+      max-width: 1150px;
+    }
+  }
+  &__items {
+    @include row($gapB: 4rem, $gapL: 2.7rem);
+
+    @media ($tablet-mad) {
+      @include row-breakpoint($gapB: 3rem);
+    }
+  }
+  &__item {
+    flex: 1 1 50%;
+    max-width: 50%;
+
+    @media ($desktop-min) {
+      &:first-child {
+        max-width: calc(1150px + 2.7rem);
+      }
+    }
+
+    @media ($tablet-max) {
+      max-width: 100%;
+      flex-basis: 100%;
+    }
+  }
+  &__inner {
+    height: 100%;
+  }
+  %form {
+    padding: 0 1.7rem;
+
+    @media ($tablet-mad) {
+      padding: 0;
+    }
+  }
+  %form-gradient {
+    padding: 3.125rem 6rem;
+
+    @media ($desktop-max-xl) and ($desktop-min) {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+    @media ($mobile-max) {
+      padding: 2.7rem;
+    }
+  }
+  %pick-a-project {
+    padding: 2.7em 4rem;
+
+    @media ($tablet-max) {
+      padding: 1.5em 3rem;
+    }
+  }
+  %image {
+    height: 100%;
+  }
+  %image-wrapper {
+    height: 100%;
+    border-radius: 10px;
+
+    @media ($tablet-max) and ($tablet-mid) {
+      height: 380px;
+    }
+    @media ($tablet-mad) and ($tablet-min) {
+      height: 350px;
+    }
+    @media ($mobile-max) {
+      height: 210px;
+    }
+  }
+  %form-contacts {
+    margin-bottom: 1.875rem;
+  }
+}

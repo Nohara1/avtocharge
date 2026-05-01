@@ -1,0 +1,43 @@
+[
+  {
+    "title": "Туристическая",
+    "url": "visa",
+    "text": "<p>Тип визы: <span>С</span><br>Стоимость: <span>от 200€</span></p>",
+    "image": "images/additional/visa_tourist.jpg",
+    "btnClass": "_btn--text",
+    "popup": true
+  },
+  {
+    "title": "Гостевая",
+    "url": "visa",
+    "text": "<p>Тип визы: <span>С</span><br>Стоимость: <span>от 200€</span></p>",
+    "image": "images/additional/visa_guest.jpg",
+    "btnClass": "_btn--text",
+    "popup": true
+  },
+  {
+    "title": "Деловая",
+    "url": "visa",
+    "text": "<p>Тип визы: <span>С</span><br>Стоимость: <span>от 200€</span></p>",
+    "image": "images/additional/visa_business.jpg",
+    "btnClass": "_btn--text",
+    "popup": true
+  },
+  {
+    "title": "Рабочая",
+    "url": "visa",
+    "text": "<p>Тип визы: <span>С</span><br>Стоимость: <span>от 200€</span></p>",
+    "image": "images/additional/visa_work.jpg",
+    "btnClass": "_btn--text",
+    "popup": true
+  },
+  {
+    "title": "Студенческая",
+    "url": "visa",
+    "text": "<p>Тип визы: <span>С</span><br>Стоимость: <span>от 200€</span></p>",
+    "image": "images/additional/visa_study.jpg",
+    "btnClass": "_btn--text",
+    "popup": true,
+    "plane": true
+  }
+]

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./src/html/page/head.html', {
+  title: "Виза для белорусов 2025 Запись в визовый центр более 50 стран",
+  sliderPreload: false
+})
+
+<body>
+  <div class="wrapper">
+    @@include('./src/html/page/header.html', {
+      transparent: false
+    })
+
+    @@include('./src/html/components/breadcrumbs.html', {
+      elements: [
+        { name: 'Главная', link: '/' },
+        { name: 'Акции', link: '' }
+      ]
+    })
+
+    @@include('./src/html/blocks/inner-items.html', {
+      extraClass: '_heading-wave _plane',
+      heading: 'Акции',
+      subheading: '',
+      text: '',
+      columns: '',
+      columnsMobile: '',
+      subcategoriesTitle: '',
+      subcategoriesJson: '',
+      itemPath: './src/html/components/blog-item.html',
+      jsonPath: '"../json/promotions.json"',
+    })
+
+    @@include('./src/html/blocks/banner.html', {
+      extraClass: 'b_bdrs',
+      slideClass: 'b__slide_right',
+      image: 'images/banners/visa_vsem.jpg',
+      heading: 'Весь мир с ВизаВсем!',
+      text: '',
+      achievements: '',
+      component: './src/html/forms/request-a-call.html'
+    })
+
+    @@include('./src/html/page/footer.html')
+  </div>
+  @@include("./src/html/page/body-bottom.html")
+</body>
+
+</html>

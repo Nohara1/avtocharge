@@ -1,0 +1,21 @@
+<div class="cs__slide"
+  data-slide-category="@@if(bestseller){bestseller,}@@if(novelty){novelty,}@@if(discount){discount,}">
+  @@include('./src/html/components/product-card-01.html', {
+  'id': '@@id',
+  'link': '@@link',
+  'imageSrc': '@@imageSrc',
+  'title': '@@title',
+  'price': '@@price',
+  'old_price': @@if(context.old_price){'@@old_price'}@@if(!context.old_price){null},
+  'seats': @@if(context.seats){'@@seats'}@@if(!context.seats){null},
+  'collection': @@if(context.collection){'@@collection'}@@if(!context.collection){null},
+  'size': @@if(context.size){'@@size'}@@if(!context.size){null},
+  'nozzles': @@if(context.nozzles){'@@nozzles'}@@if(!context.nozzles){null},
+  'in_stock': @@if(context.in_stock){@@in_stock}@@if(!context.in_stock){false},
+  'not_available': @@if(context.not_available){@@not_available}@@if(!context.not_available){false},
+  'on_order': @@if(context.on_order){@@on_order}@@if(!context.on_order){false},
+  'bestseller': @@if(context.bestseller){@@bestseller}@@if(!context.bestseller){false},
+  'novelty': @@if(context.novelty){@@novelty}@@if(!context.novelty){false},
+  'discount': @@if(context.discount){@@discount}@@if(!context.discount){false}
+  })
+</div>

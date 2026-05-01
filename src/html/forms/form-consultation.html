@@ -1,0 +1,85 @@
+<form class="form" name="consultation" novalidate="">
+    <div class="form__items">
+      <div class="form__item">
+        @@if(true){<h2 class="form__heading _heading _h4">
+          Заполните форму и мы свяжемся с вами, для обсуждения деталей.
+        </h2>}
+        @@if(false){<div class="form__description _cc"><p></p></div>}
+      </div>
+      <div class="form__item">
+        <label>
+          <span class="form__label _sr-only">Имя*</span>
+          <input class="form__input" type="text" name="name" value="" data-required="" placeholder="Имя*">
+          <span class="form__error-message"></span>
+        </label>
+      </div>
+      @@if(false){<div class="form__item">
+        <label>
+          <span class="form__label _sr-only">Имя</span>
+          @@if(false){<svg class="form__input-icon" width="16" height="16" aria-hidden="true">
+            <use href="images/icons.svg#user"></use>
+          </svg>}
+          <input class="form__input" type="text" name="name" value="" data-required="" placeholder="Имя">
+          <span class="form__error-message"></span>
+        </label>
+      </div>}
+      <div class="form__item">
+        <label>
+          <span class="form__label _sr-only">Телефон*</span>
+          @@if(false){<svg class="form__input-icon" width="16" height="16" aria-hidden="true">
+            <use href="images/icons.svg#phone"></use>
+          </svg>}
+          <input class="form__input" type="tel" name="phone" value="" data-required="" placeholder="Телефон*">
+          <span class="form__error-message"></span>
+        </label>
+      </div>
+      <div class="form__item">
+        <label>
+          <span class="form__label _sr-only">E-mail</span>
+          <input class="form__input" type="email" name="email" value="" placeholder="E-mail">
+          <span class="form__error-message"></span>
+        </label>
+      </div>
+      <div class="form__item">
+        <label>
+          <span class="form__label _sr-only">Услуга</span>
+          <select class="form__input" name="name" data-required>
+            <option value="" disabled selected hidden>Услуга</option>
+            <option value="usluga1">Услуга1</option>
+            <option value="usluga2">Услуга2</option>
+            <option value="usluga3">Услуга3</option>
+            <option value="usluga4">Услуга4</option>
+          </select>
+          <span class="form__error-message"></span>
+        </label>
+      </div>
+      @@if(true){<div class="form__item">
+        <label>
+          <span class="form__label _sr-only">Сообщение</span>
+          <textarea class="form__input" name="description" placeholder="Сообщение"></textarea>
+        </label>
+      </div>}
+      @@if(false){<div class="form__item">
+        <label>
+          <input class="form__checkbox" type="checkbox" name="agree" data-required="">
+          <span class="form__label">Я <a href="files/test.pdf" target="_blank">согласен(а)</a> на
+            обработку персональных данных</span>
+        </label>
+      </div>}
+      <div class="form__item form__item_big-gap">
+        <div class="form__buttons-wrapper">
+          @@if(false){<button class="form__button--reset _btn _btn--link" type="reset">Очистить форму</button>}
+          <button class="form__button _btn _btn--primary" type="submit" name="submit">Получить консультацию</button>
+          @@if(false){<div class="dummy"></div>}
+        </div>
+      </div>
+      <div class="form__item form__item_big-gap">
+        @@if(false){<span class="form__personal">Нажимая на кнопку вы соглашаетесь на обработку персональных данных</span>}
+        <label class="form__personal">
+          <input class="form__checkbox" type="checkbox" name="agree" data-required="">
+          <span class="form__label">Нажимая на кнопку, я даю согласие на <a href="files/test.pdf" target="_blank">обработку персональных данных</a>
+            и соглашаюсь c <a href="files/test.pdf" target="_blank">политикой конфиденциальности.</a></span>
+        </label>
+      </div>
+    </div>
+  </form>

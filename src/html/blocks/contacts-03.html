@@ -1,0 +1,77 @@
+<section class="contacts">
+  <div class="container">
+    <h1 class="contacts__heading _heading _h2">Контакты</h1>
+    <div class="contacts__items">
+      <div class="contacts__item contacts__item_info">
+        <div class="contacts__inner-items">
+          <div class="contacts__inner-item contacts__inner-item_address">
+            <div class="contacts__inner contacts__inner_border">
+              <p class="contacts__title _heading _h3">Адрес компании:</p>
+              <div class="contacts__content _cc">
+                <p><span>Почтовый адрес:</span><br>
+                  Республика Беларусь, 220014, г. Минск, пр-т Жукова дом 44, офис 506 (пом. 4-10)</p>
+                <p><span>Юридический адрес:</span><br>
+                  Республика Беларусь, г. Минск, пр-т Жукова дом 44,пом. 4-10</p>
+              </div>
+            </div>
+          </div>
+          <div class="contacts__inner-item contacts__inner-item_schedule">
+            <div class="contacts__inner contacts__inner_border">
+              <p class="contacts__title _heading _h3">Режимы работы:</p>
+              <div class="contacts__content _cc">
+                <p><span>Пн-Пт</span> с 9:15 до 17:00<br>
+                  <span>Сб-Вс</span> выходные
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="contacts__inner-item contacts__inner-item_route">
+            <div class="contacts__inner contacts__inner_border">
+              <p class="contacts__title _heading _h3">Как проехать?</p>
+              <div class="contacts__content _cc">
+                <p>Lorem ipsum dolor sit amet consectetur. Platea pretium faucibus id mollis interdum nunc feugiat.
+                  Volutpat consequat interdum mauris a in mattis dui mauris.</p><a
+                  href="https://yandex.by/maps/157/minsk/" class="_btn _btn--small" target="_blank">Яндекс
+                  Навигатор</a><a href="https://www.google.by/maps" class="_btn _btn--small" target="_blank">Google
+                  Maps</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contacts__item contacts__item_map">
+        <div class="contacts__inner">
+          @@include('./src/html/components/map.html', {
+            'mapUrl': 'https://yandex.ru/map-widget/v1/?um=constructor%3Ac19a04e2d9ce70e8377165753c68fd4ed0c1f585e9449e32a28af4471c27f4e4&amp;source=constructor'
+          })
+        </div>
+      </div>
+      <div class="contacts__item contacts__item_contacts">
+        <div class="contacts__inner contacts__inner_border">
+          <p class="contacts__title _heading _h3">Контактная информация</p>
+          <div class="contacts__content _cc">
+            <p><span>Контактный телефон</span></p>
+            @@include('./src/html/components/messengers.html')
+            <p><span>Электронная почта</span></p>
+            @@include('./src/html/components/email.html', { 'icon': 'hide' })
+            <p>
+              <img class="contacts__qr" src="images/additional/qr.png" alt='Айрон Парк qr код' width="138" height="138"
+                loading="lazy" decoding="async">
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="contacts__item contacts__item_staff">
+        <div class="contacts__slider">
+          @@loop('./src/html/include/contacts-03-employee.html', [
+            {'position': 'Отдел продаж', 'image': 'images/staff/employee-01.jpg'},
+            {'position': 'Отдел продаж', 'image': 'images/staff/employee-02.jpg'},
+            {'position': 'Подбор и испытание инструмента. Технолог', 'image': 'images/staff/employee-03.jpg'},
+            {'position': 'Бухгалтерия', 'image': 'images/staff/employee-04.jpg'},
+            {'position': 'Директор', 'image': 'images/staff/employee-05.jpg'}
+          ])
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

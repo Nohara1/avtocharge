@@ -1,0 +1,114 @@
+.ad{
+    &-items{
+        display: flex;
+        gap: 40px;
+        & > *{
+            flex: 1 1 0%;
+        }
+        @media($transition-max){
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+    &-item{
+        &__content{
+            position: relative;
+            top: auto;
+            bottom: 0;
+            transition: all 0.5s;
+            @media($desktop-min-xl){
+                %advantages-inner-hover &{
+                    bottom: 100%;
+                    transform: translateY(100%);
+                }
+            }
+        }
+        &__column{
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            @media($transition-max){
+                gap: 10px;
+            }
+        }
+        &__row{
+            flex-grow: 1
+        }
+        &__inner{
+            background-color: var(--light-blue);
+            border-radius: 20px;
+            padding: 30px;
+            height: 100%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            &::before{
+                content: '';
+                width: 70px;
+                height: 70px;
+                position: absolute;
+                top: 1.5625rem;
+                right: 1.5625rem;
+                background-image: url(/images/icons.svg#advantages);
+                background-size: contain;
+                background-repeat: no-repeat;
+                transition: all 0.5s;
+            }
+            // @media($desktop-min-xl){
+            //     %advantages-inner-hover &::before{
+            //         top: 100%;
+            //         transform: translateY(-100%);
+            //     }
+            // }
+            &:hover{
+                @extend %advantages-inner-hover !optional;
+                @media($desktop-min-xl){
+                    &::before{
+                        top: 80%;
+                        transform: translateY(-100%);
+                    }
+                }
+            }
+        }
+        &__text{
+            font-size: 16px;
+            font-weight: 400;
+            position: relative;
+            // transition: all 0.3s;
+            // top: 100%;
+            // %advantages-inner-hover &{
+            //     top: 0;
+            //     transform: translateY(-60%);
+            // }
+        }
+        &__number{
+            font-size: 36px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--primary-c);
+            position: relative;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+            top: 0;
+            @media($desktop-min-xl){
+                %advantages-inner-hover &{
+                    top: 100%;
+                    transform: translateY(-100%);
+                }
+            }
+        }
+        &__title{
+            font-weight: 600;
+            font-size: 20px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            // position: relative;
+            // transition: all 0.3s;
+            // top: 100%;
+            // %advantages-inner-hover &{
+            //     top: 0;
+            //     transform: translateY(-240%);
+            // }
+        }
+    }
+}

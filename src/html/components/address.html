@@ -1,0 +1,5 @@
+<div class="address text-icon">
+  @@if(context.icon != 'hide'){<svg class="text-icon__icon" width="16" height="16">
+    <use href="images/icons.svg#location"></use>
+  </svg>}@@if(!context.address){<span>@@siteAddress</span>}@@if(context.address){<span>@@address</span>}
+</div>

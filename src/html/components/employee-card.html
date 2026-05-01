@@ -1,0 +1,13 @@
+<div class="employee-card ec">
+  <div class="ec__inner">
+    <p class="ec__image _iw _iw--cover">
+      <img src="@@image" alt="@@name" srcset="images/placeholder.png" data-srcset="@@image"
+        width="488" height="512" decoding="async">
+    </p>
+    <div class="ec__content">
+      @@if(context.link){<a href="@@link" class="ec__name _title">@@name</a>}
+      @@if(!context.link){<p class="ec__name _title">@@name</p>}
+      <p class="ec__position _cc">@@position</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="cards-steps__item">
+  <div class="cards-steps__inner">
+    @@include('./src/html/components/image.html', {
+    'src': '@@imageSrc',
+    'thumb': @@if(context.imageThumb){'@@imageThumb'}@@if(!context.imageThumb){false},
+    'alt': @@if(context.imageAlt){'@@imageAlt'}@@if(!context.imageAlt){false},
+    'orientation': 'horizontal',
+    'gallery': true,
+    'width': '@@imageWidth',
+    'height': '@@imageHeight'
+    })
+  </div>
+  @@if(context.title){<span class="cards-steps__title _title">@@title</span>}
+</div>

@@ -1,0 +1,7 @@
+<div class="cs__slide cs__slide_employee" data-slide-category="@@if(context.c01){c01,}@@if(context.c02){c02,}@@if(context.c03){c03,}@@if(context.c04){c04,}">
+  @@include('./src/html/components/employee-card.html', {
+    image: '@@if(context.image){@@image}',
+    name: '@@if(context.name){@@name}',
+    position: '@@if(context.position){@@position}',
+  })
+</div>

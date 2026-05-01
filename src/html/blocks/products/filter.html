@@ -1,0 +1,57 @@
+<section class="filter">
+  <div class="filter__items">
+    <div class="filter__item">
+      <span class="filter__heading">
+        <svg width="18" height="18">
+          <use href="images/icons.svg#settings" />
+        </svg>
+        <span>Фильтр</span>
+      </span>
+    </div>
+    <button class="filter__close-button" type="button" name="filter-toggle"
+      aria-label="Показать/скрыть фильтр"></button>
+    <form action="/@@pageUrl" method="post" id="mse2_filters" class="filter__form">
+      <div class="filter__body">
+        <div class="filter__body-item active">
+          <fieldset class="form__item-wrapper">
+            <legend class="form__item-heading">Стоимость (BYN)
+              @@if(false){<button class="filter__toggle-item" type="button" name="filter-toggle-item"
+                aria-label="Развернуть/Свернуть">
+                <svg class="" width="16" height="16" aria-hidden="true">
+                  <use href="images/icons.svg#chevron-up" />
+                </svg>
+              </button>}
+            </legend>
+            <div class="form__items-row">
+              <div class="form__item form__item_auto">
+                <label for="mse2_ms|price_0">
+                  <span class="form__input-placeholder">от</span>
+                  <input class="form__input" type="number" name="ms|price" id="mse2_ms|price_0" value="98"
+                    data-current-value="0" data-min="0" data-original-value="98" data-decimal="0">
+                </label>
+              </div>
+              <div class="form__item form__item_auto">
+                <label for="mse2_ms|price_1">
+                  <span class="form__input-placeholder">до</span>
+                  <input class="form__input" type="number" name="ms|price" id="mse2_ms|price_1" value="3636"
+                    data-current-value="0" data-min="0" data-original-value="3636" data-decimal="0">
+                </label>
+              </div>
+            </div>
+            <div id="door-price-slider11"
+              class="form__slider mse2_number_slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+              <div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 0%; width: 80%;"></div>
+              <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0%;"></span>
+              <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 80%;"></span>
+            </div>
+          </fieldset>
+        </div>
+        @@loop('./src/html/include/products-filter-body-item.html', '../json/products-filter-body-items.json')
+      </div>
+      @@if(context.buttons){<div class="filter__buttons">
+        <button class="filter__submit _btn" type="submit">Показать проекты</button>
+        <button class="filter__reset hidden" type="reset">Сбросить</button>
+      </div>}
+    </form>
+  </div>
+</section>

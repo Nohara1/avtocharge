@@ -1,0 +1,100 @@
+.us{
+    height: 100%;
+    &__inner{
+        %_animate &,
+        %two-components-usluga &{
+            border-radius:0px 10px 10px 0px;
+            @media($desktop-max){
+                border-radius:0px 0px 10px 10px;
+            }
+        }
+        %_animate%two-components-reverse &,
+        %two-components-usluga%two-components-reverse &{
+            border-radius:10px 0px 0px 10px;
+            @media($desktop-max){
+                border-radius:0px 0px 10px 10px;
+            }
+        }
+        
+
+        background-color: var(--white);
+        border-radius: 10px;
+        height: 100%;
+        padding: 100px;
+        @media($desktop-max){
+            padding: 40px 20px;
+        }
+    }
+    &__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100%;
+    }
+    &__heading{
+        margin-bottom: 50px;
+        color: var(--black);
+        text-align: left;
+        @media($desktop-max-xl){
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+    }
+    &__text{
+        color: var(--black);
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 1.1;
+        @media($desktop-max-xl){
+            font-size: 24px;
+        }
+    }
+    &__btn{
+        margin-left: auto;
+        position: static;
+        &::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 10;
+        }
+    }
+    // &__subheading{
+    //     max-width: 790px;
+    //     margin-bottom: 20px;
+    //     font-size: 18px;
+    //     line-height: 1.22;
+    //     @media($tablet-mad){
+    //         font-size: 16px;
+    //         line-height: 1.25;
+    //     }
+    // }
+    // &__items{
+    //     display: flex;
+    //     flex-wrap: wrap;
+    //     gap: 10px;
+    //     @media($tablet-mad){
+    //         gap: 5px;
+    //     }
+    // }
+    // &__item{
+    //     @media($tablet-mad){
+    //         width: 100%;
+    //     }
+    // }
+    // &__inner{
+    //     border: 2px solid var(--primary-c);
+    //     padding: 10px;
+    //     border-radius: 10px;
+    // }
+    // &__text{
+    //     font-size: 18px;
+    //     @media($tablet-mad){
+    //         font-size: 16px;
+    //         line-height: 1.25;
+    //     }
+    // }
+}

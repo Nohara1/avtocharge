@@ -1,0 +1,48 @@
+.cards-steps {
+  // &__heading {}
+  &__items {
+    counter-reset: cards;
+    justify-content: center;
+    @include row(2.7rem, 3.125rem);
+
+    > * {
+      flex: 1 1 20%;
+      max-width: 20%;
+      counter-increment: cards;
+
+      @media ($desktop-max) and ($tablet-mid) {
+        max-width: 33.3333%;
+        flex-basis: 33.3333%;
+      }
+      @media ($tablet-mad) and ($tablet-min) {
+        max-width: 50%;
+        flex-basis: 50%;
+      }
+      @media ($mobile-max) {
+        max-width: 100%;
+        flex-basis: 100%;
+      }
+    }
+  }
+  // &__item {}
+  &__inner {
+    position: relative;
+    margin-top: 3rem;
+
+    &::before {
+      top: 0;
+      left: 50%;
+      color: change-color($color: $primary-color, $alpha: 0.08);
+      content: "0" counter(cards);
+      display: block;
+      position: absolute;
+      font-size: 6rem;
+      transform: translate(-50%, -61%);
+      font-weight: 900;
+    }
+  }
+  &__title {
+    margin-top: 1.25rem;
+    text-align: center;
+  }
+}

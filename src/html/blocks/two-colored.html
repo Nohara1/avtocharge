@@ -1,0 +1,29 @@
+<section class="two-colored"@@if(context.animate){ data-animate="appearing"}>
+  <div class="container">
+    @@if(context.heading){
+    <h2 class="two-colored__heading _heading@@if(context.h1style){ _h1}">@@heading</h2>
+    }
+    <div class="two-colored__items">
+      <div class="two-colored__item">
+        <div class="two-colored__inner">
+          <div class="two-colored__image two-colored__image-01"
+            style="background-image: url('images/additional/font-02.png')"></div>
+          <div class="two-colored__image two-colored__image-02"
+            style="background-image: url('images/additional/gears.png')"></div>
+          <h3 class="two-colored__title _title">@@title01</h3>
+          <p class="two-colored__text">@@text01</p>
+        </div>
+      </div>
+      <div class="two-colored__item">
+        <div class="two-colored__inner">
+          <div class="two-colored__image two-colored__image-03"
+            style="background-image: url('images/additional/keys.png')"></div>
+          <div class="two-colored__image two-colored__image-04"
+            style="background-image: url('images/additional/font-03.png')"></div>
+          <h3 class="two-colored__title _title">@@title02</h3>
+          <p class="two-colored__text">@@text02</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,19 @@
+@@if(context.enabled){
+<article id="@@id" class="popup@@if(context.extraClass){ @@extraClass}"@@if(context.autoOpen){ data-autoopen=""}
+  @@if(context.autoOpen && (context.autoOpenInterval || context.autoOpenInterval === 0)){ data-autoopen-interval="@@autoOpenInterval"}
+  @@if(context.autoOpen && context.autoOpenDelay){ data-autoopen-delay="@@autoOpenDelay"}
+  @@if(context.autoOpen && context.autoOpenTime){ data-autoopen-time="@@autoOpenTime"}>
+  <div class="popup__inner@@if(context.imageSrc){ popup__inner_image}">
+    <button class="popup__close" type="button" name="popup-close">
+      <span class="_sr-only">Закрыть всплывающее окно</span>
+    </button>
+    @@include('@@formSrc')
+    @@if(context.imageSrc){
+    <p class="popup__iw _iw _iw--higher">
+      <img src="@@imageSrc" alt="@@if(context.imageAlt){@@imageAlt}" srcset="images/placeholder.png"
+        data-srcset="@@imageSrc" width="600" height="530" decoding="async">
+    </p>
+    }
+  </div>
+</article>
+}

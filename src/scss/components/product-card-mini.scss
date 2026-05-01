@@ -1,0 +1,132 @@
+.product-mini {
+  position: relative;
+
+  &__remove {
+    @extend %close-button;
+
+    top: 0;
+    right: 0;
+    margin: -17px -17px 0 auto;
+    z-index: 1;
+    position: relative;
+
+    &::before,
+    &::after {
+      background-color: var(--text-l);
+    }
+  }
+  &__inner {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    align-items: center;
+
+    @media ($transition-min) {
+      transform: translateX(0);
+      transition: transform 0.2s;
+      transform-origin: right center;
+
+      &:hover {
+        transform: translateX(3px);
+
+        @extend %product-mini-hover !optional;
+      }
+    }
+
+    @extend %product-mini-inner !optional;
+  }
+  &__iw {
+    flex: 0 0 8.625rem;
+    width: 8.625rem;
+    // align-self: flex-start;
+    margin-right: 20px;
+    padding-bottom: 6.4375rem;
+
+    @media ($transition-min) {
+      transform: scale(1);
+      transition: transform 0.2s;
+
+      %product-mini-hover & {
+        transform: scale(1.1);
+      }
+    }
+    @media ($tablet-mad) {
+      margin-right: 15px;
+    }
+
+    @extend %product-mini-image-wrapper !optional;
+  }
+  &__info {
+    flex: 1 1 0%;
+    max-width: 100%;
+    align-items: flex-start;
+    @include row(1.5625rem, 1.5625rem, true);
+
+    @extend %product-mini-info !optional;
+  }
+  &__title {
+    flex: 1 1 100%;
+    text-align: left;
+
+    // &::before {
+    //   top: 0;
+    //   left: 0;
+    //   right: 0;
+    //   bottom: 0;
+    //   content: "";
+    //   display: block;
+    //   position: absolute;
+    // }
+
+    @extend %product-mini-title !optional;
+  }
+  &__features {
+    color: var(--text-l);
+    margin-top: 1.2rem;
+    line-height: 1.25;
+    margin-bottom: auto;
+
+    @media ($tablet-max) {
+      font-size: 14px;
+    }
+
+    > * + * {
+      margin-top: 0.3em;
+    }
+    b,
+    strong {
+      color: var(--text-c);
+      white-space: nowrap;
+    }
+  }
+  &__price {
+    font-size: 24px;
+    font-weight: 600;
+    white-space: nowrap;
+
+    @media ($tablet-max) {
+      font-size: 20px;
+    }
+
+    @extend %product-price !optional;
+
+    // span {
+    //   font-size: 1.25em;
+    //   font-weight: 700;
+    // }
+    &_old {
+      color: var(--discount-color);
+      font-size: 18px;
+      font-weight: 400;
+      white-space: nowrap;
+      margin-right: 0.8em;
+      text-decoration: line-through;
+
+      // & + %product-price {
+      //   color: var(--discount-color);
+      // }
+    }
+  }
+
+  @extend %product-mini !optional;
+}

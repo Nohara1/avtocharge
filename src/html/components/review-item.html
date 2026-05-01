@@ -1,0 +1,79 @@
+<article class="review" itemscope itemtype="https://schema.org/Review">
+  <header class="review__top">
+    <div class="review__inner">
+      @@if(context.photo){
+      <p class="review__photo">
+        <img src="@@photo" alt="@@author" width="45" height="45" loading="lazy" decoding="async">
+      </p>
+      }
+      <span class="review__author _title" itemprop="author">@@author</span>
+      <div class="review__rating ec-stars">
+        <span class="rating-5"><span class="_sr-only" itemprop="reviewRating">@@rating</span></span>
+      </div>
+      <time class="review__time" itemprop="datePublished" datetime="@@dateFormat">@@date</time>
+    </div>
+  </header>
+  <div class="review__bottom">
+    @@if(context.image){
+      <div class="review__image">
+        @@include('./src/html/components/image.html', {
+          'src': 'images/products/product.jpg',
+          'alt': 'Lorem Ipsum',
+          'width': 175,
+          'height': 131,
+          'responsive': false,
+          'gallery': false,
+          'title': '',
+          'subtitle': ''
+        })
+      </div>
+    }
+    <div class="review__content">
+      @@if(context.positive){
+      <span class="review__features review__features_positive">Достоинства</span>
+      <div class="review__text _cc" itemprop="positiveNotes">
+        @@positive
+      </div>
+      }
+      @@if(context.negative){
+      <span class="review__features review__features_negative">Недостатки</span>
+      <div class="review__text _cc" itemprop="negativeNotes">
+        @@negative
+      </div>
+      }
+      @@if(context.commentary){
+      <span class="review__features review__features_commentary">Тема: <strong>Lorem Ipsum</strong></span>
+      <div class="review__text _cc" itemprop="reviewBody">
+        @@commentary
+      </div>
+      }
+      @@if(context.images){
+      <div class="review__images">
+        <div class="review__images-inner">
+          @@loop('./src/html/include/review-item-image.html', [{
+          "alt": "image of product 01",
+          "src": "images/our-work/door-01.jpg"
+          },{
+          "alt": "image of product 02",
+          "src": "images/our-work/door-02.jpg"
+          },{
+          "alt": "image of product 03",
+          "src": "images/our-work/door-03.jpg"
+          },{
+          "alt": "image of product 03",
+          "src": "images/our-work/door-03.jpg"
+          },{
+          "alt": "image of product 03",
+          "src": "images/our-work/door-03.jpg"
+          }])
+        </div>
+      </div>
+      }
+      @@if(context.button){
+      <div class="review__buttons-wrapper">
+        <a href="#" class="review__link">@@button</a>
+      </div>
+      }
+    </div>
+  </div>
+</article>

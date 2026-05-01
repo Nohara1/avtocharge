@@ -1,0 +1,39 @@
+.bg01 {
+  &__items {
+    --h: 33vw;
+    --gtr: 0.35fr 0.15fr 0.5fr;
+    --gtc: 0.42fr 0.33fr 0.25fr;
+    --gta: "g1 g3 g4" "g1 g3 g5" "g2 g3 g5";
+
+    gap: 1.875rem 1.875rem;
+    height: var(--h);
+    display: grid;
+    grid-template-rows: var(--gtr);
+    grid-template-columns: var(--gtc);
+    grid-template-areas: var(--gta);
+
+    @media ($desktop-max) and ($tablet-min) {
+      --h: 80vw;
+      --gtr: 0.33fr 0.26fr 0.09fr 0.3fr;
+      --gtc: 0.54fr 0.46fr;
+      --gta: "g1 g3" "g2 g3" "g2 g5" "g4 g5";
+    }
+    @media ($mobile-max) {
+      --h: 330vw;
+      --gtr: 0.125fr 0.125fr 0.33fr 0.15fr 0.27fr;
+      --gtc: 1fr;
+      --gta: "g1" "g2" "g3" "g4" "g5";
+    }
+  }
+  &__item {
+    @for $i from 1 through 5 {
+      &:nth-child(#{$i}) {
+        grid-area: g#{$i};
+      }
+    }
+  }
+  %image,
+  %image-wrapper {
+    height: 100%;
+  }
+}

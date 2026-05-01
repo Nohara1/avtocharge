@@ -1,0 +1,36 @@
+<form class="form" name="request-a-messenger" novalidate="">
+  <div class="form__items">
+    <div class="form__item form__item_half">
+      <label>
+        <span class="form__label _sr-only">Имя</span>
+        <svg class="form__input-icon" width="16" height="16" aria-hidden="true">
+          <use href="images/icons.svg#user"></use>
+        </svg>
+        <input class="form__input" type="text" name="name" value="" data-required="" placeholder="Имя">
+        <span class="form__error-message"></span>
+      </label>
+    </div>
+    <div class="form__item form__item_half">
+      <label>
+        <span class="form__label _sr-only">Телефон</span>
+        <svg class="form__input-icon" width="16" height="16" aria-hidden="true">
+          <use href="images/icons.svg#phone"></use>
+        </svg>
+        <input class="form__input" type="tel" name="phone" value="" data-required="" placeholder="Телефон">
+        <span class="form__error-message"></span>
+      </label>
+    </div>
+    @@if(false){<div class="form__item">
+      <label>
+        <input class="form__checkbox" type="checkbox" name="agree" data-required="">
+        <span class="form__label">Я <a href="files/test.pdf" target="_blank">согласен(а)</a> на
+          обработку персональных данных</span>
+      </label>
+    </div>}
+    <div class="form__item">
+      <div class="form__buttons-wrapper">
+        <button class="form__button _btn _btn--transparent" type="submit" name="submit">Отправить</button>
+      </div>
+    </div>
+  </div>
+</form>

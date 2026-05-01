@@ -1,0 +1,115 @@
+.fade-card {
+  cursor: default;
+  flex-grow: 1;
+
+  &:hover {
+    @extend %fade-card-hover !optional;
+  }
+
+  &__inner {
+    flex: 1 0 100%;
+    width: 100%;
+    color: var(--white);
+    height: 100%;
+    outline: 1px solid var(--primary-c);
+    padding: 3.875rem 2.1875rem 3.75rem;
+    position: relative;
+    text-align: center;
+    background: none 50% 20% / auto 100% no-repeat var(--white);
+
+    @media ($transition-min) {
+      color: inherit;
+      transition: background-size 0.9s, color 0.6s;
+      background-size: auto 120%;
+
+      %fade-card-hover & {
+        color: var(--white);
+        background-size: auto 100%;
+      }
+    }
+    @media ($mobile-max) {
+      padding-bottom: 2.7rem;
+    }
+
+    &::before {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      content: "";
+      display: block;
+      position: absolute;
+      background-color: change-color($color: $primary-color, $alpha: 0.9); // 78
+
+      @media ($transition-min) {
+        transition: background-color 0.6s;
+        background-color: var(--white);
+
+        %fade-card-hover & {
+          background-color: change-color($color: $primary-color, $alpha: 0.9); // 78
+        }
+      }
+    }
+    & > * {
+      position: relative;
+    }
+  }
+  &__title {
+    color: inherit;
+    margin-bottom: 3.125rem;
+
+    @media ($mobile-max) {
+      margin-bottom: 2.7rem;
+    }
+  }
+  &__icons {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+  }
+  &__icon {
+    // color: var(--primary-c);
+    color: inherit;
+    width: 4.8125rem;
+    height: 4.8125rem;
+    min-width: 46px;
+    min-height: 46px;
+
+    @media ($transition-min) {
+      opacity: 1;
+      transform: translateY(0);
+      transition: transform 0.9s, opacity 0.6s;
+
+      // %fade-card-hover & {
+      //   opacity: 0;
+      //   transform: translateY(50%) scale(0.8);
+      //   transition: transform 0.6s, opacity 0.6s;
+      // }
+    }
+
+    &:nth-child(2) {
+      opacity: 0;
+      position: absolute;
+
+      @media ($transition-min) {
+        transform: translateY(-50%) scale(1.2);
+        transition: transform 0.6s, opacity 0.6s;
+
+        %fade-card-hover & {
+          opacity: 1;
+          transform: translateY(0);
+          transition: transform 0.9s, opacity 0.6s;
+        }
+      }
+    }
+  }
+  &__text {
+    text-align: left;
+    margin-top: 3.125rem;
+
+    @media ($mobile-max) {
+      margin-top: 2.7rem;
+    }
+  }
+}

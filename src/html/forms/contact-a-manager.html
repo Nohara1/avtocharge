@@ -1,0 +1,62 @@
+<form class="form" name="contact-a-manager" novalidate="">
+  <div class="form__items">
+    <div class="form__item">
+      <p class="form__heading _heading _h2">
+        @@if(false){<svg width="30" height="30">
+          <use href="images/icons.svg#call"></use>
+        </svg>}Связаться с менеджером
+      </p>
+      @@if(false){<p class="form__description">Наш менеджер свяжется с Вами в рабочее время</p>}
+    </div>
+    <div class="form__item">
+      <label>
+        <span class="form__label _sr-only">Ваше имя</span>
+        <input class="form__input" type="text" name="name" value="" data-required="" placeholder="Ваше имя">
+        <span class="form__error-message"></span>
+      </label>
+    </div>
+    @@if(false){<div class="form__item">
+      <label>
+        <span class="form__label _sr-only">Имя</span>
+        @@if(false){<svg class="form__input-icon" width="16" height="16" aria-hidden="true">
+          <use href="images/icons.svg#user"></use>
+        </svg>}
+        <input class="form__input" type="text" name="name" value="" data-required="" placeholder="Имя">
+        <span class="form__error-message"></span>
+      </label>
+    </div>}
+    <div class="form__item">
+      <label>
+        <span class="form__label _sr-only">Ваш телефон</span>
+        @@if(false){<svg class="form__input-icon" width="16" height="16" aria-hidden="true">
+          <use href="images/icons.svg#phone"></use>
+        </svg>}
+        <input class="form__input" type="tel" name="phone" value="" data-required="" placeholder="Ваш телефон">
+        <span class="form__error-message"></span>
+      </label>
+    </div>
+    <div class="form__item">
+      <label>
+        <span class="form__label _sr-only">Комментарий</span>
+        <textarea class="form__input" name="description" placeholder="Комментарий"></textarea>
+      </label>
+    </div>
+    @@if(false){<div class="form__item">
+      <label>
+        <input class="form__checkbox" type="checkbox" name="agree" data-required="">
+        <span class="form__label">Я <a href="files/test.pdf" target="_blank">согласен(а)</a> на
+          обработку персональных данных</span>
+      </label>
+    </div>}
+    <div class="form__item form__item_small-gap">
+      <span class="form__personal">Нажимая на кнопку вы соглашаетесь на обработку персональных данных</span>
+    </div>
+    <div class="form__item form__item_small-gap">
+      <div class="form__buttons-wrapper">
+        @@if(false){<button class="form__button--reset _btn _btn--link" type="reset">Очистить форму</button>}
+        <button class="form__button _btn" type="submit" name="submit">Отправить</button>
+        @@if(false){<div class="dummy"></div>}
+      </div>
+    </div>
+  </div>
+</form>

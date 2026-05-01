@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./src/html/page/head.html', {
+  title: "Услуги",
+  sliderPreload: false
+})
+
+<body>
+  <div class="wrapper">
+    @@include('./src/html/page/header.html', {
+      transparent: false
+    })
+
+    @@include('./src/html/blocks/background.html')
+
+    @@include('./src/html/components/breadcrumbs.html', {
+      elements: [
+        { name: 'Главная', link: '/' },
+        { name: 'Услуги', link: '' }
+      ]
+    })
+
+    @@include('./src/html/blocks/two-components.html', {
+      hStyle: 2,
+      heading: 'Наши услуги',
+      background: true,
+      subheading: '',
+      title01: '',
+      animate: false,
+      component01url: "./src/html/components/image.html",
+      component01params: "{ src: 'images/uslugi/uslugi1.png', alt: 'uslugi-1', orientation: 'square', contain: true, width: '790', height: '790', class: '' }",
+      title02: '',
+      extraClass: 'tc_usluga',
+      component02url: './src/html/components/uslugi.html',
+      component02params: '{ title: "Прокат оборудования",link: "/usluga", text: "Сотни современных решений для организации площадок премиум‑класса."}',
+    })
+
+    @@include('./src/html/blocks/two-components.html', {
+      hStyle: 2,
+      heading: '',
+      background: true,
+      subheading: '',
+      title01: '',
+      animate: false,
+      component01url: "./src/html/components/image.html",
+      component01params: "{ src: 'images/uslugi/uslugi2.png', alt: 'uslugi-1', orientation: 'square', contain: true, width: '790', height: '790', class: 'image_animate' }",
+      title02: '',
+      extraClass: 'tc_usluga tc_reverse _section_no-gap',
+      component02url: './src/html/components/uslugi.html',
+      component02params: '{ title: "Техническое сопровождение",link: "/usluga", text: "Оборудование для туров и событий, согласование райдеров и документации."}',
+    })
+
+    @@include('./src/html/blocks/two-components.html', {
+      hStyle: 2,
+      heading: '',
+      background: true,
+      subheading: '',
+      title01: '',
+      animate: false,
+      component01url: "./src/html/components/image.html",
+      component01params: "{ src: 'images/uslugi/uslugi3.png', alt: 'uslugi-1', orientation: 'square', contain: true, width: '790', height: '790', class: 'image_animate' }",
+      title02: '',
+      extraClass: 'tc_usluga _section_no-gap',
+      component02url: './src/html/components/uslugi.html',
+      component02params: '{ title: "Дизайн и продакшн",link: "/usluga", text: "Сценические концепты, планы и декорации любой сложности."}',
+    })
+    @@include('./src/html/page/footer.html')
+  </div>
+  @@include("./src/html/page/body-bottom.html")
+</body>
+
+</html>

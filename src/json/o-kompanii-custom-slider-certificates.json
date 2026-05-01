@@ -1,0 +1,26 @@
+[
+  {
+    "src": "images/certificates/1650-1.jpg",
+    "thumb": "images/certificates/thumbs/1650-1.jpg",
+    "alt": "сертификат",
+    "orientation": "vertical",
+    "contain": true,
+    "gallery": "certificate",
+    "width": 250,
+    "height": 354,
+    "responsive": true,
+    "class": ""
+  },
+  {
+    "src": "images/certificates/1650-2.jpg",
+    "thumb": "images/certificates/thumbs/1650-2.jpg",
+    "alt": "сертификат",
+    "orientation": "vertical",
+    "contain": true,
+    "gallery": "certificate",
+    "width": 250,
+    "height": 354,
+    "responsive": true,
+    "class": ""
+  }
+]

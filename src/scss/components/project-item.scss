@@ -1,0 +1,103 @@
+.pi {
+  &__inner {
+    height: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    border-radius: 10px;
+    transition: box-shadow 0.3s;
+    &:hover{
+      box-shadow: -8px -8px 16px 0px #00000005,
+                  8px 8px 16px 0px #FFFFFF4D;
+      %btn--circle{
+        background-color: var(--white);
+        svg{
+          color: var(--black);
+        }
+      }
+    }
+}
+%image-wrapper {
+  @media ($transition-min) {
+    transition: transform var(--transition);
+    --bdrs: 10px 10px 0 0 ;
+
+
+    &::after {
+      opacity: 0;
+      transition: opacity var(--transition);
+      background-color: var(--white);
+    }
+  }
+}
+  &__content{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    align-items: center;
+    flex-grow: 1;
+  }
+  &__button{
+    
+    position: static;
+    transform: none;
+    align-self: flex-end;
+
+    &%btn--circle{
+      width: 36px;
+      height: 36px;
+      border: 2px solid var(--white);
+      svg{
+        width: 26px;
+        height: 26px;
+        color: var(--white);
+      }
+      
+    }
+    &::after {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+      content: "";
+      display: block;
+      position: absolute;
+    }
+  }
+  // &__inner {}
+  // &__items {
+  //   @include row(3.125rem, 3.125rem);
+  // }
+  // &__item {
+  //   flex: 1 1 100%;
+  //   max-width: 100%;
+
+  //   @media ($tablet-mid) {
+  //     min-width: 400px;
+  //     flex-basis: 0%;
+  //   }
+
+  //   // @media ($tablet-max) {
+  //   //   max-width: 400px;
+  //   //   flex-basis: 100%;
+  //   // }
+  // }
+  // // &__content {}
+  // %image-wrapper {
+  //   height: 275px;
+  //   max-width: 500px;
+
+  //   // @media ($desktop-min) {
+  //   //   height: 100%;
+  //   // }
+  //   // @media ($tablet-max) {
+  //   //   padding-bottom: 68.75%;
+  //   // }
+  //   @media ($mobile-max) {
+  //     height: 205px;
+  //   }
+  // }
+
+  @extend %project !optional;
+}

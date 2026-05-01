@@ -1,0 +1,31 @@
+[
+  {
+    "name": "Коллекция",
+    "elementsCount": 10
+  },
+  {
+    "name": "Дезинфекция воды",
+    "elementsCount": 3,
+    "tooltips": true
+  },
+  {
+    "name": "Приложение для сматрфона / Wi-fi",
+    "elementsCount": 6
+  },
+  {
+    "name": "Ароматерапия",
+    "elementsCount": 4
+  },
+  {
+    "name": "Кислородная терапия",
+    "elementsCount": 4
+  },
+  {
+    "name": "Аудиосистема",
+    "elementsCount": 4
+  },
+  {
+    "name": "Хромотерапия",
+    "elementsCount": 4
+  }
+]

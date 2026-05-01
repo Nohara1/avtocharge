@@ -1,0 +1,26 @@
+<section class="price pr@@if(context.extraClass){ @@extraClass}" @@if(context.animate){ data-animate="appearing" }>
+    <div class="container">
+      @@include('./src/html/components/heading.html', {
+        heading: '@@if(context.heading){@@heading}',
+        hLevel: '@@if(context.hLevel){@@hLevel}',
+        hStyle: '@@if(context.hStyle){@@hStyle}',
+        hExtraClass: 'tc__heading',
+      })
+      @@if(context.subheading){
+      <h2 class="pr__heading _heading">@@subheading</h2>
+      }
+      <div class="pr__wrapper">
+        <div class="pr__items">
+          @@if(context.component01url && context.component01params) {
+          <div class="pr__item">
+            @@if(context.title01){<span class="pr__title _title">@@title01</span>}
+            @@include('@@component01url', @@component01params)
+            @@if(context.extraComponent01url && context.extraComponent01params) {
+            @@include('@@extraComponent01url', @@extraComponent01params)
+            }
+          </div>
+          }
+        </div>
+      </div>
+    </div>
+  </section>

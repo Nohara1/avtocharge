@@ -1,0 +1,85 @@
+// rating-widget
+.rw {
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+
+  @media ($desktop-max-xl) {
+    font-size: 14px;
+  }
+  @media ($mobile-max) {
+    margin-top: 8px;
+  }
+
+  &__stars {
+    align-items: center;
+    @include row(10px, 10px, true);
+  }
+  &__star {
+    color: var(--star-color);
+    width: 21.333px;
+    height: 20px;
+    position: relative;
+    transform: translateZ(0);
+
+    & + & {
+      margin-left: 6px;
+    }
+    svg {
+      width: 0%;
+      height: 100%;
+      position: relative;
+      transition: width 0.25s;
+    }
+    &:nth-child(2) svg {
+      transition-delay: 0.25s;
+    }
+    &:nth-child(3) svg {
+      transition-delay: 0.5s;
+    }
+    &:nth-child(4) svg {
+      transition-delay: 0.75s;
+    }
+    &:nth-child(5) svg {
+      transition-delay: 1s;
+    }
+    &::before {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      content: "";
+      opacity: 0.2;
+      display: block;
+      overflow: hidden;
+      position: absolute;
+      transform: translateZ(0);
+      background: url("../images/icons.svg#star-rating") left center/100% auto
+        no-repeat transparent;
+    }
+  }
+  &__description {
+    margin-top: 20px;
+
+    a {
+      color: var(--primary-c-30);
+
+      @media ($transition-min) {
+        transition: color var(--transition);
+  
+        &:hover {
+          color: var(--secondary-c);
+        }
+      }
+    }
+  }
+  // &__btn {
+  //   color: inherit;
+  //   display: inline-block;
+  //   margin-top: 20px;
+
+  //   @extend %rating-widget-btn !optional;
+  // }
+
+  @extend %rating-widget !optional;
+}

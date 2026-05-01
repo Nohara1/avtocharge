@@ -1,0 +1,58 @@
+<section class="callback@@if(context.features){ callback_features}">
+  <div class="container">
+    @@if(context.heading){<h2 class="callback__heading _heading@@if(context.h1style){ _h1}">
+      @@heading
+    </h2>}
+    @@if(context.subheading){<p class="callback__subheading@@if(context.h1style){ _heading _h2}@@if(!context.h1style){ _heading _h3}">
+      @@subheading
+    </p>}
+    <div class="callback__items-wrapper">
+      <div class="callback__items">
+        <div class="callback__item">
+          @@if(context.text){<div class="callback__text _cc">
+            @@text
+          </div>}
+          @@if(context.formPath){<div class="callback__form">
+            @@include('@@formPath')
+          </div>}
+          @@if(context.features){<div class="callback__features">
+            <ul class="callback__features-list">
+              <li class="callback__features-list-item">
+                <svg width="25" height="25">
+                  <use href="images/icons.svg#check-badge"></use>
+                </svg>
+                <p class="callback__features-title _title">Заголовок преимущества</p>
+              </li>
+              <li class="callback__features-list-item">
+                <svg width="25" height="25">
+                  <use href="images/icons.svg#check-badge"></use>
+                </svg>
+                <p class="callback__features-title _title">Заголовок преимущества</p>
+              </li>
+              <li class="callback__features-list-item">
+                <svg width="25" height="25">
+                  <use href="images/icons.svg#check-badge"></use>
+                </svg>
+                <p class="callback__features-title _title">Заголовок преимущества</p>
+              </li>
+            </ul>
+            <button class="callback__features-button _btn _btn--brown" type="button" data-open-popup="">Рассчитать
+              стоимость</button>
+          </div>}
+        </div>
+        <div class="callback__item @@if(0){callback__item_to-bottom}">
+          <div class="callback__images">
+            @@if(context.image01){<img class="callback__image" src="@@image01" alt="название купели"
+              srcset="images/placeholder-transparent.png" data-srcset="@@image01webp" width="885" height="293"
+              decoding="async">}
+            @@if(context.image02){<img class="callback__image" src="@@image02" alt="название купели"
+              srcset="images/placeholder.png" data-srcset="@@image02webp" width="277" height="277" decoding="async">}
+            @@if(context.background){<div class="callback__additional-image"
+              style="background-image: url('@@background');"></div>}
+            @@if(context.component){ @@include('@@component') }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

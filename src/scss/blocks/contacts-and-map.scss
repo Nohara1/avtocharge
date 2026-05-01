@@ -1,0 +1,64 @@
+.contacts-and-map {
+  padding: 3.5rem 0;
+
+  @media ($tablet-mad) {
+    padding: 2rem 0;
+  }
+
+  &__items {
+    align-items: center;
+    @include row($gapB: 1.875rem, $gapL: 1.875rem);
+  }
+  &__item {
+    flex: 1 1 50%;
+    max-width: 50%;
+
+    @media ($tablet-max) {
+      max-width: 100%;
+      flex-basis: 100%;
+    }
+  }
+  &__inner {
+    display: flex;
+    font-size: 20px;
+    flex-direction: column;
+
+    @media ($tablet-max) and ($tablet-min) {
+      font-size: 18px;
+    }
+    @media ($mobile-max) {
+      font-size: 16px;
+    }
+  }
+  %address,
+  %phone,
+  %email {
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+
+    svg {
+      width: 4.375rem;
+      height: 4.375rem;
+      min-width: 50px;
+      min-height: 50px;
+    }
+    span {
+      margin-left: 1.5em;
+    }
+  }
+  %address {
+    svg {
+      color: var(--white);
+      padding: 1.25rem;
+      border-radius: 50%;
+      background-color: var(--primary-c);
+    }
+  }
+  %phone,
+  %email {
+    svg {
+      padding: 0.5rem;
+    }
+  }
+}

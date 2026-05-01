@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./src/html/page/head.html', {
+  title: "Страница не найдена",
+  sliderPreload: false
+})
+
+<body>
+  <div class="wrapper">
+    @@include('./src/html/page/header.html', {
+      transparent: false
+    })
+
+    @@include('./src/html/blocks/background.html')
+
+    @@include('./src/html/components/breadcrumbs.html', {
+      elements: [
+        { name: 'Главная', link: '/' },
+        { name: '404', link: '' }
+      ]
+    })
+
+    @@include('./src/html/blocks/inner/filler.html', {
+      heading: 'Страница не найдена',
+      extraClass: '',
+      images: false,
+      citeSwitcher: '',
+      image: 'images/page_404.png',
+      text: '<p>Кажется, вы попали не туда. Но ничего страшного — начните с главной или воспользуйтесь поиском, чтобы найти нужное.</p>'
+    })
+
+    @@include('./src/html/page/footer.html')
+  </div>
+  @@include("./src/html/page/body-bottom.html")
+</body>
+
+</html>

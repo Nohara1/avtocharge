@@ -1,0 +1,35 @@
+<section class="cc cc-three@@if(context.noGap){ cc_no-gap}"@@if(context.id){ id="@@id"}@@if(context.animate){ data-animate="appearing"}>
+  <div class="container">
+    @@include('./src/html/components/heading.html', {
+      heading: '@@if(context.heading){@@heading}',
+      hLevel: '@@if(context.hLevel){@@hLevel}',
+      hStyle: '@@if(context.hStyle){@@hStyle}'
+    })
+    <div class="cc__items@@if(context.full){ cc__items_full}@@if(context.reverse){ cc__items_reverse}">
+      @@if(context.content01) {
+      <div class="cc__item">
+        <div class="cc__content _cc">
+          @@content01
+        </div>
+      </div>
+      }
+      @@if(context.content02) {
+      <div class="cc__item">
+        <div class="cc__content _cc">
+          @@content02
+        </div>
+      </div>
+      }
+      @@if(context.content03) {
+      <div class="cc__item">
+        <div class="cc__content _cc">
+          @@content03
+        </div>
+      </div>
+      }
+    </div>
+    @@if(context.button){<div class="cc__buttons"><a href="#" class="_btn _btn--arrow">@@button
+      <svg width="51" height="15" aria-hidden="true"><use href="images/icons.svg#arrow-btn"></use></svg>
+    </a></div>}
+  </div>
+</section>

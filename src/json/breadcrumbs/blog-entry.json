@@ -1,0 +1,20 @@
+[
+  {
+    "number": "1",
+    "name": "Главная",
+    "link": "/",
+    "current": false
+  },
+  {
+    "number": "2",
+    "name": "Блог",
+    "link": "/blog",
+    "current": false
+  },
+  {
+    "number": "3",
+    "name": "Заголовок для вашей статьи в блоге 1234",
+    "link": "",
+    "current": true
+  }
+]

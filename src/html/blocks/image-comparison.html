@@ -1,0 +1,39 @@
+<section class="image-comparison">
+  <div class="container">
+    @@if(context.heading){<h2 class="image-comparison__heading _heading">@@heading</h2>}
+    <div class="image-comparison__items">
+      <div class="image-comparison__item">
+        <img-comparison-slider>
+          <img slot="first" src="images/additional/comparison-01.jpg" alt="" width="502" height="335" loading="lazy" decoding="async">
+          <img slot="second" src="images/additional/comparison-02.jpg" alt="" width="502" height="335" loading="lazy" decoding="async">
+          <svg slot="handle" width="50" height="50">
+            <use href="images/icons.svg#sideways"></use>
+          </svg>
+        </img-comparison-slider>
+      </div>
+      <div class="image-comparison__item">
+        <img-comparison-slider>
+          <img slot="first" src="images/additional/comparison-01.jpg" alt="" width="502" height="335" loading="lazy" decoding="async">
+          <img slot="second" src="images/additional/comparison-02.jpg" alt="" width="502" height="335" loading="lazy" decoding="async">
+          <svg slot="handle" width="50" height="50">
+            <use href="images/icons.svg#sideways"></use>
+          </svg>
+        </img-comparison-slider>
+      </div>
+      <div class="image-comparison__item">
+        <img-comparison-slider>
+          <img slot="first" src="images/additional/comparison-01.jpg" alt="" width="502" height="335" loading="lazy" decoding="async">
+          <img slot="second" src="images/additional/comparison-02.jpg" alt="" width="502" height="335" loading="lazy" decoding="async">
+          <svg slot="handle" width="50" height="50">
+            <use href="images/icons.svg#sideways"></use>
+          </svg>
+        </img-comparison-slider>
+      </div>
+    </div>
+    @@if(context.button){
+    <div class="image-comparison__buttons">
+      <a href="#" class="image-comparison__button _btn">@@button</a>
+    </div>
+    }
+  </div>
+</section>

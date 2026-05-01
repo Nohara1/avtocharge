@@ -1,0 +1,15 @@
+<div class="portfolios _section">
+  <div class="container">
+    <nav class="tabs__nav _nav-slider" role="tablist">
+      <div class="_nav-slider__wrapper">
+        <button class="_nav-slider__slide _btn _btn--tab-01 active" type="button">Все работы</button>
+        <button class="_nav-slider__slide _btn _btn--tab-01" type="button">Спа-бассейны</button>
+        <button class="_nav-slider__slide _btn _btn--tab-01" type="button">Плавательные спа-бассейны</button>
+        <button class="_nav-slider__slide _btn _btn--tab-01" type="button">Другое</button>
+      </div>
+    </nav>
+    <div class="portfolios__items">
+      @@loop('./src/html/components/portfolio-card.html', '../json/portfolios.json')
+    </div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<section class="form-with-image">
+  <div class="container">
+    @@if(context.heading){<h2 class="form-with-image__heading _heading">@@heading</h2>}
+    @@if(context.subheading){<h3 class="form-with-image__subheading _heading">@@subheading</h3>}
+    @@if(context.text){<div class="form-with-image__text _cc">@@text</div>}
+    <div class="form-with-image__items">
+      <div class="form-with-image__item">
+        @@include('@@pathToForm')
+      </div>
+      @@if(context.imageSrc){<div class="form-with-image__item">
+        @@include('./src/html/components/image.html', {
+        'src': '@@imageSrc',
+        'alt': '@@imageAlt',
+        'width': '@@imageWidth',
+        'height': '@@imageHeight'
+        })
+      </div>}
+    </div>
+  </div>
+</section>

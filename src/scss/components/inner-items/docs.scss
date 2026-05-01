@@ -1,0 +1,87 @@
+.docs {
+  @extend %docs !optional;
+
+  &__inner {
+    width: 100%;
+    border: 0;
+    height: 100%;
+    border: 1px solid transparent;
+    display: flex;
+    padding: 30px;
+    transition:
+      color var(--transition),
+      border-color var(--transition),
+      background-color var(--transition);
+    align-items: center;
+    border-radius: 20px;
+    flex-direction: column;
+    background-color: var(--primary-c-10);
+
+    &[data-open-popup] {
+      @extend %docs-inner-popup !optional;
+
+      @media ($transition-min) {
+        &:hover {
+          border-color: var(--primary-c);
+
+          @extend %docs-inner-hover !optional;
+        }
+      }
+    }
+    &:not([data-open-popup]) {
+      @extend %docs-inner-not-popup !optional;
+    }
+
+    &%_popup-opened {
+      color: var(--white);
+      background-color: var(--primary-c);
+
+      @extend %docs-inner-active !optional;
+
+      svg {
+        color: var(--white);
+      }
+    }
+  }
+  &__folder {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    padding-top: 30px;
+    justify-content: center;
+  }
+  &__sheet {
+    top: 48%;
+    position: absolute;
+    transform: translateY(0);
+
+    @media ($transition-min) {
+      %docs-inner-hover & {
+        transform: translateY(-40px);
+        transition:
+          color var(--transition),
+          transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+      }
+    }
+    %docs-inner-active &,
+    %docs-inner-not-popup & {
+      transform: translateY(-40px);
+      transition:
+        color var(--transition),
+        transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    }
+  }
+  &__title {
+    --c: inherit;
+    margin-top: 30px;
+  }
+  svg {
+    color: var(--primary-c);
+
+    @media ($transition-min) {
+      transition:
+        color var(--transition),
+        transform 0.3s cubic-bezier(0.6, -0.28, 0.74, 0.05);
+    }
+  }
+}

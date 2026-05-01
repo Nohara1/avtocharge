@@ -1,0 +1,68 @@
+[
+  {
+    "title": "Заголовок вашего блока",
+    "icon": "construction",
+    "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orciLorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci</p>",
+    "flipped": {
+      "title": "Заголовок вашего блока",
+      "icon": "pipe",
+      "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orciLorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci</p>",
+      "image": "images/additional/card-flip-background.jpg"
+    }
+  },
+  {
+    "title": "Заголовок вашего блока",
+    "icon": "construction",
+    "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orciLorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci</p>",
+    "flipped": {
+      "title": "Заголовок вашего блока",
+      "icon": "pipe",
+      "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
+      "image": "images/additional/card-flip-background.jpg"
+    }
+  },
+  {
+    "title": "Заголовок вашего блока",
+    "icon": "construction",
+    "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci.</p>",
+    "flipped": {
+      "title": "Заголовок вашего блока",
+      "icon": "pipe",
+      "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orciLorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci</p>",
+      "image": "images/additional/card-flip-background.jpg"
+    }
+  },
+  {
+    "title": "Заголовок вашего блока",
+    "icon": "construction",
+    "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orciLorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci</p>",
+    "flipped": {
+      "title": "Заголовок вашего блока",
+      "icon": "pipe",
+      "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orciLorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci</p>",
+      "image": "images/additional/card-flip-background.jpg"
+    }
+  },
+  {
+    "title": "Заголовок вашего блока",
+    "icon": "construction",
+    "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orciLorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci</p>",
+    "flipped": {
+      "title": "Заголовок вашего блока",
+      "icon": "pipe",
+      "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orciLorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci</p>",
+      "image": "images/additional/card-flip-background.jpg"
+    }
+  },
+  {
+    "title": "Заголовок вашего блока",
+    "icon": "construction",
+    "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orciLorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci</p>",
+    "flipped": {
+      "title": "Заголовок вашего блока",
+      "icon": "pipe",
+      "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orciLorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac efficitur leo, ac venenatis orci</p>",
+      "image": "images/additional/card-flip-background.jpg"
+    }
+  }
+]

@@ -1,0 +1,24 @@
+<div class="services-item@@if(context.small){ services-item_small}@@if(context.link){ services-item_link}@@if(context.image){ services-item_image}">
+  <div class="services-item__inner" @@if(context.title){data-tittle="@@title"}>
+    @@if(context.image){
+      @@include('./src/html/components/image.html', {
+        src: '@@image',
+        alt: '@@title',
+        width: 400,
+        height: 400
+      })
+    }
+    <div class="services-item__content">
+      @@if(context.title){
+        <p class="services-item__title _title">@@title</p>
+      }
+      <div class="services-item__text _cc">
+        @@text
+      </div>
+      @@if(context.link){
+        <a href="@@link" class="services-item__link _btn">Подробнееe
+        </a>
+        }
+    </div>
+  </div>
+</div>

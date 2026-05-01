@@ -1,0 +1,50 @@
+[
+  {
+    "src": "images/additional/staff-01.jpg",
+    "thumb": "",
+    "alt": "Имя Фамилия",
+    "orientation": "vertical",
+    "contain": false,
+    "width": 400,
+    "height": 451,
+    "class": "image_team",
+    "title": "Имя Фамилия",
+    "subtitle": "<p>Должность: <b>инженер-проектировщик</b></p><p>Lorem Ipsum is simply dummy text of the printing</p>@@include('./src/html/components/messengers.html')@@include('./src/html/components/email.html')"
+  },
+  {
+    "src": "images/additional/staff-01.jpg",
+    "thumb": "",
+    "alt": "Имя Фамилия",
+    "orientation": "vertical",
+    "contain": false,
+    "width": 400,
+    "height": 451,
+    "class": "image_team",
+    "title": "Имя Фамилия",
+    "subtitle": "<p>Должность: <b>инженер-проектировщик</b></p><p>Lorem Ipsum is simply dummy text of the printing</p>@@include('./src/html/components/messengers.html')@@include('./src/html/components/email.html')"
+  },
+  {
+    "src": "images/additional/staff-01.jpg",
+    "thumb": "",
+    "alt": "Имя Фамилия",
+    "orientation": "vertical",
+    "contain": false,
+    "width": 400,
+    "height": 451,
+    "class": "image_team",
+    "title": "Имя Фамилия",
+    "subtitle": "<p>Должность: <b>инженер-проектировщик</b></p><p>Lorem Ipsum is simply dummy text of the printing</p>@@include('./src/html/components/messengers.html')@@include('./src/html/components/email.html')"
+  },
+  {
+    "src": "images/additional/staff-01.jpg",
+    "thumb": "",
+    "alt": "Имя Фамилия",
+    "orientation": "vertical",
+    "contain": false,
+    "width": 400,
+    "height": 451,
+    "class": "image_team",
+    "title": "Имя Фамилия",
+    "subtitle": "<p>Должность: <b>инженер-проектировщик</b></p><p>Lorem Ipsum is simply dummy text of the printing</p>@@include('./src/html/components/messengers.html')@@include('./src/html/components/email.html')"
+  }
+]

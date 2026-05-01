@@ -1,0 +1,477 @@
+.cc {
+  display: flex;
+
+  &-01 {
+    @extend %custom-content-01 !optional;
+  }
+  &-02 {
+    @extend %custom-content-02 !optional;
+  }
+  &-03 {
+    overflow: hidden;
+
+    @extend %custom-content-03 !optional;
+  }
+  &-three {
+    @extend %custom-content-three !optional;
+  }
+  &-center{
+    text-align: center;
+  }
+  // &-ladder {
+  //   @extend %custom-content-ladder !optional;
+  // }
+  &-indent {
+    @extend %custom-content-indent !optional;
+  }
+  &_no-gap {
+    @extend %custom-content-no-gap !optional;
+  }
+  &_uslugi-list{
+    @extend %custom-content-uslugi-list !optional;
+    %_custom-content {
+      @media($tablet-mad){
+        font-size: 16px;
+      }
+      @media ($tablet-min) {
+        ul {
+          column-gap: 40px;
+          column-count: 2;
+        }
+      }
+    }
+  }
+  &_seo-list {
+    @extend %custom-content-seo-list !optional;
+
+    %_custom-content {
+      @media ($tablet-min) {
+        ul {
+          max-width: calc($container-width / 2);
+          column-gap: 30px;
+          column-count: 2;
+        }
+      }
+    }
+  }
+  &-case {
+    @extend %custom-content-case !optional;
+
+    &_indent {
+      @extend %custom-content-case-indent !optional;
+
+      %container {
+        width: auto;
+        margin-right: 0;
+      }
+    }
+
+    %tabs {
+      @extend %sticky-element;
+      z-index: 1;
+    }
+    %_custom-content {
+      @media ($desktop-min) {
+        max-width: calc($container-width * 0.52);
+      }
+    }
+  }
+  &-target {
+    @extend %custom-content-target !optional;
+
+    %_custom-content {
+      table {
+        font-size: 2rem;
+        font-weight: 300;
+        border-spacing: 0 10px;
+        border-collapse: separate;
+
+        @media ($tablet-mad) and ($tablet-min) {
+          font-size: 18px;
+        }
+        @media ($mobile-max) {
+          font-size: 16px;
+        }
+        @media (max-width: 400px) {
+          font-size: 14px;
+        }
+      }
+      th,
+      td {
+        padding-top: 8px;
+        padding-bottom: 8px;
+      }
+      thead {
+        th {
+          --th-g: 1.5625rem;
+          --th-p: 0.9375rem;
+          padding: var(--th-p);
+          position: relative;
+          text-align: center;
+          font-weight: 300;
+          background-color: transparent;
+
+          @media ($mobile-max) {
+            font-weight: 500;
+            --th-g: 5px;
+            --th-p: 5px;
+          }
+
+          &::before {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 2px solid var(--primary-c);
+            content: "";
+            z-index: -1;
+            position: absolute;
+            border-radius: 0.9375rem;
+          }
+
+          &:first-child {
+            padding-right: calc(var(--th-g) + var(--th-p));
+
+            &::before {
+              right: var(--th-g);
+            }
+          }
+          &:nth-child(n + 2):nth-last-child(n + 2) {
+            padding-left: calc(var(--th-g) + var(--th-p));
+            padding-right: calc(var(--th-g) + var(--th-p));
+
+            &::before {
+              left: var(--th-g);
+              right: var(--th-g);
+            }
+          }
+          &:last-child {
+            padding-left: calc(var(--th-g) + var(--th-p));
+
+            &::before {
+              left: var(--th-g);
+            }
+          }
+        }
+      }
+      tfoot {
+        td {
+          color: var(--white);
+          text-align: center;
+          border-radius: 10px;
+          background-color: var(--primary-c);
+        }
+        a {
+          color: inherit;
+        }
+      }
+    }
+  }
+
+  %container {
+    > * + * {
+      margin-top: 3.125rem;
+    }
+  }
+  &__heading {
+    margin-bottom: 0;
+  }
+  // %tabs {
+  //   margin-top: 3.125rem;
+  // }
+  &__items {
+    // margin-top: 3.125rem;
+    @include row(3.125rem, 3.125rem);
+
+    &_reverse {
+      flex-direction: row-reverse;
+
+      @extend %custom-content-reverse !optional;
+    }
+    &_full {
+      @extend %custom-content-full !optional;
+    }
+    &_mirrored {
+      @extend %custom-content-mirrored !optional;
+    }
+    & + & {
+      margin-top: 0;
+    }
+
+    // %custom-content-ladder & {
+    //   position: relative;
+
+    //   &::before {
+    //     @extend %cc-logo !optional;
+    //     content: "CWEB";
+    //     z-index: -1;
+    //     position: absolute;
+    //     font-size: 12.5rem;
+    //     transform: translateX(calc(var(--scroll-position) * 0.2vw));
+    //     transition: transform 0.075s linear;
+    //     margin-left: 3.125rem;
+
+    //     @media ($desktop-max) {
+    //       right: 0;
+    //       transform: translateX(calc(var(--scroll-position) * 0.3vw * -1));
+    //     }
+    //     @media ($mobile-max) {
+    //       top: 50%;
+    //     }
+    //   }
+    // }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    %custom-content-01 &,
+    %custom-content-03 & {
+      @media ($desktop-min) {
+        flex: 1 1 50%;
+        max-width: 50%;
+      }
+    }
+    %custom-content-02 & {
+      padding-top: 0;
+
+      @media ($desktop-min) {
+        &:nth-child(2n + 1) {
+          flex: 1 1 41%;
+          max-width: 41%;
+        }
+        &:nth-child(2n + 2) {
+          flex: 1 1 59%;
+          max-width: 59%;
+        }
+      }
+    }
+    %custom-content-three & {
+      @media ($desktop-min-xl) {
+        flex: 1 1 33.3333%;
+        max-width: 33.3333%;
+      }
+      @media ($desktop-max) {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+    }
+    // %custom-content-ladder & {
+    //   @media ($desktop-min-xl) {
+    //     flex: 1 1 56%;
+    //     max-width: 56%;
+    //   }
+    //   @media ($desktop-max) {
+    //     flex: 1 1 100%;
+    //     max-width: 100%;
+    //   }
+
+    //   &:nth-child(3n + 1) {
+    //     margin-left: auto;
+    //   }
+    //   &:nth-child(3n + 2) {
+    //     margin-left: auto;
+    //     margin-right: auto;
+    //   }
+    //   &:nth-child(3n + 3) {
+    //     margin-right: auto;
+    //   }
+    // }
+    // %custom-content-case & {
+    //   @media ($desktop-min) {
+    //     flex: 0 0 calc($container-width * 0.52);
+    //     max-width: calc($container-width * 0.52);
+    //     // flex: 0 0 58.3%;
+    //     // max-width: 58.3%;
+    //   }
+    // }
+    %custom-content-02 %custom-content-mirrored & {
+      @media ($desktop-min) {
+        &:nth-child(2n + 2) {
+          flex: 1 1 41%;
+          max-width: 41%;
+        }
+        &:nth-child(2n + 1) {
+          flex: 1 1 59%;
+          max-width: 59%;
+        }
+      }
+    }
+
+    %custom-content-01 %custom-content-full > &,
+    %custom-content-02 %custom-content-full > & {
+      @media ($desktop-min) {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+    }
+
+    @media ($tablet-max) {
+      max-width: 100%;
+      flex-basis: 100%;
+
+      %custom-content-01 & {
+        &:nth-child(1) {
+          order: 1;
+        }
+        &:nth-child(2) {
+          order: 2;
+        }
+        &:nth-child(3) {
+          order: 4;
+        }
+        &:nth-child(4) {
+          order: 3;
+        }
+      }
+    }
+    &_h1 {
+      @extend %custom-content-item-h1 !optional;
+    }
+    // &_no-heading {
+    //   @media ($desktop-min-xl) {
+    //     %custom-content-02 & {
+    //       padding-top: calc(3.125rem + ($h2 * 1.157));
+
+    //       &%custom-content-item-h1 {
+    //         padding-top: calc(3.125rem + ($h1 * 1.157));
+    //       }
+    //     }
+    //   }
+    //   @media ($desktop-max) and ($desktop-min) {
+    //     %custom-content-02 & {
+    //       padding-top: calc(2.7rem + ($h2 * 1.157));
+
+    //       &%custom-content-item-h1 {
+    //         padding-top: calc(2.7rem + ($h1 * 1.157));
+    //       }
+    //     }
+    //   }
+
+    //   @extend %custom-content-item-no-heading !optional;
+    // }
+  }
+  &%custom-content-three %_title {
+    --fz: 32px;
+    --fw: 300;
+    margin-bottom: 0;
+  }
+  %_custom-content {
+    // max-width: 100%;
+
+    // @media ($mobile-max) {
+    //   display: flex;
+    //   flex-direction: column;
+    // }
+
+    img {
+      // @media ($tablet-min) {
+      //   float: right;
+      //   margin: 0.5em 0 20px 20px;
+      //   max-width: 50%;
+      // }
+      // @media ($mobile-max) {
+      //   order: 1;
+      //   width: 250px !important;
+      //   margin: 1.5em auto;
+      //   max-width: 100%;
+      // }
+
+      &:not([class]):first-child + * {
+        margin-top: 0;
+      }
+    }
+  }
+  %image {
+    @at-root {
+      %custom-content-case#{&} {
+        width: auto;
+        margin-left: calc(var(--container-p) * -1);
+        margin-right: calc(var(--container-p) * -1);
+
+        %_image-wrapper {
+          --pb: 0;
+          --bdrs: 0;
+          height: 300px;
+          min-height: 0;
+        }
+      }
+    }
+
+    %_image-wrapper {
+      --pb: 41.765%;
+      --bdrs: 1.875rem;
+      flex-grow: 1;
+      min-height: 22.1875rem;
+      max-height: 520px;
+    }
+    %_image-wrapper-contain {
+      --bdrs: 0;
+    }
+
+    // &_sticky:not(%_image-wrapper) {
+    //   img {
+    //     @extend %sticky-element;
+    //   }
+    // }
+  }
+  &__buttons {
+    margin-top: 30px;
+    text-align: center;
+    margin-left: 33.3333%;
+  }
+  // &__logo {
+  //   @extend %cc-logo !optional;
+
+  //   * + & {
+  //     margin-top: 2.1875rem;
+  //   }
+
+  //   %custom-content-three & {
+  //     z-index: -1;
+  //     position: relative;
+  //     font-size: 12.5rem;
+  //     transform: translateX(calc(var(--scroll-position) * 0.7vw * -1));
+  //     text-align: right;
+  //     transition: transform 0.075s linear;
+  //   }
+  // }
+  // &__collapse {}
+  %banner-badges {
+    @media ($tablet-min) {
+      left: 40px;
+    }
+  }
+  %custom-slider {
+    overflow: visible;
+    margin-top: 3.13rem;
+  }
+  &%custom-content-no-gap {
+    margin-top: 4.625rem;
+
+    @media ($desktop-max) {
+      margin-top: 3.125rem;
+    }
+  }
+  %files-catalog-list-item {
+    max-width: 50%;
+    flex-basis: 50%;
+
+    @media ($desktop-max) and ($desktop-min), ($mobile-max) {
+      max-width: 100%;
+      flex-basis: 100%;
+    }
+  }
+  %files-catalog-title {
+    color: var(--primary-c);
+  }
+}
+
+// %cc-logo {
+//   color: var(--grey-10) !important;
+//   display: block;
+//   font-size: 8rem;
+//   font-weight: 700;
+//   line-height: 0.86;
+//   letter-spacing: 0.01em;
+// }

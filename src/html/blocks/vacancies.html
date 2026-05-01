@@ -1,0 +1,30 @@
+<section class="vacs vacancies">
+  <div class="container">
+    @@include('./src/html/components/heading.html', {
+      heading: '@@if(context.heading){@@heading}',
+      hLevel: '@@if(context.hLevel){@@hLevel}',
+      hStyle: '@@if(context.hStyle){@@hStyle}'
+    })
+    <div class="vacs__wrapper">
+      <div class="vacs__logo-wrapper"><span class="vacs__logo"><span>CWEB</span></span></div>
+      @@if(context.vacancies){
+      <div class="vacs__items">
+        @@for(var i = 0; i < vacancies.length; i++){
+          <div class="vacs__item `+vacancies[i].class+`">
+            <div class="vacs__header">
+              <a href="`+vacancies[i].href+`" class="vacs__title _heading _h3">
+                `+vacancies[i].title+`
+                <svg width="16" height="16" aria-hidden="true">
+                  <use href="images/icons.svg#arrow-thin"></use>
+                </svg>
+              </a>
+              <span class="vacs__tag">`+vacancies[i].tag+`</span>
+            </div>
+            <div class="_cc">`+vacancies[i].text+`</div>
+        </div>
+        }
+      </div>
+      }
+    </div>
+  </div>
+</section>

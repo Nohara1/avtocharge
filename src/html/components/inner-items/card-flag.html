@@ -1,0 +1,11 @@
+<div class="card-flag cf">
+  <div class="cf__inner">
+    @@if(context.image){
+    <p class="cf__image-wrapper">
+      <img src="@@image" alt="" srcset="images/placeholder.png" data-srcset="@@image"
+        width="100" height="75" decoding="async" aria-hidden="true">
+    </p>
+    }
+    <a href="@@url" class="cf__title _title">@@title</a>
+  </div>
+</div>

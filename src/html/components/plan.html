@@ -1,0 +1,150 @@
+<div class="plan-wrapper">
+  <div class="plan" data-icons-path="images/" @@if(context.booked){data-booked="@@booked" }
+    @@if(context.booked){data-address="@@booked" } @@if(context.floor){data-floor="@@floor" } style="--zoom:1;">
+    @@if(context.gallery){<div class="plan-gallery" data-plan-gallery="@@floor">
+      <p class="plan-gallery__image _image-wrapper" data-gallery="@@slide_1o" data-gallery-office="1" tabindex="0">
+        <img src="images/offices/IMG_0342_resized.jpg" alt="@@address, этаж @@floor, офис 1">
+      </p>
+      <p class="plan-gallery__image _image-wrapper" data-gallery="@@slide_1o" data-gallery-office="1" tabindex="0">
+        <img src="images/offices/IMG_0343_resized.jpg" alt="@@address, этаж @@floor, офис 1">
+      </p>
+      <p class="plan-gallery__image _image-wrapper" data-gallery="@@slide_1o" data-gallery-office="1" tabindex="0">
+        <img src="images/offices/IMG_0348_resized.jpg" alt="@@address, этаж @@floor, офис 1">
+      </p>
+      <p class="plan-gallery__image _image-wrapper" data-gallery="@@slide_1o" data-gallery-office="1" tabindex="0">
+        <img src="images/offices/IMG_0355_resized.jpg" alt="@@address, этаж @@floor, офис 1">
+      </p>
+      <p class="plan-gallery__image _image-wrapper" data-gallery="@@slide_1o" data-gallery-office="1" tabindex="0">
+        <img src="images/offices/IMG_0366_resized.jpg" alt="@@address, этаж @@floor, офис 1">
+      </p>
+      <p class="plan-gallery__image _image-wrapper" data-gallery="@@slide_1o" data-gallery-office="1" tabindex="0">
+        <img src="images/offices/IMG_0370_resized.jpg" alt="@@address, этаж @@floor, офис 1">
+      </p>
+      <p class="plan-gallery__image _image-wrapper" data-gallery="@@slide_2o" data-gallery-office="2" tabindex="0">
+        <img src="images/offices/IMG_0366_resized.jpg" alt="@@address, этаж @@floor, офис 2">
+      </p>
+      <p class="plan-gallery__image _image-wrapper" data-gallery="@@slide_2o" data-gallery-office="2" tabindex="0">
+        <img src="images/offices/IMG_0370_resized.jpg" alt="@@address, этаж @@floor, офис 2">
+      </p>
+    </div>}
+    @@include('@@svg')
+  </div>
+  <script>
+    const worldMap = {
+      "Польша": "/country",
+      "Испания": "/country",
+      "Италия": "/country",
+      "Греция": "/country",
+      "Великобритания": "/country",
+      "Таиланд": "/country",
+      "Индонезия": "/country",
+      "Индия": "/country",
+      "США": "/country",
+      "Босния и Герцеговина": "/country",
+      "Австрия": "/country",
+      "Бельгия": "/country",
+      "Болгария": "/country",
+      "Венгрия": "/country",
+      "Германия": "/country",
+      "Дания": "/country",
+      "Ирландия": "/country",
+      "Исландия": "/country",
+      "Латвия": "/country",
+      "Литва": "/country",
+      "Люксембург": "/country",
+      "Нидерланды": "/country",
+      "Норвегия": "/country",
+      "Португалия": "/country",
+      "Румыния": "/country",
+      "Сербия": "/country",
+      "Словакия": "/country",
+      "Словения": "/country",
+      "Финляндия": "/country",
+      "Хорватия": "/country",
+      "Чехия": "/country",
+      "Швейцария": "/country",
+      "Швеция": "/country",
+      "Эстония": "/country",
+      "Франция": "/country",
+      "Кипр": "/country",
+      "Мальта": "/country",
+      "Фарерские острова": "/country",
+      "Гренландия": "/country",
+      "Доминикана": "/country",
+      "Канада": "/country",
+      "Колумбия": "/country",
+      "Мексика": "/country",
+      "Уругвай": "/country",
+      "Французская Гвиана": "/country",
+      "Французская Полинезия": "/country",
+      "Багамы": "/country",
+      "Бермудские Острова": "/country",
+      "Каймановы острова": "/country",
+      "Теркс и Кайкос": "/country",
+      "Бахрейн": "/country",
+      "Израиль": "/country",
+      "Иран": "/country",
+      "Камбоджа": "/country",
+      "Китай": "/country",
+      "Мьянма": "/country",
+      "Непал": "/country",
+      "ОАЭ": "/country",
+      "Оман": "/country",
+      "Пакистан": "/country",
+      "Саудовская Аравия": "/country",
+      "Сингапур": "/country",
+      "Сирия": "/country",
+      "Тайвань": "/country",
+      "Турция": "/country",
+      "Южная Корея": "/country",
+      "Япония": "/country",
+      "Вьетнам": "/country",
+      "Филиппины": "/country",
+      "Шри-Ланка": "/country",
+      "Австралия": "/country",
+      "Новая Зеландия": "/country",
+      "Папуа-Новая Гвинея": "/country",
+      "Фиджи": "/country",
+      "Алжир": "/country",
+      "Бенин": "/country",
+      "Габон": "/country",
+      "Гвинея": "/country",
+      "Египет": "/country",
+      "Камерун": "/country",
+      "Кения": "/country",
+      "Кот-д'Ивуар": "/country",
+      "Марокко": "/country",
+      "Мозамбик": "/country",
+      "Сьерра-Леоне": "/country",
+      "Танзания": "/country",
+      "Уганда": "/country",
+      "Эфиопия": "/country",
+      "ЮАР": "/country",
+      "Реюньон": "/country",
+      "Лихтенштейн": "/country",
+      "Сан-Марино": "/country",
+      "Гибралтар": "/country",
+      "Гонконг": "/country",
+    };
+    let countriesSelector = "rofl";
+    for (const key in worldMap) {
+      countriesSelector += ',[data-country="' + key + '"]';
+    }
+    const activeCountries = document.querySelectorAll(countriesSelector);
+    activeCountries.forEach(function (country) {
+      country.className.baseVal = "active";
+    });
+    document.addEventListener("countrySelected", function (e) {
+      const link = worldMap[e.detail];
+      if (link) document.location.href = link;
+    });
+    // to remove on production
+    /*document.addEventListener("click", function (e) {
+      if (e.target.nodeName === "path") {
+        navigator.clipboard.writeText(e.target.getAttribute("d")).then(() => {
+          e.target.style.fill = "red";
+        });
+      }
+    });*/
+  </script>
+</div>

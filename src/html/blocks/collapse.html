@@ -1,0 +1,13 @@
+<@@if(context.heading){section}@@if(!context.heading){div} class="collapse@@if(context.extraClass){ @@extraClass}@@if(!context.heading){ _section}">
+  <div class="container">
+    @@include('./src/html/components/heading.html', {
+      heading: '@@if(context.heading){@@heading}',
+      hLevel: '@@if(context.hLevel){@@hLevel}',
+      hStyle: '@@if(context.hStyle){@@hStyle}',
+      hExtraClass: 'collapse__heading'
+    })
+    <div class="collapse__items" data-toggle-container="toggle@@if(context.self){,self}" role="tablist">
+      @@loop('./src/html/include/collapse-item.html', '@@jsonPath')
+    </div>
+  </div>
+</@@if(context.heading){section}@@if(!context.heading){div}>

@@ -1,0 +1,115 @@
+<form class="form pick-a-project" name="pick-a-project" novalidate="">
+  <div class="form__items">
+    <div class="form__item form__item_half">
+      <p class="form__item-heading">Площадь</p>
+      <div class="form__items-row">
+        <div class="form__item form__item_auto">
+          <label>
+            <span class="form__input-placeholder">от</span>
+            <input class="form__input" type="number" value="1" data-current-value="0" data-min="0" data-original-value="1" data-decimal="0">
+            <span class="form__input-placeholder">м<sup>2</sup></span>
+          </label>
+        </div>
+        <div class="form__item form__item_auto">
+          <label>
+            <span class="form__input-placeholder">до</span>
+            <input class="form__input" type="number" value="1" data-current-value="0" data-min="0" data-original-value="1" data-decimal="0">
+            <span class="form__input-placeholder">м<sup>2</sup></span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form__item form__item_half">
+      <p class="form__item-heading">Материал</p>
+      <div class="form__item-wrapper form__item-wrapper_row">
+        <div class="form__item">
+          <label>
+            <input class="form__checkbox" type="checkbox" name="material" value="kirpich">
+            <span class="form__label">кирпич</span>
+          </label>
+        </div>
+        <div class="form__item">
+          <label>
+            <input class="form__checkbox" type="checkbox" name="material" value="gazobeton">
+            <span class="form__label">газобетон</span>
+          </label>
+        </div>
+        <div class="form__item">
+          <label>
+            <input class="form__checkbox" type="checkbox" name="material" value="penoblok">
+            <span class="form__label">пеноблок</span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form__item form__item_half">
+      <p class="form__item-heading">Этаж</p>
+      <div class="form__item-wrapper form__item-wrapper_row">
+        <div class="form__item">
+          <label>
+            <input class="form__checkbox" type="checkbox" name="etazh" value="1">
+            <span class="form__label">1</span>
+          </label>
+        </div>
+        <div class="form__item">
+          <label>
+            <input class="form__checkbox" type="checkbox" name="etazh" value="2">
+            <span class="form__label">2</span>
+          </label>
+        </div>
+        <div class="form__item">
+          <label>
+            <input class="form__checkbox" type="checkbox" name="etazh" value="garazh">
+            <span class="form__label">гараж</span>
+          </label>
+        </div>
+        <div class="form__item">
+          <label>
+            <input class="form__checkbox" type="checkbox" name="etazh" value="mansarda">
+            <span class="form__label">мансарда</span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form__item form__item_half">
+      <p class="form__item-heading">Количество спален</p>
+      <div class="form__item-wrapper form__item-wrapper_row">
+        <div class="form__item">
+          <label>
+            <input class="form__checkbox" type="checkbox" name="spalni" value="1">
+            <span class="form__label">1</span>
+          </label>
+        </div>
+        <div class="form__item">
+          <label>
+            <input class="form__checkbox" type="checkbox" name="spalni" value="2">
+            <span class="form__label">2</span>
+          </label>
+        </div>
+        <div class="form__item">
+          <label>
+            <input class="form__checkbox" type="checkbox" name="spalni" value="garazh">
+            <span class="form__label">3</span>
+          </label>
+        </div>
+        <div class="form__item">
+          <label>
+            <input class="form__checkbox" type="checkbox" name="spalni" value="mansarda">
+            <span class="form__label">4</span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form__item">
+      <p class="form__item-heading">Знаете номер проекта</p>
+      <div class="search-form">
+        @@include('./src/html/components/search-form.html')
+      </div>
+    </div>
+    <div class="form__item">
+      <div class="form__buttons-wrapper">
+        <button class="form__button _btn" type="submit" name="submit">Подобрать</button>
+      </div>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,44 @@
+[
+  {
+    "country": "russia",
+    "top": 57,
+    "left": 12,
+    "label": "г. Москва"
+  },
+  {
+    "country": "russia",
+    "top": 47,
+    "left": 6,
+    "label": "г. Санкт-Петербург"
+  },
+  {
+    "country": "russia",
+    "top": 53,
+    "left": 24,
+    "label": "г. Ижевск"
+  },
+  {
+    "country": "russia",
+    "top": 69,
+    "left": 62,
+    "label": "г. Улан-Удэ"
+  },
+  {
+    "country": "russia",
+    "top": 57,
+    "left": 48,
+    "label": "г. Томск"
+  },
+  {
+    "country": "russia",
+    "top": 64,
+    "left": 47,
+    "label": "г. Новосибирск"
+  },
+  {
+    "country": "russia",
+    "top": 70,
+    "left": 47.5,
+    "label": "г. Барнаул"
+  }
+]

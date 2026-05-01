@@ -1,0 +1,13 @@
+@@if (context.bestseller || context.discount || context.novelty) {
+<div class="product-badges">
+  @@if (context.bestseller) {
+  <div class="product-badges__badge product-badges__badge_bestseller">хит</div>
+  }
+  @@if (context.discount) {
+  <div class="product-badges__badge product-badges__badge_discount"><span class="_sr-only">со скидкой</span>%</div>
+  }
+  @@if (context.novelty) {
+  <div class="product-badges__badge product-badges__badge_novelty">new</div>
+  }
+</div>
+}

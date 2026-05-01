@@ -1,0 +1,122 @@
+.cart {
+  // &__heading {
+  // }
+  &__items {
+    @include row(3.125rem, 3.125rem);
+
+    & + & {
+      margin-top: 0 !important;
+    }
+  }
+  &__item {
+    flex: 1 1 0%;
+    max-width: 100%;
+
+    &_result {
+      flex-grow: 0;
+      flex-basis: auto;
+    }
+  }
+  &__inner-item {
+    flex: 1 1 50%;
+    max-width: 50%;
+
+    @media ($desktop-max-xl) and ($desktop-min), ($tablet-mad) {
+      max-width: 100%;
+      flex-basis: 100%;
+    }
+
+    &_full {
+      max-width: 100%;
+      flex-basis: 100%;
+    }
+  }
+  &__inner {
+    height: 100%;
+    padding: 2.1875rem 3.125rem;
+    background-color: var(--white);
+  }
+  &__title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+
+    svg {
+      margin-right: 0.8125rem;
+    }
+  }
+  &__result {
+    padding: 2.1875rem;
+    background-color: var(--white);
+    @extend %sticky-element;
+
+    @media ($desktop-min) {
+      width: 34.375rem;
+    }
+  }
+  // &__summary {}
+  &__submit {
+    width: 100%;
+  }
+  & &--red {
+    * {
+      color: var(--discount-color);
+    }
+  }
+  %product-mini-inner {
+    padding: 2.375rem 1.875rem;
+    background-color: var(--white);
+  }
+  %product-mini-image-wrapper {
+    width: 11.625rem;
+    flex-basis: 11.625rem;
+    padding-bottom: 8.438rem;
+  }
+  %product-mini-info {
+    justify-content: space-between;
+
+    @media ($mobile-max) {
+      flex-basis: 100%;
+    }
+  }
+  %form-item-wrapper {
+    @media ($tablet-min) {
+      flex-wrap: nowrap;
+    }
+
+    %form-item {
+      & + %form-item {
+        margin-top: 1rem;
+      }
+    }
+  }
+  %form-item-wrapper-row {
+    %form-item {
+      @media ($tablet-min) {
+        flex-basis: 0%;
+      }
+
+      %form-input {
+        padding-right: 15px;
+      }
+
+      & + %form-item {
+        %form-input {
+          padding: 0 15px;
+        }
+      }
+      @media ($tablet-min) {
+        &:nth-child(1) {
+          flex-grow: 0.5;
+        }
+        &:nth-child(2) {
+          flex-grow: 0.35;
+        }
+        &:nth-child(3) {
+          flex-grow: 0.15;
+        }
+      }
+    }
+  }
+}

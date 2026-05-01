@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./src/html/page/head.html', {
+  title: "Главная",
+  sliderPreload: true
+})
+
+<body>
+  <div class="wrapper wrapper--no-gap">
+    @@include('./src/html/page/header.html', {
+      transparent: false,
+    })
+
+    @@include('./src/html/blocks/background.html')
+
+    @@include('./src/html/blocks/main-banner.html', {
+      extraClass: '',
+      heading: '',
+      background: true,
+      text: '<p>Black Stage</p>',
+      videoLink: 'videos/banner-01.mp4',
+      videoPoster: 'images/banners/home_01.webp',
+    })
+
+    @@if(false){@@include('./src/html/blocks/banner.html', {
+      extraClass: 'b_no-gap',
+      slideClass: 'b__slide_blackout',
+      image: 'images/banners/home_01.webp',
+      heading: 'аутсорcинг в самаре',
+      text: '<div><p>Помогаем предпринимателям и малому бизнесу решать проблемы с компьютерной техникой</p><ul><li>Грамотная поддержка</li><li>Абонентское обслуживание</li></ul></div>',
+      achievements: '',
+      button: 'Выбрать услугу',
+      component: './src/html/forms/request-a-call-banner.html'
+    })
+
+    @@include('./src/html/blocks/inner-items.html', {
+      extraClass: 'ii_banner-info ',
+      columns: 4,
+      customDivClass: '_info-castom',
+      columnsMobile: '1',
+      subcategoriesTitle: '',
+      subcategoriesJson: '',
+      itemPath: './src/html/components/inner-items/inner-items-item.html',
+      jsonPath: '"../json/ii-advantages.json"'
+    })}
+
+    @@include('./src/html/blocks/two-components.html', {
+      hStyle: 2,
+      heading: 'О нас',
+      background: true,
+      id: 'o-nas',
+      subheading: '',
+      title01: '',
+      component01url: "./src/html/components/image.html",
+      component01params: "{ src: 'images/content/content-1.png', alt: 'content', orientation: 'vertical', contain: false, width: '325', height: '442', class: '' }",
+      title02: '',
+      extraClass: 'tc_three',
+      component02url: './src/html/components/custom-content.html',
+      component02params: '{ contents: "<p>Lorem ipsum dolor sit amet consectetur. Orci id elementum arcu tellus. At mattis consectetur augue leo nam magna fermentum. Sem cum dignissim lectus cursus est purus facilisi. Urna pulvinar montes diam ac facilisis nisi. Sollicitudin ullamcorper enim risus ornare.</p><p>Lorem ipsum dolor sit amet consectetur. Orci id elementum arcu tellus. At mattis consectetur augue leo nam magna ferme</p><p>Lorem ipsum dolor sit amet consectetur. Orci id elementum arcu tellus. At mattis consectetur augue leo nam magna fermentum. Sem cum dignissim lectus cursus est purus facilisi. Urna pulvina</p><p>Lorem ipsum dolor sit amet consectetur. Orci id elementum arcu tellus. At mattis consectetur augue le</p>", extraClass: "cc-center" }',
+      title03: '',
+      component03url: "./src/html/components/image.html",
+      component03params: "{ src: 'images/content/content-2.png', alt: 'content', orientation: 'vertical', contain: false, width: '430', height: '520', class: '' }",
+    })
+
+    @@include('./src/html/blocks/inner-items.html', {
+      extraClass: 'ii_number _section_no-gap',
+      columns: 4,
+      customDivClass: '',
+      columnsMobile: '1',
+      subcategoriesTitle: '',
+      subcategoriesJson: '',
+      itemPath: './src/html/components/inner-items/inner-items-item.html',
+      jsonPath: '"../json/ii-number.json"'
+    })
+
+    @@include('./src/html/blocks/two-components.html', {
+      hStyle: 2,
+      heading: 'Наши услуги',
+      background: true,
+      subheading: '',
+      title01: '',
+      animate: true,
+      component01url: "./src/html/components/image.html",
+      component01params: "{ src: 'images/uslugi/uslugi1.png', alt: 'uslugi-1', orientation: 'square', contain: true, width: '790', height: '790', class: '' }",
+      title02: '',
+      extraClass: 'tc_animate',
+      component02url: './src/html/components/uslugi.html',
+      component02params: '{ title: "Прокат оборудования",link: "/usluga", text: "Сотни современных решений для организации площадок премиум‑класса."}',
+    })
+
+    @@include('./src/html/blocks/two-components.html', {
+      hStyle: 2,
+      heading: '',
+      background: true,
+      subheading: '',
+      title01: '',
+      animate: true,
+      component01url: "./src/html/components/image.html",
+      component01params: "{ src: 'images/uslugi/uslugi1.png', alt: 'uslugi-1', orientation: 'square', contain: true, width: '790', height: '790', class: 'image_animate' }",
+      title02: '',
+      extraClass: 'tc_animate tc_reverse',
+      component02url: './src/html/components/uslugi.html',
+      component02params: '{ title: "Прокат оборудования",link: "/usluga", text: "Сотни современных решений для организации площадок премиум‑класса."}',
+    })
+
+    @@include('./src/html/blocks/two-components.html', {
+      hStyle: 2,
+      heading: '',
+      background: true,
+      subheading: '',
+      title01: '',
+      animate: true,
+      component01url: "./src/html/components/image.html",
+      component01params: "{ src: 'images/uslugi/uslugi1.png', alt: 'uslugi-1', orientation: 'square', contain: true, width: '790', height: '790', class: 'image_animate' }",
+      title02: '',
+      extraClass: 'tc_animate',
+      component02url: './src/html/components/uslugi.html',
+      component02params: '{ title: "Прокат оборудования",link: "/usluga", text: "Сотни современных решений для организации площадок премиум‑класса."}',
+    })
+
+    @@include('./src/html/blocks/custom-slider.html', {
+      extraClass: 'cs_autoplay',
+      gap: 40,
+      slides: "auto",
+      mobSlides: 1,
+      looped: 'true',
+      delay: 0,
+      speed: 5000,
+      heading: 'Проекты',
+      autoplay: true,
+      text: '',
+      navigation: false,
+      navigationStyle: 1,
+      pagination: false,
+      itemPath: './src/html/include/custom-slider-image-item.html',
+      jsonPath: '../json/project.json',
+    })
+
+
+    @@include('./src/html/blocks/two-components.html', {
+      hStyle: 2,
+      heading: '',
+      subheading: '',
+      title01: '',
+      extraClass: 'tc_proportions tc_form',
+      component01url: './src/html/components/custom-content.html',
+      component01params: '{ contents: "<h2 class=\'_heading _h2\'>Как получить услугу?</h2><p>Чтобы получить консультацию, свяжитесь с нами любым удобным способом, либо заполните форму:</p>@@include(\'./src/html/components/messengers.html\',{hideTelegram: true,hideViber: true,solid: true})@@include(\'./src/html/components/email.html\')<p>Если необходимо, дадим подробную бесплатную консультацию, в ходе которой рассчитаем предварительную цену работы.</p>", extraClass: "_cc_contacts-form" }',
+      title02: '',
+      component02url: './src/html/forms/form-consultation.html',
+      component02params: 'null',
+    })
+
+    @@include('./src/html/page/footer.html')
+  </div>
+  @@include("./src/html/page/body-bottom.html", {
+    contactManager: false,
+    checkout: false,
+    promo: false
+  })
+</body>
+
+</html>

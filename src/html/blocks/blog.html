@@ -1,0 +1,22 @@
+<section class="blog">
+  <div class="container">
+    @@if(context.heading) {
+      <@@headingLevel class="blog__heading _heading _h2">@@heading</@@headingLevel>
+    }
+    @@if(context.tabs){<nav class="tabs__nav _nav-slider" role="tablist">
+      <div class="_nav-slider__wrapper">
+        <button class="_nav-slider__slide _btn _btn--tab-01 active" type="button" role="tab">Новость</button>
+        <button class="_nav-slider__slide _btn _btn--tab-01" type="button" role="tab">Статья</button>
+        <button class="_nav-slider__slide _btn _btn--tab-01" type="button" role="tab">Акции</button>
+      </div>
+    </nav>}
+    <div class="blog__items">
+      @@loop('./src/html/components/blog-item.html', '@@jsonPath')
+    </div>
+    @@if(false){@@include('./src/html/components/pagination.html', {
+      'pageUrl': 'blog',
+      'description': false,
+      'variant': 3
+    })}
+  </div>
+</section>

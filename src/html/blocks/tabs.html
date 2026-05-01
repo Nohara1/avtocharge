@@ -1,0 +1,13 @@
+@@if(context.tabs){
+<div class="tabs-block _section@@if(context.sticky){ tabs-block_sticky}">
+  <div class="container">
+  @@include('./src/html/components/tabs.html', {
+    tabs: @@tabs,
+    tabsSlider: '@@if(context.tabsSlider){@@tabsSlider}',
+    tabsLinks: '@@if(context.tabsLinks){@@tabsLinks}',
+    tabsActive: '@@if(context.tabsActive){@@tabsActive}',
+    style: '@@if(context.style){@@style}'
+  })
+  </div>
+</div>
+}

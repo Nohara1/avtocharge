@@ -1,0 +1,14 @@
+[
+  {
+    "image": "images/team/person_02.png",
+    "name": "Сигейкина Екатерина",
+    "link": "author",
+    "position": "Директор визового направления"
+  },
+  {
+    "image": "images/icons.svg#user",
+    "name": "Редактор",
+    "link": "author",
+    "position": "Редактор Vizavsem"
+  }
+]

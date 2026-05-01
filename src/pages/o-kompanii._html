@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./src/html/page/head.html', {
+  title: "О компании"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('./src/html/page/header.html')
+
+    @@include('./src/html/components/breadcrumbs.html', {
+      elements: [
+        { name: 'Главная', link: '/' },
+        { name: 'О компании', link: '' }
+      ]
+    })
+
+    @@include('./src/html/blocks/heading.html', {
+      heading: 'О компании',
+      hLevel: 1,
+      hStyle: 2,
+      noGap: true
+    })
+
+    @@include('./src/html/blocks/pro.html', {
+      heading: '',
+      features: [
+        { value: '2017', name: 'год основания' },
+        { value: '15', name: 'специалистов' },
+        { value: '250 000+', name: 'решенных задач' }
+      ],
+      imageObj: "{ src: 'images/team/deshukos.jpg', thumb: '', alt: 'Сергей Дешук', orientation: 'square', contain: false, width: '400', height: '400', class: 'image--grayscale image--scale' }",
+      text: '<p>Моя бизнес идея — это «продажи», причем мне все равно, что продавать, но волей судьбы я стал продавать продвижение сайтов и влюбился во все это с первого взгляда.</p><p>В самом начале работы CWEB я занимался абсолютно всем: вел проекты, общался с заказчиками, решал юридические и бухгалтерские вопросы, и даже наполнял сайты&#41;. Сейчас, спустя 4 года, я до сих пор веду ключевых клиентов, но уже больше фокусируюсь на планировании и стратегии развития компании.</p>',
+      name: 'Сергей Дешук',
+      position: 'Директор/Учредитель'
+    })
+
+    @@include('./src/html/blocks/contacts-05.html', {
+      heading: 'Контактные данные',
+      image: true
+    })
+
+    @@include('./src/html/blocks/block-gallery-01.html', {
+      extraClass: '_primary-background _section-p _section-p_bdrs',
+      heading: 'Наш офис',
+      images: [
+        { src: 'images/additional/team-01.jpg', thumb: 'images/additional/thumbs/team-01.jpg', width: 710, height: 310 },
+        { src: 'images/additional/team-02.jpg', thumb: 'images/additional/thumbs/team-02.jpg', width: 710, height: 310 },
+        { src: 'images/additional/team-03.jpg', thumb: 'images/additional/thumbs/team-03.jpg', width: 560, height: 650 },
+        { src: 'images/additional/team-04.jpg', thumb: 'images/additional/thumbs/team-04.jpg', width: 420, height: 220 },
+        { src: 'images/additional/team-05.jpg', thumb: 'images/additional/thumbs/team-05.jpg', width: 420, height: 400 }
+      ]
+    })
+
+    @@include('./src/html/blocks/content-grid.html', {
+      heading: 'История CWEB'
+    })
+
+    @@include('./src/html/blocks/inner-items.html', {
+      heading: 'Почему мы?',
+      text: '',
+      columns: '',
+      columnsMobile: 1,
+      subcategoriesTitle: '',
+      subcategoriesJson: '',
+      itemPath: './src/html/components/inner-items/why-us.html',
+      jsonPath: '"../json/inner-items-why-us.json"'
+    })
+
+    @@include('./src/html/blocks/our-clients.html')
+
+    @@include('./src/html/blocks/form-with-links.html', {
+      heading: 'Приступить к работе',
+      tagline: 'Онлайн присутствие - оффлайн успех!'
+    })
+
+    @@include('./src/html/page/footer.html')
+  </div>
+  @@include("./src/html/page/body-bottom.html")
+</body>
+
+</html>

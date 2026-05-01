@@ -1,0 +1,21 @@
+<div class="cs__slide cs__slide_flip-card">
+  <div class="flip-card">
+    <div class="flip-card__inner">
+      <div class="flip-card__side flip-card__side_front">
+        @@if(context.title){<p class="flip-card__title _title">@@title</p>}
+        @@if(context.icon){<svg class="flip-card__icon" width="77" height="77">
+          <use href="images/icons.svg#@@icon"></use>
+        </svg>}
+        @@if(context.text){<div class="flip-card__text _cc">@@text</div>}
+      </div>
+      @@if(context.flipped){<div class="flip-card__side flip-card__side_rear"
+        style="background-image:url(@@flipped.image)">
+        @@if(context.flipped.title){<p class="flip-card__title _title">@@flipped.title</p>}
+        @@if(context.flipped.icon){<svg class="flip-card__icon" width="77" height="77">
+          <use href="images/icons.svg#@@flipped.icon"></use>
+        </svg>}
+        @@if(context.flipped.text){<div class="flip-card__text _cc">@@flipped.text</div>}
+      </div>}
+    </div>
+  </div>
+</div>

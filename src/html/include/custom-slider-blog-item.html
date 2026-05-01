@@ -1,0 +1,22 @@
+<div class="cs__slide cs__slide_blog" data-slide-category="@@if(context.c01){c01,}@@if(context.c02){c02,}@@if(context.c03){c03,}@@if(context.c04){c04,}">
+  @@include('./src/html/components/blog-item.html', {
+    extraClass: '@@if(context.extraClass){@@extraClass}',
+    imageSrc: '@@if(context.src){@@src}',
+    thumb: '@@if(context.thumb){@@thumb}',
+    alt: '@@if(context.alt){@@alt}',
+    gallery: '@@if(context.gallery){@@gallery}',
+    orientation: '@@if(context.orientation){@@orientation}',
+    responsive: '@@if(context.responsive){@@responsive}',
+    contain: @@if(context.contain){true}@@if(!context.contain){false},
+    width: '@@if(context.width){@@width}',
+    height: '@@if(context.height){@@height}',
+    class: '@@if(context.class){@@class}',
+    subtitle: '@@if(context.subtitle){@@subtitle}',
+    date: '@@if(context.date){@@date}',
+    dateFormat: '@@if(context.dateFormat){@@dateFormat}',
+    link: '@@if(context.link){@@link}',
+    title: '@@if(context.title){@@title}',
+    text: '@@if(context.text){@@text}',
+    btnClass: '@@if(context.btnClass){@@btnClass}',
+  })
+</div>

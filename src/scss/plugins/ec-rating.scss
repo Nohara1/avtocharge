@@ -1,0 +1,60 @@
+.ec-rating {
+  display: inline-block;
+}
+.ec-rating-stars {
+  display: flex;
+}
+.ec-rating-stars span {
+  // width: 28px;
+  // height: 20px;
+  width: 33px;
+  height: 24px;
+  cursor: pointer;
+  background-size: auto 200%;
+  background-image: url("../images/stars-rating.png");
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+
+  // @media ($tablet-max) {
+  //   width: 37px;
+  //   height: 27px;
+  // }
+}
+.ec-rating-stars span.active {
+  background-position: 0 0;
+}
+.ec-stars {
+  width: 106px;
+  height: 16px;
+  background-size: auto 200%;
+  background-image: url("../images/stars-rating.png");
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+}
+.ec-stars span {
+  width: 0;
+  height: 100%;
+  display: block;
+  background-size: auto 200%;
+  background-image: url("../images/stars-rating.png");
+  background-repeat: repeat-x;
+  background-position: 0 0;
+}
+.ec-stars span.rating-0 {
+  width: 0;
+}
+.ec-stars span.rating-1 {
+  width: 20%;
+}
+.ec-stars span.rating-2 {
+  width: 40%;
+}
+.ec-stars span.rating-3 {
+  width: 60%;
+}
+.ec-stars span.rating-4 {
+  width: 80%;
+}
+.ec-stars span.rating-5 {
+  width: 100%;
+}

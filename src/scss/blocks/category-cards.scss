@@ -1,0 +1,60 @@
+.category-cards {
+  &-01 {
+    @extend %category-cards-01 !optional;
+  }
+  &-02 {
+    @extend %category-cards-02 !optional;
+  }
+  &-03 {
+    @extend %category-cards-03 !optional;
+  }
+  // &__heading {
+  // }
+  &__items {
+    @include row(2.75%, 2.75%);
+
+    @media ($tablet-mad) {
+      @include row-breakpoint(20px, 20px);
+    }
+
+    > * {
+      flex: 1 1 50%;
+      max-width: 50%;
+
+      @media ($desktop-min-xl) {
+        %category-cards-01 & {
+          &:nth-child(9n + 3),
+          &:nth-child(9n + 4),
+          &:nth-child(9n + 5),
+          &:nth-child(9n + 6) {
+            max-width: 25%;
+            flex-basis: 25%;
+          }
+        }
+        %category-cards-02 & {
+          &:nth-child(9n + 3),
+          &:nth-child(9n + 4),
+          &:nth-child(9n + 5),
+          &:nth-child(9n + 6) {
+            max-width: 25%;
+            flex-basis: 25%;
+          }
+          &:nth-child(9n + 7),
+          &:nth-child(9n + 8),
+          &:nth-child(9n + 9) {
+            max-width: 33.3333%;
+            flex-basis: 33.3333%;
+          }
+        }
+        %category-cards-03 & {
+          max-width: 25%;
+          flex-basis: 25%;
+        }
+      }
+      @media ($mobile-max) {
+        max-width: 100%;
+        flex-basis: 100%;
+      }
+    }
+  }
+}

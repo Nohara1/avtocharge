@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60.84" height="51.01" fill="none" version="1.1" viewBox="0 0 60.84 51.01" xmlns="http://www.w3.org/2000/svg">
+ <g fill="currentColor">
+  <rect x="32.69" y="7.542" width="21.12" height="2.011" rx="1.006"/>
+  <rect x="17.6" y="11.56" width="36.2" height="2.011" rx="1.006"/>
+  <rect x="25.65" y="15.59" width="28.16" height="2.011" rx="1.006"/>
+ </g>
+ <path transform="translate(-19.55 -4.497)" d="m20.06 55v-41.96c0-4.443 3.602-8.045 8.044-8.045h43.74c4.443 0 8.045 3.602 8.045 8.045v41.96z" stroke="currentColor" stroke-width="1.006"/>
+</svg>

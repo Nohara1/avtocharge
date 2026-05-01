@@ -1,0 +1,10 @@
+<section class="form-block">
+  <div class="container">
+    @@if(context.heading){<h2 class="form-block__heading _heading">@@heading</h2>}
+    @@if(context.subheading){<h3 class="form-block__subheading _heading">@@subheading</h3>}
+    @@if(context.text){<div class="form-block__text _cc">@@text</div>}
+    <div class="form-block__wrapper">
+      @@include('@@pathToForm')
+    </div>
+  </div>
+</section>

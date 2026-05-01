@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Виза в Польшу",
+    "url": "visa",
+    "price": "от 200€",
+    "image": "images/additional/preview_poland.jpg",
+    "background": "images/flags.svg#PL"
+  },
+  {
+    "title": "Виза в Италию",
+    "url": "visa",
+    "price": "от 200€",
+    "image": "images/additional/preview_italy.jpg",
+    "background": "images/flags.svg#IT"
+  },
+  {
+    "title": "Виза в Грецию",
+    "url": "visa",
+    "price": "от 200€",
+    "image": "images/additional/preview_greece.jpg",
+    "background": "images/flags.svg#GR"
+  },
+  {
+    "title": "Виза в Великобританию",
+    "url": "visa",
+    "price": "от 200€",
+    "image": "images/additional/preview_gb.jpg",
+    "background": "images/flags.svg#GB-UKM"
+  }
+]

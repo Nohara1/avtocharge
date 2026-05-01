@@ -1,0 +1,102 @@
+.related-product {
+  padding: 1rem;
+  overflow: hidden;
+  border-radius: 5px;
+  background-image: var(--linear-gradient);
+
+  @media ($tablet-mad) {
+    padding: 1.4rem;
+  }
+
+  &__inner {
+    display: flex;
+    padding: 0.75rem 2.2rem;
+    position: relative;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: space-between;
+    background-color: var(--white);
+
+    @media ($transition-min) {
+      transform: scale(1);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0);
+      transition: transform 0.3s, box-shadow 0.3s;
+
+      &:hover {
+        transform: scale(0.98, 0.97);
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+
+        @extend %related-product-hover !optional;
+      }
+    }
+    @media ($tablet-mad) {
+      padding: 1.2rem 2rem;
+    }
+  }
+  &__iw {
+    width: 5.9375rem;
+    height: 5.9375rem;
+    border: 1px solid var(--header-border);
+    min-width: 74px;
+    min-height: 74px;
+  }
+  // &__image {
+  // }
+  &__content {
+    padding: 0 1.35rem;
+    margin-right: auto;
+  }
+  &__title {
+    color: var(--heading-c);
+    display: block;
+    margin-top: 0.5rem;
+    font-weight: 600;
+    line-height: 1.257;
+    text-decoration: none;
+
+    @media ($tablet-mad) {
+      font-size: 14px;
+      margin-top: 0.8rem;
+    }
+
+    &::before {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      content: "";
+      display: block;
+      position: absolute;
+    }
+  }
+  // &__button-wrapper {
+  // }
+  &__btn {
+    color: var(--primary-c);
+    width: 3.125rem;
+    height: 3.125rem;
+    border: 2px solid var(--primary-c);
+    display: flex;
+    min-width: 40px;
+    min-height: 40px;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+
+    @media ($desktop-max) {
+      border-width: 1px;
+    }
+    @media ($transition-min) {
+      transition: color 0.3s, background-color 0.3s;
+
+      %related-product-hover & {
+        color: var(--white);
+        background-color: var(--primary-c);
+      }
+    }
+  }
+  &__btn-arrow {
+    width: 65.2%;
+    height: auto;
+  }
+}

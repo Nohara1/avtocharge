@@ -1,0 +1,118 @@
+.faq {
+  position: relative;
+  max-width: 100%;
+
+  @media ($tablet-max) {
+    overflow: hidden;
+  }
+
+  // &__heading {}
+  &__row {
+    @include row(30px, 50px);
+  }
+  &__column {
+    @media ($desktop-min) {
+      &_left {
+        flex: 1 1 34.3%;
+        max-width: 34.3%;
+      }
+      &_right {
+        flex: 1 1 65.7%;
+        max-width: 65.7%;
+      }
+    }
+    @media ($tablet-max) {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+  }
+  &__cube {
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    justify-content: center;
+    background-color: var(--primary-c);
+    @extend %sticky-element;
+    @extend %reversed-selection;
+
+    @media ($tablet-max) {
+      max-width: 400px;
+    }
+    @media ($tablet-max) and ($tablet-min) {
+      border-radius: 40px;
+    }
+    @media ($mobile-max) {
+      border-radius: 30px;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      padding-bottom: 100%;
+    }
+  }
+  &__cube-title {
+    color: inherit;
+    margin-bottom: 0;
+  }
+  &__items-wrapper {
+    &.swiper-initialized {
+      @extend %faq-swiper-init !optional;
+    }
+  }
+  &__items {
+    @include row(50px, 20px);
+
+    @media ($tablet-max) {
+      flex-wrap: nowrap;
+    }
+
+    %faq-swiper-init & {
+      margin: 0;
+      z-index: 1;
+      padding: 0;
+      display: flex;
+      position: relative;
+      // max-width: 100%;
+      list-style: none;
+      touch-action: pan-y;
+    }
+  }
+  &__item {
+    %faq-swiper-init & {
+      max-width: 100%;
+      margin-top: 0;
+      padding-left: 0;
+    }
+  }
+  &__item-inner {
+    border: 4px solid var(--primary-c);
+    padding: 46px;
+    border-radius: 50px;
+    background-color: var(--white);
+
+    @media ($tablet-max) and ($tablet-min) {
+      width: 400px;
+      padding: 36px;
+      border-radius: 40px;
+    }
+    @media ($mobile-max) {
+      width: 320px;
+      padding: 26px;
+      max-width: 100%;
+      border-radius: 30px;
+    }
+  }
+  &__title {
+    margin-bottom: 20px;
+  }
+  &__text {
+    @media ($tablet-max) and ($tablet-min) {
+      font-size: 18px;
+    }
+    @media ($mobile-max) {
+      font-size: 16px;
+    }
+  }
+}

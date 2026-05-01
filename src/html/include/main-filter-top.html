@@ -1,0 +1,54 @@
+<div class="mft">
+  <div class="mft__item">
+    <fieldset class="form__item-wrapper">
+      <legend class="form__item-heading">Я ищу двери</legend>
+      <div class="form__item">
+        <label class="form__radio" tabindex="0">
+          <input class="form__input" type="radio" name="door-type" value="interior" checked hidden>
+          <span class="form__label">Межкомнатные</span>
+        </label>
+        <label class="form__radio" tabindex="0">
+          <input class="form__input" type="radio" name="door-type" value="entrance" hidden>
+          <span class="form__label">Входные</span>
+        </label>
+      </div>
+    </fieldset>
+  </div>
+  <div class="mft__item">
+    <span class="form__item-heading">Производитель</span>
+    <div class="form__item">
+      <label>
+        <span class="form__label" hidden>Производитель</span>
+        <select class="form__select" name="door-manufacturer">
+          <option value="" disabled>Все производители</option>
+          <option value="opt001">Динмар</option>
+          <option value="opt002">Albero</option>
+          <option value="opt003">МДФ Техно профиль</option>
+          <option value="opt004">Profildoors</option>
+        </select>
+      </label>
+    </div>
+  </div>
+  <div class="mft__item mft__item_shrink">
+    <fieldset class="form__item-wrapper">
+      <legend class="form__item-heading">Цена</legend>
+      <div class="form__items-row">
+        <div class="form__item">
+          <span class="form__input-placeholder">от</span>
+          <label>
+            <span class="form__label" hidden>минимальная цена</span>
+            <input class="form__input" type="number" name="door-price-min" data-min="200" value="200">
+          </label>
+        </div>
+        <div class="form__item">
+          <span class="form__input-placeholder">до</span>
+          <label>
+            <span class="form__label _sr-only" hidden>максимальная цена</span>
+            <input class="form__input" type="number" name="door-price-max" data-max="50000" value="50000">
+          </label>
+        </div>
+      </div>
+      <div id="door-price-slider" class="form__slider"></div>
+    </fieldset>
+  </div>
+</div>

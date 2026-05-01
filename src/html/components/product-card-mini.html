@@ -1,0 +1,52 @@
+<article class="product-mini">
+  @@if(context.closeButton){
+  <button class="product-mini__remove" type="button" name="product-remove">
+    <span class="_sr-only">Удалить товар</span>
+  </button>
+  }
+  <div class="product-mini__inner">
+    <p class="product-mini__iw _iw _iw--contain">
+      <img src="@@imageSrc" srcset="images/placeholder.png" data-srcset="@@imageSrc" alt="@@title" width="90"
+        height="90" decoding="async">
+    </p>
+    <div class="product-mini__info">
+      <a href="@@link" class="product-mini__title _title">@@title</a>
+      @@if(context.feature01){
+      <div class="product-mini__features">
+        @@if(context.feature01){
+        <p>@@if(context.feature01.key){@@feature01.key}
+          <strong>@@if(context.feature01.value){@@feature01.value}</strong>
+        </p>
+        }
+        @@if(context.feature02){
+        <p>@@if(context.feature02.key){@@feature02.key}
+          <strong>@@if(context.feature02.value){@@feature02.value}</strong>
+        </p>
+        }
+        @@if(context.feature03){
+        <p>@@if(context.feature03.key){@@feature03.key}
+          <strong>@@if(context.feature03.value){@@feature03.value}</strong>
+        </p>
+        }
+        @@if(context.feature04){
+        <p>@@if(context.feature04.key){@@feature04.key}
+          <strong>@@if(context.feature04.value){@@feature04.value}</strong>
+        </p>
+        }
+        @@if(context.feature05){
+        <p>@@if(context.feature05.key){@@feature05.key}
+          <strong>@@if(context.feature05.value){@@feature05.value}</strong>
+        </p>
+        }
+      </div>
+      }
+      @@include('./src/html/components/counter.html')
+      <div class="product-mini__price-wrapper">
+        @@if (context.oldPrice) {
+        <span class="product-mini__price product-mini__price_old">@@oldPrice RUB</span>
+        }
+        <span class="product-mini__price">@@price RUB</span>
+      </div>
+    </div>
+  </div>
+</article>

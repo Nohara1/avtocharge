@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Визы в Европу",
+    "url": "country",
+    "price": "от 200€",
+    "image": "images/additional/preview_europe.jpg",
+    "background": "images/additional/globe_europe.png"
+  },
+  {
+    "title": "Визы в Азию",
+    "url": "country",
+    "price": "от 200€",
+    "image": "images/additional/preview_asia.jpg",
+    "background": "images/additional/globe_asia.png"
+  },
+  {
+    "title": "Визы в Северную и Южную Америку",
+    "url": "country",
+    "price": "от 200€",
+    "image": "images/additional/preview_america.jpg",
+    "background": "images/additional/globe_america.png"
+  },
+  {
+    "title": "Визы в Африку",
+    "url": "country",
+    "price": "от 200€",
+    "image": "images/additional/preview_africa.jpg",
+    "background": "images/additional/globe_africa.png"
+  },
+  {
+    "title": "Визы в Австралию и Океанию",
+    "url": "country",
+    "price": "от 200€",
+    "image": "images/additional/preview_australia.jpg",
+    "background": "images/additional/globe_australia.png"
+  },
+  {
+    "title": "Все страны",
+    "url": "all-countries",
+    "price": "от 200€",
+    "image": "images/additional/preview_world.jpg",
+    "background": "images/additional/globe_world.png"
+  }
+]
