@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <!-- saved from url=(0026)https://dev.avtocharge.ru/ -->
-<html lang="ru" style="--header-height: 78px;" class="js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="files/page-dump/tag_ec.js" type="text/javascript" charset="utf-8" async=""></script><script src="files/page-dump/tag_phono.js" type="text/javascript" charset="utf-8" async=""></script>
-    <script async="" src="files/page-dump/call.tracker.js"></script><script async="" src="files/page-dump/tag.js"></script><script async="" src="files/page-dump/loader_1_8j2izf.js"></script><script async="" src="files/page-dump/v2.js"></script><title>Зарядные станции для электромобилей в Avtocharge – большой выбор зарядок и комплектующих для электрокаров</title>
+<html lang="ru" style="--header-height: 78px;" class="js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script async="" src="files/page-dump/loader_1_8j2izf.js"></script><script async="" src="files/page-dump/v2.js"></script><title>Зарядные станции для электромобилей в Avtocharge – большой выбор зарядок и комплектующих для электрокаров</title>
 <meta name="description" content="Продажа, установка и сервисное обслуживание зарядных станций для электромобилей. Большой выбор устройств для зарядки электрокаров и комплектующих в наличии и под заказ. Доставка по всей России. Официальная гарантия.">
 
 <!--<base href="https://dev.avtocharge.ru/">--><base href=".">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="google-site-verification" content="FXYPn6ucf-jLXRiQAHWAixf1exxSFJw8M3atow13fdQ">
-
 <link rel="preload" as="image" href="files/page-dump/slide-1_1928x874_7c6.webp" imagesrcset="images/placeholder.png 500w, images/placeholder.png 1000w, images/placeholder.png 714w, images/placeholder.png 1428w, images/placeholder.png 964w, images/placeholder.png 1928w" imagesizes="(max-width: 575px) 500px,(min-width: 576px) and (max-width: 767px) 500px,(min-width: 768px) and (max-width: 1023px) 500px,(min-width: 1024px) and (max-width: 1230px) 714px,(min-width: 1231px) and (max-width: 1649px) 964px,(min-width: 1650px) 964px">
 
 <link rel="apple-touch-icon" sizes="180x180" href="images/placeholder.png">
@@ -45,272 +43,23 @@
 <!-- custom select -->
 <script src="files/page-dump/jquery.custom-select.js"></script>
 
-<script>
-(function() {
-    'use strict';
-
-    var CONFIG = {
-        yandexMetrikaId: 53189173,
-        storageKey: 'avtocharge_human_verified',
-        storageTtlDays: 30,
-        minUrlSegments: 3,
-        botSignalThreshold: 1
-    };
-
-    function isVerified() {
-        try {
-            var data = localStorage.getItem(CONFIG.storageKey);
-            if (!data) return false;
-
-            var parsed = JSON.parse(data);
-            var expiry = parsed.expiry || 0;
-
-            if (Date.now() > expiry) {
-                localStorage.removeItem(CONFIG.storageKey);
-                return false;
-            }
-
-            return true;
-        } catch (e) {
-            return false;
-        }
-    }
-
-    function setVerified() {
-        try {
-            var expiry = Date.now() + (CONFIG.storageTtlDays * 24 * 60 * 60 * 1000);
-            localStorage.setItem(CONFIG.storageKey, JSON.stringify({
-                verified: true,
-                expiry: expiry
-            }));
-        } catch (e) {}
-    }
-
-    function getUrlSegments() {
-        var path = window.location.pathname.replace(/^\/|\/$/g, '');
-        if (!path) return 0;
-        return path.split('/').filter(function(s) { return s.length > 0; }).length;
-    }
-
-    function detectBot() {
-        var signals = 0;
-
-        if (navigator.webdriver === true) {
-            signals += 2;
-        }
-
-        var ua = navigator.userAgent.toLowerCase();
-        if (ua.indexOf('headless') !== -1 || ua.indexOf('phantomjs') !== -1) {
-            signals += 2;
-        }
-
-        var hasReferrer = document.referrer && document.referrer.length > 0;
-        var urlSegments = getUrlSegments();
-
-        if (!hasReferrer && urlSegments >= CONFIG.minUrlSegments) {
-            signals += 1;
-        }
-
-        var isMobile = /android|iphone|ipad|ipod/i.test(ua);
-        if (isMobile && !('ontouchstart' in window) && !navigator.maxTouchPoints) {
-            signals += 1;
-        }
-
-        return signals >= CONFIG.botSignalThreshold;
-    }
-
-    function loadYandexMetrika() {
-        if (window.ymLoaded) return;
-        window.ymLoaded = true;
-
-        (function(m,e,t,r,i,k,a){
-            m[i]=m[i]||function(){ (m[i].a=m[i].a||[]).push(arguments)};
-            m[i].l=1*new Date();
-            for (var j = 0; j < document.scripts.length; j++) {
-                if (document.scripts[j].src === r) { return; }
-            }
-            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a);
-        })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym');
-
-        ym(CONFIG.yandexMetrikaId, 'init', {
-            clickmap: true,
-            trackLinks: true,
-            accurateTrackBounce: true,
-            webvisor: true,
-            ecommerce: 'dataLayer'
-        });
-    }
-
-    function showVerificationPopup() {
-        var popup = document.getElementById('human-verification-popup');
-        if (popup) {
-            popup.style.display = 'flex';
-        }
-    }
-
-    function hideVerificationPopup() {
-        var popup = document.getElementById('human-verification-popup');
-        if (popup) {
-            popup.style.display = 'none';
-        }
-    }
-
-    window.confirmHuman = function() {
-        setVerified();
-        hideVerificationPopup();
-        loadYandexMetrika();
-    };
-
-    function init() {
-        if (isVerified()) {
-            loadYandexMetrika();
-            return;
-        }
-
-        if (detectBot()) {
-            showVerificationPopup();
-        } else {
-            setVerified();
-            loadYandexMetrika();
-        }
-    }
-
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', init);
-    } else {
-        init();
-    }
-})();
-</script>
-<noscript>
-    <div><img src="https://mc.yandex.ru/watch/53189173" style="position:absolute; left:-9999px;" alt="" /></div>
-</noscript>
-
-
 <link rel="stylesheet" href="files/page-dump/redesign.css">
 <link rel="stylesheet" href="files/page-dump/tw-entry.css">
 
+<link rel="stylesheet" href="files/page-dump/index-inline.css">
 
 
-    <meta name="yandex-verification" content="ce11c30a42363162">
-    <link rel="canonical" href="https://dev.avtocharge.ru/">
-<link rel="stylesheet" href="files/page-dump/default.min.css" type="text/css">
-<meta name="msfavorites:version" content="3.0.6-beta">
-<meta name="msfavorites:ctx" content="web">
-<meta name="msfavorites:actionUrl" content="/assets/components/msfavorites/action.php">
 
+
+    <link rel="stylesheet" href="files/page-dump/default.min.css" type="text/css">
 <link rel="stylesheet" href="files/page-dump/default.css" type="text/css">
 <link rel="stylesheet" href="files/page-dump/cityfields.css" type="text/css">
 <link rel="stylesheet" href="files/page-dump/default(1).css" type="text/css">
 
-		<script type="text/javascript">
-			if (typeof mse2Config == "undefined") {mse2Config = {"cssUrl":"\/assets\/components\/msearch2\/css\/web\/","jsUrl":"\/assets\/components\/msearch2\/js\/web\/","actionUrl":"\/assets\/components\/msearch2\/action.php"};}
-			if (typeof mse2FormConfig == "undefined") {mse2FormConfig = {};}
-			mse2FormConfig["df60154bfa810a52ab8f9ceab3fffc0f19ef1bea"] = {"autocomplete":"results","queryVar":"query","minQuery":3,"pageId":1};
-		</script>
 
-		<script type="text/javascript">
-			if (typeof mse2Config == "undefined") {mse2Config = {"cssUrl":"\/assets\/components\/msearch2\/css\/web\/","jsUrl":"\/assets\/components\/msearch2\/js\/web\/","actionUrl":"\/assets\/components\/msearch2\/action.php"};}
-			if (typeof mse2FormConfig == "undefined") {mse2FormConfig = {};}
-			mse2FormConfig["1fea6d550a5e1abc822473c48ad80b8ba1313825"] = {"autocomplete":"results","queryVar":"query","minQuery":3,"pageId":1};
-		</script>
-
-		<script type="text/javascript">
-			if (typeof mse2Config == "undefined") {mse2Config = {"cssUrl":"\/assets\/components\/msearch2\/css\/web\/","jsUrl":"\/assets\/components\/msearch2\/js\/web\/","actionUrl":"\/assets\/components\/msearch2\/action.php"};}
-			if (typeof mse2FormConfig == "undefined") {mse2FormConfig = {};}
-			mse2FormConfig["20ecbeb3748c3b14d30de4415374a68072da0744"] = {"autocomplete":"results","queryVar":"query","minQuery":3,"pageId":1};
-		</script>
 <link rel="stylesheet" href="files/page-dump/default(2).css" type="text/css">
-<script type="text/javascript">miniShop2Config = {"cssUrl":"\/assets\/components\/minishop2\/css\/web\/","jsUrl":"\/assets\/components\/minishop2\/js\/web\/","actionUrl":"\/assets\/components\/minishop2\/action.php","ctx":"web","close_all_message":"\u0437\u0430\u043a\u0440\u044b\u0442\u044c \u0432\u0441\u0435","price_format":[0,"."," "],"price_format_no_zeros":true,"weight_format":[3,"."," "],"weight_format_no_zeros":true};</script>
 <link rel="stylesheet" href="files/page-dump/default(3).css" type="text/css">
-<style>.marquiz__button{display:inline-block;font-weight:500;text-align:center;vertical-align:middle;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;transition:all .2s ease-out;color:var(--marquiz-button-text-color,#fff) !important;border:1px solid var(--marquiz-button-color,#d34085);background-color:var(--marquiz-button-color,#d34085);padding:18px 21px;font-size:22px;line-height:1;cursor:pointer;text-decoration:none !important;overflow:hidden;position:relative}.marquiz__button:hover,.marquiz__button:focus{color:var(--marquiz-button-text-color,#fff) !important;filter:brightness(105%);text-decoration:none !important}.marquiz__button_shadow{box-shadow:1.7px 5.8px 21px 0 var(--marquiz-button-alpha-color,var(--marquiz-button-color))}.marquiz__button_blicked:after{content:'';position:absolute;top:-50%;bottom:-50%;background:linear-gradient(90deg,rgba(255,255,255,0.1),rgba(255,255,255,0.6) 100%);width:45px;transform:skewX(-22deg);left:-65%;animation-name:blick;animation-duration:3s;animation-iteration-count:infinite}@keyframes blick{60%{left:100%}to{left:130%}}.marquiz__button_rounded{border-radius:50px}.marquiz__button_fixed{transition:none;height:48px;line-height:1.5;box-sizing:border-box;white-space:nowrap;display:-ms-inline-flexbox;display:inline-flex;-ms-flex-align:center;align-items:center;padding:7px 20px 7px 7px;font-size:19px}.marquiz__button_fixed span{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center}@media (max-width:768px){.marquiz__button_fixed{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center;transform:none !important;width:55px;height:55px;line-height:55px;border-radius:50px !important;bottom:20px;top:auto !important}.marquiz__button_fixed-left{left:15px !important;padding:0 !important}.marquiz__button_fixed-right{right:15px !important;left:auto !important;padding:0 !important}.marquiz__button_fixed .marquiz__text,.marquiz__button_fixed .script__buttonText{display:none}}.marquiz__button_fixed.marquiz__button_rounded{border-radius:0 0 10px 10px}.marquiz__button_fixed.marquiz__button_shadow{box-shadow:1.7px 5.8px 21px 0 var(--marquiz-button-alpha-color,var(--marquiz-button-color))}.marquiz__button_fixed-left{position:fixed;left:0;transform:rotate(-90deg) translate(-40.2%,0%);transform-origin:calc(0% - 1px) 0%;top:50%;z-index:99999;border-radius:4px}.marquiz__button_fixed-left.marquiz__button_rounded{border-radius:0 0 4px 4px}.marquiz__button_fixed-right{position:fixed;left:calc(100% - 48px);-ms-flex-direction:row-reverse;flex-direction:row-reverse;transform:rotate(-90deg) translate(-40.2%,0%);transform-origin:calc(0% - 1px) 0%;top:50%;padding:7px 20px 7px 7px;z-index:99999}.marquiz__button_fixed-right.marquiz__button_rounded{border-radius:4px 4px 0 0}.marquiz__button_fixed .icon-quiz{height:32px;width:32px;padding:7px 5px 7px 7px;border-radius:4px;background:var(--color-text,#fff);box-sizing:border-box;transform:rotate(90deg);margin-right:12px}.marquiz__button_fixed .icon-quiz path{fill:var(--color,var(--marquiz-button-color,#d34085))}@media (max-width:768px){.marquiz__button_fixed .icon-quiz{height:30px;width:30px;margin-right:0 !important;transform:rotate(0) !important}}.marquiz__button_fixed .marquiz__material-symbol{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center;-ms-flex-item-align:center;align-self:center;height:32px;width:32px;padding:7px 5px 7px 7px;border-radius:4px;background:var(--color-text,#fff);box-sizing:border-box;transform:rotate(90deg);transform-origin:center center;margin-right:12px;color:var(--color,var(--marquiz-button-color,#d34085));font-size:18px;line-height:1;font-family:'Material Symbols Outlined';white-space:nowrap;direction:ltr;overflow:hidden;text-transform:none;letter-spacing:normal;font-style:normal;font-weight:normal;font-variation-settings:'opsz' 24,'wght' 400,'FILL' 0,'GRAD' 0;text-align:center;vertical-align:middle}@media (max-width:768px){.marquiz__button_fixed .marquiz__material-symbol{height:30px;width:30px;margin-right:0 !important;transform:rotate(0) !important}}.marquiz__button_fixed .marquiz__emoji-symbol{display:block;height:32px;width:32px;transform:rotate(90deg);transform-origin:center center;margin-right:12px;object-fit:contain}@media (max-width:768px){.marquiz__button_fixed .marquiz__emoji-symbol{height:30px;width:30px;margin-right:0 !important;transform:rotate(0) !important}}.marquiz__button_red{background-color:#f86c6b;border-color:#f86c6b}.marquiz__button_yellow{background-color:#f8cb00;border-color:#f8cb00;color:#000}.marquiz__button_yellow:hover,.marquiz__button_yellow:focus{color:#000}.marquiz__button_blue{background-color:#20a8d8;border-color:#20a8d8}.marquiz__button_green{background-color:#4dbd74;border-color:#4dbd74}</style><style>.marquiz__container_inline{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;width:100%;max-width:1024px;margin:0 auto;height:auto;background:rgba(255,255,255,0.2) url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAwIDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPgogIDxjaXJjbGUgZmlsbD0iI0IxQjFCMSIgc3Ryb2tlPSJub25lIiBjeD0iNiIgY3k9IjUwIiByPSI2Ij4KICAgIDxhbmltYXRlCiAgICAgIGF0dHJpYnV0ZU5hbWU9Im9wYWNpdHkiCiAgICAgIGR1cj0iMXMiCiAgICAgIHZhbHVlcz0iMDsxOzAiCiAgICAgIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIgogICAgICBiZWdpbj0iMC4xIi8+CiAgPC9jaXJjbGU+CiAgPGNpcmNsZSBmaWxsPSIjQjFCMUIxIiBzdHJva2U9Im5vbmUiIGN4PSIyNiIgY3k9IjUwIiByPSI2Ij4KICAgIDxhbmltYXRlCiAgICAgIGF0dHJpYnV0ZU5hbWU9Im9wYWNpdHkiCiAgICAgIGR1cj0iMXMiCiAgICAgIHZhbHVlcz0iMDsxOzAiCiAgICAgIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIgogICAgICBiZWdpbj0iMC4yIi8+CiAgPC9jaXJjbGU+CiAgPGNpcmNsZSBmaWxsPSIjQjFCMUIxIiBzdHJva2U9Im5vbmUiIGN4PSI0NiIgY3k9IjUwIiByPSI2Ij4KICAgIDxhbmltYXRlCiAgICAgIGF0dHJpYnV0ZU5hbWU9Im9wYWNpdHkiCiAgICAgIGR1cj0iMXMiCiAgICAgIHZhbHVlcz0iMDsxOzAiCiAgICAgIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIgogICAgICBiZWdpbj0iMC4zIi8+CiAgPC9jaXJjbGU+Cjwvc3ZnPgo=) no-repeat calc(50% + 40px) center;background-size:160px}.marquiz__container_inline .marquiz__button{display:none}.marquiz__container_full-width{max-width:inherit}@media (max-width:767px){.marquiz__container_full-width{min-height:0;height:auto;background:none}}@media (max-width:767px){.marquiz__container_has_button .marquiz__button{display:inline-block}.marquiz__container_has_button .marquiz__inline-frame{display:none}}</style><style>.marquiz-pops__bonus-count{width:14px;height:14px;display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center;border-radius:50%;position:absolute;top:-5px;right:-5px;box-shadow:0 3px 6px 0 rgba(0,0,0,0.33);background-color:#ed0000;color:#fff;font-size:9px;overflow:hidden}.marquiz-pops__bonus-icon{margin-right:15px;position:relative}.marquiz-pops__bonus-icon path{fill:var(--marquiz-pop-svg-color,#fff)}.marquiz-pops{animation-name:marquiz__pop-fade-in_down;animation-duration:.5s;animation-timing-function:ease-in;opacity:0;animation-fill-mode:both;text-rendering:optimizelegibility;position:fixed;top:0;z-index:99990;width:100%;display:none;box-sizing:border-box;height:60px;background-color:var(--marquiz-pop-background-color,#d34085)}@keyframes marquiz__pop-fade-in_down{0%{transform:translate3d(0,-70px,0);opacity:0;pointer-events:none}100%{transform:translate3d(0,0,0);opacity:1;pointer-events:auto}}.marquiz__icon-quiz{width:30px;margin:0 auto}.marquiz__icon-quiz path{fill:var(--marquiz-pop-svg-color,#fff)}.marquiz__material-symbol{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center;-ms-flex-item-align:center;align-self:center;width:100%;height:-webkit-min-content;height:-moz-min-content;height:min-content;margin:0 auto;color:var(--marquiz-pop-svg-color,#fff);font-size:20px;line-height:1;font-family:'Material Symbols Outlined';white-space:nowrap;direction:ltr;overflow:hidden;text-transform:none;letter-spacing:normal;font-style:normal;font-weight:normal;font-variation-settings:'opsz' 24,'wght' 400,'FILL' 0,'GRAD' 0;text-align:center;vertical-align:middle}.marquiz__emoji-symbol{display:block;width:22px;height:22px;margin:0 auto;object-fit:contain}.marquiz-pops{text-indent:0 !important}@media (max-width:767px){.marquiz-pops_hide-on-mobile{display:none !important}}.marquiz-pops_position .marquiz-pops__bonus{display:none}.marquiz-pops_position_bottom{animation-name:marquiz__pop-fade-in_up;animation-duration:.5s;animation-timing-function:ease-in;opacity:0;animation-fill-mode:both;bottom:0;top:auto}@keyframes marquiz__pop-fade-in_up{0%{transform:translate3d(0,70px,0);opacity:0;pointer-events:none}100%{transform:translate3d(0,0,0);opacity:1;pointer-events:auto}}.marquiz-pops_position_bottom-left{animation-name:marquiz__pop-fade-in_up;animation-duration:.5s;animation-timing-function:ease-in;opacity:0;animation-fill-mode:both;bottom:0;top:auto}@keyframes marquiz__pop-fade-in_up{0%{transform:translate3d(0,70px,0);opacity:0;pointer-events:none}100%{transform:translate3d(0,0,0);opacity:1;pointer-events:auto}}.marquiz-pops_position_bottom-right{animation-name:marquiz__pop-fade-in_up;animation-duration:.5s;animation-timing-function:ease-in;opacity:0;animation-fill-mode:both;bottom:0;top:auto}@keyframes marquiz__pop-fade-in_up{0%{transform:translate3d(0,70px,0);opacity:0;pointer-events:none}100%{transform:translate3d(0,0,0);opacity:1;pointer-events:auto}}.marquiz-pops_blicked:after{content:'';will-change:left;position:absolute;transform:skewX(-22deg);width:45px;height:100%;opacity:0;left:0%;animation-delay:2s;pointer-events:none;background:linear-gradient(90deg,rgba(255,255,255,0.1),rgba(255,255,255,0.6) 100%);animation-name:marquiz__pop-blick;animation-duration:5s;animation-timing-function:ease-in-out;animation-iteration-count:infinite}@keyframes marquiz__pop-blick{0%{opacity:0}20%{opacity:1}27%{opacity:0}40%{opacity:0;left:100%}100%{opacity:0}}.marquiz-pops_shadowed{box-shadow:0 0 12px 0 var(--marquiz-pop-background-color,#d34085)}.marquiz-pops_pulse:before{box-shadow:0 0 0 var(--marquiz-pop-color-pulse);animation:marquiz__pop-pulse 6s infinite linear;will-change:box-shadow;pointer-events:none;border-radius:4px;content:'';position:absolute;width:100%;height:100%}@keyframes marquiz__pop-pulse{0%{box-shadow:0 0 0 0 var(--marquiz-pop-color-pulse)}30%{box-shadow:0 0 0 15px var(--marquiz-pop-color-pulse-alpha)}100%{box-shadow:0 0 0 0 var(--marquiz-pop-color-pulse-alpha)}}.marquiz-pops__body{display:-ms-inline-flexbox;display:inline-flex;width:calc(100% - 60px);min-width:calc(100% - 60px);box-sizing:border-box;text-decoration:none !important;color:var(--marquiz-pop-text-color,#fff) !important}.marquiz-pops__content{display:-ms-inline-flexbox;display:inline-flex;width:calc(100% - 60px);-ms-flex-direction:column;flex-direction:column;-ms-flex-pack:center;justify-content:center;box-sizing:border-box;padding-left:10px;-ms-flex-negative:1;flex-shrink:1}.marquiz-pops__content-text{text-decoration:none;font-size:14px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;line-height:16px;font-weight:bold}.marquiz-pops__content-title{overflow:hidden;font-weight:bold;white-space:nowrap;font-size:10px;line-height:12px;text-overflow:ellipsis;text-transform:uppercase;opacity:.7;padding-bottom:2px;letter-spacing:1px}.marquiz-pops__icon{display:-ms-flexbox;display:flex;width:44px;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center;overflow:hidden;border-radius:4px;-ms-flex-negative:0;flex-shrink:0;margin:8px 0 8px 10px}.marquiz-pops__close-wrapper{width:60px;height:60px;display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center;-ms-flex-negative:0;flex-shrink:0;background-image:linear-gradient(to left,rgba(0,0,0,0.1),rgba(0,0,0,0));cursor:pointer}.marquiz-pops__close{width:60px;height:60px;display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center;text-align:center;font-size:28px}.marquiz-pops__close svg{fill:var(--marquiz-pop-close-color,#fff);width:12px;height:12px}.marquiz-pops__bonus{display:none;background:rgba(0,0,0,0.1);border-radius:35px 0 0 35px;-ms-flex-negative:0;flex-shrink:0;-ms-flex-positive:1;flex-grow:1;box-sizing:border-box;-ms-flex-align:center;align-items:center;padding-left:20px;padding-right:10px;margin-left:30px;font-size:14px;font-weight:600}@media (min-width:800px){.marquiz-pops{height:70px}.marquiz-pops__content{width:100%;width:auto;overflow:hidden}.marquiz-pops__icon{width:54px}.marquiz-pops__bonus{display:-ms-flexbox;display:flex;-ms-flex-positive:2;flex-grow:2;box-sizing:border-box}.marquiz-pops__close-wrapper{width:70px;height:70px;background-color:rgba(0,0,0,0.2)}.marquiz-pops__close{background-image:none;width:70px;height:70px}.marquiz-pops__close svg{width:12px;height:12px}.marquiz-pops__body{width:calc(100% - 70px);min-width:calc(100% - 70px)}.marquiz-pops_position{max-width:450px;margin:15px;border-radius:4px;height:54px;width:auto}.marquiz-pops_position.marquiz-pops_rounded{border-radius:60px !important}.marquiz-pops_position.marquiz-pops_pulse:before{border-radius:60px !important}.marquiz-pops_position .marquiz-pops__body{width:auto;padding-right:22px}.marquiz-pops_position .marquiz-pops__content{padding-left:0}.marquiz-pops_position .marquiz-pops__close-wrapper{position:absolute;width:22px;height:22px;top:-3px;right:-3px;background:unset}.marquiz-pops_position .marquiz-pops__close{width:21px;height:21px;background:#f7f7f7;font-size:14px;font-weight:600;border-radius:50%;position:fixed;display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center}.marquiz-pops_position .marquiz-pops__close svg{fill:#000;width:7px;height:7px}.marquiz-pops_position .marquiz-pops__icon{width:54px;border-radius:4px 0 0 4px;margin:0}.marquiz-pops_position .marquiz__icon-quiz{width:18px}.marquiz-pops_position_bottom-left{animation-name:marquiz__pop-fade-in_right;animation-duration:.5s;animation-timing-function:ease-in;opacity:0;animation-fill-mode:both;left:0}@keyframes marquiz__pop-fade-in_right{0%{transform:translate3d(-200px,0,0);opacity:0;pointer-events:none}100%{transform:translate3d(0,0,0);opacity:1;pointer-events:auto}}.marquiz-pops_position_bottom-right{animation-name:marquiz__pop-fade-in_left;animation-duration:.5s;animation-timing-function:ease-in;opacity:0;animation-fill-mode:both;right:0}@keyframes marquiz__pop-fade-in_left{0%{transform:translate3d(200px,0,0);opacity:0;pointer-events:none}100%{transform:translate3d(0,0,0);opacity:1;pointer-events:auto}}.marquiz-pops_position_top-left{animation-name:marquiz__pop-fade-in_right;animation-duration:.5s;animation-timing-function:ease-in;opacity:0;animation-fill-mode:both;left:0}@keyframes marquiz__pop-fade-in_right{0%{transform:translate3d(-200px,0,0);opacity:0;pointer-events:none}100%{transform:translate3d(0,0,0);opacity:1;pointer-events:auto}}.marquiz-pops_position_top-right{animation-name:marquiz__pop-fade-in_left;animation-duration:.5s;animation-timing-function:ease-in;opacity:0;animation-fill-mode:both;right:0}@keyframes marquiz__pop-fade-in_left{0%{transform:translate3d(200px,0,0);opacity:0;pointer-events:none}100%{transform:translate3d(0,0,0);opacity:1;pointer-events:auto}}}</style><style>.marquiz-widget iframe{width:100%;height:100%;border-radius:10px}.marquiz-widget__container{display:none;-ms-flex-direction:column;flex-direction:column;position:fixed;bottom:16px;border-radius:10px;width:350px;height:var(--widget-height,50px);box-shadow:0 15px 10px -15px rgba(0,0,0,0.1),1px 2px 20px rgba(0,0,0,0.1);z-index:2147483647}.marquiz-widget__container-small{width:120px;height:120px;border-radius:20px}.marquiz-widget__container-small iframe{border-radius:20px}.marquiz-widget__container_after-modal .marquiz-widget__close{display:-ms-flexbox;display:flex}.marquiz-widget__container_left{left:16px}.marquiz-widget__container_left.marquiz-widget__container_fade{animation:.3s ease-in forwards fade-in_right;opacity:0}.marquiz-widget__container_right{right:16px}.marquiz-widget__container_right.marquiz-widget__container_fade{animation:.3s ease-in forwards fade-in_left;opacity:0}.marquiz-widget__container_closing{animation:.3s ease-in forwards hide-down}.marquiz-widget__close{display:none;position:absolute;top:-12px;right:-12px;width:32px;height:32px;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center;background-color:#f1f4f6;border-radius:50%;cursor:pointer}.marquiz-widget__close svg{width:12px;height:12px;fill:rgba(105,116,140,0.6)}.marquiz-widget_open .marquiz-widget__container{height:580px;max-height:85%}.marquiz-widget_open .marquiz-widget__container_mobile .marquiz-widget__close{right:16px;top:-48px}.marquiz-widget_open .marquiz-widget__close{display:-ms-flexbox;display:flex}@media (max-width:767px){.marquiz-widget_hide-on-mobile{display:none}}@media (max-width:480px){.marquiz-widget__container{width:calc(100% - 24px);bottom:12px;right:12px}.marquiz-widget__container-small{width:120px}.marquiz-widget__container_fade.marquiz-widget__container_mobile{animation:.3s ease-in forwards fade-in_up}.marquiz-widget__container_closing{animation:0 ease-in forwards hide-down}.marquiz-widget iframe{border-radius:10px 10px 0 0}.marquiz-widget .marquiz-widget__container-small iframe{border-radius:20px}.marquiz-widget_open{background-color:rgba(0,0,0,0.7);transition:.15s;position:fixed;top:0;left:0;width:100%;height:100%;z-index:2147483647}.marquiz-widget_open .marquiz-widget__container{width:100%;bottom:0;right:0;left:0;border-radius:10px 10px 0 0}.marquiz-widget_open .marquiz-widget__container_open-fade{animation:.15s cubic-bezier(.71,.09,.74,.91) forwards fade-in_up}}@keyframes fade-in_up{from{transform:translateY(100px);opacity:0}to{transform:translateY(0);opacity:1}}@keyframes fade-in_left{from{transform:translateX(300px);opacity:0}to{transform:translateX(0);opacity:1}}@keyframes fade-in_right{from{transform:translateX(-300px);opacity:0}to{transform:translateX(0);opacity:1}}@keyframes hide-down{from{transform:translateY(0);opacity:1}to{transform:translateY(200px);opacity:0}}</style><style>.marquiz__scroll-fix{overflow:hidden}.marquiz__bg{top:0;bottom:0;left:0;right:0;background:rgba(25,25,25,0.89);visibility:hidden;position:fixed;opacity:0;z-index:-10000;overflow-x:hidden;overflow-y:auto;overflow-scrolling:touch;-webkit-overflow-scrolling:touch;display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center}.marquiz__modal{visibility:hidden;z-index:100010;position:relative;max-width:1200px;width:80%;padding:30px 0}#marquiz__close{position:absolute;right:-40px;top:-10px;height:45px;width:45px;cursor:pointer;background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhcGFfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiCiAgdmlld0JveD0iMCAwIDIxMi45ODIgMjEyLjk4MiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjEyLjk4MiAyMTIuOTgyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgZmlsbD0iI2ZmZiI+CjxnIGlkPSJDbG9zZSI+CiAgPHBhdGggc3R5bGU9ImZpbGwtcnVsZTpldmVub2RkO2NsaXAtcnVsZTpldmVub2RkOyIgZD0iTTEzMS44MDQsMTA2LjQ5MWw3NS45MzYtNzUuOTM2YzYuOTktNi45OSw2Ljk5LTE4LjMyMywwLTI1LjMxMgogICAgYy02Ljk5LTYuOTktMTguMzIyLTYuOTktMjUuMzEyLDBsLTc1LjkzNyw3NS45MzdMMzAuNTU0LDUuMjQyYy02Ljk5LTYuOTktMTguMzIyLTYuOTktMjUuMzEyLDBjLTYuOTg5LDYuOTktNi45ODksMTguMzIzLDAsMjUuMzEyCiAgICBsNzUuOTM3LDc1LjkzNkw1LjI0MiwxODIuNDI3Yy02Ljk4OSw2Ljk5LTYuOTg5LDE4LjMyMywwLDI1LjMxMmM2Ljk5LDYuOTksMTguMzIyLDYuOTksMjUuMzEyLDBsNzUuOTM3LTc1LjkzN2w3NS45MzcsNzUuOTM3CiAgICBjNi45ODksNi45OSwxOC4zMjIsNi45OSwyNS4zMTIsMGM2Ljk5LTYuOTksNi45OS0xOC4zMjIsMC0yNS4zMTJMMTMxLjgwNCwxMDYuNDkxeiIvPgo8L2c+Cjwvc3ZnPgo=) no-repeat 100% 0;background-size:16px;background-position:center;border:none;z-index:100020;box-sizing:border-box;padding:0;opacity:.6}#marquiz__close:hover{opacity:1}@media (max-width:1023px){#marquiz__close{background:url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMzcgMzciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTAuMjc3OCAxMC4yNzc4QzkuNDI2MzQgMTEuMTI5MiA5LjQyNjM0IDEyLjUwOTcgMTAuMjc3OCAxMy4zNjExTDE1LjQxNjcgMTguNUwxMC4yNzc4IDIzLjYzODlDOS40MjYzNCAyNC40OTAzIDkuNDI2MzQgMjUuODcwOCAxMC4yNzc4IDI2LjcyMjJDMTEuMTI5MiAyNy41NzM3IDEyLjUwOTcgMjcuNTczNyAxMy4zNjExIDI2LjcyMjJMMTguNSAyMS41ODMzTDIzLjYzODkgMjYuNzIyMkMyNC40OTAzIDI3LjU3MzcgMjUuODcwOCAyNy41NzM3IDI2LjcyMjIgMjYuNzIyMkMyNy41NzM3IDI1Ljg3MDggMjcuNTczNyAyNC40OTAzIDI2LjcyMjIgMjMuNjM4OUwyMS41ODMzIDE4LjVMMjYuNzIyMiAxMy4zNjExQzI3LjU3MzcgMTIuNTA5NyAyNy41NzM3IDExLjEyOTIgMjYuNzIyMiAxMC4yNzc4QzI1Ljg3MDggOS40MjYzNCAyNC40OTAzIDkuNDI2MzQgMjMuNjM4OSAxMC4yNzc4TDE4LjUgMTUuNDE2N0wxMy4zNjExIDEwLjI3NzhDMTIuNTA5NyA5LjQyNjM0IDExLjEyOTIgOS40MjYzNCAxMC4yNzc4IDEwLjI3NzhaIiBmaWxsPSIjMzMzMzMzIi8+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNOS4yNSAxNC4zODg5QzcuODMwOTQgMTIuOTY5OCA3LjgzMDkzIDEwLjY2OTEgOS4yNSA5LjI1QzEwLjY2OTEgNy44MzA5MyAxMi45Njk4IDcuODMwOTQgMTQuMzg4OSA5LjI1TDE4LjUgMTMuMzYxMUwyMi42MTExIDkuMjVDMjQuMDMwMiA3LjgzMDkzIDI2LjMzMDkgNy44MzA5MyAyNy43NSA5LjI1QzI5LjE2OTEgMTAuNjY5MSAyOS4xNjkxIDEyLjk2OTggMjcuNzUgMTQuMzg4OUwyMy42Mzg5IDE4LjVMMjcuNzUgMjIuNjExMUMyOS4xNjkxIDI0LjAzMDIgMjkuMTY5MSAyNi4zMzA5IDI3Ljc1IDI3Ljc1QzI2LjMzMDkgMjkuMTY5MSAyNC4wMzAyIDI5LjE2OTEgMjIuNjExMSAyNy43NUwxOC41IDIzLjYzODlMMTQuMzg4OSAyNy43NUMxMi45Njk4IDI5LjE2OTEgMTAuNjY5MSAyOS4xNjkxIDkuMjUgMjcuNzVDNy44MzA5MyAyNi4zMzA5IDcuODMwOTMgMjQuMDMwMiA5LjI1IDIyLjYxMTFMMTMuMzYxMSAxOC41TDkuMjUgMTQuMzg4OVpNMTAuMjc3OCAxMy4zNjExQzkuNDI2MzQgMTIuNTA5NyA5LjQyNjM0IDExLjEyOTIgMTAuMjc3OCAxMC4yNzc4QzExLjEyOTIgOS40MjYzNCAxMi41MDk3IDkuNDI2MzQgMTMuMzYxMSAxMC4yNzc4TDE4LjUgMTUuNDE2N0wyMy42Mzg5IDEwLjI3NzhDMjQuNDkwMyA5LjQyNjM0IDI1Ljg3MDggOS40MjYzNCAyNi43MjIyIDEwLjI3NzhDMjcuNTczNyAxMS4xMjkyIDI3LjU3MzcgMTIuNTA5NyAyNi43MjIyIDEzLjM2MTFMMjEuNTgzMyAxOC41TDI2LjcyMjIgMjMuNjM4OUMyNy41NzM3IDI0LjQ5MDMgMjcuNTczNyAyNS44NzA4IDI2LjcyMjIgMjYuNzIyMkMyNS44NzA4IDI3LjU3MzcgMjQuNDkwMyAyNy41NzM3IDIzLjYzODkgMjYuNzIyMkwxOC41IDIxLjU4MzNMMTMuMzYxMSAyNi43MjIyQzEyLjUwOTcgMjcuNTczNyAxMS4xMjkyIDI3LjU3MzcgMTAuMjc3OCAyNi43MjIyQzkuNDI2MzQgMjUuODcwOCA5LjQyNjM0IDI0LjQ5MDMgMTAuMjc3OCAyMy42Mzg5TDE1LjQxNjcgMTguNUwxMC4yNzc4IDEzLjM2MTFaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K) no-repeat;background-size:28px;background-position:center;height:28px;width:28px}}@media (max-width:1023px){.marquiz__modal{top:0;left:0;right:0;bottom:0;margin:0;position:absolute;width:100%;padding:0}#marquiz__close{right:0;top:0}}.icon-quiz{vertical-align:baseline}.marquiz__container{width:100%;text-align:center}@media (max-width:767px){.marquiz__container_hide-on-mobile{display:none}}.marquiz__frame{display:none;height:100%;width:100%;background:#fff;transition:height .2s ease-in}.marquiz__frame::-webkit-scrollbar{width:0}@media (min-width:1200px) and (max-width:1439px){.marquiz__frame{height:590px}}@media (min-width:1024px) and (max-width:1199px){.marquiz__frame{height:560px}}@media (min-width:1200px) and (max-width:1439px){.marquiz__modal{width:75%}}@media (min-width:1440px){.marquiz__frame{height:650px}}.marquiz__bg_open{visibility:visible;z-index:2147483647;opacity:1}.marquiz__bg_open .marquiz__modal{visibility:visible;margin:auto}.marquiz__frame_open{display:block;width:100%}</style><style>.SmartCaptcha-Overlay{
-  position:fixed;
-  z-index:9999999;
-  top:-10000px;
-  left:-10000px;
-
-  width:100%;
-  width:var(--smart-captcha-doc-width, 100%);
-  height:100%;
-  height:var(--smart-captcha-doc-height, 100%);
-  margin:0;
-  padding:0;
-
-  background:rgba(0, 0, 0, 0.4);
-}
-
-.SmartCaptcha-Overlay.SmartCaptcha-Overlay_visible{
-  position:fixed;
-  top:0;
-  left:0;
-}
-
-.SmartCaptcha-Overlay.SmartCaptcha-Overlay_no_background{
-  background:none;
-}
-
-.SmartCaptcha-Overlay .SmartCaptcha-Spin{
-  position:absolute;
-  top:50%;
-  left:0;
-  right:0;
-
-  margin:auto;
-
-  transform:translateY(-50%);
-}
-</style><style>.SmartCaptcha-Spin{
-  display:none;
-  visibility:hidden;
-
-  box-sizing:border-box;
-
-  border:2px solid transparent;
-  border-radius:50%;
-  background-image:linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
-}
-.SmartCaptcha-Spin::after{
-  visibility:hidden;
-
-  content:'\00A0';
-}
-.SmartCaptcha-Overlay_visible.SmartCaptcha-Overlay_show_spinner .SmartCaptcha-Spin{
-  display:inline-block;
-  visibility:visible;
-
-  width:50px;
-  height:50px;
-
-  border-top-color:#5282FF;
-  border-left-color:#5282FF;
-
-  animation:islands-spin 1s .21s infinite linear;
-
-  backface-visibility:hidden;
-}
- .SmartCaptcha-Overlay_visible.SmartCaptcha-Overlay_show_spinner .SmartCaptcha-Spin{
-  border-top-color:var(--spin-view-default-border-color, #5282FF);
-  border-left-color:var(--spin-view-default-border-color, #5282FF);
-}
-
-@keyframes islands-spin{
-  from{
-    transform:rotate(0deg);
-  }
-
-  to{
-    transform:rotate(360deg);
-  }
-}
-</style><style>.smart-captcha{
-  min-width:300px;
-  height:102px;
-}
-
-.smart-captcha_invisible{
-  height:0;
-}
-</style><link rel="prefetch" as="script" href="https://smartcaptcha.yandexcloud.net/shield.99cae02f31149fbbaa53.chunk.js"><style type="text/css">html.bx-ios.bx-ios-fix-frame-focus,.bx-ios.bx-ios-fix-frame-focus body{-webkit-overflow-scrolling:touch}.bx-touch{-webkit-tap-highlight-color:rgba(0,0,0,0)}.bx-touch.crm-widget-button-mobile,.bx-touch.crm-widget-button-mobile body{height:100%;overflow:auto}.b24-widget-button-shadow{position:fixed;background:rgba(33,33,33,.3);width:100%;height:100%;top:0;left:0;visibility:hidden;z-index:10100}.bx-touch .b24-widget-button-shadow{background:rgba(33,33,33,.75)}.b24-widget-button-inner-container{position:relative;display:inline-block}.b24-widget-button-position-fixed{position:fixed;z-index:10000}.b24-widget-button-block{width:66px;height:66px;border-radius:100%;box-sizing:border-box;overflow:hidden;cursor:pointer}.b24-widget-button-block .b24-widget-button-icon{opacity:1}.b24-widget-button-block-active .b24-widget-button-icon{opacity:.7}.b24-widget-button-position-top-left{top:50px;left:50px}.b24-widget-button-position-top-middle{top:50px;left:50%;margin:0 0 0 -33px}.b24-widget-button-position-top-right{top:50px;right:50px}.b24-widget-button-position-bottom-left{left:50px;bottom:50px}.b24-widget-button-position-bottom-middle{left:50%;bottom:50px;margin:0 0 0 -33px}.b24-widget-button-position-bottom-right{right:50px;bottom:50px}.b24-widget-button-inner-block{position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;height:66px;border-radius:100px;background:#00aeef;box-sizing:border-box}.b24-widget-button-icon-container{position:relative;-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1}.b24-widget-button-inner-item{position:absolute;top:0;left:0;display:flex;align-items:center;justify-content:center;width:100%;height:100%;border-radius:50%;-webkit-transition:opacity .6s ease-out;transition:opacity .6s ease-out;-webkit-animation:socialRotateBack .4s;animation:socialRotateBack .4s;opacity:0;overflow:hidden;box-sizing:border-box}.b24-widget-button-icon-animation{opacity:1}.b24-widget-button-inner-mask{position:absolute;top:-8px;left:-8px;height:82px;min-width:66px;-webkit-width:calc(100% + 16px);width:calc(100% + 16px);border-radius:100px;background:#00aeef;opacity:.2}.b24-widget-button-icon{-webkit-transition:opacity .3s ease-out;transition:opacity .3s ease-out;cursor:pointer}.b24-widget-button-icon:hover{opacity:1}.b24-widget-button-inner-item-active .b24-widget-button-icon{opacity:1}.b24-widget-button-wrapper{position:fixed;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end;visibility:hidden;direction:ltr;z-index:10150}.bx-imopenlines-config-sidebar{z-index:10101}.b24-widget-button-visible{visibility:visible;-webkit-animation:b24-widget-button-visible 1s ease-out forwards 1;animation:b24-widget-button-visible 1s ease-out forwards 1}@-webkit-keyframes b24-widget-button-visible{from{-webkit-transform:scale(0);transform:scale(0)}30.001%{-webkit-transform:scale(1.2);transform:scale(1.2)}62.999%{-webkit-transform:scale(1);transform:scale(1)}100%{-webkit-transform:scale(1);transform:scale(1)}}@keyframes b24-widget-button-visible{from{-webkit-transform:scale(0);transform:scale(0)}30.001%{-webkit-transform:scale(1.2);transform:scale(1.2)}62.999%{-webkit-transform:scale(1);transform:scale(1)}100%{-webkit-transform:scale(1);transform:scale(1)}}.b24-widget-button-disable{-webkit-animation:b24-widget-button-disable .3s ease-out forwards 1;animation:b24-widget-button-disable .3s ease-out forwards 1}@-webkit-keyframes b24-widget-button-disable{from{-webkit-transform:scale(1);transform:scale(1)}50.001%{-webkit-transform:scale(.5);transform:scale(.5)}92.999%{-webkit-transform:scale(0);transform:scale(0)}100%{-webkit-transform:scale(0);transform:scale(0)}}@keyframes b24-widget-button-disable{from{-webkit-transform:scale(1);transform:scale(1)}50.001%{-webkit-transform:scale(.5);transform:scale(.5)}92.999%{-webkit-transform:scale(0);transform:scale(0)}100%{-webkit-transform:scale(0);transform:scale(0)}}.b24-widget-button-social{display:none}.b24-widget-button-social-item{position:relative;display:block;margin:0 10px 10px 0;width:45px;height:44px;background-size:100%;border-radius:25px;-webkit-box-shadow:0 8px 6px -6px rgba(33,33,33,.2);-moz-box-shadow:0 8px 6px -6px rgba(33,33,33,.2);box-shadow:0 8px 6px -6px rgba(33,33,33,.2);cursor:pointer}.b24-widget-button-social-item:hover{-webkit-box-shadow:0 0 6px rgba(0,0,0,.16),0 6px 12px rgba(0,0,0,.32);box-shadow:0 0 6px rgba(0,0,0,.16),0 6px 12px rgba(0,0,0,.32);-webkit-transition:box-shadow .17s cubic-bezier(0,0,.2,1);transition:box-shadow .17s cubic-bezier(0,0,.2,1)}.ui-icon.b24-widget-button-social-item,.ui-icon.connector-icon-45{width:46px;height:46px;--ui-icon-size-md:46px }
+<link rel="prefetch" as="script" href="https://smartcaptcha.yandexcloud.net/shield.99cae02f31149fbbaa53.chunk.js"><style type="text/css">html.bx-ios.bx-ios-fix-frame-focus,.bx-ios.bx-ios-fix-frame-focus body{-webkit-overflow-scrolling:touch}.bx-touch{-webkit-tap-highlight-color:rgba(0,0,0,0)}.bx-touch.crm-widget-button-mobile,.bx-touch.crm-widget-button-mobile body{height:100%;overflow:auto}.b24-widget-button-shadow{position:fixed;background:rgba(33,33,33,.3);width:100%;height:100%;top:0;left:0;visibility:hidden;z-index:10100}.bx-touch .b24-widget-button-shadow{background:rgba(33,33,33,.75)}.b24-widget-button-inner-container{position:relative;display:inline-block}.b24-widget-button-position-fixed{position:fixed;z-index:10000}.b24-widget-button-block{width:66px;height:66px;border-radius:100%;box-sizing:border-box;overflow:hidden;cursor:pointer}.b24-widget-button-block .b24-widget-button-icon{opacity:1}.b24-widget-button-block-active .b24-widget-button-icon{opacity:.7}.b24-widget-button-position-top-left{top:50px;left:50px}.b24-widget-button-position-top-middle{top:50px;left:50%;margin:0 0 0 -33px}.b24-widget-button-position-top-right{top:50px;right:50px}.b24-widget-button-position-bottom-left{left:50px;bottom:50px}.b24-widget-button-position-bottom-middle{left:50%;bottom:50px;margin:0 0 0 -33px}.b24-widget-button-position-bottom-right{right:50px;bottom:50px}.b24-widget-button-inner-block{position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;height:66px;border-radius:100px;background:#00aeef;box-sizing:border-box}.b24-widget-button-icon-container{position:relative;-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1}.b24-widget-button-inner-item{position:absolute;top:0;left:0;display:flex;align-items:center;justify-content:center;width:100%;height:100%;border-radius:50%;-webkit-transition:opacity .6s ease-out;transition:opacity .6s ease-out;-webkit-animation:socialRotateBack .4s;animation:socialRotateBack .4s;opacity:0;overflow:hidden;box-sizing:border-box}.b24-widget-button-icon-animation{opacity:1}.b24-widget-button-inner-mask{position:absolute;top:-8px;left:-8px;height:82px;min-width:66px;-webkit-width:calc(100% + 16px);width:calc(100% + 16px);border-radius:100px;background:#00aeef;opacity:.2}.b24-widget-button-icon{-webkit-transition:opacity .3s ease-out;transition:opacity .3s ease-out;cursor:pointer}.b24-widget-button-icon:hover{opacity:1}.b24-widget-button-inner-item-active .b24-widget-button-icon{opacity:1}.b24-widget-button-wrapper{position:fixed;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end;visibility:hidden;direction:ltr;z-index:10150}.bx-imopenlines-config-sidebar{z-index:10101}.b24-widget-button-visible{visibility:visible;-webkit-animation:b24-widget-button-visible 1s ease-out forwards 1;animation:b24-widget-button-visible 1s ease-out forwards 1}@-webkit-keyframes b24-widget-button-visible{from{-webkit-transform:scale(0);transform:scale(0)}30.001%{-webkit-transform:scale(1.2);transform:scale(1.2)}62.999%{-webkit-transform:scale(1);transform:scale(1)}100%{-webkit-transform:scale(1);transform:scale(1)}}@keyframes b24-widget-button-visible{from{-webkit-transform:scale(0);transform:scale(0)}30.001%{-webkit-transform:scale(1.2);transform:scale(1.2)}62.999%{-webkit-transform:scale(1);transform:scale(1)}100%{-webkit-transform:scale(1);transform:scale(1)}}.b24-widget-button-disable{-webkit-animation:b24-widget-button-disable .3s ease-out forwards 1;animation:b24-widget-button-disable .3s ease-out forwards 1}@-webkit-keyframes b24-widget-button-disable{from{-webkit-transform:scale(1);transform:scale(1)}50.001%{-webkit-transform:scale(.5);transform:scale(.5)}92.999%{-webkit-transform:scale(0);transform:scale(0)}100%{-webkit-transform:scale(0);transform:scale(0)}}@keyframes b24-widget-button-disable{from{-webkit-transform:scale(1);transform:scale(1)}50.001%{-webkit-transform:scale(.5);transform:scale(.5)}92.999%{-webkit-transform:scale(0);transform:scale(0)}100%{-webkit-transform:scale(0);transform:scale(0)}}.b24-widget-button-social{display:none}.b24-widget-button-social-item{position:relative;display:block;margin:0 10px 10px 0;width:45px;height:44px;background-size:100%;border-radius:25px;-webkit-box-shadow:0 8px 6px -6px rgba(33,33,33,.2);-moz-box-shadow:0 8px 6px -6px rgba(33,33,33,.2);box-shadow:0 8px 6px -6px rgba(33,33,33,.2);cursor:pointer}.b24-widget-button-social-item:hover{-webkit-box-shadow:0 0 6px rgba(0,0,0,.16),0 6px 12px rgba(0,0,0,.32);box-shadow:0 0 6px rgba(0,0,0,.16),0 6px 12px rgba(0,0,0,.32);-webkit-transition:box-shadow .17s cubic-bezier(0,0,.2,1);transition:box-shadow .17s cubic-bezier(0,0,.2,1)}.ui-icon.b24-widget-button-social-item,.ui-icon.connector-icon-45{width:46px;height:46px;--ui-icon-size-md:46px }
 
 .b24-widget-button-callback {
 	background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2229%22%20height%3D%2230%22%20viewBox%3D%220%200%2029%2030%22%3E%3Cpath%20fill%3D%22%23FFF%22%20fill-rule%3D%22evenodd%22%20d%3D%22M21.872%2019.905c-.947-.968-2.13-.968-3.072%200-.718.737-1.256.974-1.962%201.723-.193.206-.356.25-.59.112-.466-.262-.96-.474-1.408-.76-2.082-1.356-3.827-3.098-5.372-5.058-.767-.974-1.45-2.017-1.926-3.19-.096-.238-.078-.394.11-.587.717-.718.96-.98%201.665-1.717.984-1.024.984-2.223-.006-3.253-.56-.586-1.103-1.397-1.56-2.034-.458-.636-.817-1.392-1.403-1.985C5.4%202.2%204.217%202.2%203.275%203.16%202.55%203.9%201.855%204.654%201.12%205.378.438%206.045.093%206.863.02%207.817c-.114%201.556.255%203.023.774%204.453%201.062%202.96%202.68%205.587%204.642%207.997%202.65%203.26%205.813%205.837%209.513%207.698%201.665.836%203.39%201.48%205.268%201.585%201.292.075%202.415-.262%203.314-1.304.616-.712%201.31-1.36%201.962-2.042.966-1.01.972-2.235.012-3.234-1.147-1.192-2.48-1.88-3.634-3.065zm-.49-5.36l.268-.047c.583-.103.953-.707.79-1.295-.465-1.676-1.332-3.193-2.537-4.445-1.288-1.33-2.857-2.254-4.59-2.708-.574-.15-1.148.248-1.23.855l-.038.28c-.07.522.253%201.01.747%201.142%201.326.355%202.53%201.064%203.517%202.086.926.958%201.59%202.125%201.952%203.412.14.5.624.807%201.12.72zm2.56-9.85C21.618%202.292%2018.74.69%2015.56.02c-.56-.117-1.1.283-1.178.868l-.038.28c-.073.537.272%201.04.786%201.15%202.74.584%205.218%201.968%207.217%204.03%201.885%201.95%203.19%204.36%203.803%207.012.122.53.617.873%201.136.78l.265-.046c.57-.1.934-.678.8-1.26-.71-3.08-2.223-5.873-4.41-8.14z%22/%3E%3C/svg%3E'); background-repeat:no-repeat;background-position:center;background-color:#00aeef;background-size:43%;}
@@ -699,20 +448,8 @@ window.b24form.Loader.run({"form":{"usedBySiteButton":true,"lang":"ru","id":"3",
 })();
 
 
-})();</script><script type="text/javascript" async="" src="files/page-dump/app.js"></script><link type="text/css" rel="stylesheet" href="files/page-dump/styles.min.css"><script type="text/javascript" async="" charset="UTF-8" src="files/page-dump/script.min.js"></script><link type="text/css" rel="stylesheet" href="files/page-dump/app.bundle.min.css"><script type="text/javascript" src="files/page-dump/app.bundle.min.js"></script><style type="text/css">
-				.b24-window-mounts #b24-window-mount-b24-site-button-form-3,
-				.b24-form #b24-b24-site-button-form-3, 
-				.b24-form #b24-b24-site-button-form-3.b24-form-dark {
-					--b24-primary-color: rgba(0, 174, 239, 1);
---b24-primary-text-color: rgba(255, 255, 255, 1);
---b24-text-color: rgba(0, 0, 0, 1);
---b24-background-color: rgba(255, 255, 255, 1);
---b24-field-border-color: rgba(0, 0, 0, 0.07);
---b24-field-background-color: rgba(0, 0, 0, 0.05);
---b24-field-focus-background-color: rgba(255, 255, 255, 1);
---b24-popup-background-color: rgba(255, 255, 255, 1);
---b24-primary-hover-color: rgba(0, 174, 239, 0.7);
-				}</style></head>
+})();</script><script type="text/javascript" async="" src="files/page-dump/app.js"></script><link type="text/css" rel="stylesheet" href="files/page-dump/styles.min.css"><script type="text/javascript" async="" charset="UTF-8" src="files/page-dump/script.min.js"></script><link type="text/css" rel="stylesheet" href="files/page-dump/app.bundle.min.css"><script type="text/javascript" src="files/page-dump/app.bundle.min.js"></script>
+</head>
 <body><div></div><div><div>
 	<div data-b24-crm-button-shadow="" class="b24-widget-button-shadow"></div>
 	<div style="display: none;">
@@ -790,6 +527,7 @@ window.b24form.Loader.run({"form":{"usedBySiteButton":true,"lang":"ru","id":"3",
 	</div>
 </div>
 </div>
+
     <div class="
             page index-pg
         ">
@@ -2986,7 +2724,7 @@ window.b24form.Loader.run({"form":{"usedBySiteButton":true,"lang":"ru","id":"3",
                         lg:tw-order-1 lg:tw-w-[136px]
                         xl:max-[1440px]:tw-w-[116px]
                         xl:tw-h-[45px] xl:tw-text-[18px]
-                    " onclick="myFunction772();" type="submit" name="ms2_action" value="cart/add">Купить</button>
+                    " type="submit" name="ms2_action" value="cart/add">Купить</button>
             </form>
         </div>
     </div>
@@ -3427,40 +3165,7 @@ window.b24form.Loader.run({"form":{"usedBySiteButton":true,"lang":"ru","id":"3",
                         max-lg:[&amp;&gt;*]:tw-w-[250px] max-lg:[&amp;&gt;*]:tw-shrink-0
                         lg:[&amp;&gt;*]:tw-w-[25%] lg:[&amp;&gt;*]:tw-shrink-0
                     ">
-                    <script>
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'view_item_list',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция WattSaving T60Neo S 60 кВт GB/T DC',
-			'item_id':2633,
-			'price':380000,
-			'item_brand':'WattSaving',			'item_category': '2633'
-		}]
-	}
-  });
-</script>
-
-<script>
-function myFunction2633() {
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'add_to_cart',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция WattSaving T60Neo S 60 кВт GB/T DC',
-			'item_id':2633,
-			'price':380000,
-			'item_brand':'WattSaving',			'item_category': '2633',
-			'quantity': 1
-		}]
-	}
-  });
-};
-</script>
-
-<div class="catalog-product tw-flex tw-flex-col tw-transition-shadow max-md:[.view\_mobile\_list_&amp;]:tw-flex-row max-md:[.view\_mobile\_list_&amp;]:tw-gap-x-[20px] lg:tw-p-[20px] lg:hover:tw-shadow-[0_0_15px_rgba(45,142,255,.18)] swiper-slide">
+                    <div class="catalog-product tw-flex tw-flex-col tw-transition-shadow max-md:[.view\_mobile\_list_&amp;]:tw-flex-row max-md:[.view\_mobile\_list_&amp;]:tw-gap-x-[20px] lg:tw-p-[20px] lg:hover:tw-shadow-[0_0_15px_rgba(45,142,255,.18)] swiper-slide">
 	<div class="
 			max-md:[.view\_mobile\_list_&amp;]:tw-w-[100px] max-md:[.view\_mobile\_list_&amp;]:tw-shrink-0
 		">
@@ -3604,7 +3309,7 @@ dataLayer.push({
             <button class="
                     btn-t
                     max-md:[.view\_mobile\_list_&amp;]:tw-text-[12px] max-md:[.view\_mobile\_list_&amp;]:tw-w-[115px] max-md:[.view\_mobile\_list_&amp;]:tw-min-h-[28px]
-                " onclick="myFunction2633();" type="submit" name="ms2_action" value="cart/add">Купить</button>
+                " type="submit" name="ms2_action" value="cart/add">Купить</button>
         </form>
         <div class="tw-flex tw-gap-x-[10px] tw-items-center">
             <div class="
@@ -3637,39 +3342,6 @@ dataLayer.push({
 		</div>
 	</div>
 </div>
-
-<script>
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'view_item_list',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция AUTOCHARGE Basic DLB(динамическая балансировка) кабель GBT',
-			'item_id':2540,
-			'price':105468,
-			'item_brand':'Autocharge',			'item_category': '2540'
-		}]
-	}
-  });
-</script>
-
-<script>
-function myFunction2540() {
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'add_to_cart',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция AUTOCHARGE Basic DLB(динамическая балансировка) кабель GBT',
-			'item_id':2540,
-			'price':105468,
-			'item_brand':'Autocharge',			'item_category': '2540',
-			'quantity': 1
-		}]
-	}
-  });
-};
-</script>
 
 <div class="catalog-product tw-flex tw-flex-col tw-transition-shadow max-md:[.view\_mobile\_list_&amp;]:tw-flex-row max-md:[.view\_mobile\_list_&amp;]:tw-gap-x-[20px] lg:tw-p-[20px] lg:hover:tw-shadow-[0_0_15px_rgba(45,142,255,.18)] swiper-slide">
 	<div class="
@@ -3845,7 +3517,7 @@ dataLayer.push({
             <button class="
                     btn-t
                     max-md:[.view\_mobile\_list_&amp;]:tw-text-[12px] max-md:[.view\_mobile\_list_&amp;]:tw-w-[115px] max-md:[.view\_mobile\_list_&amp;]:tw-min-h-[28px]
-                " onclick="myFunction2540();" type="submit" name="ms2_action" value="cart/add">Купить</button>
+                " type="submit" name="ms2_action" value="cart/add">Купить</button>
         </form>
         <div class="tw-flex tw-gap-x-[10px] tw-items-center">
             <div class="
@@ -3878,39 +3550,6 @@ dataLayer.push({
 		</div>
 	</div>
 </div>
-
-<script>
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'view_item_list',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция ABB Terra AC W22-T-0 Wallbox',
-			'item_id':772,
-			'price':146400,
-			'item_brand':'ABB',			'item_category': '772'
-		}]
-	}
-  });
-</script>
-
-<script>
-function myFunction772() {
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'add_to_cart',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция ABB Terra AC W22-T-0 Wallbox',
-			'item_id':772,
-			'price':146400,
-			'item_brand':'ABB',			'item_category': '772',
-			'quantity': 1
-		}]
-	}
-  });
-};
-</script>
 
 <div class="catalog-product tw-flex tw-flex-col tw-transition-shadow max-md:[.view\_mobile\_list_&amp;]:tw-flex-row max-md:[.view\_mobile\_list_&amp;]:tw-gap-x-[20px] lg:tw-p-[20px] lg:hover:tw-shadow-[0_0_15px_rgba(45,142,255,.18)] swiper-slide">
 	<div class="
@@ -4128,7 +3767,7 @@ dataLayer.push({
             <button class="
                     btn-t
                     max-md:[.view\_mobile\_list_&amp;]:tw-text-[12px] max-md:[.view\_mobile\_list_&amp;]:tw-w-[115px] max-md:[.view\_mobile\_list_&amp;]:tw-min-h-[28px]
-                " onclick="myFunction772();" type="submit" name="ms2_action" value="cart/add">Купить</button>
+                " type="submit" name="ms2_action" value="cart/add">Купить</button>
         </form>
         <div class="tw-flex tw-gap-x-[10px] tw-items-center">
             <div class="
@@ -4161,39 +3800,6 @@ dataLayer.push({
 		</div>
 	</div>
 </div>
-
-<script>
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'view_item_list',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция Orbis VIARIS UNI трехфазная 22 кВт с кабелем T2 5м',
-			'item_id':846,
-			'price':187452,
-			'item_brand':'Orbis',			'item_category': '846'
-		}]
-	}
-  });
-</script>
-
-<script>
-function myFunction846() {
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'add_to_cart',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция Orbis VIARIS UNI трехфазная 22 кВт с кабелем T2 5м',
-			'item_id':846,
-			'price':187452,
-			'item_brand':'Orbis',			'item_category': '846',
-			'quantity': 1
-		}]
-	}
-  });
-};
-</script>
 
 <div class="catalog-product tw-flex tw-flex-col tw-transition-shadow max-md:[.view\_mobile\_list_&amp;]:tw-flex-row max-md:[.view\_mobile\_list_&amp;]:tw-gap-x-[20px] lg:tw-p-[20px] lg:hover:tw-shadow-[0_0_15px_rgba(45,142,255,.18)] swiper-slide">
 	<div class="
@@ -4411,7 +4017,7 @@ dataLayer.push({
             <button class="
                     btn-t
                     max-md:[.view\_mobile\_list_&amp;]:tw-text-[12px] max-md:[.view\_mobile\_list_&amp;]:tw-w-[115px] max-md:[.view\_mobile\_list_&amp;]:tw-min-h-[28px]
-                " onclick="myFunction846();" type="submit" name="ms2_action" value="cart/add">Купить</button>
+                " type="submit" name="ms2_action" value="cart/add">Купить</button>
         </form>
         <div class="tw-flex tw-gap-x-[10px] tw-items-center">
             <div class="
@@ -4444,39 +4050,6 @@ dataLayer.push({
 		</div>
 	</div>
 </div>
-
-<script>
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'view_item_list',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция AUTOCHARGE Basic 22T2C GBT',
-			'item_id':1261,
-			'price':105468,
-			'item_brand':'Autocharge',			'item_category': '1261'
-		}]
-	}
-  });
-</script>
-
-<script>
-function myFunction1261() {
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'add_to_cart',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция AUTOCHARGE Basic 22T2C GBT',
-			'item_id':1261,
-			'price':105468,
-			'item_brand':'Autocharge',			'item_category': '1261',
-			'quantity': 1
-		}]
-	}
-  });
-};
-</script>
 
 <div class="catalog-product tw-flex tw-flex-col tw-transition-shadow max-md:[.view\_mobile\_list_&amp;]:tw-flex-row max-md:[.view\_mobile\_list_&amp;]:tw-gap-x-[20px] lg:tw-p-[20px] lg:hover:tw-shadow-[0_0_15px_rgba(45,142,255,.18)] swiper-slide">
 	<div class="
@@ -4660,7 +4233,7 @@ dataLayer.push({
             <button class="
                     btn-t
                     max-md:[.view\_mobile\_list_&amp;]:tw-text-[12px] max-md:[.view\_mobile\_list_&amp;]:tw-w-[115px] max-md:[.view\_mobile\_list_&amp;]:tw-min-h-[28px]
-                " onclick="myFunction1261();" type="submit" name="ms2_action" value="cart/add">Купить</button>
+                " type="submit" name="ms2_action" value="cart/add">Купить</button>
         </form>
         <div class="tw-flex tw-gap-x-[10px] tw-items-center">
             <div class="
@@ -4693,39 +4266,6 @@ dataLayer.push({
 		</div>
 	</div>
 </div>
-
-<script>
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'view_item_list',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядный кабель Type2- GBT 5 метров + Переходник type2-gbt 3 фазы 22 кВт',
-			'item_id':1525,
-			'price':29990,
-			'item_brand':'Autocharge',			'item_category': '1525'
-		}]
-	}
-  });
-</script>
-
-<script>
-function myFunction1525() {
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'add_to_cart',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядный кабель Type2- GBT 5 метров + Переходник type2-gbt 3 фазы 22 кВт',
-			'item_id':1525,
-			'price':29990,
-			'item_brand':'Autocharge',			'item_category': '1525',
-			'quantity': 1
-		}]
-	}
-  });
-};
-</script>
 
 <div class="catalog-product tw-flex tw-flex-col tw-transition-shadow max-md:[.view\_mobile\_list_&amp;]:tw-flex-row max-md:[.view\_mobile\_list_&amp;]:tw-gap-x-[20px] lg:tw-p-[20px] lg:hover:tw-shadow-[0_0_15px_rgba(45,142,255,.18)] swiper-slide">
 	<div class="
@@ -4909,7 +4449,7 @@ dataLayer.push({
             <button class="
                     btn-t
                     max-md:[.view\_mobile\_list_&amp;]:tw-text-[12px] max-md:[.view\_mobile\_list_&amp;]:tw-w-[115px] max-md:[.view\_mobile\_list_&amp;]:tw-min-h-[28px]
-                " onclick="myFunction1525();" type="submit" name="ms2_action" value="cart/add">Купить</button>
+                " type="submit" name="ms2_action" value="cart/add">Купить</button>
         </form>
         <div class="tw-flex tw-gap-x-[10px] tw-items-center">
             <div class="
@@ -4942,39 +4482,6 @@ dataLayer.push({
 		</div>
 	</div>
 </div>
-
-<script>
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'view_item_list',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция ABL Wallbox eMH1 1W2221',
-			'item_id':58,
-			'price':170839,
-			'item_brand':'ABL',			'item_category': '58'
-		}]
-	}
-  });
-</script>
-
-<script>
-function myFunction58() {
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'add_to_cart',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция ABL Wallbox eMH1 1W2221',
-			'item_id':58,
-			'price':170839,
-			'item_brand':'ABL',			'item_category': '58',
-			'quantity': 1
-		}]
-	}
-  });
-};
-</script>
 
 <div class="catalog-product tw-flex tw-flex-col tw-transition-shadow max-md:[.view\_mobile\_list_&amp;]:tw-flex-row max-md:[.view\_mobile\_list_&amp;]:tw-gap-x-[20px] lg:tw-p-[20px] lg:hover:tw-shadow-[0_0_15px_rgba(45,142,255,.18)] swiper-slide">
 	<div class="
@@ -5120,7 +4627,7 @@ dataLayer.push({
             <button class="
                     btn-t
                     max-md:[.view\_mobile\_list_&amp;]:tw-text-[12px] max-md:[.view\_mobile\_list_&amp;]:tw-w-[115px] max-md:[.view\_mobile\_list_&amp;]:tw-min-h-[28px]
-                " onclick="myFunction58();" type="submit" name="ms2_action" value="cart/add">Купить</button>
+                " type="submit" name="ms2_action" value="cart/add">Купить</button>
         </form>
         <div class="tw-flex tw-gap-x-[10px] tw-items-center">
             <div class="
@@ -5153,39 +4660,6 @@ dataLayer.push({
 		</div>
 	</div>
 </div>
-
-<script>
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'view_item_list',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция Mercedes-Benz Wallbox Home',
-			'item_id':68,
-			'price':236000,
-			'item_brand':'Mercedes',			'item_category': '68'
-		}]
-	}
-  });
-</script>
-
-<script>
-function myFunction68() {
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'add_to_cart',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция Mercedes-Benz Wallbox Home',
-			'item_id':68,
-			'price':236000,
-			'item_brand':'Mercedes',			'item_category': '68',
-			'quantity': 1
-		}]
-	}
-  });
-};
-</script>
 
 <div class="catalog-product tw-flex tw-flex-col tw-transition-shadow max-md:[.view\_mobile\_list_&amp;]:tw-flex-row max-md:[.view\_mobile\_list_&amp;]:tw-gap-x-[20px] lg:tw-p-[20px] lg:hover:tw-shadow-[0_0_15px_rgba(45,142,255,.18)] swiper-slide">
 	<div class="
@@ -5331,7 +4805,7 @@ dataLayer.push({
             <button class="
                     btn-t
                     max-md:[.view\_mobile\_list_&amp;]:tw-text-[12px] max-md:[.view\_mobile\_list_&amp;]:tw-w-[115px] max-md:[.view\_mobile\_list_&amp;]:tw-min-h-[28px]
-                " onclick="myFunction68();" type="submit" name="ms2_action" value="cart/add">Купить</button>
+                " type="submit" name="ms2_action" value="cart/add">Купить</button>
         </form>
         <div class="tw-flex tw-gap-x-[10px] tw-items-center">
             <div class="
@@ -5364,39 +4838,6 @@ dataLayer.push({
 		</div>
 	</div>
 </div>
-
-<script>
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'view_item_list',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция JUICE BOOSTER (Комплектация Basic) EL-JB2E2',
-			'item_id':82,
-			'price':202499,
-			'item_brand':'Juice Technology',			'item_category': '82'
-		}]
-	}
-  });
-</script>
-
-<script>
-function myFunction82() {
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'add_to_cart',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция JUICE BOOSTER (Комплектация Basic) EL-JB2E2',
-			'item_id':82,
-			'price':202499,
-			'item_brand':'Juice Technology',			'item_category': '82',
-			'quantity': 1
-		}]
-	}
-  });
-};
-</script>
 
 <div class="catalog-product tw-flex tw-flex-col tw-transition-shadow max-md:[.view\_mobile\_list_&amp;]:tw-flex-row max-md:[.view\_mobile\_list_&amp;]:tw-gap-x-[20px] lg:tw-p-[20px] lg:hover:tw-shadow-[0_0_15px_rgba(45,142,255,.18)] swiper-slide">
 	<div class="
@@ -5535,7 +4976,7 @@ dataLayer.push({
             <button class="
                     btn-t
                     max-md:[.view\_mobile\_list_&amp;]:tw-text-[12px] max-md:[.view\_mobile\_list_&amp;]:tw-w-[115px] max-md:[.view\_mobile\_list_&amp;]:tw-min-h-[28px]
-                " onclick="myFunction82();" type="submit" name="ms2_action" value="cart/add">Купить</button>
+                " type="submit" name="ms2_action" value="cart/add">Купить</button>
         </form>
         <div class="tw-flex tw-gap-x-[10px] tw-items-center">
             <div class="
@@ -5568,39 +5009,6 @@ dataLayer.push({
 		</div>
 	</div>
 </div>
-
-<script>
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'view_item_list',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция ABL Wallbox eMH1 1W1108 Basic',
-			'item_id':104,
-			'price':139711,
-			'item_brand':'ABL',			'item_category': '104'
-		}]
-	}
-  });
-</script>
-
-<script>
-function myFunction104() {
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'add_to_cart',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция ABL Wallbox eMH1 1W1108 Basic',
-			'item_id':104,
-			'price':139711,
-			'item_brand':'ABL',			'item_category': '104',
-			'quantity': 1
-		}]
-	}
-  });
-};
-</script>
 
 <div class="catalog-product tw-flex tw-flex-col tw-transition-shadow max-md:[.view\_mobile\_list_&amp;]:tw-flex-row max-md:[.view\_mobile\_list_&amp;]:tw-gap-x-[20px] lg:tw-p-[20px] lg:hover:tw-shadow-[0_0_15px_rgba(45,142,255,.18)] swiper-slide">
 	<div class="
@@ -5746,7 +5154,7 @@ dataLayer.push({
             <button class="
                     btn-t
                     max-md:[.view\_mobile\_list_&amp;]:tw-text-[12px] max-md:[.view\_mobile\_list_&amp;]:tw-w-[115px] max-md:[.view\_mobile\_list_&amp;]:tw-min-h-[28px]
-                " onclick="myFunction104();" type="submit" name="ms2_action" value="cart/add">Купить</button>
+                " type="submit" name="ms2_action" value="cart/add">Купить</button>
         </form>
         <div class="tw-flex tw-gap-x-[10px] tw-items-center">
             <div class="
@@ -5779,39 +5187,6 @@ dataLayer.push({
 		</div>
 	</div>
 </div>
-
-<script>
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'view_item_list',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция Heidelberg Wallbox Home Eco',
-			'item_id':429,
-			'price':111602,
-			'item_brand':'Heidelberg',			'item_category': '429'
-		}]
-	}
-  });
-</script>
-
-<script>
-function myFunction429() {
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'add_to_cart',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция Heidelberg Wallbox Home Eco',
-			'item_id':429,
-			'price':111602,
-			'item_brand':'Heidelberg',			'item_category': '429',
-			'quantity': 1
-		}]
-	}
-  });
-};
-</script>
 
 <div class="catalog-product tw-flex tw-flex-col tw-transition-shadow max-md:[.view\_mobile\_list_&amp;]:tw-flex-row max-md:[.view\_mobile\_list_&amp;]:tw-gap-x-[20px] lg:tw-p-[20px] lg:hover:tw-shadow-[0_0_15px_rgba(45,142,255,.18)] swiper-slide">
 	<div class="
@@ -5980,7 +5355,7 @@ dataLayer.push({
             <button class="
                     btn-t
                     max-md:[.view\_mobile\_list_&amp;]:tw-text-[12px] max-md:[.view\_mobile\_list_&amp;]:tw-w-[115px] max-md:[.view\_mobile\_list_&amp;]:tw-min-h-[28px]
-                " onclick="myFunction429();" type="submit" name="ms2_action" value="cart/add">Купить</button>
+                " type="submit" name="ms2_action" value="cart/add">Купить</button>
         </form>
         <div class="tw-flex tw-gap-x-[10px] tw-items-center">
             <div class="
@@ -6013,39 +5388,6 @@ dataLayer.push({
 		</div>
 	</div>
 </div>
-
-<script>
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'view_item_list',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция JUICE CHARGER me 11 кВт',
-			'item_id':678,
-			'price':151000,
-			'item_brand':'Juice Technology',			'item_category': '678'
-		}]
-	}
-  });
-</script>
-
-<script>
-function myFunction678() {
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'add_to_cart',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция JUICE CHARGER me 11 кВт',
-			'item_id':678,
-			'price':151000,
-			'item_brand':'Juice Technology',			'item_category': '678',
-			'quantity': 1
-		}]
-	}
-  });
-};
-</script>
 
 <div class="catalog-product tw-flex tw-flex-col tw-transition-shadow max-md:[.view\_mobile\_list_&amp;]:tw-flex-row max-md:[.view\_mobile\_list_&amp;]:tw-gap-x-[20px] lg:tw-p-[20px] lg:hover:tw-shadow-[0_0_15px_rgba(45,142,255,.18)] swiper-slide">
 	<div class="
@@ -6207,7 +5549,7 @@ dataLayer.push({
             <button class="
                     btn-t
                     max-md:[.view\_mobile\_list_&amp;]:tw-text-[12px] max-md:[.view\_mobile\_list_&amp;]:tw-w-[115px] max-md:[.view\_mobile\_list_&amp;]:tw-min-h-[28px]
-                " onclick="myFunction678();" type="submit" name="ms2_action" value="cart/add">Купить</button>
+                " type="submit" name="ms2_action" value="cart/add">Купить</button>
         </form>
         <div class="tw-flex tw-gap-x-[10px] tw-items-center">
             <div class="
@@ -6240,39 +5582,6 @@ dataLayer.push({
 		</div>
 	</div>
 </div>
-
-<script>
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'view_item_list',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция Webasto Pure II 5110494A Wallbox',
-			'item_id':775,
-			'price':125418,
-			'item_brand':'Webasto',			'item_category': '775'
-		}]
-	}
-  });
-</script>
-
-<script>
-function myFunction775() {
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'add_to_cart',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция Webasto Pure II 5110494A Wallbox',
-			'item_id':775,
-			'price':125418,
-			'item_brand':'Webasto',			'item_category': '775',
-			'quantity': 1
-		}]
-	}
-  });
-};
-</script>
 
 <div class="catalog-product tw-flex tw-flex-col tw-transition-shadow max-md:[.view\_mobile\_list_&amp;]:tw-flex-row max-md:[.view\_mobile\_list_&amp;]:tw-gap-x-[20px] lg:tw-p-[20px] lg:hover:tw-shadow-[0_0_15px_rgba(45,142,255,.18)] swiper-slide">
 	<div class="
@@ -6411,7 +5720,7 @@ dataLayer.push({
             <button class="
                     btn-t
                     max-md:[.view\_mobile\_list_&amp;]:tw-text-[12px] max-md:[.view\_mobile\_list_&amp;]:tw-w-[115px] max-md:[.view\_mobile\_list_&amp;]:tw-min-h-[28px]
-                " onclick="myFunction775();" type="submit" name="ms2_action" value="cart/add">Купить</button>
+                " type="submit" name="ms2_action" value="cart/add">Купить</button>
         </form>
         <div class="tw-flex tw-gap-x-[10px] tw-items-center">
             <div class="
@@ -6444,39 +5753,6 @@ dataLayer.push({
 		</div>
 	</div>
 </div>
-
-<script>
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'view_item_list',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция Webasto Next 11 kW, 4,5 m Wallbox',
-			'item_id':779,
-			'price':153573,
-			'item_brand':'Webasto',			'item_category': '779'
-		}]
-	}
-  });
-</script>
-
-<script>
-function myFunction779() {
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'add_to_cart',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция Webasto Next 11 kW, 4,5 m Wallbox',
-			'item_id':779,
-			'price':153573,
-			'item_brand':'Webasto',			'item_category': '779',
-			'quantity': 1
-		}]
-	}
-  });
-};
-</script>
 
 <div class="catalog-product tw-flex tw-flex-col tw-transition-shadow max-md:[.view\_mobile\_list_&amp;]:tw-flex-row max-md:[.view\_mobile\_list_&amp;]:tw-gap-x-[20px] lg:tw-p-[20px] lg:hover:tw-shadow-[0_0_15px_rgba(45,142,255,.18)] swiper-slide">
 	<div class="
@@ -6638,7 +5914,7 @@ dataLayer.push({
             <button class="
                     btn-t
                     max-md:[.view\_mobile\_list_&amp;]:tw-text-[12px] max-md:[.view\_mobile\_list_&amp;]:tw-w-[115px] max-md:[.view\_mobile\_list_&amp;]:tw-min-h-[28px]
-                " onclick="myFunction779();" type="submit" name="ms2_action" value="cart/add">Купить</button>
+                " type="submit" name="ms2_action" value="cart/add">Купить</button>
         </form>
         <div class="tw-flex tw-gap-x-[10px] tw-items-center">
             <div class="
@@ -6671,39 +5947,6 @@ dataLayer.push({
 		</div>
 	</div>
 </div>
-
-<script>
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'view_item_list',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция Orbis VIARIS UNI трехфазная 22 кВт с розеткой T2 с затвором',
-			'item_id':847,
-			'price':181883,
-			'item_brand':'Orbis',			'item_category': 'Зарядные станции для электромобилей'
-		}]
-	}
-  });
-</script>
-
-<script>
-function myFunction847() {
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'add_to_cart',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция Orbis VIARIS UNI трехфазная 22 кВт с розеткой T2 с затвором',
-			'item_id':847,
-			'price':181883,
-			'item_brand':'Orbis',			'item_category': 'Зарядные станции для электромобилей',
-			'quantity': 1
-		}]
-	}
-  });
-};
-</script>
 
 <div class="catalog-product tw-flex tw-flex-col tw-transition-shadow max-md:[.view\_mobile\_list_&amp;]:tw-flex-row max-md:[.view\_mobile\_list_&amp;]:tw-gap-x-[20px] lg:tw-p-[20px] lg:hover:tw-shadow-[0_0_15px_rgba(45,142,255,.18)] swiper-slide">
 	<div class="
@@ -6872,7 +6115,7 @@ dataLayer.push({
             <button class="
                     btn-t
                     max-md:[.view\_mobile\_list_&amp;]:tw-text-[12px] max-md:[.view\_mobile\_list_&amp;]:tw-w-[115px] max-md:[.view\_mobile\_list_&amp;]:tw-min-h-[28px]
-                " onclick="myFunction847();" type="submit" name="ms2_action" value="cart/add">Купить</button>
+                " type="submit" name="ms2_action" value="cart/add">Купить</button>
         </form>
         <div class="tw-flex tw-gap-x-[10px] tw-items-center">
             <div class="
@@ -6905,39 +6148,6 @@ dataLayer.push({
 		</div>
 	</div>
 </div>
-
-<script>
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'view_item_list',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция AUTOCHARGE Basic 22T2C',
-			'item_id':975,
-			'price':105468,
-			'item_brand':'Autocharge',			'item_category': '975'
-		}]
-	}
-  });
-</script>
-
-<script>
-function myFunction975() {
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'add_to_cart',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция AUTOCHARGE Basic 22T2C',
-			'item_id':975,
-			'price':105468,
-			'item_brand':'Autocharge',			'item_category': '975',
-			'quantity': 1
-		}]
-	}
-  });
-};
-</script>
 
 <div class="catalog-product tw-flex tw-flex-col tw-transition-shadow max-md:[.view\_mobile\_list_&amp;]:tw-flex-row max-md:[.view\_mobile\_list_&amp;]:tw-gap-x-[20px] lg:tw-p-[20px] lg:hover:tw-shadow-[0_0_15px_rgba(45,142,255,.18)] swiper-slide">
 	<div class="
@@ -7102,7 +6312,7 @@ dataLayer.push({
             <button class="
                     btn-t
                     max-md:[.view\_mobile\_list_&amp;]:tw-text-[12px] max-md:[.view\_mobile\_list_&amp;]:tw-w-[115px] max-md:[.view\_mobile\_list_&amp;]:tw-min-h-[28px]
-                " onclick="myFunction975();" type="submit" name="ms2_action" value="cart/add">Купить</button>
+                " type="submit" name="ms2_action" value="cart/add">Купить</button>
         </form>
         <div class="tw-flex tw-gap-x-[10px] tw-items-center">
             <div class="
@@ -7135,39 +6345,6 @@ dataLayer.push({
 		</div>
 	</div>
 </div>
-
-<script>
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'view_item_list',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядный кабель Type2- Type1 1 фаза 32 А 220 V 5 метров',
-			'item_id':976,
-			'price':21189,
-			'item_brand':'Autocharge',			'item_category': '976'
-		}]
-	}
-  });
-</script>
-
-<script>
-function myFunction976() {
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'add_to_cart',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядный кабель Type2- Type1 1 фаза 32 А 220 V 5 метров',
-			'item_id':976,
-			'price':21189,
-			'item_brand':'Autocharge',			'item_category': '976',
-			'quantity': 1
-		}]
-	}
-  });
-};
-</script>
 
 <div class="catalog-product tw-flex tw-flex-col tw-transition-shadow max-md:[.view\_mobile\_list_&amp;]:tw-flex-row max-md:[.view\_mobile\_list_&amp;]:tw-gap-x-[20px] lg:tw-p-[20px] lg:hover:tw-shadow-[0_0_15px_rgba(45,142,255,.18)] swiper-slide">
 	<div class="
@@ -7325,7 +6502,7 @@ dataLayer.push({
             <button class="
                     btn-t
                     max-md:[.view\_mobile\_list_&amp;]:tw-text-[12px] max-md:[.view\_mobile\_list_&amp;]:tw-w-[115px] max-md:[.view\_mobile\_list_&amp;]:tw-min-h-[28px]
-                " onclick="myFunction976();" type="submit" name="ms2_action" value="cart/add">Купить</button>
+                " type="submit" name="ms2_action" value="cart/add">Купить</button>
         </form>
         <div class="tw-flex tw-gap-x-[10px] tw-items-center">
             <div class="
@@ -7400,40 +6577,7 @@ dataLayer.push({
                         max-lg:[&amp;&gt;*]:tw-w-[250px] max-lg:[&amp;&gt;*]:tw-shrink-0
                         lg:[&amp;&gt;*]:tw-w-[25%] lg:[&amp;&gt;*]:tw-shrink-0
                     ">
-                    <script>
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'view_item_list',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция AUTOCHARGE Basic DLB(динамическая балансировка) кабель GBT',
-			'item_id':2540,
-			'price':105468,
-			'item_brand':'Autocharge',			'item_category': '2540'
-		}]
-	}
-  });
-</script>
-
-<script>
-function myFunction2540() {
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'add_to_cart',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция AUTOCHARGE Basic DLB(динамическая балансировка) кабель GBT',
-			'item_id':2540,
-			'price':105468,
-			'item_brand':'Autocharge',			'item_category': '2540',
-			'quantity': 1
-		}]
-	}
-  });
-};
-</script>
-
-<div class="catalog-product tw-flex tw-flex-col tw-transition-shadow max-md:[.view\_mobile\_list_&amp;]:tw-flex-row max-md:[.view\_mobile\_list_&amp;]:tw-gap-x-[20px] lg:tw-p-[20px] lg:hover:tw-shadow-[0_0_15px_rgba(45,142,255,.18)] swiper-slide">
+                    <div class="catalog-product tw-flex tw-flex-col tw-transition-shadow max-md:[.view\_mobile\_list_&amp;]:tw-flex-row max-md:[.view\_mobile\_list_&amp;]:tw-gap-x-[20px] lg:tw-p-[20px] lg:hover:tw-shadow-[0_0_15px_rgba(45,142,255,.18)] swiper-slide">
 	<div class="
 			max-md:[.view\_mobile\_list_&amp;]:tw-w-[100px] max-md:[.view\_mobile\_list_&amp;]:tw-shrink-0
 		">
@@ -7607,7 +6751,7 @@ dataLayer.push({
             <button class="
                     btn-t
                     max-md:[.view\_mobile\_list_&amp;]:tw-text-[12px] max-md:[.view\_mobile\_list_&amp;]:tw-w-[115px] max-md:[.view\_mobile\_list_&amp;]:tw-min-h-[28px]
-                " onclick="myFunction2540();" type="submit" name="ms2_action" value="cart/add">Купить</button>
+                " type="submit" name="ms2_action" value="cart/add">Купить</button>
         </form>
         <div class="tw-flex tw-gap-x-[10px] tw-items-center">
             <div class="
@@ -7640,39 +6784,6 @@ dataLayer.push({
 		</div>
 	</div>
 </div>
-
-<script>
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'view_item_list',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция Pandora Wall-E AC 22 кВт Home Edition без кабеля',
-			'item_id':1403,
-			'price':120000,
-			'item_brand':'Pandora',			'item_category': '1403'
-		}]
-	}
-  });
-</script>
-
-<script>
-function myFunction1403() {
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'add_to_cart',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция Pandora Wall-E AC 22 кВт Home Edition без кабеля',
-			'item_id':1403,
-			'price':120000,
-			'item_brand':'Pandora',			'item_category': '1403',
-			'quantity': 1
-		}]
-	}
-  });
-};
-</script>
 
 <div class="catalog-product tw-flex tw-flex-col tw-transition-shadow max-md:[.view\_mobile\_list_&amp;]:tw-flex-row max-md:[.view\_mobile\_list_&amp;]:tw-gap-x-[20px] lg:tw-p-[20px] lg:hover:tw-shadow-[0_0_15px_rgba(45,142,255,.18)] swiper-slide">
 	<div class="
@@ -7810,7 +6921,7 @@ dataLayer.push({
             <button class="
                     btn-t
                     max-md:[.view\_mobile\_list_&amp;]:tw-text-[12px] max-md:[.view\_mobile\_list_&amp;]:tw-w-[115px] max-md:[.view\_mobile\_list_&amp;]:tw-min-h-[28px]
-                " onclick="myFunction1403();" type="submit" name="ms2_action" value="cart/add">Купить</button>
+                " type="submit" name="ms2_action" value="cart/add">Купить</button>
         </form>
         <div class="tw-flex tw-gap-x-[10px] tw-items-center">
             <div class="
@@ -7843,39 +6954,6 @@ dataLayer.push({
 		</div>
 	</div>
 </div>
-
-<script>
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'view_item_list',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Переносная зарядная станция Autocharge Booster GBT',
-			'item_id':1230,
-			'price':90638,
-			'item_brand':'Autocharge',			'item_category': '1230'
-		}]
-	}
-  });
-</script>
-
-<script>
-function myFunction1230() {
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'add_to_cart',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Переносная зарядная станция Autocharge Booster GBT',
-			'item_id':1230,
-			'price':90638,
-			'item_brand':'Autocharge',			'item_category': '1230',
-			'quantity': 1
-		}]
-	}
-  });
-};
-</script>
 
 <div class="catalog-product tw-flex tw-flex-col tw-transition-shadow max-md:[.view\_mobile\_list_&amp;]:tw-flex-row max-md:[.view\_mobile\_list_&amp;]:tw-gap-x-[20px] lg:tw-p-[20px] lg:hover:tw-shadow-[0_0_15px_rgba(45,142,255,.18)] swiper-slide">
 	<div class="
@@ -8052,7 +7130,7 @@ dataLayer.push({
             <button class="
                     btn-t
                     max-md:[.view\_mobile\_list_&amp;]:tw-text-[12px] max-md:[.view\_mobile\_list_&amp;]:tw-w-[115px] max-md:[.view\_mobile\_list_&amp;]:tw-min-h-[28px]
-                " onclick="myFunction1230();" type="submit" name="ms2_action" value="cart/add">Купить</button>
+                " type="submit" name="ms2_action" value="cart/add">Купить</button>
         </form>
         <div class="tw-flex tw-gap-x-[10px] tw-items-center">
             <div class="
@@ -8085,39 +7163,6 @@ dataLayer.push({
 		</div>
 	</div>
 </div>
-
-<script>
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'view_item_list',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция Orbis VIARIS UNI + трехфазная 22 кВт с розеткой T2',
-			'item_id':2122,
-			'price':181883,
-			'item_brand':'Orbis',			'item_category': '2122'
-		}]
-	}
-  });
-</script>
-
-<script>
-function myFunction2122() {
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'add_to_cart',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция Orbis VIARIS UNI + трехфазная 22 кВт с розеткой T2',
-			'item_id':2122,
-			'price':181883,
-			'item_brand':'Orbis',			'item_category': '2122',
-			'quantity': 1
-		}]
-	}
-  });
-};
-</script>
 
 <div class="catalog-product tw-flex tw-flex-col tw-transition-shadow max-md:[.view\_mobile\_list_&amp;]:tw-flex-row max-md:[.view\_mobile\_list_&amp;]:tw-gap-x-[20px] lg:tw-p-[20px] lg:hover:tw-shadow-[0_0_15px_rgba(45,142,255,.18)] swiper-slide">
 	<div class="
@@ -8335,7 +7380,7 @@ dataLayer.push({
             <button class="
                     btn-t
                     max-md:[.view\_mobile\_list_&amp;]:tw-text-[12px] max-md:[.view\_mobile\_list_&amp;]:tw-w-[115px] max-md:[.view\_mobile\_list_&amp;]:tw-min-h-[28px]
-                " onclick="myFunction2122();" type="submit" name="ms2_action" value="cart/add">Купить</button>
+                " type="submit" name="ms2_action" value="cart/add">Купить</button>
         </form>
         <div class="tw-flex tw-gap-x-[10px] tw-items-center">
             <div class="
@@ -8368,39 +7413,6 @@ dataLayer.push({
 		</div>
 	</div>
 </div>
-
-<script>
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'view_item_list',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция ABL Wallbox eMH1 1W2201',
-			'item_id':103,
-			'price':137800,
-			'item_brand':'ABL',			'item_category': '103'
-		}]
-	}
-  });
-</script>
-
-<script>
-function myFunction103() {
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'add_to_cart',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция ABL Wallbox eMH1 1W2201',
-			'item_id':103,
-			'price':137800,
-			'item_brand':'ABL',			'item_category': '103',
-			'quantity': 1
-		}]
-	}
-  });
-};
-</script>
 
 <div class="catalog-product tw-flex tw-flex-col tw-transition-shadow max-md:[.view\_mobile\_list_&amp;]:tw-flex-row max-md:[.view\_mobile\_list_&amp;]:tw-gap-x-[20px] lg:tw-p-[20px] lg:hover:tw-shadow-[0_0_15px_rgba(45,142,255,.18)] swiper-slide">
 	<div class="
@@ -8565,7 +7577,7 @@ dataLayer.push({
             <button class="
                     btn-t
                     max-md:[.view\_mobile\_list_&amp;]:tw-text-[12px] max-md:[.view\_mobile\_list_&amp;]:tw-w-[115px] max-md:[.view\_mobile\_list_&amp;]:tw-min-h-[28px]
-                " onclick="myFunction103();" type="submit" name="ms2_action" value="cart/add">Купить</button>
+                " type="submit" name="ms2_action" value="cart/add">Купить</button>
         </form>
         <div class="tw-flex tw-gap-x-[10px] tw-items-center">
             <div class="
@@ -8598,39 +7610,6 @@ dataLayer.push({
 		</div>
 	</div>
 </div>
-
-<script>
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'view_item_list',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция Orbis VIARIS UNI трехфазная 22 кВт с кабелем T2 5м',
-			'item_id':846,
-			'price':187452,
-			'item_brand':'Orbis',			'item_category': '846'
-		}]
-	}
-  });
-</script>
-
-<script>
-function myFunction846() {
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'add_to_cart',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция Orbis VIARIS UNI трехфазная 22 кВт с кабелем T2 5м',
-			'item_id':846,
-			'price':187452,
-			'item_brand':'Orbis',			'item_category': '846',
-			'quantity': 1
-		}]
-	}
-  });
-};
-</script>
 
 <div class="catalog-product tw-flex tw-flex-col tw-transition-shadow max-md:[.view\_mobile\_list_&amp;]:tw-flex-row max-md:[.view\_mobile\_list_&amp;]:tw-gap-x-[20px] lg:tw-p-[20px] lg:hover:tw-shadow-[0_0_15px_rgba(45,142,255,.18)] swiper-slide">
 	<div class="
@@ -8848,7 +7827,7 @@ dataLayer.push({
             <button class="
                     btn-t
                     max-md:[.view\_mobile\_list_&amp;]:tw-text-[12px] max-md:[.view\_mobile\_list_&amp;]:tw-w-[115px] max-md:[.view\_mobile\_list_&amp;]:tw-min-h-[28px]
-                " onclick="myFunction846();" type="submit" name="ms2_action" value="cart/add">Купить</button>
+                " type="submit" name="ms2_action" value="cart/add">Купить</button>
         </form>
         <div class="tw-flex tw-gap-x-[10px] tw-items-center">
             <div class="
@@ -8881,39 +7860,6 @@ dataLayer.push({
 		</div>
 	</div>
 </div>
-
-<script>
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'view_item_list',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция AUTOCHARGE Basic 22T2C GBT',
-			'item_id':1261,
-			'price':105468,
-			'item_brand':'Autocharge',			'item_category': '1261'
-		}]
-	}
-  });
-</script>
-
-<script>
-function myFunction1261() {
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'add_to_cart',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция AUTOCHARGE Basic 22T2C GBT',
-			'item_id':1261,
-			'price':105468,
-			'item_brand':'Autocharge',			'item_category': '1261',
-			'quantity': 1
-		}]
-	}
-  });
-};
-</script>
 
 <div class="catalog-product tw-flex tw-flex-col tw-transition-shadow max-md:[.view\_mobile\_list_&amp;]:tw-flex-row max-md:[.view\_mobile\_list_&amp;]:tw-gap-x-[20px] lg:tw-p-[20px] lg:hover:tw-shadow-[0_0_15px_rgba(45,142,255,.18)] swiper-slide">
 	<div class="
@@ -9097,7 +8043,7 @@ dataLayer.push({
             <button class="
                     btn-t
                     max-md:[.view\_mobile\_list_&amp;]:tw-text-[12px] max-md:[.view\_mobile\_list_&amp;]:tw-w-[115px] max-md:[.view\_mobile\_list_&amp;]:tw-min-h-[28px]
-                " onclick="myFunction1261();" type="submit" name="ms2_action" value="cart/add">Купить</button>
+                " type="submit" name="ms2_action" value="cart/add">Купить</button>
         </form>
         <div class="tw-flex tw-gap-x-[10px] tw-items-center">
             <div class="
@@ -9130,39 +8076,6 @@ dataLayer.push({
 		</div>
 	</div>
 </div>
-
-<script>
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'view_item_list',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядный кабель Type2- GBT 5 метров + Переходник type2-gbt 3 фазы 22 кВт',
-			'item_id':1525,
-			'price':29990,
-			'item_brand':'Autocharge',			'item_category': '1525'
-		}]
-	}
-  });
-</script>
-
-<script>
-function myFunction1525() {
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'add_to_cart',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядный кабель Type2- GBT 5 метров + Переходник type2-gbt 3 фазы 22 кВт',
-			'item_id':1525,
-			'price':29990,
-			'item_brand':'Autocharge',			'item_category': '1525',
-			'quantity': 1
-		}]
-	}
-  });
-};
-</script>
 
 <div class="catalog-product tw-flex tw-flex-col tw-transition-shadow max-md:[.view\_mobile\_list_&amp;]:tw-flex-row max-md:[.view\_mobile\_list_&amp;]:tw-gap-x-[20px] lg:tw-p-[20px] lg:hover:tw-shadow-[0_0_15px_rgba(45,142,255,.18)] swiper-slide">
 	<div class="
@@ -9346,7 +8259,7 @@ dataLayer.push({
             <button class="
                     btn-t
                     max-md:[.view\_mobile\_list_&amp;]:tw-text-[12px] max-md:[.view\_mobile\_list_&amp;]:tw-w-[115px] max-md:[.view\_mobile\_list_&amp;]:tw-min-h-[28px]
-                " onclick="myFunction1525();" type="submit" name="ms2_action" value="cart/add">Купить</button>
+                " type="submit" name="ms2_action" value="cart/add">Купить</button>
         </form>
         <div class="tw-flex tw-gap-x-[10px] tw-items-center">
             <div class="
@@ -9379,39 +8292,6 @@ dataLayer.push({
 		</div>
 	</div>
 </div>
-
-<script>
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'view_item_list',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция TOUCH Home Mini кабель GB/T',
-			'item_id':1597,
-			'price':105000,
-			'item_brand':'TOUCH',			'item_category': 'Зарядные станции для электромобилей'
-		}]
-	}
-  });
-</script>
-
-<script>
-function myFunction1597() {
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'add_to_cart',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция TOUCH Home Mini кабель GB/T',
-			'item_id':1597,
-			'price':105000,
-			'item_brand':'TOUCH',			'item_category': 'Зарядные станции для электромобилей',
-			'quantity': 1
-		}]
-	}
-  });
-};
-</script>
 
 <div class="catalog-product tw-flex tw-flex-col tw-transition-shadow max-md:[.view\_mobile\_list_&amp;]:tw-flex-row max-md:[.view\_mobile\_list_&amp;]:tw-gap-x-[20px] lg:tw-p-[20px] lg:hover:tw-shadow-[0_0_15px_rgba(45,142,255,.18)] swiper-slide">
 	<div class="
@@ -9542,7 +8422,7 @@ dataLayer.push({
             <button class="
                     btn-t
                     max-md:[.view\_mobile\_list_&amp;]:tw-text-[12px] max-md:[.view\_mobile\_list_&amp;]:tw-w-[115px] max-md:[.view\_mobile\_list_&amp;]:tw-min-h-[28px]
-                " onclick="myFunction1597();" type="submit" name="ms2_action" value="cart/add">Купить</button>
+                " type="submit" name="ms2_action" value="cart/add">Купить</button>
         </form>
         <div class="tw-flex tw-gap-x-[10px] tw-items-center">
             <div class="
@@ -9575,39 +8455,6 @@ dataLayer.push({
 		</div>
 	</div>
 </div>
-
-<script>
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'view_item_list',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция TOUCH Home Max 2 розетки Type 2 по 7 кВт',
-			'item_id':1634,
-			'price':193800,
-			'item_brand':'TOUCH',			'item_category': 'Зарядные станции для электромобилей'
-		}]
-	}
-  });
-</script>
-
-<script>
-function myFunction1634() {
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'add_to_cart',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция TOUCH Home Max 2 розетки Type 2 по 7 кВт',
-			'item_id':1634,
-			'price':193800,
-			'item_brand':'TOUCH',			'item_category': 'Зарядные станции для электромобилей',
-			'quantity': 1
-		}]
-	}
-  });
-};
-</script>
 
 <div class="catalog-product tw-flex tw-flex-col tw-transition-shadow max-md:[.view\_mobile\_list_&amp;]:tw-flex-row max-md:[.view\_mobile\_list_&amp;]:tw-gap-x-[20px] lg:tw-p-[20px] lg:hover:tw-shadow-[0_0_15px_rgba(45,142,255,.18)] swiper-slide">
 	<div class="
@@ -9738,7 +8585,7 @@ dataLayer.push({
             <button class="
                     btn-t
                     max-md:[.view\_mobile\_list_&amp;]:tw-text-[12px] max-md:[.view\_mobile\_list_&amp;]:tw-w-[115px] max-md:[.view\_mobile\_list_&amp;]:tw-min-h-[28px]
-                " onclick="myFunction1634();" type="submit" name="ms2_action" value="cart/add">Купить</button>
+                " type="submit" name="ms2_action" value="cart/add">Купить</button>
         </form>
         <div class="tw-flex tw-gap-x-[10px] tw-items-center">
             <div class="
@@ -9771,39 +8618,6 @@ dataLayer.push({
 		</div>
 	</div>
 </div>
-
-<script>
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'view_item_list',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция TOUCH Home Max 2 кабеля Type 2 по 7 кВт',
-			'item_id':2476,
-			'price':193800,
-			'item_brand':'TOUCH',			'item_category': 'Зарядные станции для электромобилей'
-		}]
-	}
-  });
-</script>
-
-<script>
-function myFunction2476() {
-window.dataLayer = window.dataLayer || [];
-dataLayer.push({
-	'event': 'add_to_cart',
-	'ecommerce':{
-		'items':[{
-			'item_name':'Зарядная станция TOUCH Home Max 2 кабеля Type 2 по 7 кВт',
-			'item_id':2476,
-			'price':193800,
-			'item_brand':'TOUCH',			'item_category': 'Зарядные станции для электромобилей',
-			'quantity': 1
-		}]
-	}
-  });
-};
-</script>
 
 <div class="catalog-product tw-flex tw-flex-col tw-transition-shadow max-md:[.view\_mobile\_list_&amp;]:tw-flex-row max-md:[.view\_mobile\_list_&amp;]:tw-gap-x-[20px] lg:tw-p-[20px] lg:hover:tw-shadow-[0_0_15px_rgba(45,142,255,.18)] swiper-slide">
 	<div class="
@@ -9934,7 +8748,7 @@ dataLayer.push({
             <button class="
                     btn-t
                     max-md:[.view\_mobile\_list_&amp;]:tw-text-[12px] max-md:[.view\_mobile\_list_&amp;]:tw-w-[115px] max-md:[.view\_mobile\_list_&amp;]:tw-min-h-[28px]
-                " onclick="myFunction2476();" type="submit" name="ms2_action" value="cart/add">Купить</button>
+                " type="submit" name="ms2_action" value="cart/add">Купить</button>
         </form>
         <div class="tw-flex tw-gap-x-[10px] tw-items-center">
             <div class="
@@ -18026,38 +16840,7 @@ dataLayer.push({
 
     </div>
 
-        <div id="human-verification-popup" class="
-        tw-fixed tw-inset-0 tw-z-[9999]
-        tw-bg-black/50
-        tw-hidden tw-items-center tw-justify-center
-    ">
-    <div class="
-            tw-bg-white tw-rounded-[16px] tw-p-[32px]
-            tw-max-w-[400px] tw-w-[90%]
-            tw-text-center tw-shadow-xl
-        ">
-        <div class="
-                tw-text-[24px] tw-font-bold tw-mb-[16px]
-                tw-text-gray-800
-            ">
-            Подтверждение        </div>
-        <div class="
-                tw-text-[16px] tw-text-gray-600 tw-mb-[24px]
-                tw-leading-[1.5]
-            ">
-            Пожалуйста, подтвердите, что вы не робот        </div>
-        <button type="button" onclick="confirmHuman()" class="
-                tw-bg-[#00A651] tw-text-white
-                tw-px-[32px] tw-py-[14px]
-                tw-rounded-[8px] tw-text-[16px] tw-font-medium
-                tw-cursor-pointer tw-border-0
-                tw-transition-all tw-duration-200
-                hover:tw-bg-[#008c44]
-            ">
-            Я человек        </button>
-    </div>
-</div>
-    <!------- modal window - application --------->
+        <!------- modal window - application --------->
 <div class="v-modal" data-type-modal="application">
 	<div class="v-modal__inner">
         <form action="https://dev.avtocharge.ru/#" method="post" class="ajax_form v-modal__form application-f" id="popnew">
@@ -18222,78 +17005,8 @@ submit1.disabled = 'disabled';
 }
 </script>
 
-<script>
-       	$(document).on('af_complete', function(event, response) {
-            var form = response.form;
-            if (form.attr('id') == 'contactForm2' && response.success) {
-               window.location.href = "spasibo-za-podpisku-na-rassyilku-novostej!/"
-            }
-        });
-</script>
-<script>
-       	$(document).on('af_complete', function(event, response) {
-            var form = response.form;
-            if ((
-                form.attr('id') == 'popnew'
-                || form.attr('id') == 'partner-order'
-            ) && response.success) {
-               window.location.href = "spasibo-za-otpravku-soobshheniya!/"
-            }
-        });
-</script>
-<script>
-       	$(document).on('af_complete', function(event, response) {
-            var form = response.form;
-            if (form.attr('id') == 'contactForm4' && response.success) {
-               window.location.href = "spasibo-za-otpravku-soobshheniya!/"
-            }
-        });
-</script>
-<script>
-       	$(document).on('af_complete', function(event, response) {
-            var form = response.form;
-            if (form.attr('id') == 'deshevlenew' && response.success) {
-               window.location.href = "spasibo-za-otpravku-soobshheniya!/"
-            }
-        });
-</script>
-<script>
-       	$(document).on('af_complete', function(event, response) {
-            var form = response.form;
-            if (form.attr('id') == 'os' && response.success) {
-               window.location.href = "spasibo-za-otpravku-soobshheniya!/"
-            }
-        });
-</script>
-<script>
-$(function(){
-    $('.ajax_form').append('<input type="text" name="org" value="" class="_org" style="visibility:hidden; height: 0; width: 0; padding: 0; border:none;"/>')
-})
-</script>
 
-<script async="">
-(function(w,d,u){
-var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
-var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
-})(window,document,'https://cdn-ru.bitrix24.ru/b17885774/crm/site_button/loader_1_8j2izf.js');
-</script>
-	<style>
-		#cont_txt, #cont_txt2 {display:none;}
-		#cont_txt.active,#cont_txt2.active {display:block;}
-	</style>
 
-	<script>
-	$(document).on('mse2_load', function(e, response) {
-		var page = mse2Config.page;
-		if(page){
-			$("#cont_txt").removeClass("active");
-			$("#cont_txt2").removeClass("active");
-		} else {
-			$("#cont_txt").addClass("active");
-			$("#cont_txt2").addClass("active");
-		}
-	});
-	</script>
 
 <script src="https://script.marquiz.ru/v2.js"></script>
 <script>
@@ -18330,99 +17043,16 @@ var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
 })();
 </script>
 <script src="files/page-dump/default.min.js"></script>
-	<script type="text/javascript">
-		if(typeof jQuery == "undefined") {
-			document.write("<script src=\"/assets/components/comparison/js/lib/jquery.min.js\" type=\"text/javascript\"><\/script>");
-		}
-	</script>
-
-<script src="files/page-dump/default.js"></script>
+	<script src="files/page-dump/default.js"></script>
 <script type="text/javascript">cityFields = {actionUrl: "/assets/components/cityfields/action.php",cityInDomain: false};typeof jQuery == "function" || document.write("<script type=\"text/javascript\" src=\"/assets/components/cityfields/js/web/jquery.min.js\"><\/script>");</script>
 <script src="files/page-dump/cityfields.js"></script>
+
 <script src="files/page-dump/default(4).js"></script>
 
-		<script type="text/javascript">
-			if ($("form.msearch2").length) {
-				mSearch2.Form.initialize("form.msearch2");
-			}
-		</script>
-<script src="files/page-dump/default(5).js"></script>
-<script type="text/javascript">document.addEventListener("DOMContentLoaded", function(){ Comparison.add.initialize(".comparison-default", {minItems:1});});</script>
+		<script src="files/page-dump/default(5).js"></script>
 <script src="files/page-dump/default(6).js"></script>
-<script type="text/javascript">AjaxForm.initialize({"assetsUrl":"\/assets\/components\/ajaxform\/","actionUrl":"\/assets\/components\/ajaxform\/action.php","closeMessage":"\u0437\u0430\u043a\u0440\u044b\u0442\u044c \u0432\u0441\u0435","formSelector":"form.ajax_form","pageId":1});</script><script src="files/page-dump/jquery.form.min.js"></script><script src="files/page-dump/jquery.jgrowl.min.js"></script>
+<script src="files/page-dump/jquery.form.min.js"></script><script src="files/page-dump/jquery.jgrowl.min.js"></script>
 
 
 
-<div class="SmartCaptcha-Overlay SmartCaptcha-Overlay_show_spinner" data-testid="advanced-container" tabindex="-1" style="--smart-captcha-doc-height: 964px; --smart-captcha-doc-width: 1920px;"><div class="SmartCaptcha-Spin"></div></div><div class="b24-window-mounts"><div id="b24-window-mount-b24-site-button-form-3" class="b24-form"><div class="vue-portal-target"><div class="b24-window"><div class="b24-window-overlay" style="display: none;"></div> <div class="b24-window-popup b24-window-popup-on-top b24-window-popup-p-center" style="display: none;"><div class="b24-window-popup-wrapper" style="max-width: 600px;"><button type="button" aria-label="" class="b24-window-close" style="z-index: 200019;"></button> <div><!----> <div class="b24-window-scrollable" style="z-index: 199999;"><div class="b24-window-scroll-anchor"></div> <!----> <div class="b24-window-popup-body"><div style="padding: 0px 12px 12px;"><div></div> <div class="b24-form-btn-container" style="padding: 12px 0px 0px;"><div class="b24-form-btn-block"><button type="button" class="b24-form-btn">
-								Принимаю
-							</button></div> <div class="b24-form-btn-block"><button type="button" class="b24-form-btn b24-form-btn-white b24-form-btn-border">
-								Не принимаю
-							</button></div></div></div></div> <div class="b24-window-scroll-anchor"></div></div> <!----></div></div></div></div></div></div><div id="b24-window-mount-empty" class="b24-form"><div class="vue-portal-target"></div></div></div><div class="b24-form"><div id="b24-b24-site-button-form-3" data-styles-apllied="true" class="b24-form-style-classic"><div class="b24-window"><div class="b24-window-overlay" style="display: none;"></div> <div class="b24-window-panel b24-window-panel-pos-left" style="display: none;"><button type="button" aria-label="Закрыть" class="b24-window-close" style="z-index: 220;"></button> <div><!----> <div class="b24-window-scrollable" style="z-index: 200;"><div class="b24-window-scroll-anchor"></div> <!----> <div class="b24-form-wrapper b24-form-border-bottom"><div role="region" aria-labelledby="b24-form-form-1-title" aria-describedby="b24-form-form-1-desc" class="b24-form-header b24-form-padding-side"><h2 id="b24-form-form-1-title" class="b24-form-header-title">Обратная связь</h2> <p id="b24-form-form-1-desc" class="b24-form-header-description">Поделитесь мнением о нашей работе или задайте нам любой интересующий вас вопрос в поле комментарий</p></div> <div class="b24-form-content b24-form-padding-side"><form method="post" novalidate="novalidate"><!----> <div><div class="b24-form-field b24-form-field-name b24-form-control-string"><div><div><div class="b24-form-control-container b24-form-control-icon-after"><input id="b24-form-field-2" name="name" autocomplete="given-name" aria-required="true" type="string" class="b24-form-control"> <label for="b24-form-field-2" class="b24-form-control-label">
-				Имя 
-				<span aria-hidden="true" class="b24-form-control-required">*</span></label> <!----> <!----> <div id="b24-form-error-2" role="alert" class="b24-form-control-alert-message" style="display: none;"><span class="b24-form-sr-only">Имя: </span>Поле обязательно для заполнения
-		</div></div></div> <!----> <!----></div> <!----></div><div class="b24-form-field b24-form-field-last-name b24-form-control-string"><div><div><div class="b24-form-control-container b24-form-control-icon-after"><input id="b24-form-field-3" name="lastname" autocomplete="family-name" type="string" class="b24-form-control"> <label for="b24-form-field-3" class="b24-form-control-label">
-				Фамилия 
-				<span aria-hidden="true" class="b24-form-control-required" style="display: none;">*</span></label> <!----> <!----> <div id="b24-form-error-3" role="alert" class="b24-form-control-alert-message" style="display: none;"><span class="b24-form-sr-only">Фамилия: </span>
-		</div></div></div> <!----> <!----></div> <!----></div><div class="b24-form-field b24-form-field-phone b24-form-control-string"><div><div><div class="b24-form-control-container b24-form-control-icon-after"><input id="b24-form-field-4" name="phone" autocomplete="tel" aria-required="true" type="tel" class="b24-form-control"> <label for="b24-form-field-4" class="b24-form-control-label">
-				Телефон 
-				<span aria-hidden="true" class="b24-form-control-required">*</span></label> <!----> <!----> <div id="b24-form-error-4" role="alert" class="b24-form-control-alert-message" style="display: none;"><span class="b24-form-sr-only">Телефон: </span>Поле обязательно для заполнения
-		</div></div></div> <!----> <!----></div> <!----></div><div class="b24-form-field b24-form-field-email b24-form-control-string"><div><div><div class="b24-form-control-container b24-form-control-icon-after"><input id="b24-form-field-5" name="email" autocomplete="email" aria-required="true" type="email" class="b24-form-control"> <label for="b24-form-field-5" class="b24-form-control-label">
-				E-mail 
-				<span aria-hidden="true" class="b24-form-control-required">*</span></label> <!----> <!----> <div id="b24-form-error-5" role="alert" class="b24-form-control-alert-message" style="display: none;"><span class="b24-form-sr-only">E-mail: </span>Поле обязательно для заполнения
-		</div></div></div> <!----> <!----></div> <!----></div><div class="b24-form-field b24-form-field-text b24-form-control-text"><div><div><div class="b24-form-control-container b24-form-control-icon-after"><textarea id="b24-form-field-6" class="b24-form-control"></textarea> <label for="b24-form-field-6" class="b24-form-control-label">
-				Комментарий 
-				<span aria-hidden="true" class="b24-form-control-required" style="display: none;">*</span></label> <!----> <div id="b24-form-error-6" role="alert" class="b24-form-control-alert-message" style="display: none;"><span class="b24-form-sr-only">Комментарий: </span>
-		</div></div></div> <!----> <!----></div> <!----></div></div> <div><div class="b24-form-field b24-form-field-agreement b24-form-control-agreement"><!----> <div><div class="b24-form-control-container"><label><input type="checkbox" id="b24-form-field-7" aria-required="true" onclick="this.blur()"> <span class="b24-form-control-desc"><span class="b24-form-field-agreement-link">Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в Согласии на обработку персональных данных</span></span> <span aria-hidden="true" class="b24-form-control-required">*</span></label> <div id="b24-form-error-7" role="alert" class="b24-form-control-alert-message" style="display: none;"><span class="b24-form-sr-only">Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в Согласии на обработку персональных данных: </span>
-		</div></div> <!----></div></div> <div class="v-portal" style="display: none;"></div></div> <!----> <div class="b24-form-btn-container"><!----> <!----> <div class="b24-form-btn-block"><button type="submit" aria-label="Отправить" class="b24-form-btn">
-								Отправить
-							</button></div></div> <span style="color: red; display: none;">
-						Debug: fill fields
-					</span></form></div> <div class="b24-form-state-container"><div role="status" aria-label="" class="b24-form-loader" style="display: none;"><!----> <div class="b24-form-loader-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 263 174"><g transform="translate(52.5,7)"><path id="bxSunLines" d="M79,0 C80.6568542,0 82,1.34314575 82,3 L82,22 C82,23.6568542 80.6568542,25 79,25 C77.3431458,25 76,23.6568542 76,22 L76,3 C76,1.34314575 77.3431458,0 79,0 Z M134.861,23.139 C136.032146,24.3104996 136.032146,26.2095004 134.861,27.381 L121.426,40.816 C120.248863,41.9529166 118.377746,41.9366571 117.220544,40.7794557 C116.063343,39.6222543 116.047083,37.7511367 117.184,36.574 L130.619,23.139 C131.7905,21.9678542 133.6895,21.9678542 134.861,23.139 L134.861,23.139 Z M158,79 C158,80.6568542 156.656854,82 155,82 L136,82 C134.343146,82 133,80.6568542 133,79 C133,77.3431458 134.343146,76 136,76 L155,76 C156.656854,76 158,77.3431458 158,79 Z M134.861,134.861 C133.6895,136.032146 131.7905,136.032146 130.619,134.861 L117.184,121.426 C116.40413,120.672777 116.091362,119.557366 116.365909,118.508478 C116.640455,117.45959 117.45959,116.640455 118.508478,116.365909 C119.557366,116.091362 120.672777,116.40413 121.426,117.184 L134.861,130.619 C136.032146,131.7905 136.032146,133.6895 134.861,134.861 Z M79,158 C77.3431458,158 76,156.656854 76,155 L76,136 C76,134.343146 77.3431458,133 79,133 C80.6568542,133 82,134.343146 82,136 L82,155 C82,156.656854 80.6568542,158 79,158 Z M23.139,134.861 C21.9678542,133.6895 21.9678542,131.7905 23.139,130.619 L36.574,117.184 C37.3272234,116.40413 38.4426337,116.091362 39.491522,116.365909 C40.5404103,116.640455 41.3595451,117.45959 41.6340915,118.508478 C41.9086378,119.557366 41.5958698,120.672777 40.816,121.426 L27.381,134.861 C26.2095004,136.032146 24.3104996,136.032146 23.139,134.861 Z M0,79 C0,77.3431458 1.34314575,76 3,76 L22,76 C23.6568542,76 25,77.3431458 25,79 C25,80.6568542 23.6568542,82 22,82 L3,82 C1.34314575,82 0,80.6568542 0,79 L0,79 Z M23.139,23.139 C24.3104996,21.9678542 26.2095004,21.9678542 27.381,23.139 L40.816,36.574 C41.5958698,37.3272234 41.9086378,38.4426337 41.6340915,39.491522 C41.3595451,40.5404103 40.5404103,41.3595451 39.491522,41.6340915 C38.4426337,41.9086378 37.3272234,41.5958698 36.574,40.816 L23.139,27.381 C21.9678542,26.2095004 21.9678542,24.3104996 23.139,23.139 Z" fill="#FFD110" class="bx-sun-lines-animate"></path></g> <g fill="none" fill-rule="evenodd"><path d="M65.745 160.5l.245-.005c13.047-.261 23.51-10.923 23.51-23.995 0-13.255-10.745-24-24-24-3.404 0-6.706.709-9.748 2.062l-.47.21-.196-.477A19.004 19.004 0 0 0 37.5 102.5c-10.493 0-19 8.507-19 19 0 1.154.103 2.295.306 3.413l.108.6-.609-.01A17.856 17.856 0 0 0 18 125.5C8.335 125.5.5 133.335.5 143s7.835 17.5 17.5 17.5h47.745zM166.5 85.5h69v-.316l.422-.066C251.14 82.73 262.5 69.564 262.5 54c0-17.397-14.103-31.5-31.5-31.5-.347 0-.694.006-1.04.017l-.395.013-.103-.382C226.025 9.455 214.63.5 201.5.5c-15.014 0-27.512 11.658-28.877 26.765l-.047.515-.512-.063a29.296 29.296 0 0 0-3.564-.217c-16.016 0-29 12.984-29 29 0 15.101 11.59 27.643 26.542 28.897l.458.039v.064z" stroke-opacity=".05" stroke="#000" fill="#000"></path> <circle stroke="#FFD110" stroke-width="6" cx="131.5" cy="86.5" r="44.5" class="b24-form-loader-icon-sun-ring"></circle></g></svg></div></div> <div role="status" class="b24-form-state b24-form-success" style="display: none;"><div class="b24-form-state-inner"><div class="b24-form-state-icon b24-form-success-icon"></div> <div class="b24-form-state-text"><p>Отправлено!</p> <p></p></div> <!----></div> <div class="b24-form-inner-box"></div></div> <div role="alert" class="b24-form-state b24-form-error" style="display: none;"><div class="b24-form-state-inner"><div aria-hidden="true" class="b24-form-state-icon b24-form-error-icon"></div> <div class="b24-form-state-text"><p></p></div> <button aria-label="Отправить еще раз" class="b24-form-btn b24-form-btn-border b24-form-btn-tight">
-							Отправить еще раз						
-						</button></div> <div class="b24-form-inner-box"></div></div> <div role="status" class="b24-form-state b24-form-warning" style="display: none;"><div class="b24-form-state-inner"><div class="b24-form-state-icon b24-form-warning-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 169 169"><defs><circle id="a" cx="84.5" cy="84.5" r="65.5"></circle><filter x="-.8%" y="-.8%" width="101.5%" height="101.5%" filterUnits="objectBoundingBox" id="b"><fegaussianblur stdDeviation=".5" in="SourceAlpha" result="shadowBlurInner1"></fegaussianblur><feoffset dx="-1" dy="-1" in="shadowBlurInner1" result="shadowOffsetInner1"></feoffset><fecomposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></fecomposite><fecolormatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.0886691434 0" in="shadowInnerInner1" result="shadowMatrixInner1"></fecolormatrix><fegaussianblur stdDeviation=".5" in="SourceAlpha" result="shadowBlurInner2"></fegaussianblur><feoffset dx="1" dy="1" in="shadowBlurInner2" result="shadowOffsetInner2"></feoffset><fecomposite in="shadowOffsetInner2" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner2"></fecomposite><fecolormatrix values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.292285839 0" in="shadowInnerInner2" result="shadowMatrixInner2"></fecolormatrix><femerge><femergenode in="shadowMatrixInner1"></femergenode><femergenode in="shadowMatrixInner2"></femergenode></femerge></filter></defs><g fill="none" fill-rule="evenodd"><circle stroke-opacity=".05" stroke="#000" fill-opacity=".07" fill="#000" cx="84.5" cy="84.5" r="84"></circle><use fill="#FFF" xlink:href="#a"></use><use fill="#000" filter="url(#b)" xlink:href="#a"></use><path d="M114.29 99.648L89.214 58.376c-1.932-3.168-6.536-3.168-8.427 0L55.709 99.648c-1.974 3.25.41 7.352 4.234 7.352h50.155c3.782 0 6.166-4.103 4.193-7.352zM81.404 72.756c0-1.828 1.48-3.29 3.33-3.29h.452c1.85 0 3.33 1.462 3.33 3.29v12.309c0 1.827-1.48 3.29-3.33 3.29h-.453c-1.85 0-3.33-1.463-3.33-3.29V72.756zm7.77 23.886c0 2.274-1.892 4.143-4.194 4.143s-4.193-1.869-4.193-4.143c0-2.275 1.891-4.144 4.193-4.144 2.302 0 4.193 1.869 4.193 4.144z" fill="#000" opacity=".4"></path></g></svg></div> <div class="b24-form-state-text"><p>Форма не актуальна</p></div></div> <div class="b24-form-inner-box"></div></div></div> <!----> <!----> <div class="b24-form-sign"><select style="display: none;"><option value="ar">
-						ar
-					</option><option value="br">
-						br
-					</option><option value="de">
-						de
-					</option><option value="en">
-						en
-					</option><option value="fr">
-						fr
-					</option><option value="hi">
-						hi
-					</option><option value="id">
-						id
-					</option><option value="in">
-						in
-					</option><option value="it">
-						it
-					</option><option value="ja">
-						ja
-					</option><option value="kz">
-						kz
-					</option><option value="la">
-						la
-					</option><option value="ms">
-						ms
-					</option><option value="pl">
-						pl
-					</option><option value="ru">
-						ru
-					</option><option value="sc">
-						sc
-					</option><option value="tc">
-						tc
-					</option><option value="th">
-						th
-					</option><option value="tr">
-						tr
-					</option><option value="ua">
-						ua
-					</option><option value="vn">
-						vn
-					</option></select> <div><span class="b24-form-sign-abuse"><a href="#" target="_blank" rel="nofollow" class="b24-form-sign-abuse-link">
-					Сообщить о нарушении
-				</a> <span title="Компания Битрикс24 не несёт ответственности за содержимое формы, но вы можете сообщить нам о нарушении" class="b24-form-sign-abuse-help"></span></span> <div><div class="b24-window"><div class="b24-window-overlay" style="display: none;"></div> <div class="b24-window-popup b24-window-popup-p-center" style="display: none;"><div class="b24-window-popup-wrapper"><button type="button" aria-label="" class="b24-window-close" style="z-index: 220;"></button> <div><!----> <div class="b24-window-scrollable" style="z-index: 200;"><div class="b24-window-scroll-anchor" style="display: none;"></div> <div class="b24-window-popup-head"><div class="b24-window-popup-title">Сообщить о нарушении</div></div> <div class="b24-window-popup-body"><div class="b24-form-sign-abuse-popup">
-					Компания Битрикс24 не несёт ответственности за содержимое формы, но вы можете сообщить нам о нарушении
-				</div></div> <div class="b24-window-scroll-anchor" style="display: none;"></div></div> <!----></div></div></div></div></div></div> <div class="b24-form-sign-info"><span class="b24-form-sign-text">Заряжено</span> <span class="b24-form-sign-bx">Битрикс</span> <span class="b24-form-sign-24">24</span></div></div></div> <div class="b24-window-scroll-anchor"></div></div> <!----></div></div></div></div></div><div id="color-picker-toast"></div><div id="color-picker-widget" style="display: none; flex-direction: column; align-items: stretch; left: calc(100% - 50px); top: calc(100% - 50px); transform: translate(25px, 25px);"><img id="pick-color-button-image" src="chrome-extension://ccgngdpmfjecdgijjjnbbndeahobokhj/icons/icn128.png" draggable="false" alt="Pick Color"><button id="pick-color-button"></button><button id="close-button" style="inset: auto 0px 0px auto;">×</button></div></body></html>
+</body></html>
