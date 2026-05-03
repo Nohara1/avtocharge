@@ -1,0 +1,24 @@
+/*==================== INDEX PAGE ====================*/
+.index-pg {
+	.content-wrap {
+		padding-top: 0;
+	}
+
+	.category-cards {
+		margin-top: 8px;
+	}
+
+	.articles-b {
+		margin-top: 61px;
+	}
+
+	@include mobile {
+		.category-cards {
+			margin-top: 39px;
+		}
+	
+		.articles-b {
+			margin-top: 15px;
+		}
+	}
+}

@@ -1,0 +1,324 @@
+@import "fonts";
+@import "./base/variables";
+@import "./mixsins/mixsins";
+@import "./base/spacing";
+@import "./base/nullstyle";
+@import "./base/settings";
+@import "./base/grid";
+@import "./lib/jquery.custom-select";
+
+html,
+body {
+	font-family: var(--fm-1);
+	font-size: 16px;
+	font-weight: 400;
+	color: #000;
+	scrollbar-color: var(--scroll-thumb-color) var(--scroll-bar-color); /* «цвет ползунка» «цвет полосы скроллбара» */
+	scrollbar-width: thin; /* толщина */
+}
+
+html {
+	scrollbar-gutter: stable;
+	scroll-padding-top: var(--header-height);
+
+	@include mobile {
+		font-size: 14px;
+	}
+}
+
+::-webkit-scrollbar {
+	width: 0.8rem;
+	background-color: var(--scroll-bar-color);
+}
+
+::-webkit-scrollbar-thumb {
+	cursor: pointer;
+	background-color: var(--scroll-thumb-color);
+	border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: var(--scroll-thumb-color-hover);
+}
+
+.body {
+	height: 1px;
+	min-height: 100vh;
+}
+
+.page {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+/*--------------------------------Common--------------------------------*/
+.container {
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 30px;
+	padding-right: 30px;
+	width: 100%;
+	max-width: 1640px;
+
+	.container {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	&--sm {
+		max-width: 1200px;
+
+		.container & {
+			max-width: 1170px;
+		}
+
+		.section__title {
+			margin-bottom: 40px;
+		}
+	}
+
+	@include table {
+		padding-right: 20px;
+		padding-left: 20px;
+		max-width: 768px;
+	}
+
+	@include mobile {
+		padding-right: 20px;
+		padding-left: 20px;
+		max-width: 100%;
+	}
+}
+
+.container-l {
+	margin: 0 auto;
+	max-width: 1930px;
+	width: 100%;
+}
+
+.title {
+	font-weight: 700;
+	line-height: (36/30);
+	color: #313131;
+	text-align: center;
+
+	&--underline {
+		position: relative;
+		padding-bottom: getEm(19, 28);
+
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			display: block;
+			height: 5px;
+			width: getEm(234, 30);
+			background-color: var(--color-primary);
+			transform: translateX(-50%);
+		}
+	}
+
+	&--color {
+		text-transform: uppercase;
+		color: var(--color-primary);
+	}
+
+	&--position {
+		&_left {
+			text-align: left;
+
+			&::before {
+				left: 0;
+				transform: none;
+			}
+		}
+	}
+}
+
+.title-1 {
+	@extend .title;
+	font-size: 30px;
+
+	@include desctop-mid {
+		font-size: 26px;
+	}
+
+	@include desctop-min {
+		font-size: 24px;
+	}
+
+	@include mobile {
+		font-size: 20px;
+	}
+}
+
+.title-2 {
+	@extend .title;
+	font-size: 28px;
+
+	@include desctop-mid {
+		font-size: 25px;
+	}
+
+	@include mobile {
+		font-size: 18px;
+	}
+}
+
+.title-3 {
+	@extend .title;
+	font-size: 24px;
+
+	@include desctop-mid {
+		font-size: 22px;
+	}
+
+	@include mobile {
+		font-size: 18px;
+	}
+}
+
+.title-4 {
+	@extend .title;
+	font-size: 20px;
+}
+
+.text {
+	font-size: 18px;
+	line-height: (35/18);
+
+	p,
+	ul,
+	ol {
+		margin-top: getEm(30, 18);
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	ul {
+		padding-left: 1.55em;
+		li {
+			list-style-type: disc;
+		}
+	}
+	
+	ol {
+		padding-left: 1.55em;
+	}
+
+	a:not(.btn) {
+		color: var(--color-primary);
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&--fz_l {
+		font-size: 20px;
+	}
+
+	&--fz_s {
+		font-size: 18px;
+	}
+
+	&--lh {
+		&_s {
+			line-height: (30/18);
+		}
+
+		&_xs {
+			line-height: (20/18);
+		}
+	}
+
+	&--no-air {
+		p,
+		ul,
+		ol {
+			margin-top: 0;
+		}
+	}
+
+	.list-custom {
+		line-height: (22/18);
+
+		li {
+			margin-bottom: getEm(20, 18);
+		}
+	}
+
+	&_h2AsTitleUnderline {
+		h2 {
+			text-align: center;
+			@extend .title-1;
+			@extend .title--underline;
+			margin-top: 95px;
+			@include mobile {
+				margin-top: 45px;
+			}
+		}
+	}
+
+	@include desctop-mid {
+		font-size: 16px;
+
+		&--fz_l {
+			font-size: 18px;
+		}
+	}
+
+	@include desctop-min {
+		&--fz_s {
+			font-size: 16px;
+		}
+	}
+
+	@include mobile {
+		p,
+		ul,
+		ol {
+			margin-top: getEm(20, 18);
+		}
+		&--fz_l {
+			font-size: 16px;
+		}
+		&--fz_l {
+			font-size: 16px;
+		}
+	}
+
+}
+
+.separate-text {
+	margin: 20px 0;
+}
+
+@import "./components/interface";
+@import "./components/btns";
+@import "./components/molecules";
+@import "./components/blocks";
+@import "./components/header";
+@import "./components/footer";
+@import "./pages/index";
+@import "./pages/catalog";
+@import "./pages/internal-catalog";
+@import "./pages/base-info";
+@import "./pages/article";
+@import "./pages/news";
+@import "./pages/state-owned";
+@import "./pages/for-business";
+@import "./pages/contacts";
+@import "./pages/basket";
+@import "./pages/account";
+@import "./pages/notify";
+@import "./pages/common-pg";
+@import "./pages/product-card";
+@import "./pages/reviews-note";
+@import "./pages/portfolio";
+@import "./pages/comparison";
+/*--------------------------------Other--------------------------------*/

@@ -1,0 +1,61 @@
+/*==================== REVIEWS NOTE PAGE ====================*/
+.reviews-note-pg {
+	.main-banner {
+		min-height: 480px;
+		&__bg {
+			img {
+				object-position: left center;
+			}
+		}
+
+		&__content {
+			padding-bottom: getEm(40, 32);
+			margin-top: auto;
+			max-width: 860px;
+		}
+	}
+
+	.text p,
+	.text ul,
+	.text ol {
+		margin-top: getEm(20, 18);
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	@include desctop-mid {
+		.main-banner {
+			min-height: 420px;
+		}
+	}
+
+	@include desctop-min {
+		.main-banner {
+			min-height: 380px;
+		}
+	}
+
+	@include table {
+		.main-banner {
+			&__bg {
+				&::before {
+					display: none;
+				}
+
+				img {
+					filter: blur(0px);
+				}
+			}
+		}
+	}
+
+	@include mobile {
+		.main-banner {
+			&__content {
+				font-size: 18px;
+			}
+		}
+	}
+}

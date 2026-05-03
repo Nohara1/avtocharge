@@ -1,0 +1,8 @@
+/*==================== DELIVERY PAYMENT PAGE ====================*/
+.delivery-payment-pg {
+	@include mobile {
+		.main-banner__content p {
+			text-align: center;
+		}
+	}
+}

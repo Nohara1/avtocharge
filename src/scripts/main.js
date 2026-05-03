@@ -1,3 +1,9 @@
+import * as myFunctions from "./functions/index.js";
+import "./slider.js";
+import "./tippy.js";
+import "./inputmask.js";
+import "./page-dump/entry.js";
+
 myFunctions.onReady(ready);
 
 function ready() {
@@ -25,7 +31,9 @@ function ready() {
   // myFunctions.citeSwitcher();
   // myFunctions.imageSwitcher();
 
-  new myFunctions.myGallery();
+  if (document.querySelector("[data-gallery]")) {
+    new myFunctions.myGallery();
+  }
 
   // interaction on label //
 
@@ -139,5 +147,4 @@ function ready() {
     });
 }
 
-import * as myFunctions from "./functions/index.js";
 // import "img-comparison-slider";

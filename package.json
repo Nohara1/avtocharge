@@ -1,13 +1,15 @@
 {
-  "name": "cwebbl",
-  "description": "Запустить проект\r ```\r npm run dev\r ```\r Сгруппировать файл иконок (icons.svg)\r ```\r npm run sprite\r ```\r Обновить файл подключения шрифтов (fonts.scss)\r ```\r npm run fonts\r ```",
+  "name": "Nohara",
+  "description": "Запустить проект\r ```\r npm run dev\r ```\r Tailwind v3 CLI → src/tailwind/tw-entry.css\r ```\r npm run tb\r ```\r ```\r npm run tw\r ```\r Сгруппировать файл иконок (icons.svg)\r ```\r npm run sprite\r ```\r Обновить файл подключения шрифтов (fonts.scss)\r ```\r npm run fonts\r ```",
   "main": "gulpfile.js",
   "type": "module",
   "scripts": {
     "dev": "gulp dev",
     "build": "gulp build --build",
     "fonts": "gulp fonts",
-    "sprite": "gulp sprite"
+    "sprite": "gulp sprite",
+    "tb": "npx --yes tailwindcss@3.4.17 -i ./src/tailwind/tw-input.css -o ./src/tailwind/tw-entry.css --minify -c ./src/tailwind/tailwind.tw.cjs",
+    "tw": "npx --yes tailwindcss@3.4.17 -i ./src/tailwind/tw-input.css -o ./src/tailwind/tw-entry.css --minify --watch -c ./src/tailwind/tailwind.tw.cjs"
   },
   "author": "dimosoff",
   "license": "ISC",
@@ -45,6 +47,7 @@
     "imagemin-pngquant": "^10.0.0",
     "img-comparison-slider": "^8.0.6",
     "inputmask": "^5.0.9",
+    "jquery": "^3.7.1",
     "prettier": "^3.5.3",
     "sass": "^1.77.7",
     "swiper": "^8.4.7",

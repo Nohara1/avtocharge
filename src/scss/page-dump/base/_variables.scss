@@ -1,0 +1,46 @@
+/*==================== VARIABLES ====================*/
+$hue-color: 212;
+
+$color-primary: #2d8eff;
+$color-text: #212121;
+
+:root {
+	/*font-family*/
+	--fm-1: "Lato", sans-serif;
+	--fm-2: "Roboto", sans-serif;
+
+	/*colors*/
+	--basick-black: #000;
+	--basick-dark: #333;
+	--basick-white: #fff;
+
+	--color-primary: #{$color-primary};
+	--color-text: #{$color-text};
+
+	--color-primary-hsl: hsl(#{$hue-color}, 100%, 59%);
+
+	--scroll-bar-color: hsl(#{$hue-color}, 42%, 90%);
+	--scroll-thumb-color: hsl(#{$hue-color}, 42%, 70%);
+	--scroll-thumb-color-hover: hsl(#{$hue-color}, 42%, 60%);
+}
+
+//breakpoints
+$desctop: 1920;
+$desctop-mid: 1650;
+$desctop-min: 1230;
+$table: 1024;
+$mobile: 768;
+$tel: 480;
+
+$breakpoints: (
+	"xl": #{$desctop-mid}px,
+	"lg": #{$desctop-min}px,
+	"md": #{$table}px,
+	"sm": #{$mobile}px,
+	"xs": #{$tel}px,
+) !default;
+
+$grid-columns: 12 !default;
+
+/***********************Main*/
+$duration: 0.3s;

@@ -1,0 +1,28 @@
+/*==================== INTERNAL CATALOG ====================*/
+.internal-catalog-pg {
+	.panel-b {
+		margin-top: 45px;
+
+		&__sidebar {
+			min-width: 280px;
+			width: getPr(363, 1580);
+		}
+	}
+
+	.articles-b {
+		margin-top: 30px;
+	}
+
+	@include desctop-mid {
+	}
+
+	@include table {
+		.panel-b__sidebar {
+			width: 100%;
+		}
+
+		.articles-b {
+			margin-top: 20px;
+		}
+	}
+}

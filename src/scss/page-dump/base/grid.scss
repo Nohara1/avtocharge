@@ -1,0 +1,176 @@
+:root {
+	--column: #{$grid-columns};
+	--air-l: 30px;
+	--air-b: 20px;
+}
+
+@mixin row-flex {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: calc(var(--air-b) * -1);
+	margin-left: calc(var(--air-l) * -1);
+}
+
+@mixin col {
+	margin-bottom: var(--air-b);
+	margin-left: var(--air-l);
+	word-wrap: break-word;
+}
+
+@mixin size($n) {
+	width: calc(100% / var(--column) * #{$n} - var(--air-l));
+}
+
+[class*="row-cols"] {
+	--air-l: 30px;
+	--air-b: 30px;
+
+	@include row-flex;
+
+	& > * {
+		@include col;
+	}
+}
+
+.b-cols {
+	$this: &;
+	@include row-flex();
+
+	&__col {
+		@include col();
+	}
+}
+
+.b-row {
+	@include row-flex();
+}
+
+.b-col,
+[class*="b-col-"] {
+	@include col();
+}
+
+@for $i from 1 through $grid-columns {
+	.b-col-#{$i} {
+		width: calc(100% / #{$grid-columns} * #{$i} - var(--air-l));
+	}
+
+	.row-cols-#{$i} {
+		& > * {
+			width: calc(100% / #{$grid-columns} * #{$i} - var(--air-l));
+		}
+	}
+}
+
+@for $i from 0 through 60 {
+	@if $i % 5 == 0 {
+		.gx-#{$i},
+		.g-#{$i} {
+			--air-l: #{$i}px !important;
+		}
+
+		.gy-#{$i},
+		.g-#{$i} {
+			--air-b: #{$i}px !important;
+		}
+	}
+}
+
+@each $break, $value_break in $breakpoints {
+	@media (max-width: $value_break) {
+		@for $i from 0 through 60 {
+			@if $i % 5 == 0 {
+				.gx-#{$break}-#{$i},
+				.g-#{$break}-#{$i} {
+					--air-l: #{$i}px !important;
+				}
+
+				.gy-#{$break}-#{$i},
+				.g-#{$break}-#{$i} {
+					--air-b: #{$i}px !important;
+				}
+			}
+		}
+
+		@for $i from 1 through $grid-columns {
+			.row-cols-#{$break}-#{$i} {
+				& > * {
+					width: calc(100% / #{$grid-columns} * #{$i} - var(--air-l));
+				}
+			}
+
+			.b-col-#{$break}-#{$i} {
+				width: calc(100% / #{$grid-columns} * #{$i} - var(--air-l));
+			}
+		}
+	}
+}
+
+.content-wrap {
+	padding: 4rem 0 6rem;
+
+	h1 {
+		margin-bottom: 65px;
+	}
+
+	.bread-crumb + & {
+		padding-top: 0;
+	}
+
+	@include desctop-min {
+		padding: 3.5rem 0 7rem;
+
+		h1 {
+			margin-bottom: 50px;
+		}
+	}
+
+	@include table {
+		padding: 2.5rem 0 5rem;
+
+		.bread-crumb + & {
+			padding-top: 0;
+		}
+	}
+
+	@include mobile {
+		h1 {
+			margin-bottom: 35px;
+		}
+	}
+}
+
+/*section*/
+.section {
+	padding: 50px 0 20px;
+
+	&__title {
+		margin-bottom: 64px;
+	}
+
+	@include desctop-mid {
+		&__title {
+			margin-bottom: 54px;
+		}
+	}
+
+	@include desctop-min {
+		padding: 38px 0 20px;
+
+		&__title {
+			margin-bottom: 44px;
+		}
+	}
+
+	@include table {
+		padding: 58px 0 20px;
+	}
+
+	@include mobile {
+		padding: 28px 0 20px;
+
+		&__title {
+			margin-bottom: 28px;
+		}
+	}
+}

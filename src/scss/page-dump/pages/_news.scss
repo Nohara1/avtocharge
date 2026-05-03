@@ -1,0 +1,38 @@
+/*==================== NEWS PAGE ====================*/
+.news-pg {
+	.panel-b {
+		&__sidebar {
+			width: getPr(500, 1580);
+			min-width: 400px;
+		}
+	}
+
+	@include desctop-min {
+		.panel-b {
+			&__sidebar {
+				min-width: 350px;
+			}
+		}
+	}
+
+	@include table {
+		.panel-b {
+			&__sidebar {
+				margin-bottom: 30px;
+				width: 100%;
+				min-width: auto;
+			}
+		}
+
+		.news-nav {
+			margin: 0 auto;
+			max-width: 500px;
+		}
+	}
+
+	@include mobile {
+		.content-wrap {
+			padding-top: 35px;
+		}
+	}
+}

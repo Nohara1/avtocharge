@@ -3,6 +3,7 @@ import plugin from "tailwindcss/plugin";
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
+    "./src/pages/**/*.html",
     "./src/html/**/*.{html,json}",
     "./src/scripts/**/*.js",
   ],

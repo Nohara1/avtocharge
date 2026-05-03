@@ -1,4 +1,4 @@
-import * as nodePath from "path";
+﻿import * as nodePath from "path";
 const rootFolder = nodePath.basename(nodePath.resolve());
 
 const buildFolder = `./build`;
@@ -14,6 +14,7 @@ export const path = {
     images: `${buildFolder}/images/`,
     favicon: `${buildFolder}/images/favicon/`,
     scripts: `${buildFolder}/scripts/`,
+    tailwind: `${buildFolder}/tailwind/`,
   },
   src: {
     html: `${srcFolder}/pages/*.html`,
@@ -21,6 +22,7 @@ export const path = {
     fonts: `${srcFolder}/fonts/**/*.*`,
     fontsTTF: `${srcFolder}/fonts/**/*.ttf`,
     files: `${srcFolder}/files/**/*.*`,
+    css: `${srcFolder}/css/**/*.*`,
     videos: `${srcFolder}/videos/**/*.*`,
     images: [
       `${srcFolder}/images/**/*.{jpg,jpeg,png,svg}`,
@@ -31,10 +33,12 @@ export const path = {
       `!${srcFolder}/images/favicon/**`,
     ],
     favicon: `${srcFolder}/images/favicon/**/*.*`,
-    scripts: `${srcFolder}/scripts/*.js`,
+    /** Одна точка входа: см. gulp/tasks/scripts.js */
+    scripts: `${srcFolder}/scripts/main.js`,
     svgs: `${srcFolder}/svg/*.svg`,
     svgSprite: `${srcFolder}/images/`,
     robots: `${srcFolder}/robots.txt`,
+    tailwind: `${srcFolder}/tailwind/**/*.css`,
   },
   watch: {
     html: [
@@ -46,9 +50,17 @@ export const path = {
     videos: `${srcFolder}/videos/**/*.*`,
     images: `${srcFolder}/images/**/*.{jpg,jpeg,png,webp,ico,svg}`,
     scripts: `${srcFolder}/scripts/**/*.js`,
+    /** Esbuild bundle: site scripts only (excludes theme concat sources). */
+    scriptsEsbuild: [
+      `${srcFolder}/scripts/*.js`,
+      `${srcFolder}/scripts/functions/**/*.js`,
+    ],
+    pageDumpStyle: `${srcFolder}/scss/page-dump/**/*.{scss,css}`,
+    tailwind: `${srcFolder}/tailwind/**/*.css`,
   },
   clean: `${buildFolder}/**`,
   buildFolder: buildFolder,
   srcFolder: srcFolder,
   rootFolder: rootFolder,
 };
+

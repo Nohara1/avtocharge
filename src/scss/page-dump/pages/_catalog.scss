@@ -1,0 +1,43 @@
+/*==================== CATALOG PAGE ====================*/
+.catalog-pg {
+	.compatibility-b__list {
+		justify-content: center;
+	}
+
+	.product-selection-b {
+		margin-top: 16px;
+	}
+
+	.compatibility-b {
+		margin-top: 42px;
+	}
+
+	.card-links-b {
+		margin-top: 34px;
+	}
+
+	.info-b {
+		margin-top: 8px;
+	}
+
+	@include desctop-min {
+		.product-selection-b {
+			margin-top: 5px;
+		}
+
+		.compatibility-b {
+			margin-top: 0px;
+		}
+	}
+
+	@include mobile {
+		.product-selection-b,
+		.info-b {
+			margin-top: 0;
+		}
+
+		.card-links-b {
+			margin: 27px 0 10px;
+		}
+	}
+}

@@ -1,0 +1,283 @@
+/*==================== CONTACTS PAGE ====================*/
+.contacts-pg {
+	.content-wrap {
+		padding-bottom: 0;
+	}
+	.main-banner--line-content .main-banner__bg img {
+		object-position: right;
+	}
+
+	.location-b {
+		margin-top: 108px;
+	}
+
+	@include desctop-mid {
+		.location-b {
+			margin-top: 80px;
+		}
+	}
+
+	@include mobile {
+		.location-b {
+			margin-top: 60px;
+		}
+	}
+}
+
+.contacts-b {
+	&__row {
+		--air-l: 0px;
+		--air-b: 90px;
+		@include row-flex;
+	}
+
+	&__col {
+		@include col;
+		@include size(4);
+		font-size: 26px;
+		line-height: (31/26);
+		border-right: 1px solid #e5e5e5;
+
+		&:nth-child(3n + 3) {
+			border-right: none;
+		}
+
+		&-inner {
+			padding-left: getPr(125, 526);
+		}
+
+		&-title {
+			margin-bottom: getEm(33, 26);
+			font-size: getEm(32, 26);
+			font-weight: 700;
+		}
+
+		a {
+			color: var(--color-primary);
+
+			&:not(.sci__link--phone):hover {
+				text-decoration: underline;
+			}
+		}
+
+		.sci {
+			display: grid;
+			grid-template-columns: repeat(4, auto);
+			justify-content: flex-start;
+			row-gap: getEm(26, 26);
+
+			&__link {
+				justify-self: center;
+				margin: 0;
+				&--phone {
+					grid-column: span 4;
+					grid-row: 1 / 2;
+					width: 100%;
+				}
+
+				svg,
+				img {
+					width: getEm(41, 26);
+					height: getEm(41, 26);
+				}
+			}
+		}
+	}
+
+	@include desctop-mid {
+		&__row {
+			--air-b: 70px;
+		}
+		&__col {
+			font-size: 22px;
+		}
+	}
+
+	@include desctop-min {
+		&__row {
+			--air-b: 60px;
+		}
+		&__col {
+			font-size: 20px;
+		}
+	}
+
+	@include table {
+		&__col {
+			@include size(6);
+
+			&:nth-child(3n + 3) {
+				border-right: 1px solid #e5e5e5;
+			}
+
+			&:nth-child(2n + 2) {
+				border-right: none;
+			}
+
+			&-inner {
+				padding-left: 20%;
+			}
+		}
+	}
+
+	@include to(600) {
+		&__row {
+			--air-b: 40px;
+		}
+
+		&__col {
+			@include size(12);
+			font-size: 18px;
+			border-right: none !important;
+		}
+	}
+}
+
+.location-b {
+	background-color: rgba($color-primary, 0.1);
+
+	&__container-l {
+		position: relative;
+	}
+
+	&__row {
+		display: flex;
+	}
+
+	&__textBox,
+	&__mapBox {
+		width: 50%;
+	}
+
+	&__textBox {
+		flex-direction: column;
+		padding: 53px 3%;
+
+		.visit-card {
+			margin: auto;
+		}
+	}
+
+	&__mapBox {
+		position: absolute;
+		left: 50%;
+		right: 0;
+		height: 100%;
+		display: flex;
+
+		&-wrapper {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			position: relative;
+			&:after {
+				content:'Для взаимодействия с картой, кликнете по ней';
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				z-index: 2;
+				transition-duration: .2s;
+				background: rgba(0,0,0,.7);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: white;
+				cursor: pointer;
+				padding: 2rem;
+				border-radius: 15px;
+				text-align: center;
+			}
+			&:not(:hover):not(.location-b__mapBox-wrapper_touched):after {
+				opacity: 0;
+			}
+			&_clicked:after {
+				display: none;
+			}
+		}
+		
+		iframe {
+			position: relative;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	@include table {
+		&__container-l {
+			padding-bottom: 600px;
+		}
+
+		&__row {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		&__mapBox,
+		&__textBox {
+			width: 100%;
+		}
+
+		&__mapBox {
+			left: 0;
+			bottom: 0;
+			height: 600px;
+		}
+	}
+
+	@include mobile {
+		&__textBox {
+			padding: 37px 0 39px;
+		}
+	}
+}
+
+/*visit card*/
+.visit-card {
+	display: grid;
+	row-gap: getEm(23, 26);
+	padding: getEm(54, 26) getEm(55, 26) getEm(55, 26);
+	max-width: getEm(420, 26);
+	width: 100%;
+	font-size: 26px;
+	background-color: #ffffff;
+	box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
+	border-radius: 10px;
+
+	&__title {
+		margin-bottom: getEm(10, 32);
+		font-weight: 700;
+		font-size: getEm(32, 26);
+	}
+
+	a {
+		color: var(--color-primary);
+	}
+
+	.sci {
+		justify-self: center;
+		&__link {
+			margin-left: getEm(21, 26);
+			&:first-child {
+				margin-left: 0;
+			}
+
+			svg,
+			img {
+				width: getEm(49, 26);
+				height: getEm(49, 26);
+			}
+		}
+	}
+
+	@include desctop-mid {
+		font-size: 22px;
+	}
+	@include desctop-min {
+		font-size: 20px;
+	}
+	@include table {
+		font-size: 18px;
+	}
+}

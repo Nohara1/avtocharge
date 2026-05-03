@@ -1,0 +1,469 @@
+/*==================== COMMON BUTTON ====================*/
+/* btns */
+.btns {
+	$this: &;
+	
+	display: flex;
+	justify-content: initial;
+	align-items: center;
+
+	&__list {
+		--air-l: 20px;
+		--air-b: 20px;
+		
+		@include row-flex;
+		flex-grow: 1;
+		justify-content: inherit;
+
+		> * {
+			@include col;
+		}
+	}
+
+	&--filling {
+		&_full {
+			.btns__list {
+				flex-grow: 1;
+
+				> * {
+					flex-grow: 1;
+				}
+			}
+		}
+	}
+
+	&--direction {
+		&_col {
+			.btns__list {
+				align-items: initial;
+				flex-direction: column;
+			}
+		}
+	}
+
+	&--no-wrap {
+		#{$this}__list {
+			flex-wrap: nowrap;
+		}
+	}
+}
+
+%baseBtn {
+	cursor: pointer;
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+%baseView {
+	--padding: #{getEm(8, 18)} #{getEm(32, 18)};
+	--height: 45px;
+	--fz: 18px;
+	--border-width: 2px;
+	--colorText: #fff;
+	--colorTone: var(--color-primary);
+	padding: var(--padding);
+	min-height: var(--height);
+	font-weight: 500;
+	font-size: var(--fz);
+	color: var(--colorText);
+	border-width: var(--border-width);
+	border-radius: 60px;
+	background-color: var(--colorTone);
+}
+
+.btn {
+	@extend %baseBtn;
+	@extend %baseView;
+	border: var(--border-width) solid var(--color-primary);
+	transition: all $duration;
+
+	&:hover {
+		--colorText: var(--color-primary);
+		--colorTone: transparent;
+	}
+
+	&--light {
+		--colorTone: #f5f4f4;
+		--colorText: #7d7d7d;
+
+		&:hover {
+			--colorTone: var(--color-primary-lig);
+		}
+	}
+
+	&--reset {
+		--colorTone: #e9e9e9;
+		border-color: #e9e9e9;
+
+		&:hover {
+			--colorTone: var(--color-primary);
+			border-color: var(--color-primary);
+			color: #fff;
+		}
+	}
+}
+
+.btn,
+.btn-t,
+.btn-mate {
+	&--size_l {
+		--height: 50px;
+		padding: 0 24px;
+	}
+}
+
+.btn-t {
+	--colorTone: transparent;
+	--colorText: var(--color-text);
+
+	@extend %baseBtn;
+	@extend %baseView;
+
+	border: 2px solid var(--color-primary);
+	transition: all $duration;
+
+	&:hover {
+		--colorText: #fff;
+		--colorTone: var(--color-primary);
+	}
+
+	&--white {
+		--colorText: #fff;
+
+		border: 2px solid #fff;
+
+		&:hover {
+			--colorText: var(--color-primary);
+			background-color: #fff;
+		}
+	}
+}
+
+.btn-mate {
+	--colorTone: rgba(255, 255, 255, 0.3);
+	--colorText: #fff;
+	@extend %baseBtn;
+	@extend %baseView;
+
+	letter-spacing: getEm(1, 18);
+	font-weight: 700;
+	border: solid #fff;
+	backdrop-filter: blur(25px);
+	// box-shadow: 0px 0px 5px #ffffff;
+	overflow: hidden;
+	transition: all $duration;
+
+	&::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		backdrop-filter: blur(25px);
+		transition: all $duration;
+	}
+
+	span {
+		position: relative;
+		z-index: 1;
+	}
+
+	&:hover {
+		--colorText: var(--color-primary);
+		--colorTone: #fff;
+	}
+}
+
+.btn-compare {
+	@extend %baseBtn;
+	height: 45px;
+	width: 45px;
+	background-color: #eaf4ff;
+	border-radius: 50%;
+	transition: background-color $duration;
+
+	&:hover {
+		background-color: darken(#eaf4ff, 10%);
+		svg {
+			fill: lighten(#cdd8e6, 10%);
+		}
+	}
+
+	.active {
+		background-color: var(--color-primary);
+		svg {
+			fill: #fff;
+		}
+	}
+
+	svg {
+		width: getPr(20, 45);
+		height: getPr(17, 45);
+		fill: #cdd8e6;
+	}
+}
+
+.btn-go {
+	@extend %baseBtn;
+	width: 54px;
+	height: 54px;
+
+	&:hover svg {
+		--arr-color: #fff;
+		fill: var(--color-primary);
+	}
+
+	svg {
+		--border-color: var(--color-primary);
+		--arr-color: var(--color-primary);
+		fill: #fff;
+		color: red;
+		max-height: 100%;
+		transition: fill $duration;
+	}
+}
+
+.btn-link {
+	@extend %baseBtn;
+
+	font-size: 24px;
+	color: var(--color-primary);
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		background-color: currentColor;
+		transition: opacity $duration;
+	}
+
+	&:hover {
+		&::before {
+			opacity: 0;
+		}
+	}
+
+	@include desctop-mid {
+		font-size: 22px;
+	}
+
+	@include mobile {
+		font-size: 18px;
+	}
+}
+
+.btn-fav {
+	@extend %baseBtn;
+	svg {
+		fill: #fff;
+		filter: drop-shadow(0px 0px 2px rgba(170, 170, 170, 1));
+		transition: fill $duration, transform $duration;
+	}
+
+	&:hover,
+	&.active {
+		svg {
+			filter: drop-shadow(0px 0px 6px rgba(196, 196, 196, 0));
+			fill: tomato;
+			transform: scale(1.1);
+		}
+	}
+
+	svg {
+		width: 39px;
+		height: 39px;
+	}
+}
+
+.btn-slider-circ {
+	width: 46px;
+	height: 46px;
+
+	&:hover {
+		svg {
+			--border-color: darken($color-primary, 7%);
+			fill: darken($color-primary, 7%);
+		}
+	}
+
+	svg {
+		--arr-color: #fff;
+		--border-color: var(--color-primary);
+		max-width: 100%;
+		max-height: 100%;
+		fill: var(--color-primary);
+	}
+}
+
+/*count button*/
+.count-btn-wrap {
+	@extend %baseBtn;
+	font-size: 20px;
+	font-weight: 500;
+	height: 1px;
+	min-height: 83px;
+	background-color: #fff;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	border-radius: 50px;
+	overflow: hidden;
+
+	input {
+		padding: 0 10px;
+		width: getEm(86, 32);
+		font-size: 32px;
+		color: #c4c4c4;
+		line-height: 1;
+		text-align: center;
+	}
+
+	button {
+		padding: 0 getEm(26, 20);
+		height: 100%;
+		display: inline-flex;
+		align-items: center;
+		background-color: var(--color-primary);
+		color: #fff;
+	}
+
+	svg {
+		margin-left: getEm(10, 20);
+		height: getEm(30, 20);
+		width: getEm(30, 20);
+		fill: #fff;
+	}
+
+	@include desctop-mid {
+		min-height: 65px;
+		font-size: 16px;
+
+		input {
+			font-size: 28px;
+		}
+	}
+
+	@include mobile {
+		input {
+			width: 70px;
+			font-size: 24px;
+		}
+	}
+}
+
+.btn-remove {
+	@extend %baseBtn;
+	width: 28px;
+	height: 36px;
+	fill: #c4c4c4;
+	transition: all $duration;
+
+	&:hover {
+		fill: tomato;
+	}
+	svg {
+		max-height: 100%;
+	}
+}
+
+/*v-up*/
+.v-up {
+	cursor: pointer;
+	position: sticky;
+	left: 50px;
+	bottom: 90px;
+	z-index: 4;
+	width: 66px;
+	height: 66px;
+	background-color: var(--color-primary);
+	border-radius: 50%;
+	opacity: 0;
+	pointer-events: none;
+	transition: background-color $duration, opacity $duration;
+	
+	margin-bottom: 50px;
+	margin-top: -116px;
+
+	&.active {
+		opacity: 1;
+		pointer-events: all;
+	}
+
+	&:hover {
+		background-color: var(--color-primary);
+
+		&::before,
+		&::after {
+			background-color: #fff;
+		}
+	}
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		top: 58%;
+		left: 44%;
+		width: 27%;
+		height: 6%;
+		background-color: #fff;
+		transition: background-color $duration;
+	}
+
+	&::before {
+		border-radius: 0px 3px 3px 0;
+		transform-origin: right top;
+		transform: rotate(45deg);
+	}
+
+	&::after {
+		margin-left: -13%;
+		border-radius: 3px 0 0 3px;
+		transform-origin: left top;
+		transform: rotate(-45deg);
+	}
+
+	@include desctop-min {
+		width: 65px;
+		height: 65px;
+	}
+
+	@include mobile {
+		display: none;
+	}
+}
+
+/* fixed to element btn */
+.fixed-to-element-btn {
+	position: fixed;
+	left: 20px;
+	bottom: 0;
+	z-index: 1000;
+	padding: 0.4em getEm(42, 24);
+	font-size: 24px;
+	color: #fff;
+	background-color: var(--color-primary);
+	border: 1px solid var(--color-primary);
+	border-radius: 10px 10px 0 0;
+	border-bottom: 0;
+	transition: all $duration;
+
+	&:hover {
+		color: var(--color-primary);
+		background-color: #fff;
+	}
+
+	@include desctop-min {
+		font-size: 22px;
+	}
+
+	@include mobile {
+		font-size: 18px;
+	}
+}

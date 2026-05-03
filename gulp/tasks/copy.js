@@ -8,6 +8,9 @@ export const copy = () => {
     gulp
       .src(path.src.videos, { encoding: false, allowEmpty: true })
       .pipe(gulp.dest(path.build.videos)),
-    gulp.src(path.src.robots).pipe(gulp.dest(path.build.html))
+    gulp.src(path.src.robots).pipe(gulp.dest(path.build.html)),
+    gulp
+      .src(path.src.tailwind, { encoding: false, allowEmpty: true })
+      .pipe(gulp.dest(path.build.tailwind))
   );
 };

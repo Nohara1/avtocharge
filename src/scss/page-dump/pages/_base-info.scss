@@ -1,0 +1,79 @@
+/*==================== BASE INFO ====================*/
+.base-info-pg {
+	.content-wrap {
+		padding-bottom: 0;
+	}
+	&__answers {
+		.b-row {
+			--air-l: #{getPr(125, 1580)};
+			--air-b: 30px;
+			align-items: center;
+		}
+
+		.b-col {
+			@include size(6);
+		}
+
+		.article-links {
+			padding: 29px getPr(25, 735) 30px getPr(45, 735);
+			font-size: 24px;
+			background-color: #ffffff;
+			box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.08);
+			border-radius: 10px;
+
+			&__title {
+				margin-bottom: getEm(17, 24);
+				text-align: left;
+			}
+
+			&__list {
+				color: var(--color-primary);
+
+				li {
+					margin-bottom: 17px;
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+
+				a:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		@include desctop-mid {
+			.article-links {
+				font-size: 20px;
+			}
+		}
+
+		@include desctop-min {
+			.b-row {
+				--air-l: 40px;
+			}
+
+			.article-links {
+				font-size: 18px;
+			}
+		}
+
+		@include table {
+			.b-col {
+				@include size(12);
+			}
+		}
+
+		@include mobile {
+			.article-links {
+				padding: 24px 10px 31px;
+				font-size: 15px;
+			}
+		}
+	}
+
+	.there-questions-b {
+		margin-top: 70px;
+	}
+}

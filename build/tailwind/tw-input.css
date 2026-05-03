@@ -1,0 +1,23 @@
+/**
+ * Вход для Tailwind v3 CLI (npm run tb / npm run tw).
+ * Конфиг: ./tailwind.tw.cjs в этой папке (prefix tw-, без preflight).
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+}
+
+@layer components {
+	.tw-absolute-fluid {
+		@apply tw-absolute tw-left-0 tw-top-0 tw-w-full tw-h-full;
+	}
+}
+
+@layer utilities {
+	.tw-ratio:before {
+		display: block;
+		content: "" !important;
+	}
+}

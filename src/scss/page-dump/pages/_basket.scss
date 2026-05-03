@@ -1,0 +1,436 @@
+/*==================== BASKET PAGE ====================*/
+.basket-pg {
+	.panel-b {
+		&__sidebar {
+			margin: 0 0 0 getPr(34, 1580);
+			width: getPr(386, 1580);
+			min-width: 310px;
+		}
+	}
+
+	.order-f {
+		margin-top: 75px;
+	}
+
+	@include table {
+		.panel-b {
+			&__inner {
+				flex-direction: column;
+				align-items: center;
+			}
+
+			&__sidebar {
+				margin: 30px 0 0;
+				width: 100%;
+			}
+		}
+	}
+
+	@include mobile {
+		.content-wrap {
+			padding-top: 35px;
+		}
+		.panel-b {
+			margin: 0 -20px;
+		}
+	}
+}
+
+.preview-basket {
+	&-wrap {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&-submit {
+		--height: 42px;
+		-fz: 16px;
+		margin: 22px auto 0;
+		padding: 0 getEm(47, 16);
+	}
+}
+
+.preview-basket-card {
+	&__total-cost {
+		font-weight: 700;
+		font-size: getEm(20, 16);
+		color: var(--color-primary);
+	}
+}
+
+.table-frame {
+	display: flex;
+	flex-direction: column;
+	font-weight: 600;
+
+	&__head,
+	&__bottom {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__head {
+		padding: 0.3em;
+		min-height: getEm(47, 18);
+		font-size: 18px;
+		line-height: (22/18);
+		color: #fff;
+		text-align: center;
+		background-color: var(--color-primary);
+	}
+
+	&__body {
+		flex: 1;
+		padding: 16px 26px 22px;
+		line-height: (30/16);
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	}
+
+	&__bottom {
+		justify-content: space-between;
+		padding: getEm(14, 16) getEm(26, 16);
+		min-height: getEm(58, 16);
+		background-color: #eeeeee;
+	}
+}
+
+.basket-f {
+	&__bottom {
+		--air-b: 45px;
+		margin-top: 34px;
+		@include row-flex;
+		flex-direction: row-reverse;
+		justify-content: flex-end;
+		align-items: flex-start;
+		padding: 0 20px;
+
+		& > * {
+			@include col;
+		}
+	}
+
+	&__promo {
+		display: flex;
+		align-items: center;
+		margin-right: auto;
+		width: auto !important;
+
+		.b-input {
+			margin-bottom: 0;
+			input {
+				border-top-right-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+		}
+
+		button {
+			padding-left: getEm(34, 16);
+			padding-right: getEm(34, 16);
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+
+		p,
+		.mspc2-discount-amount {
+			margin-left: getEm(25, 14);
+			font-size: 14px;
+			color: #b0b0b0;
+		}
+	}
+
+	@include mobile {
+		&__bottom {
+			flex-direction: column;
+			align-items: center;
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		&__promo {
+			flex-direction: column;
+			align-items: flex-start;
+			margin-left: auto;
+			margin-right: auto;
+
+			button {
+				--fz: 14px;
+				padding: 0 12px;
+			}
+
+			p,
+			.mspc2-discount-amount {
+				margin: 16px 0 0 0;
+			}
+		}
+
+		.btn--reset {
+			align-self: center;
+		}
+	}
+}
+
+/*basket table*/
+.basket-table {
+	$this: &;
+
+	&__row {
+		position: relative;
+		display: flex;
+		padding-bottom: 20px;
+		width: 100%;
+
+		&:last-child {
+			padding-bottom: 0;
+		}
+	}
+
+	&__head,
+	&__body,
+	&__bottom {
+		padding-left: 24px;
+		padding-right: 24px;
+	}
+
+	&__td {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+
+		&:last-child {
+			flex: 0.2;
+		}
+
+		&--name {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			font-weight: 700;
+			a {
+				display: inline-block;
+
+				img {
+					max-width: 100px;
+				}
+			}
+
+			p {
+				margin-left: getEm(14.5, 18);
+				font-size: 18px;
+				line-height: (22/18);
+			}
+		}
+	}
+
+	&__body {
+		#{$this}__td {
+			text-align: left;
+		}
+	}
+
+	&__bottom {
+		#{$this}__td {
+			&:first-child {
+				padding-left: getPr(85, 1580);
+				align-items: flex-start;
+				font-weight: 700;
+			}
+
+			&--price {
+				font-weight: 700;
+				font-size: 24px;
+				color: var(--color-primary);
+			}
+		}
+	}
+
+	@include desctop-min {
+		$this: &;
+
+		&__body {
+			#{$this}__td {
+				&--name {
+					flex-direction: column-reverse;
+
+					p {
+						margin-left: 0;
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+
+	@include table {
+		$this: &;
+		&__body {
+			#{$this}__td {
+				&--name {
+					p {
+						font-size: 16px;
+					}
+				}
+			}
+		}
+	}
+
+	@include to(600) {
+		$this: &;
+
+		&__head {
+			.basket-table__td:not(.basket-table__td--name) {
+				display: none;
+			}
+		}
+
+		&__body {
+			#{$this}__row {
+				flex-direction: column;
+			}
+			#{$this}__td {
+				margin-bottom: 22px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+
+				&--name {
+					padding-top: 8px;
+					p {
+						width: 85%;
+						font-size: 14px;
+					}
+				}
+
+				&--price {
+					font-size: 20px;
+				}
+
+				.btn-remove {
+					position: absolute;
+					top: 0;
+					right: 0;
+					width: 17px;
+					height: 20px;
+				}
+			}
+		}
+
+		&__bottom {
+			font-size: 16px;
+			#{$this}__td {
+				&:first-child {
+					padding-left: 0;
+				}
+
+				&--price {
+					display: inline-block;
+					text-align: right;
+				}
+
+				&:last-child {
+					display: none;
+				}
+
+				&--price {
+					font-size: 20px;
+				}
+			}
+		}
+	}
+}
+
+.order-f {
+	&__inner {
+		--air-l: 39px;
+		--air-b: 40px;
+		@include row-flex;
+
+		& > * {
+			@include col;
+			@include size(6);
+		}
+	}
+
+	&__bottom {
+		padding: 32px 0px 0;
+	}
+
+	.table-frame {
+		&__body {
+			padding: 23px 20px 25px;
+		}
+	}
+
+	.b-input {
+		width: 100%;
+
+		&__title {
+			flex-shrink: 0;
+			margin-right: 8px;
+			width: 135px;
+		}
+
+		&--triple {
+			.b-input__input {
+				display: flex;
+
+				input:nth-of-type(1) {
+					border-top-right-radius: 0;
+					border-bottom-right-radius: 0;
+				}
+
+				input:nth-of-type(2) {
+					flex-shrink: 0;
+					padding: 0 10px;
+					width: getPr(73, 357);
+					border-right: none;
+					border-left: none;
+					border-radius: 0;
+					transition: all 0s;
+				}
+
+				input:nth-of-type(3) {
+					flex-shrink: 0;
+					padding: 0 7px 0 19px;
+					width: getPr(73, 357);
+					border-top-left-radius: 0;
+					border-bottom-left-radius: 0;
+				}
+			}
+		}
+	}
+
+	@include desctop-min {
+		&__inner {
+			& > * {
+				@include size(12);
+				max-width: 570px;
+			}
+		}
+
+		&__bottom {
+			display: flex;
+		}
+	}
+
+	@include table {
+		&__inner {
+			justify-content: center;
+		}
+		&__bottom {
+			.btn--reset {
+				margin: 0 auto;
+			}
+		}
+	}
+
+	@include tel {
+		.b-input__title {
+			display: none;
+		}
+	}
+}

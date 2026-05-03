@@ -1,0 +1,18 @@
+/*==================== STATE OWNED ====================*/
+.state-owned-pg {
+	.info-b {
+		padding: 51px 0 25px;
+	}
+
+	@include desctop-min {
+		.info-b {
+			padding: 35px 0 15px;
+		}
+	}
+
+	@include mobile {
+		.info-b {
+			padding: 23px 0 10px;
+		}
+	}
+}
